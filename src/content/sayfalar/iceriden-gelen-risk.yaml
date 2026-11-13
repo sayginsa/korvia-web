@@ -1,0 +1,72 @@
+kimlik: İçeriden gelen risk
+yol: cozumler/iceriden-gelen-risk
+bolum: cozumler
+sira: 3
+ikon: ayrilan
+menuAciklama: Ayrılan çalışanların veya ele geçirilmiş hesapların veri kaçırmasını durdurun.
+seoBaslik: İçeriden gelen risk | Korvia
+seoAciklama: Her veri kaybı olayı dışarıdan bir saldırganla yaşanmaz. Hassas bilgi, zaten meşru erişimi olan biri tarafından kopyalanabilir, iletilebilir veya aktarılabili
+eyebrow: Çözümler · İçeriden gelen risk
+baslik: İçeriden gelen risk çoğu zaman sıradan iş gibi görünür.
+ozet: Her veri kaybı olayı dışarıdan bir saldırganla yaşanmaz. Hassas bilgi, zaten meşru erişimi olan biri tarafından kopyalanabilir, iletilebilir veya aktarılabilir. Korvia dosya sınıflandırmasını, uç nokta etkinliğini ve olağan dışı hareket hacmini ilişkilendirir; güvenlik ekipleri ayrılan çalışanların veya ele geçirilmiş hesapların veri kaçırmasını durdurur.
+cta:
+  etiket: Demo planlayın
+  url: /demo/
+bloklar:
+- discriminant: senaryo
+  value:
+    baslik: Ayrılan bir çalışan gizli müşteri verisini kopyalıyor.
+    veri: Hesap listesi, Gizli
+    kullanici: Ayrılan satış temsilcisi
+    hedef: USB bellek
+    politika: Gizli veri aktarım politikası
+    karar: engelle
+    kararNotu: durduruldu, olay kaydedildi
+- discriminant: metin
+  value:
+    eyebrow: ''
+    baslik: Bir politika ihlali kötü niyetin kanıtı değildir.
+    govde: |-
+      Bir çalışan bir veri koruma kuralını yanlışlıkla veya meşru bir işi yaparken tetikleyebilir. Güvenlik ekiplerinin olayı adil değerlendirmek için yeterli bağlama ihtiyacı vardır.
+
+      Korvia inceleyenlere söz konusu veriyi, gerçekleşen etkinliği ve uygulanan sonucu göstererek politikaya dayalı incelemeyi destekler.
+- discriminant: kartlar
+  value:
+    eyebrow: ''
+    baslik: Korvia içeriden gelen risk incelemelerini nasıl destekler?
+    aciklama: ''
+    ogeler:
+    - ikon: belgeAra
+      baslik: İnceleme
+      metin: 'Dosyanın tüm zaman çizelgesi: hassas veriyi kim açtı, yeniden adlandırdı, arşivledi veya dışarı çıkarmaya çalıştı.'
+    - ikon: ekran
+      baslik: Uç Nokta DLP
+      metin: Dizüstü bilgisayarlar ağ dışındayken bile USB belleği, kişisel bulut yüklemelerini, yazdırmayı ve pano yapıştırmalarını denetleyin.
+    - ikon: etiket
+      baslik: Veri Sınıflandırma
+      metin: Etiketler yeniden adlandırmada ve biçim değişikliklerinde dosyayla gider; politikalar her zaman tetiklenir.
+- discriminant: not
+  value:
+    baslik: Hangi kurulum uygun?
+    metin: Kurum içi veya özel bulut. Hassas olay kanıtı ve çalışan etkinlik kayıtları rol tabanlı erişimle kendi altyapınızda kalır.
+    link:
+      etiket: Kurulum seçenekleri
+      url: /platform/kurulum/
+- discriminant: mevzuat
+  value:
+    baslik: Hangi mevzuata dokunur?
+    ogeler:
+    - ikon: ''
+      baslik: KVKK
+      metin: '6698 sayılı Kanun: veri güvenliğine ilişkin yükümlülükler (md. 12), veri envanteri ve ihlal bildirimi.'
+    - ikon: ''
+      baslik: ISO/IEC 27001
+      metin: Sınıflandırma, etiketleme ve bilgi aktarımı kontrolleri.
+- discriminant: sss
+  value:
+    baslik: İçeriden gelen risk hakkında sorular
+    ogeler:
+    - soru: Her DLP politika ihlali içeriden tehdit midir?
+      cevap: Hayır. Çalışanlar veri koruma politikalarını yanlışlıkla veya meşru iş sırasında tetikleyebilir. İnceleyenler bir olayın yanlışlıkla ifşa mı, politika sorunu mu, yoksa kötü niyetli etkinlik mi olduğuna karar vermeden önce tüm bağlamı değerlendirmelidir.
+    - soru: Çalışan izlemesi KVKK açısından nasıl ele alınmalı?
+      cevap: Korvia içeriği yalnızca bir politika eşleştiğinde kaydeder ve erişimi rol bazında sınırlar. Çalışanların aydınlatılması ve işleme şartlarının belirlenmesi kurumunuzun sorumluluğundadır; bu konuda hukuk danışmanınızın görüşünü alın.

@@ -1,0 +1,30 @@
+kimlik: Demo planlayın
+yol: demo
+bolum: kurumsal
+sira: 5
+ikon: ekran
+menuAciklama: Otuz dakika; önce sizin sorularınız.
+seoBaslik: Demo planlayın | Korvia
+seoAciklama: Neyi korumak istediğinizi ve nerede durduğunu anlatın. Platformun sizin için önemli kısımlarını gösteririz; başka bir çözüm daha uygunsa bunu da söyleriz.
+eyebrow: Demo
+baslik: Otuz dakika. Önce sizin sorularınız.
+ozet: Neyi korumak istediğinizi ve nerede durduğunu anlatın. Platformun sizin için önemli kısımlarını gösteririz; başka bir çözüm daha uygunsa bunu da söyleriz.
+cta:
+  etiket: ''
+  url: ''
+bloklar:
+- discriminant: form
+  value:
+    tur: demo
+    baslik: Demo talebi
+    aciklama: ''
+    secenekBasligi: Ne görmek istersiniz?
+    secenekler:
+    - Veri sınıflandırma
+    - DLP
+    - Yapay zekâ güvenlik duvarı
+    - Yapay zekâ veri güvenliği
+    - Kod asistanları
+    - Henüz emin değilim
+    mesajEtiketi: Neyi korumak istiyorsunuz? (isteğe bağlı)
+    gonderEtiketi: Demo talep edin

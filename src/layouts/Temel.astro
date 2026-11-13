@@ -1,0 +1,42 @@
+---
+import '../styles/global.css';
+import UstBilgi from '../components/UstBilgi.astro';
+import AltBilgi from '../components/AltBilgi.astro';
+import Kapanis from '../components/Kapanis.astro';
+
+interface Props {
+  baslik: string;
+  aciklama?: string;
+  kapanis?: boolean;
+}
+const { baslik, aciklama = '', kapanis = true } = Astro.props;
+const kanonik = new URL(Astro.url.pathname, Astro.site).href;
+---
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{baslik}</title>
+    {aciklama && <meta name="description" content={aciklama} />}
+    <link rel="canonical" href={kanonik} />
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta name="theme-color" content="#FFFFFF" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="tr_TR" />
+    <meta property="og:title" content={baslik} />
+    {aciklama && <meta property="og:description" content={aciklama} />}
+    <meta property="og:url" content={kanonik} />
+  </head>
+  <body>
+    <a class="atla" href="#icerik">İçeriğe geç</a>
+    <UstBilgi />
+    <main id="icerik" tabindex="-1">
+      <slot />
+    </main>
+    {kapanis && <Kapanis />}
+    <AltBilgi />
+  </body>
+</html>

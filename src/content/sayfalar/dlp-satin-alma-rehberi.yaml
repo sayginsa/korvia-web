@@ -1,0 +1,88 @@
+kimlik: DLP satın alma rehberi
+yol: kaynaklar/dlp-satin-alma-rehberi
+bolum: kaynaklar
+sira: 2
+ikon: kitap
+menuAciklama: DLP almadan önce sorulacak altı soru.
+seoBaslik: DLP satın alma rehberi | Korvia
+seoAciklama: Bir DLP ürününün demosunu yapmak kolay, işletmek zordur. Bu sorular bir ürünün kurumunuzda, sizin verinizle nasıl davranacağını gösterir.
+eyebrow: Kaynaklar · DLP satın alma rehberi
+baslik: DLP almadan önce sormanız gereken altı soru.
+ozet: Bir DLP ürününün demosunu yapmak kolay, işletmek zordur. Bu sorular bir ürünün kurumunuzda, sizin verinizle nasıl davranacağını gösterir.
+cta:
+  etiket: Bir POC planlayın
+  url: /kaynaklar/poc-rehberi/
+bloklar:
+- discriminant: not
+  value:
+    baslik: DLP projeleri neden tıkanır?
+    metin: Engellemeyle başlarlar ve alarmlar içinde boğulurlar. Bir ürünün izleme modundan öteye geçip geçemeyeceğini doğruluk ve bağlam belirler.
+    link:
+      etiket: ''
+      url: ''
+- discriminant: tablo
+  value:
+    baslik: Ne sormalısınız?
+    aciklama: ''
+    sutunlar:
+    - Soru
+    - Neden önemli
+    - İyi bir cevap
+    satirlar:
+    - hucreler:
+      - Veri nerede tespit ediliyor?
+      - Ağ dışında neyin çalışmaya devam edeceğini ve neyin yeniden yönlendirilmesi gerektiğini belirler.
+      - Hangi bileşenin nerede çalıştığını gösteren net bir harita.
+    - hucreler:
+      - Ürün gerçekte neyi tanıyabiliyor?
+      - Yalnızca kalıplar tasarımları, kodu ve sözleşmeleri kaçırır.
+      - Doğrulanmış tanımlayıcılar, parmak izleri ve içerik analizi; sizin dosyalarınızda gösterilmiş.
+    - hucreler:
+      - Hangi yapay zekâ senaryoları görünür?
+      - Alan adına göre denetim kurumsal hesabı kişiselden ayıramaz.
+      - Adıyla servisler, kullanılan hesap ve komutun içeriği.
+    - hucreler:
+      - Kurum ağı dışında ne oluyor?
+      - Hassas işin büyük kısmı ofis dışında yapılır.
+      - Bağlantı olmadan da aynı politika ve aynı kanıt.
+    - hucreler:
+      - Analist kararı anlayabiliyor mu?
+      - Kimsenin açıklayamadığı bir alarm gürültüye dönüşür.
+      - 'Tek ekran: kim, ne, nereye, hangi politika ve neden eşleşti.'
+    - hucreler:
+      - Kayıtlar ve hassas veri nerede saklanıyor?
+      - Bir sızıntının kanıtı sızan veriyi taşıyabilir.
+      - Belirtilmiş saklama süresi, konum, erişim hakları ve içeriğin kopyalanıp kopyalanmadığı.
+- discriminant: tablo
+  value:
+    baslik: Hangi kanalları test etmelisiniz?
+    aciklama: ''
+    sutunlar:
+    - Kanal
+    - Çalıştırmaya değer tek test
+    satirlar:
+    - hucreler:
+      - Uç nokta
+      - Etiketli bir dosyayı USB'ye kopyalayın, sonra yazdırın.
+    - hucreler:
+      - E-posta
+      - Gizli bir dosyayı kişisel bir adrese gönderin.
+    - hucreler:
+      - Web
+      - Aynı dosyayı kişisel web postasıyla yükleyin.
+    - hucreler:
+      - Bulut uygulamaları
+      - Onaysız bir depolama servisinden paylaşın.
+    - hucreler:
+      - Yapay zekâ araçları
+      - Bir kısmını kişisel bir yapay zekâ hesabına yapıştırın.
+    - hucreler:
+      - Ağ dışında
+      - Testleri dizüstü bilgisayarın bağlantısı kesikken tekrarlayın.
+- discriminant: ilgili
+  value:
+    baslik: Sırada ne var?
+    sayfalar:
+    - poc-rehberi
+    - dlp
+    - sozluk

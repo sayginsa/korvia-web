@@ -1,0 +1,218 @@
+---
+import OlayKarti from './OlayKarti.astro';
+import Form from './Form.astro';
+import Ikon from './Ikon.astro';
+import Sahne from './Sahne.astro';
+import { tumSayfalar, href, paragraflar, doldur } from '../lib/icerik';
+
+interface Props { bloklar: { discriminant: string; value: any }[] }
+const { bloklar } = Astro.props;
+const sayfalar = await tumSayfalar();
+const sayfaBul = (slug: string) => sayfalar.find((s) => s.slug === slug);
+
+// Bölümler sırayla beyaz / canvas zeminde; senaryo bir önceki bölümle birlikte durur.
+const doldurulmus = await Promise.all(
+  bloklar.map(async (b) => {
+    if (b.discriminant === 'tablo') {
+      const v = b.value;
+      return { ...b, value: { ...v, satirlar: await Promise.all(v.satirlar.map(async (s: any) => ({ hucreler: await Promise.all(s.hucreler.map(doldur)) }))) } };
+    }
+    if (b.discriminant === 'metin') return { ...b, value: { ...b.value, govde: await doldur(b.value.govde) } };
+    return b;
+  }),
+);
+const ok = `<svg class="ok" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>`;
+---
+{doldurulmus.map((b, i) => {
+  const v = b.value;
+  const zemin = i % 2 === 0 ? '' : ' bolum--beyaz';
+  switch (b.discriminant) {
+    case 'senaryo':
+      return (
+        <section class={`bolum bolum--siki${zemin}`} aria-label="Örnek senaryo">
+          <div class="wrap iki-sutun">
+            <div style="display:grid;gap:12px">
+              <p class="eyebrow">Senaryo</p>
+              <p class="h2">{v.baslik}</p>
+              <p class="muted" style="max-width:44ch">Bir dosya, bir kullanıcı, bir hedef, bir karar. Korvia politikayı veri hareket ettiği anda uygular.</p>
+            </div>
+            <OlayKarti
+              ust="Politika olayı" 
+              satirlar={[
+                { ad: 'Veri', deger: v.veri },
+                { ad: 'Kullanıcı', deger: v.kullanici },
+                { ad: 'Hedef', deger: v.hedef },
+                { ad: 'Politika', deger: v.politika },
+              ]}
+              karar={v.karar}
+              kararNotu={v.kararNotu}
+            />
+          </div>
+        </section>
+      );
+    case 'metin':
+      return (
+        <section class={`bolum${zemin}`}>
+          <div class="wrap iki-sutun">
+            <div style="display:grid;gap:12px">
+              {v.eyebrow && <p class="eyebrow">{v.eyebrow}</p>}
+              <h2 class="h2">{v.baslik}</h2>
+            </div>
+            <div class="prose">{paragraflar(v.govde).map((p) => <p>{p}</p>)}</div>
+          </div>
+        </section>
+      );
+    case 'adimlar':
+      return (
+        <section class={`bolum${zemin}`}>
+          <div class="wrap">
+            <div class="bolum-baslik"><h2 class="h2">{v.baslik}</h2></div>
+            <ol class={`adimlar${v.ogeler.length === 3 ? ' adimlar--3' : ''}`}>
+              {v.ogeler.map((o: any) => (<li><h3 class="h3">{o.baslik}</h3><p>{o.metin}</p></li>))}
+            </ol>
+          </div>
+        </section>
+      );
+    case 'kartlar':
+      return (
+        <section class={`bolum${zemin}`}>
+          <div class="wrap iki-sutun">
+            <div class="bolum-baslik" style="margin:0">
+              {v.eyebrow && <p class="eyebrow">{v.eyebrow}</p>}
+              <h2 class="h2">{v.baslik}</h2>
+              {v.aciklama && <p class="lead">{v.aciklama}</p>}
+            </div>
+            <ul class="liste">
+              {v.ogeler.map((o: any) => (<li><h3 class="h3 liste__baslik"><Ikon ad={o.ikon} boyut={20} />{o.baslik}</h3><p>{o.metin}</p></li>))}
+            </ul>
+          </div>
+        </section>
+      );
+    case 'bildirim':
+      return (
+        <section class={`bolum${zemin}`}>
+          <div class="wrap bildirim-izgara">
+            <div class="bolum-baslik" style="margin:0">
+              {v.eyebrow && <p class="eyebrow">{v.eyebrow}</p>}
+              <h2 class="h2">{v.baslik}</h2>
+              {v.aciklama && <p class="lead">{v.aciklama}</p>}
+            </div>
+            <Sahne sahne={v.sahne} karar={v.karar} hedef={v.hedef} uygulama={v.uygulama} veriTuru={v.veriTuru} veriDegeri={v.veriDegeri} dosya={v.dosya} />
+          </div>
+        </section>
+      );
+    case 'karar':
+      return (
+        <section class={`bolum${zemin}`}>
+          <div class="wrap">
+            <div class="bolum-baslik"><h2 class="h2">{v.baslik}</h2>{v.aciklama && <p class="lead">{v.aciklama}</p>}</div>
+            <div class="olcek">
+              <div><strong>İzle</strong><p>{v.izle}</p></div>
+              <div><strong>Uyar</strong><p>{v.uyar}</p></div>
+              <div><strong>Kaydet</strong><p>{v.kaydet}</p></div>
+              <div><strong>Engelle</strong><p>{v.engelle}</p></div>
+            </div>
+            <div class="olcek__eksen mono"><span>düşük müdahale</span><span>yüksek müdahale</span></div>
+          </div>
+        </section>
+      );
+    case 'tablo':
+      return (
+        <section class={`bolum${zemin}`}>
+          <div class="wrap">
+            <div class="bolum-baslik"><h2 class="h2">{v.baslik}</h2></div>
+            <div class="tablo-kap" role="region" aria-label={v.baslik} tabindex="0">
+              <table>
+                <thead><tr>{v.sutunlar.map((s: string) => <th scope="col">{s || <span class="sr-only">Satır</span>}</th>)}</tr></thead>
+                <tbody>
+                  {v.satirlar.map((s: any) => (
+                    <tr>{s.hucreler.map((h: string, j: number) => (j === 0 ? <th scope="row">{h}</th> : <td data-etiket={v.sutunlar[j] || ''}>{h}</td>))}</tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            {v.aciklama && <p class="tablo-not">{v.aciklama}</p>}
+          </div>
+        </section>
+      );
+    case 'maskeleme':
+      return (
+        <section class={`bolum bolum--siki${zemin}`}>
+          <div class="wrap">
+            <div class="bolum-baslik"><p class="eyebrow">{v.baslik}</p></div>
+            <div class="maske">
+              <div><span class="mono muted">Kullanıcının yazdığı</span><pre>{v.once}</pre></div>
+              <div class="maske__ok"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.75" aria-label="maskelendi" role="img"><path d="M4 10h12M11 5l5 5-5 5" /></svg></div>
+              <div><span class="mono muted">Yapay zekâ aracına giden</span><pre set:html={v.sonra.replace(/\[[^\]]+\]/g, (m: string) => `<mark>${m}</mark>`)} /></div>
+            </div>
+            {v.not && <p class="tablo-not">{v.not}</p>}
+          </div>
+        </section>
+      );
+    case 'not':
+      return (
+        <section class={`bolum bolum--siki${zemin}`}>
+          <div class="wrap">
+            <div class="vurgu">
+              <strong>{v.baslik}</strong>
+              <p>{v.metin}</p>
+              {v.link?.url && <a class="metin-link" href={v.link.url}>{v.link.etiket}<Fragment set:html={ok} /></a>}
+            </div>
+          </div>
+        </section>
+      );
+    case 'sss':
+      return (
+        <section class={`bolum${zemin}`}>
+          <div class="wrap iki-sutun">
+            <h2 class="h2">{v.baslik}</h2>
+            <div class="sss">
+              {v.ogeler.map((o: any) => (<details><summary>{o.soru}</summary><div><p>{o.cevap}</p></div></details>))}
+            </div>
+          </div>
+        </section>
+      );
+    case 'mevzuat':
+      return (
+        <section class={`bolum${zemin}`}>
+          <div class="wrap iki-sutun">
+            <div class="bolum-baslik" style="margin:0">
+              <p class="eyebrow">Mevzuat</p>
+              <h2 class="h2">{v.baslik}</h2>
+              <p class="muted" style="font-size:15px">Korvia bu gereksinimleri teknik kontrollerle destekler. Hukuki yorum hukuk danışmanınıza aittir.</p>
+            </div>
+            <ul class="liste">
+              {v.ogeler.map((o: any) => (<li><h3 class="h3">{o.baslik}</h3><p>{o.metin}</p></li>))}
+            </ul>
+          </div>
+        </section>
+      );
+    case 'ilgili': {
+      const liste = v.sayfalar.map(sayfaBul).filter(Boolean);
+      return (
+        <section class={`bolum${zemin}`}>
+          <div class="wrap">
+            <div class="bolum-baslik"><h2 class="h2">{v.baslik}</h2></div>
+            <div class="ilgili">
+              {liste.map((s: any) => (
+                <a href={href(s.yol)}>
+                  {s.ikon && <span class="ikon-kutu"><Ikon ad={s.ikon} boyut={18} /></span>}
+                  <strong>{s.kimlik}<Fragment set:html={ok} /></strong>
+                  <span>{s.menuAciklama}</span>
+                </a>
+              ))}
+            </div>
+          </div>
+        </section>
+      );
+    }
+    case 'form':
+      return (
+        <section class={`bolum${zemin}`} id="form">
+          <div class="wrap"><Form {...v} /></div>
+        </section>
+      );
+    default:
+      return null;
+  }
+})}

@@ -1,0 +1,94 @@
+kimlik: Kurulum seçenekleri
+yol: platform/kurulum
+bolum: platform
+sira: 10
+ikon: sunucu
+menuAciklama: Kurum içi, özel bulut, internetten yalıtılmış ağ veya yönetilen hizmet.
+seoBaslik: Kurulum seçenekleri | Korvia
+seoAciklama: Korvia önce kurum içi çalışacak biçimde tasarlandı; çünkü DLP'ye en çok ihtiyaç duyan kurumlar çoğu zaman verisini başkasının bulutuna gönderemez. Yönetilen s
+eyebrow: Platform · Kurulum
+baslik: Varsayılan olarak kurum içinde. Gerisi sizin tercihiniz.
+ozet: Korvia önce kurum içi çalışacak biçimde tasarlandı; çünkü DLP'ye en çok ihtiyaç duyan kurumlar çoğu zaman verisini başkasının bulutuna gönderemez. Yönetilen sürümler aynı kodu çalıştırır.
+cta:
+  etiket: Demo planlayın
+  url: /demo/
+bloklar:
+- discriminant: tablo
+  value:
+    baslik: Dört sürüm, tek lisans.
+    aciklama: ''
+    sutunlar:
+    - ''
+    - Kurum içi
+    - Özel bulut
+    - Yönetilen hizmet
+    - MSSP sürümü
+    satirlar:
+    - hucreler:
+      - Politika sunucusu ve konsol
+      - Veri merkeziniz, ISO veya OVA cihaz
+      - Kendi bulut kiracılığınız
+      - Korvia tarafından barındırılır, müşteri başına tek kiracı
+      - Korvia veya MSSP tarafından barındırılır, çok kiracılı
+    - hucreler:
+      - Uç nokta ajanları
+      - Sizde
+      - Sizde
+      - Sizde
+      - Her müşteride
+    - hucreler:
+      - İçerik ve kanıtın yeri
+      - Ağınızın içinde
+      - Kiracılığınızın içinde
+      - Barındırılan depoda, seçtiğiniz bölgede
+      - Kiracı başına, seçtiğiniz bölgede
+    - hucreler:
+      - İlk politikaya kadar süre
+      - Günler
+      - Günler
+      - Aynı gün
+      - Müşteri başına aynı gün
+    - hucreler:
+      - Tipik müşteri
+      - Bankalar, kamu, düzenlemeye tabi sektörler
+      - Bulut öncelikli kurumlar
+      - Platform ekibi olmayan orta ölçekli kurumlar
+      - Hizmet sağlayıcılar
+- discriminant: kartlar
+  value:
+    eyebrow: ''
+    baslik: Kurum içi kurulum ayrıntıları
+    aciklama: ''
+    ogeler:
+    - ikon: sunucu
+      baslik: Sağlamlaştırılmış cihaz
+      metin: Tam disk şifreleme; ISO veya OVA olarak teslim edilir.
+    - ikon: sunucu
+      baslik: Kendi sanallaştırma ortamınız
+      metin: Yönetim cihazı VMware, Hyper-V veya KVM üzerinde çalışır.
+    - ikon: katman
+      baslik: Yüksek erişilebilirlik
+      metin: Politika sunucusu için.
+    - ikon: kullanicilar
+      baslik: Dizin entegrasyonu
+      metin: Kullanıcılar ve gruplar için Active Directory veya LDAP.
+    - ikon: cevrimdisi
+      baslik: Yalıtılmış ağda çalışma
+      metin: Güncellemeler imzalı çevrim dışı paketler olarak gelir.
+    - ikon: cevrimdisi
+      baslik: Varsayılan olarak telemetri yok
+      metin: Siz açmadıkça ağınızdan hiçbir şey çıkmaz.
+- discriminant: not
+  value:
+    baslik: Entegrasyonlar
+    metin: Syslog üzerinden SIEM (CEF veya RFC 5424), JSON REST API ve CSV veya JSON dışa aktarım.
+    link:
+      etiket: ''
+      url: ''
+- discriminant: not
+  value:
+    baslik: Hangi sürümün uygun olduğundan emin değil misiniz?
+    metin: Pek çok müşteri politikaları kanıtlamak için yönetilen hizmetle başlar, sonra karar verir.
+    link:
+      etiket: Bir POC planlayın
+      url: /kaynaklar/poc-rehberi/

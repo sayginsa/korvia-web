@@ -1,0 +1,53 @@
+kimlik: Yapay zekâ güvenliğine genel bakış
+yol: yapay-zeka-guvenligi
+bolum: yapay-zeka
+sira: 1
+ikon: yapayZeka
+menuAciklama: Gölge yapay zekâyı görün, komutlardaki hassas veriyi koruyun.
+seoBaslik: Yapay Zekâ Güvenliği | Korvia
+seoAciklama: 'Yapay zekâ araçları artık gündelik işin parçası. Ancak çalışanların bu araçlara yapıştırdığı veya yüklediği veri hemen bir risk yaratıyor. Korvia gölge yapay '
+eyebrow: Yapay zekâ güvenliği · Daha çok yapay zekâ, daha az risk
+baslik: Yapay zekâ kullanımını kurumunuz için daha güvenli hâle getirin.
+ozet: Yapay zekâ araçları artık gündelik işin parçası. Ancak çalışanların bu araçlara yapıştırdığı veya yüklediği veri hemen bir risk yaratıyor. Korvia gölge yapay zekâyı görünür kılar ve tarayıcıda, masaüstünde ve kurumsal yapay zekâ iş akışlarında veri koruma politikalarını uygular.
+cta:
+  etiket: Demo planlayın
+  url: /demo/
+bloklar:
+- discriminant: ilgili
+  value:
+    baslik: Farklı riskler, farklı denetimler
+    sayfalar:
+    - yapay-zeka-guvenlik-duvari
+    - yapay-zeka-veri-guvenligi
+    - kod-asistanlari
+- discriminant: kartlar
+  value:
+    eyebrow: ''
+    baslik: Ekipleriniz için ne değişir?
+    aciklama: ''
+    ogeler:
+    - ikon: ''
+      baslik: Kullanılan araçları görün
+      metin: Hangi yapay zekâ servislerinin, kim tarafından, hangi veriyle kullanıldığı.
+    - ikon: ''
+      baslik: Engellemek yerine maskeleyin
+      metin: Hassas kısım bir etiketle değiştirilir; komutun geri kalanı gider.
+    - ikon: ''
+      baslik: Kararı açıklayın
+      metin: Çalışan neyin bulunduğunu ve nedenini o anda görür.
+- discriminant: metin
+  value:
+    eyebrow: ''
+    baslik: Veri riskini görmezden gelmeden yapay zekâyı benimseyin.
+    govde: |-
+      Bir pazarlama çalışanı müşteri bilgisini bir yazım asistanıyla paylaşabilir. Bir yazılımcı kaynak kodu bir kod asistanına verebilir. Bir analist gizli bir belgeyi özetletmek için yükleyebilir.
+
+      Bu durumların iş amacı farklıdır ama temel soru aynıdır: bu bilgi bu şekilde paylaşılmalı mı?
+
+      Korvia güvenlik ekiplerinin kurumsal hesabı kişisel hesaptan ayırmasını, komutlardaki hassas değerleri maskelemesini ve izinsiz kod veya dosya yüklemelerini, yapay zekâ kullanımını durdurmadan engellemesini sağlar.
+- discriminant: sss
+  value:
+    baslik: Yapay zekâ güvenliği hakkında sorular
+    ogeler:
+    - soru: Yapay zekâ veri güvenliği geleneksel DLP'den nasıl farklı?
+      cevap: Geleneksel DLP e-posta, USB ve web yüklemeleriyle hareket eden dosyaları denetler. Yapay zekâ veri güvenliği bu korumayı sohbet komutlarına, yapay zekâ dosya yüklemelerine, kod asistanlarına ve model yanıtlarına taşır; aracın tamamını engellemek yerine hassas değerleri satır içinde maskelemenizi sağlar.

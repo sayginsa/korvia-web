@@ -1,0 +1,29 @@
+kimlik: İletişim
+yol: iletisim
+bolum: kurumsal
+sira: 4
+ikon: eposta
+menuAciklama: Satış, iş ortaklığı ve destek.
+seoBaslik: İletişim | Korvia
+seoAciklama: Platform, iş ortaklığı veya mevcut bir kurulum hakkında sorularınız mı var? Doğru adrese yazın ya da formu kullanın.
+eyebrow: İletişim
+baslik: Ürünü geliştirenlerle konuşun.
+ozet: Platform, iş ortaklığı veya mevcut bir kurulum hakkında sorularınız mı var? Doğru adrese yazın ya da formu kullanın.
+cta:
+  etiket: ''
+  url: ''
+bloklar:
+- discriminant: form
+  value:
+    tur: iletisim
+    baslik: Bize yazın
+    aciklama: ''
+    secenekBasligi: Konu
+    secenekler:
+    - Satış
+    - İş ortaklığı
+    - Destek
+    - Basın
+    - Diğer
+    mesajEtiketi: Mesajınız
+    gonderEtiketi: Mesajı gönderin

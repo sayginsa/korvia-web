@@ -1,0 +1,58 @@
+---
+baslik: "PCI DSS 4.0.1 ve hareket hâlindeki veri"
+kategori: Uyum
+tarih: 2026-11-07
+sure: 3
+ozet: >-
+  İki PCI DSS gereksinimi aslında birer veri kaybı sorunudur. İkisi de kart verisini bulabildiğinizi ve nasıl hareket ettiğini denetleyebildiğinizi varsayar.
+---
+PCI DSS 4.0.1, aslında veri kaybı sorunu olan iki şey ister. Gereksinim 3.4.2, uzaktan erişim sırasında kart numaralarının kopyalanmasını veya taşınmasını durduran teknik denetimler ister. Gereksinim 12.10.7, saklanan kart numaraları olmamaları gereken bir yerde ortaya çıktığında olay müdahalesinin başlamasını ister. İkisi de kart verisini bulabildiğinizi ve nasıl hareket ettiğini, onu tutmak için kurduğunuz sistemlerin dışında da denetleyebildiğinizi varsayar.
+
+## Ne değişti, ne zaman?
+
+PCI DSS 4.0 2022'de yayımlandı ve bir süre isteğe bağlı kalan gereksinimler içeriyordu; kurumlar hazırlanmak için zaman buldu. Konsey Haziran 2024'te, gereksinim eklemeyen veya çıkarmayan sınırlı bir revizyon olarak 4.0.1 sürümünü yayımladı. İleri tarihli gereksinimler 31 Mart 2025'te zorunlu hâle geldi; değerlendiriciler artık bunlara bakıyor.
+
+Programların çoğu emeğini kart sahibi veri ortamına harcar; haklı olarak. Bu iki gereksinim ise o ortamın kenarlarına, kart verisinin gündelik işe sızdığı yerlere bakar.
+
+## Gereksinim 3.4.2: uzaktan oturumlarda kart numaraları
+
+Metin kısadır. Uzaktan erişim teknolojileri kullanıldığında, belgelenmiş açık yetkisi ve meşru iş ihtiyacı olanlar dışında herkes için birincil hesap numaralarının kopyalanmasını veya taşınmasını önleyen teknik denetimler bulunmalıdır.
+
+Bunun neyi kapsadığını düşünün. Uzaktan oturumdaki bir destek temsilcisi bir kart numarasını görebilir. Denetim yoksa onu panoya kopyalayabilir, yerel bir nota yapıştırabilir veya bir dosyayı kişisel bir sürücüye sürükleyebilir. Kimsenin kötü niyetli olması gerekmez; yardımsever bir alışkanlık yeter.
+
+Bir politika belgesi bunların hiçbirini önleyemez; çünkü gereksinim teknik denetim der. Ayrıca istisnaları kanıtlamanızı ister: kime izin verildi, neden ve bu nerede yazılı. Yani uç noktada eylemi gören, veriyi tanıyan ve karar veren bir şeye, ayrıca her istisnanın kaydına ihtiyacınız var.
+
+## Gereksinim 12.10.7: yanlış yerdeki kart numaraları
+
+Bu gereksinim dürüst bir varsayımla başlar: kart numaraları ait olmadıkları yerlerde ortaya çıkacaktır. Bir destek talebinde yapıştırılmış bir kart. İndirilenler klasöründe duran bir döküm. Çoktan bitmiş bir projeden dosya sunucusunda kalmış bir tablo.
+
+Gereksinim, o an için olay müdahale prosedürlerinin bulunmasını ve bu an geldiğinde başlatılmasını söyler. Prosedürler veriyle ne yapılacağına karar vermeyi, oraya nasıl geldiğini bulmayı ve nedeni düzeltmeyi içerir.
+
+Neyi varsaydığına dikkat edin. Yalnızca tespit ettiğiniz şeye müdahale edebilirsiniz. Kart sahibi veri ortamının dışında kimse bakmıyorsa prosedür hiç çalışmaz, veri de orada kalır.
+
+## İkisinin ortak noktası
+
+İki gereksinim de aynı üç yeteneği ister.
+
+**Veriyi bulun.** Uç noktaları ve dosya sunucularını kart numaraları için tarayın; on altı haneli bir sipariş numarası alarm üretmesin diye sağlama doğrulaması kullanın. Tek başına bir kalıp, harekete geçilemeyecek kadar çok gürültü üretir.
+
+**Hareketi denetleyin.** Pano, dosya kopyalama, çıkarılabilir bellek ve yüklemelerin hepsinin cihazda, eylem anında kuralı olmalıdır. Uzaktan oturum bu yollardan yalnızca biridir.
+
+**Kaydı tutun.** Her olay neyin tespit edildiğini, kimin işin içinde olduğunu, nereye gittiğini ve ne olduğunu göstermelidir. Bir denetimi kanıta dönüştüren bu kayıttır.
+
+## Değerlendiriciniz için hazırlanacak sorular
+
+Bir sonraki değerlendirmeden önce birkaç basit sorunun cevabını hazır tutmaya değer.
+
+- Kart sahibi veri ortamı dışında kart verisi gerçekte nerede ortaya çıkıyor?
+- Uzaktan erişim sırasında kopyalamayı hangi teknik denetim durduruyor ve çalıştığını nereden biliyorsunuz?
+- Kimin istisnası var ve gerekçesi nerede kayıtlı?
+- Saklanan kart verisini olmaması gereken bir yerde en son ne zaman buldunuz ve sonra ne oldu?
+
+Son sorunun cevabı yoksa bu nadiren iyi haberdir. Genellikle kimsenin bakmadığı anlamına gelir.
+
+## Bir taramayla başlayın
+
+En hızlı ilk adım uç noktalarda ve dosya sunucularında bir keşif taramasıdır. Beklediğiniz yerlerin dışında ne kadar kart verisi durduğunu gösterir ve size gerçek bir başlangıç listesi verir. Oradan, en önemli kanallar için kurallar koyun; önce izleme modunda, gördüğünüze güvendiğinizde engellemeye geçin.
+
+Değerlendiriciniz niyet değil kanıt ister. Aynı kanıt, bir şey ters gittiği gün de işe yarar. [Korvia'nın PCI DSS çalışmalarını nasıl desteklediğini okuyun.](/mevzuat/)

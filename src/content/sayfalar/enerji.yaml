@@ -1,0 +1,64 @@
+kimlik: Enerji
+yol: sektorler/enerji
+bolum: sektorler
+sira: 7
+ikon: enerji
+menuAciklama: Enerji, su ve telekom; yalıtılmış ağlar.
+seoBaslik: Enerji | Korvia
+seoAciklama: Enerji, su ve telekom için bir sızıntı finansal kayıptan fazlasıdır. Korvia kapalı ağlarda çalışır; şebeke haritalarını, tesis planlarını ve SCADA yapılandırm
+eyebrow: Sektörler · Enerji
+baslik: Kritik veri, buluta hiç dokunmayan ağlarda.
+ozet: Enerji, su ve telekom için bir sızıntı finansal kayıptan fazlasıdır. Korvia kapalı ağlarda çalışır; şebeke haritalarını, tesis planlarını ve SCADA yapılandırmalarını korur.
+cta:
+  etiket: Demo planlayın
+  url: /demo/
+bloklar:
+- discriminant: senaryo
+  value:
+    baslik: Bir SCADA dosyası USB belleğe gidiyor.
+    veri: SCADA yapılandırma dosyası
+    kullanici: Operasyon mühendisi
+    hedef: OT iş istasyonundaki USB bellek
+    politika: 'Tesis verisi: çıkarılabilir bellek yok'
+    karar: engelle
+    kararNotu: durduruldu, bulut bağlantısı gerekmedi
+- discriminant: metin
+  value:
+    eyebrow: ''
+    baslik: Hassas operasyonel ve ticari bilgiyi koruyun.
+    govde: |-
+      Elektrik dağıtım şirketleri, petrol ve gaz işletmeleri ve su idareleri; şebeke topolojilerini, SCADA yapılandırmalarını, tesis şemalarını ve teklif modellerini internet bağlantısının kısıtlı veya hiç olmadığı ayrık BT ve OT ortamlarında korur.
+
+      Korvia tamamen kurum içinde ve yalıtılmış ağlarda, imzalı çevrim dışı güncellemelerle çalışır. USB portlarını, mühendislik iş istasyonlarını ve dışarı aktarımları denetim altına alır.
+- discriminant: kartlar
+  value:
+    eyebrow: ''
+    baslik: Korvia'nın hangi parçaları bunu yapar?
+    aciklama: ''
+    ogeler:
+    - ikon: sunucu
+      baslik: Kurulum
+      metin: Sunucu, sınıflandırma ve analiz kapalı ağınızın içinde çalışır.
+    - ikon: etiket
+      baslik: Veri Sınıflandırma
+      metin: Şebeke haritaları, tesis planları ve acil durum prosedürleri hassas olarak etiketlenir.
+    - ikon: ekran
+      baslik: Uç Nokta DLP
+      metin: USB ve dosya aktarımları iş istasyonunda durdurulur.
+- discriminant: not
+  value:
+    baslik: Hangi kurulum uygun?
+    metin: Kurum içi ve yalıtılmış ağ; güncellemeler imzalı dosyalar olarak gelir.
+    link:
+      etiket: Kurulum seçenekleri
+      url: /platform/kurulum/
+- discriminant: mevzuat
+  value:
+    baslik: Hangi mevzuata dokunur?
+    ogeler:
+    - ikon: ''
+      baslik: Bilgi ve İletişim Güvenliği Rehberi
+      metin: 'Cumhurbaşkanlığı rehberi: kritik verinin sınıflandırılması, korunması ve kayıt yönetimi.'
+    - ikon: ''
+      baslik: ISO/IEC 27001
+      metin: Sınıflandırma, etiketleme ve bilgi aktarımı kontrolleri.

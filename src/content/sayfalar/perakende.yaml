@@ -1,0 +1,64 @@
+kimlik: Perakende
+yol: sektorler/perakende
+bolum: sektorler
+sira: 6
+ikon: perakende
+menuAciklama: Mağazalar, e-ticaret ve çağrı merkezleri.
+seoBaslik: Perakende | Korvia
+seoAciklama: Perakende; yüksek personel değişimi, çok sayıda uç nokta ve büyük müşteri listeleri demektir. Korvia müşteri ve kart verisini bulur; genel müdürlük ve tüm mağ
+eyebrow: Sektörler · Perakende
+baslik: Her mağaza, müşteri verisi için bir çıkış kapısıdır.
+ozet: Perakende; yüksek personel değişimi, çok sayıda uç nokta ve büyük müşteri listeleri demektir. Korvia müşteri ve kart verisini bulur; genel müdürlük ve tüm mağazalar için tek politikayı tek konsoldan yönetir.
+cta:
+  etiket: Demo planlayın
+  url: /demo/
+bloklar:
+- discriminant: senaryo
+  value:
+    baslik: Ayrılan bir mağaza müdürü sadakat listesini USB'ye kopyalıyor.
+    veri: Sadakat programı listesi
+    kullanici: Ayrılan mağaza müdürü
+    hedef: USB bellek
+    politika: 'Müşteri verisi: çıkarılabilir bellek yok'
+    karar: engelle
+    kararNotu: durduruldu, vaka açıldı
+- discriminant: metin
+  value:
+    eyebrow: ''
+    baslik: Müşteri ve ticari veriyi koruyun.
+    govde: |-
+      Perakendeciler ve e-ticaret markaları mağazalarda ve çağrı merkezlerinde yüksek personel değişimini büyük sadakat veritabanları, ödeme kayıtları ve sezonluk fiyat tablolarıyla bir arada yaşar. Ayrılan çalışanlar ve ortak kullanılan arka ofis bilgisayarları sürekli sızıntı yolları oluşturur.
+
+      Korvia uç noktalarda ve paylaşımlarda unutulmuş kart ve sadakat dökümlerini bulur, USB ve kişisel web postası üzerinden veri kaçırmayı engeller ve genel müdürlük güvenlik ekibine tüm lokasyonları yönetebileceği tek konsol verir.
+- discriminant: kartlar
+  value:
+    eyebrow: ''
+    baslik: Korvia'nın hangi parçaları bunu yapar?
+    aciklama: ''
+    ogeler:
+    - ikon: ekran
+      baslik: Uç Nokta DLP
+      metin: Arka ofis bilgisayarları ve genel müdürlük tek politikaya uyar.
+    - ikon: belgeAra
+      baslik: İnceleme
+      metin: Ayrılan personel bilinen bir örüntüdür; kanıt saklanır.
+    - ikon: tara
+      baslik: Veri Keşfi ve DSPM
+      metin: Kart ve sadakat verisini biriktiği her yerde bulun.
+- discriminant: not
+  value:
+    baslik: Hangi kurulum uygun?
+    metin: Platform ekibi olmayan perakendeciler için yönetilen hizmet; kurum içi kurulum her şeyi içeride tutar.
+    link:
+      etiket: Kurulum seçenekleri
+      url: /platform/kurulum/
+- discriminant: mevzuat
+  value:
+    baslik: Hangi mevzuata dokunur?
+    ogeler:
+    - ikon: ''
+      baslik: PCI DSS
+      metin: Kart verisinin saklanması ve hareket hâlinde korunması.
+    - ikon: ''
+      baslik: KVKK
+      metin: '6698 sayılı Kanun: veri güvenliğine ilişkin yükümlülükler (md. 12), veri envanteri ve ihlal bildirimi.'

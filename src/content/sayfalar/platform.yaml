@@ -1,0 +1,92 @@
+kimlik: Platforma genel bakış
+yol: platform
+bolum: platform
+sira: 1
+ikon: katman
+menuAciklama: Tek ajan ve tek konsol nasıl birlikte çalışır.
+seoBaslik: Platform | Veri Keşfi, Sınıflandırma, DLP ve Yapay Zekâ Güvenliği | Korvia
+seoAciklama: Korvia veri keşfini, sınıflandırmayı, uç nokta ve ağ DLP'sini ve yapay zekâ güvenliğini tek mimaride birleştirir. Güvenlik ekibi hassas veriyi bulur, nasıl ha
+eyebrow: Platform
+baslik: Hassas veriyi keşfetmekten politikayı uygulamaya.
+ozet: Korvia veri keşfini, sınıflandırmayı, uç nokta ve ağ DLP'sini ve yapay zekâ güvenliğini tek mimaride birleştirir. Güvenlik ekibi hassas veriyi bulur, nasıl hareket ettiğini denetler ve olayları tek konsoldan inceler.
+cta:
+  etiket: Demo planlayın
+  url: /demo/
+bloklar:
+- discriminant: kartlar
+  value:
+    eyebrow: Mimari
+    baslik: Mimari dört parçadan oluşur.
+    aciklama: ''
+    ogeler:
+    - ikon: ekran
+      baslik: Uç nokta ajanı
+      metin: Keşif, sınıflandırma, uç nokta DLP ve yapay zekâ kanalı.
+    - ikon: belgeAra
+      baslik: Ağ incelemesi
+      metin: Giden e-posta ve web trafiği, çıkmadan önce incelenir.
+    - ikon: sunucu
+      baslik: Politika sunucusu
+      metin: Kurallar, dizinler, kullanıcı dizini ve konsol.
+    - ikon: veritabani
+      baslik: Kanıt deposu
+      metin: İmzalı olaylar, vakalar ve raporlar.
+- discriminant: kartlar
+  value:
+    eyebrow: Sorun
+    baslik: Üç kör nokta.
+    aciklama: ''
+    ogeler:
+    - ikon: ''
+      baslik: Kimsenin görmediği yapay zekâ araçları
+      metin: USB denetleniyor ama yapay zekâ araçlarına ne gittiğini kimse görmüyor.
+    - ikon: ''
+      baslik: Karar vermeyen etiketler
+      metin: Dosyanın üzerinde "Gizli" yazıyor ama politika bunu dikkate almıyor.
+    - ikon: ''
+      baslik: Bağlamı olmayan alarmlar
+      metin: Analist nedenini öğrenmek için sistemler arasında dolaşıyor.
+- discriminant: adimlar
+  value:
+    baslik: Keşfet. Sınıflandır. Koru. İncele.
+    ogeler:
+    - ikon: ''
+      baslik: Keşfet
+      metin: Uç noktalarda, dosya paylaşımlarında, NAS'ta, SharePoint'te ve bulut sürücülerde hassas bilgiyi bulun.
+    - ikon: ''
+      baslik: Sınıflandır
+      metin: İçeriği, bağlamı ve üst veriyi analiz ederek dosyaya kalıcı görsel ve teknik etiket uygulayın.
+    - ikon: ''
+      baslik: Koru
+      metin: Veri kopyalandığı, yüklendiği, e-postayla gönderildiği veya bir komuta yapıştırıldığı anda DLP ve yapay zekâ politikalarını uygulayın.
+    - ikon: ''
+      baslik: İncele
+      metin: İmzalı olayları, eşleşen tespitçileri, kullanıcı eylemlerini ve tüm bağlamı tek ekranda inceleyin.
+- discriminant: metin
+  value:
+    eyebrow: ''
+    baslik: Alarm etrafında değil, politika etrafında kurulu.
+    govde: |-
+      Tespit, güvenlik ekibine bir bilginin hassas olabileceğini söyler. Sınıflandırma iş bağlamını ekler. Politika ise hangi eylemlere izin verileceğine, hangilerinin incelemeye düşeceğine ve hangilerinin durdurulacağına karar verir.
+
+      Korvia keşfi, sınıflandırmayı ve uygulamayı tek motorda birleştirir; durağan etiketleri gerçek zamanlı koruma kararlarına dönüştürür.
+- discriminant: ilgili
+  value:
+    baslik: Modüller
+    sayfalar:
+    - veri-siniflandirma
+    - veri-kesfi-dspm
+    - tespit-motoru
+    - dlp
+    - uc-nokta-dlp
+    - ag-ve-e-posta-dlp
+    - bulut-dlp
+    - inceleme
+    - kurulum
+- discriminant: not
+  value:
+    baslik: Bilerek kapsam dışında bırakılanlar
+    metin: Korvia bir EDR, güvenlik duvarı veya SIEM değildir. Sizinkilerle birlikte çalışır.
+    link:
+      etiket: ''
+      url: ''

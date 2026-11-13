@@ -1,0 +1,87 @@
+kimlik: Veri Keşfi ve DSPM
+yol: platform/veri-kesfi-dspm
+bolum: platform
+sira: 3
+ikon: tara
+menuAciklama: Hassas verinin nerede durduğunu ve kimin erişebildiğini bulun.
+seoBaslik: Veri Keşfi ve DSPM | Korvia
+seoAciklama: 'Hassas veri dosya paylaşımlarına, çalışan bilgisayarlarına, posta kutularına ve bulut sürücülere yayılır. Korvia hassas dosyaların nerede durduğunu keşfeder, '
+eyebrow: Platform · Veri keşfi ve DSPM
+baslik: Hassas veriyi bulun. Riskin nerede olduğunu anlayın.
+ozet: Hassas veri dosya paylaşımlarına, çalışan bilgisayarlarına, posta kutularına ve bulut sürücülere yayılır. Korvia hassas dosyaların nerede durduğunu keşfeder, kimin erişebildiğini haritalar ve sızmadan önce gereğinden fazla açıkta veya bayat kalmış veriyi gösterir.
+cta:
+  etiket: Demo planlayın
+  url: /demo/
+bloklar:
+- discriminant: senaryo
+  value:
+    baslik: Bordro dökümü açık bir paylaşımda duruyor.
+    veri: Maaş ve IBAN bilgisi içeren bordro dökümü
+    kullanici: Finans ekibi (sahibi)
+    hedef: Herkesle paylaşılan NAS klasörü
+    politika: 'Bordro verisi: yalnızca sahipler'
+    karar: uyar
+    kararNotu: sahibine bildirildi
+- discriminant: metin
+  value:
+    eyebrow: ''
+    baslik: Veriyi bulmak ilk adım. Ne kadar açıkta olduğunu anlamak ikinci adım.
+    govde: 'Veri keşfi hassas dosyaların nerede durduğunu gösterir. DSPM bir adım öteye gider: dosyaların sahibini, kimin okuyabildiğini, hangi paylaşımların herkese açık olduğunu ve hangi dosyaların bayatladığını haritalar. Güvenlik ekibi böylece bir ihlal yaşanmadan aşırı açıklığı giderebilir.'
+- discriminant: adimlar
+  value:
+    baslik: DSPM nasıl çalışır?
+    ogeler:
+    - ikon: ''
+      baslik: Keşfet
+      metin: Uç noktaları, SMB/NFS ağ paylaşımlarını, SharePoint'i, posta kutularını ve bulut sürücüleri tarayın.
+    - ikon: ''
+      baslik: Sınıflandır
+      metin: Birebir veri eşleştirme, belge parmak izi, sağlama doğrulamalı kalıplar ve OCR ile hassas içeriği tanıyın.
+    - ikon: ''
+      baslik: Açıklığı değerlendir
+      metin: Dosya sahipliğini, açık paylaşımları, dış bağlantıları ve erişim izinlerini haritalayın.
+    - ikon: ''
+      baslik: Harekete geç
+      metin: Sahibine bildirin, dosyayı karantinaya alın veya şifreleyin ya da erişimi kısıtlayın.
+- discriminant: kartlar
+  value:
+    eyebrow: ''
+    baslik: Neleri gösterir?
+    aciklama: ''
+    ogeler:
+    - ikon: liste
+      baslik: Envanter
+      metin: Kişisel, finansal ve gizli verinin nerede durduğu; dosya dosya.
+    - ikon: paylasim
+      baslik: Sahipler ve erişim
+      metin: Her dosyanın sahibi, kimin okuma veya yazma yetkisi olduğu ve nasıl paylaşıldığı.
+    - ikon: paylasim
+      baslik: Açık paylaşımlar
+      metin: Herkesle veya dış bağlantıyla paylaşılan dosyalar.
+    - ikon: arsiv
+      baslik: Bayat veri
+      metin: Yıllardır açılmamış hassas dosyalar; arşivleyin veya imha edin.
+    - ikon: eposta
+      baslik: Posta kutusu arşivleri
+      metin: Exchange ve Microsoft 365 posta kutularında unutulmuş hassas ekler.
+    - ikon: liste
+      baslik: Kişisel veri envanteri
+      metin: Kişisel ve özel nitelikli kişisel verinin konuma göre güncel envanteri; KVKK ve denetim hazırlığı için.
+- discriminant: sss
+  value:
+    baslik: DSPM hakkında sorular
+    ogeler:
+    - soru: Veri Sınıflandırma'dan farkı ne?
+      cevap: Veri Sınıflandırma bilginin hassasiyetini ve bağlamını belirler. Veri Keşfi bu bilginin nerede olduğunu bulur; DSPM ise açıklık ve erişim riskini değerlendirir. Üçü birlikte, hangi bilginin neden ilgi gerektirdiğini gösterir.
+    - soru: Keşif verimizi taşır veya kopyalar mı?
+      cevap: Uç nokta ajanları dosyaları cihazda inceler; ağ paylaşımları (SMB ve NFS) yönetim cihazından taranır. Taranan içerik ve tespit edilen değerler bu cihazda kalır; cihaz kurum içi ve özel bulut kurulumlarında sizin belirlediğiniz altyapıda çalışır. Bağlı bulut kaynaklarında veri işleme, yapılandırılan entegrasyona ve mimariye bağlıdır.
+    - soru: Bir bulgudan sonra ne olur?
+      cevap: Güvenlik ekibi veri sahibine bildirebilir, dosyayı taşıyabilir veya karantinaya alabilir, şifreleyebilir, etiketi güncelleyebilir ya da inceleme vakası açabilir. Her düzeltme adımı denetim için kaydedilir.
+- discriminant: ilgili
+  value:
+    baslik: İlgili sayfalar
+    sayfalar:
+    - veri-siniflandirma
+    - tespit-motoru
+    - inceleme
+    - platform

@@ -1,0 +1,60 @@
+---
+/**
+ * Korvia uç nokta bildirimi: kullanıcının ekranında beliren uyarı kutusu.
+ * GuardStance bildiriminin Korvia kimliğiyle Türkçe sürümü.
+ */
+interface Props {
+  karar?: 'engelle' | 'uyar' | 'maskele' | string;
+  hedef: string;
+  uygulama?: string;
+  veriTuru: string;
+  veriDegeri: string;
+  class?: string;
+}
+const { karar = 'engelle', hedef, uygulama = 'A', veriTuru, veriDegeri, class: sinif = '' } = Astro.props;
+const METIN: Record<string, { baslik: string; govde: (h: string) => string }> = {
+  engelle: {
+    baslik: 'Aktarım engellendi',
+    govde: (h) => `<b>${h}</b> hedefine aktarım, kurumunuzun veri koruma politikası nedeniyle durduruldu ve yöneticinize bildirildi.`,
+  },
+  uyar: {
+    baslik: 'Gerekçe gerekiyor',
+    govde: (h) => `<b>${h}</b> hedefine gönderdiğiniz içerik hassas veri taşıyor. Devam etmek için bir iş gerekçesi yazın.`,
+  },
+  maskele: {
+    baslik: 'Hassas veri maskelendi',
+    govde: (h) => `İçeriğiniz <b>${h}</b> hedefine gönderildi. Hassas değerler gönderilmeden önce etiketle değiştirildi.`,
+  },
+};
+const m = METIN[karar] ?? METIN.engelle;
+const esc = (s: string) => s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]!);
+---
+<div class={`kuyari kuyari--${karar} ${sinif}`} role="img" aria-label={`Korvia bildirimi: ${m.baslik}. Hedef ${hedef}. Tespit edilen veri: ${veriTuru}.`}>
+  <div class="kuyari__ust">
+    <img src="/logo/korvia-yatay-renkli.svg" alt="" width="120" height="27" />
+    <span class="kuyari__kapat" aria-hidden="true">
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><path d="M4 4l8 8M12 4l-8 8" /></svg>
+    </span>
+  </div>
+  <div class="kuyari__govde">
+    <div class="kuyari__baslik">
+      <span class="kuyari__uyg">{uygulama.slice(0, 1).toUpperCase()}</span>
+      <strong>{m.baslik}</strong>
+    </div>
+    <p set:html={m.govde(esc(hedef))} />
+    <div class="kuyari__veri">
+      <span class="kuyari__etiket">Tespit edilen veri</span>
+      <span class="kuyari__deger"><b>{veriTuru}</b> <code>{veriDegeri}</code></span>
+    </div>
+    {karar === 'uyar' ? (
+      <div class="kuyari__gerekce">
+        <span>İş gerekçesi…</span>
+        <span class="kuyari__dugme">Gönder</span>
+      </div>
+    ) : (
+      <div class="kuyari__sayfa" aria-hidden="true">
+        <span>‹</span><b>1/1</b><span>›</span>
+      </div>
+    )}
+  </div>
+</div>

@@ -1,0 +1,120 @@
+---
+import { ayarlar } from '../lib/icerik';
+interface Props {
+  tur: string;
+  baslik: string;
+  aciklama?: string;
+  secenekBasligi?: string;
+  secenekler?: string[];
+  mesajEtiketi?: string;
+  gonderEtiketi?: string;
+}
+const { tur, baslik, aciklama, secenekBasligi, secenekler = [], mesajEtiketi = 'Mesajınız', gonderEtiketi = 'Gönderin' } = Astro.props;
+const a = await ayarlar();
+const id = `f-${tur}`;
+const alici = tur === 'iletisim' ? a.satisEposta : a.satisEposta;
+const cokluSecim = tur === 'demo';
+---
+<div class="iki-sutun">
+  <div class="bolum-baslik" style="margin:0">
+    <h2 class="h2">{baslik}</h2>
+    {aciklama && <p class="lead">{aciklama}</p>}
+    <div class="muted" style="font-size:15px;line-height:23px;margin-top:8px">
+      <p>Satış: <a href={`mailto:${a.satisEposta}`}>{a.satisEposta}</a></p>
+      <p>Destek: <a href={`mailto:${a.destekEposta}`}>{a.destekEposta}</a></p>
+      <p style="margin-top:8px">{a.adres}</p>
+    </div>
+  </div>
+  <form class="form" id={id} data-form data-tur={tur} data-adres={a.formAdresi || ''} data-alici={alici} novalidate>
+    {secenekler.length > 0 && (
+      <fieldset class="alan">
+        <legend>{secenekBasligi}</legend>
+        <div class="secenekler" style="margin-top:8px">
+          {secenekler.map((s, i) => (
+            <label class="secenek">
+              <input type={cokluSecim ? 'checkbox' : 'radio'} name="secim" value={s} checked={!cokluSecim && i === 0} />
+              <span>{s}</span>
+            </label>
+          ))}
+        </div>
+      </fieldset>
+    )}
+    <div class="form__satir">
+      <div class="alan">
+        <label for={`${id}-ad`}>Ad soyad</label>
+        <input id={`${id}-ad`} name="ad" autocomplete="name" required />
+      </div>
+      <div class="alan">
+        <label for={`${id}-eposta`}>İş e-postası</label>
+        <input id={`${id}-eposta`} name="eposta" type="email" autocomplete="email" inputmode="email" required />
+      </div>
+    </div>
+    <div class="form__satir">
+      <div class="alan">
+        <label for={`${id}-kurum`}>Kurum</label>
+        <input id={`${id}-kurum`} name="kurum" autocomplete="organization" required={tur !== 'iletisim'} />
+      </div>
+      <div class="alan">
+        <label for={`${id}-telefon`}>Telefon <span class="yardim">(isteğe bağlı)</span></label>
+        <input id={`${id}-telefon`} name="telefon" type="tel" autocomplete="tel" inputmode="tel" />
+      </div>
+    </div>
+    <div class="alan">
+      <label for={`${id}-mesaj`}>{mesajEtiketi}</label>
+      <textarea id={`${id}-mesaj`} name="mesaj" required={tur === 'iletisim' || tur === 'belge'}></textarea>
+    </div>
+    <label class="onay">
+      <input type="checkbox" name="kvkk" required />
+      <span><a href="/kvkk-aydinlatma/" target="_blank" rel="noopener">KVKK aydınlatma metnini</a> okudum. Bilgilerimin yalnızca bu talebi cevaplamak için işleneceğini biliyorum.</span>
+    </label>
+    <div class="form__durum" role="status" aria-live="polite" hidden></div>
+    <div><button class="btn btn--birincil" type="submit">{gonderEtiketi}</button></div>
+  </form>
+</div>
+
+<script>
+  document.querySelectorAll<HTMLFormElement>('[data-form]').forEach((form) => {
+    const durum = form.querySelector<HTMLElement>('.form__durum')!;
+    const goster = (tur: 'ok' | 'hata', metin: string) => {
+      durum.hidden = false;
+      durum.dataset.tur = tur;
+      durum.textContent = metin;
+    };
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const gecersiz = Array.from(form.querySelectorAll<HTMLInputElement>('input, textarea')).find((el) => !el.checkValidity());
+      if (gecersiz) {
+        gecersiz.focus();
+        const ad = gecersiz.name === 'kvkk' ? 'Devam etmek için aydınlatma metnini onaylayın.' : gecersiz.type === 'email' && gecersiz.value ? 'Geçerli bir e-posta adresi yazın.' : 'Zorunlu alanları doldurun.';
+        goster('hata', ad);
+        return;
+      }
+      const veri = new FormData(form);
+      const nesne: Record<string, string> = { tur: form.dataset.tur || '' };
+      veri.forEach((v, k) => { nesne[k] = nesne[k] ? `${nesne[k]}, ${v}` : String(v); });
+      const dugme = form.querySelector<HTMLButtonElement>('button[type=submit]')!;
+      const adres = form.dataset.adres;
+      if (!adres) {
+        const govde = Object.entries(nesne).filter(([k]) => k !== 'kvkk').map(([k, v]) => `${k}: ${v}`).join('\n');
+        window.location.href = `mailto:${form.dataset.alici}?subject=${encodeURIComponent('Korvia web: ' + nesne.tur)}&body=${encodeURIComponent(govde)}`;
+        goster('ok', 'E-posta uygulamanız açıldı. Mesajı oradan gönderebilirsiniz.');
+        return;
+      }
+      dugme.disabled = true;
+      dugme.textContent = 'Gönderiliyor…';
+      try {
+        const r = await fetch(adres, { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify(nesne) });
+        if (!r.ok) throw new Error(String(r.status));
+        form.reset();
+        goster('ok', 'Teşekkürler. Talebinizi aldık; en kısa sürede size dönüyoruz.');
+      } catch {
+        goster('hata', 'Gönderilemedi. Lütfen tekrar deneyin veya bize doğrudan e-posta yazın.');
+      } finally {
+        dugme.disabled = false;
+        dugme.textContent = dugme.dataset.etiket || 'Gönderin';
+      }
+    });
+    const d = form.querySelector<HTMLButtonElement>('button[type=submit]');
+    if (d) d.dataset.etiket = d.textContent || '';
+  });
+</script>

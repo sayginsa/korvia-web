@@ -1,0 +1,306 @@
+from ortak import *
+
+sayfa('platform', 'Platforma genel bakış', 'platform', 'platform', 1,
+      'Tek ajan ve tek konsol nasıl birlikte çalışır.',
+      'Platform', 'Hassas veriyi keşfetmekten politikayı uygulamaya.',
+      'Korvia veri keşfini, sınıflandırmayı, uç nokta ve ağ DLP\'sini ve yapay zekâ güvenliğini tek mimaride birleştirir. Güvenlik ekibi hassas veriyi bulur, nasıl hareket ettiğini denetler ve olayları tek konsoldan inceler.',
+      [
+          kartlar('Mimari dört parçadan oluşur.', [
+              ('Uç nokta ajanı', 'Keşif, sınıflandırma, uç nokta DLP ve yapay zekâ kanalı.'),
+              ('Ağ incelemesi', 'Giden e-posta ve web trafiği, çıkmadan önce incelenir.'),
+              ('Politika sunucusu', 'Kurallar, dizinler, kullanıcı dizini ve konsol.'),
+              ('Kanıt deposu', 'İmzalı olaylar, vakalar ve raporlar.'),
+          ], eyebrow='Mimari'),
+          kartlar('Üç kör nokta.', [
+              ('Kimsenin görmediği yapay zekâ araçları', 'USB denetleniyor ama yapay zekâ araçlarına ne gittiğini kimse görmüyor.'),
+              ('Karar vermeyen etiketler', 'Dosyanın üzerinde "Gizli" yazıyor ama politika bunu dikkate almıyor.'),
+              ('Bağlamı olmayan alarmlar', 'Analist nedenini öğrenmek için sistemler arasında dolaşıyor.'),
+          ], eyebrow='Sorun'),
+          adimlar('Keşfet. Sınıflandır. Koru. İncele.', [
+              ('Keşfet', 'Uç noktalarda, dosya paylaşımlarında, NAS\'ta, SharePoint\'te ve bulut sürücülerde hassas bilgiyi bulun.'),
+              ('Sınıflandır', 'İçeriği, bağlamı ve üst veriyi analiz ederek dosyaya kalıcı görsel ve teknik etiket uygulayın.'),
+              ('Koru', 'Veri kopyalandığı, yüklendiği, e-postayla gönderildiği veya bir komuta yapıştırıldığı anda DLP ve yapay zekâ politikalarını uygulayın.'),
+              ('İncele', 'İmzalı olayları, eşleşen tespitçileri, kullanıcı eylemlerini ve tüm bağlamı tek ekranda inceleyin.'),
+          ]),
+          metin('Alarm etrafında değil, politika etrafında kurulu.',
+                'Tespit, güvenlik ekibine bir bilginin hassas olabileceğini söyler. Sınıflandırma iş bağlamını ekler. Politika ise hangi eylemlere izin verileceğine, hangilerinin incelemeye düşeceğine ve hangilerinin durdurulacağına karar verir.\n\nKorvia keşfi, sınıflandırmayı ve uygulamayı tek motorda birleştirir; durağan etiketleri gerçek zamanlı koruma kararlarına dönüştürür.'),
+          ilgili('veri-siniflandirma', 'veri-kesfi-dspm', 'tespit-motoru', 'dlp', 'uc-nokta-dlp', 'ag-ve-e-posta-dlp', 'bulut-dlp', 'inceleme', 'kurulum', baslik='Modüller'),
+          notkutu('Bilerek kapsam dışında bırakılanlar', 'Korvia bir EDR, güvenlik duvarı veya SIEM değildir. Sizinkilerle birlikte çalışır.'),
+      ],
+      seoBaslik='Platform | Veri Keşfi, Sınıflandırma, DLP ve Yapay Zekâ Güvenliği | Korvia')
+
+sayfa('veri-siniflandirma', 'Veri Sınıflandırma', 'platform/veri-siniflandirma', 'platform', 2,
+      'Dosyaları içerik, bağlam, mevcut üst veri ve özel kurallarla sınıflandırın.',
+      'Platform · Veri sınıflandırma', 'Verinizi tanıyın. Güvenle sınıflandırın.',
+      'Hassas bilgi nadiren tutarlı biçimde etiketlenir. Korvia Veri Sınıflandırma ortamınızdaki veriyi keşfeder ve içerik incelemesi, bağlam analizi, mevcut MIP etiketleri ve özel kurallarla kalıcı hassasiyet etiketleri uygular.',
+      [
+          senaryo('Sıradan görünen bir dosya müşteri verisi taşıyor.', 'Genel adlı, müşteri kayıtları içeren tablo',
+                  'Paylaşmaya hazırlanan çalışan', 'Dış e-posta veya bulut yüklemesi', 'Müşteri verisi "Gizli"dir', 'kaydet', 'içeriğine göre sınıflandırıldı'),
+          metin('Dosyanın adına değil, içine bakan politika.',
+                'Bir çalışan müşteri bilgisi içeren bir tabloyu paylaşmaya hazırlanıyor. Dosyanın adı sıradan ama içeriği tanımlı bir hassas veri sınıflandırma politikasıyla eşleşiyor.\n\nKorvia sınıflandırma etiketini her kanaldaki koruma kararında hemen kullanır. Politikalar dosyanın adına değil, içinde gerçekte ne olduğuna göre çalışır.'),
+          adimlar('Sınıflandırma nasıl çalışır?', [
+              ('Tara', 'Uç noktaları, dosya sunucularını, NAS\'ı, SharePoint\'i ve bulut sürücüleri zamanlanmış veya sürekli tarayın.'),
+              ('Tanı', 'İçerik, bağlam, mevcut etiketler ve kendi kurallarınız dosyanın ne olduğuna karar verir.'),
+              ('Etiketle', 'Görsel etiket ve üst veri etiketi dosyayla birlikte taşınır.'),
+              ('Uygula', 'Dosya hareket ettiği anda DLP politikaları etiketi kullanır.'),
+          ]),
+          kartlar('Neleri kapsar?', [
+              ('Her yerde keşif', 'Uç noktalar, dosya sunucuları, NAS, SharePoint ve bulut sürücüler; aynı ajanla.'),
+              ('Görsel ve üst veri etiketleri', 'Üst bilgi, alt bilgi veya filigran ile birlikte bir üst veri etiketi.'),
+              ('Otomatik veya kullanıcı seçimi', 'Etiketi içerik belirler ya da kullanıcı kaydederken seçer.'),
+              ('Yanlış etiketlenmiş dosyalar', '"Genel" işaretli ama kart numarası taşıyan bir dosya işaretlenir.'),
+              ('Düzeltme', 'Taşıyın, karantinaya alın, şifreleyin, sahibine bildirin veya vaka açın.'),
+              ('Erişim raporları', 'Herkesle paylaşılan dosyalar, dış bağlantılar ve bayat veri.'),
+          ]),
+          sss('Veri Sınıflandırma hakkında sorular', [
+              ('Sınıflandırma ve DLP neden aynı üründe?', 'Her etiket, uygulama politikalarının kullanabileceği bir sinyaldir. Aynı ajan dosyayı etiketleyip daha sonra hareket ettiğini gördüğünde karar, dosyanın yalnızca nereye gittiğine değil gerçekte ne olduğuna dayanır. Tek yaygınlaştırma, sürdürülecek tek politika.'),
+              ('Microsoft duyarlılık etiketleriyle çalışır mı?', 'Evet. Platform etiketleri Office belgelerindeki Microsoft duyarlılık (MIP) etiketleriyle eşlenebilir; mevcut etiketler sınıflandırmada sinyallerden biri olarak okunur. Diğer etiketleme araçlarıyla birlikte çalışma POC\'de doğrulanır.'),
+              ('Çalışanlar taramaları fark eder mi?', 'Keşif zamanlanmış veya sürekli çalışır ve hızı sınırlanır; çalışanlar işine devam eder. Sonuçlar konsolda, hassas verinin nerede durduğunu, kimin sahibi olduğunu ve kimin erişebildiğini gösteren bir envanter olarak görünür.'),
+          ]),
+          ilgili('veri-kesfi-dspm', 'tespit-motoru', 'dlp', 'platform'),
+      ])
+
+sayfa('veri-kesfi-dspm', 'Veri Keşfi ve DSPM', 'platform/veri-kesfi-dspm', 'platform', 3,
+      'Hassas verinin nerede durduğunu ve kimin erişebildiğini bulun.',
+      'Platform · Veri keşfi ve DSPM', 'Hassas veriyi bulun. Riskin nerede olduğunu anlayın.',
+      'Hassas veri dosya paylaşımlarına, çalışan bilgisayarlarına, posta kutularına ve bulut sürücülere yayılır. Korvia hassas dosyaların nerede durduğunu keşfeder, kimin erişebildiğini haritalar ve sızmadan önce gereğinden fazla açıkta veya bayat kalmış veriyi gösterir.',
+      [
+          senaryo('Bordro dökümü açık bir paylaşımda duruyor.', 'Maaş ve IBAN bilgisi içeren bordro dökümü',
+                  'Finans ekibi (sahibi)', 'Herkesle paylaşılan NAS klasörü', 'Bordro verisi: yalnızca sahipler', 'uyar', 'sahibine bildirildi'),
+          metin('Veriyi bulmak ilk adım. Ne kadar açıkta olduğunu anlamak ikinci adım.',
+                'Veri keşfi hassas dosyaların nerede durduğunu gösterir. DSPM bir adım öteye gider: dosyaların sahibini, kimin okuyabildiğini, hangi paylaşımların herkese açık olduğunu ve hangi dosyaların bayatladığını haritalar. Güvenlik ekibi böylece bir ihlal yaşanmadan aşırı açıklığı giderebilir.'),
+          adimlar('DSPM nasıl çalışır?', [
+              ('Keşfet', 'Uç noktaları, SMB/NFS ağ paylaşımlarını, SharePoint\'i, posta kutularını ve bulut sürücüleri tarayın.'),
+              ('Sınıflandır', 'Birebir veri eşleştirme, belge parmak izi, sağlama doğrulamalı kalıplar ve OCR ile hassas içeriği tanıyın.'),
+              ('Açıklığı değerlendir', 'Dosya sahipliğini, açık paylaşımları, dış bağlantıları ve erişim izinlerini haritalayın.'),
+              ('Harekete geç', 'Sahibine bildirin, dosyayı karantinaya alın veya şifreleyin ya da erişimi kısıtlayın.'),
+          ]),
+          kartlar('Neleri gösterir?', [
+              ('Envanter', 'Kişisel, finansal ve gizli verinin nerede durduğu; dosya dosya.'),
+              ('Sahipler ve erişim', 'Her dosyanın sahibi, kimin okuma veya yazma yetkisi olduğu ve nasıl paylaşıldığı.'),
+              ('Açık paylaşımlar', 'Herkesle veya dış bağlantıyla paylaşılan dosyalar.'),
+              ('Bayat veri', 'Yıllardır açılmamış hassas dosyalar; arşivleyin veya imha edin.'),
+              ('Posta kutusu arşivleri', 'Exchange ve Microsoft 365 posta kutularında unutulmuş hassas ekler.'),
+              ('Kişisel veri envanteri', 'Kişisel ve özel nitelikli kişisel verinin konuma göre güncel envanteri; KVKK ve denetim hazırlığı için.'),
+          ]),
+          sss('DSPM hakkında sorular', [
+              ('Veri Sınıflandırma\'dan farkı ne?', 'Veri Sınıflandırma bilginin hassasiyetini ve bağlamını belirler. Veri Keşfi bu bilginin nerede olduğunu bulur; DSPM ise açıklık ve erişim riskini değerlendirir. Üçü birlikte, hangi bilginin neden ilgi gerektirdiğini gösterir.'),
+              ('Keşif verimizi taşır veya kopyalar mı?', 'Uç nokta ajanları dosyaları cihazda inceler; ağ paylaşımları (SMB ve NFS) yönetim cihazından taranır. Taranan içerik ve tespit edilen değerler bu cihazda kalır; cihaz kurum içi ve özel bulut kurulumlarında sizin belirlediğiniz altyapıda çalışır. Bağlı bulut kaynaklarında veri işleme, yapılandırılan entegrasyona ve mimariye bağlıdır.'),
+              ('Bir bulgudan sonra ne olur?', 'Güvenlik ekibi veri sahibine bildirebilir, dosyayı taşıyabilir veya karantinaya alabilir, şifreleyebilir, etiketi güncelleyebilir ya da inceleme vakası açabilir. Her düzeltme adımı denetim için kaydedilir.'),
+          ]),
+          ilgili('veri-siniflandirma', 'tespit-motoru', 'inceleme', 'platform'),
+      ])
+
+sayfa('tespit-motoru', 'Tespit Motoru', 'platform/tespit-motoru', 'platform', 4,
+      'Parmak izi, birebir veri eşleştirme, görsellerde OCR.',
+      'Platform · Tespit motoru', 'İçeriğin ne zaman hassas olduğunu bilin.',
+      'Güvenilir veri koruması bir dosyanın, görselin veya komutun gerçekte ne içerdiğini bilmekle başlar. Korvia Tespit Motoru birebir veri eşleştirme, belge parmak izi, sağlama doğrulaması, sınıflandırıcılar ve OCR\'ı birleştirerek yanlış alarmı azaltır.',
+      [
+          senaryo('Fiyat modelinin tek bir paragrafı dışarı çıkıyor.', 'Parmak izi alınmış fiyat modelinden bir paragraf',
+                  'Müşteri temsilcisi', 'Kişisel web postası', 'Fiyat modeli: parmak izi eşleşmesi ve dış alıcı', 'engelle', 'kısmi kopya yakalandı'),
+          metin('Tespit kalitesi bağlama bağlıdır.',
+                'Hassas veri tespiti bir anahtar kelime araması değildir. Bilginin biçimi, eşleştirme yöntemi ve politika koşulları, bir olayın önemli olup olmadığını birlikte belirler.\n\nKorvia güvenlik ekiplerinin birden çok tespit sinyalini, eşiği ve alıcı kuralını tek politikada birleştirmesine izin verir. Aynı motor hem sınıflandırmayı hem gerçek zamanlı DLP uygulamasını besler.'),
+          adimlar('Nasıl karar verir?', [
+              ('Önemli olanı dizinle', 'Veritabanlarınız ve referans belgeleriniz ağınızın içinde dizinlenir.'),
+              ('Yöntemleri birleştir', 'Her politika ihtiyaç duyduğu yöntemleri ve eşikleri seçer.'),
+              ('Eşleştir', 'İçerik, görseller ve arşivler dahil, hareket ederken kontrol edilir.'),
+              ('Açıkla', 'Her olay hangi kuralın neden eşleştiğini söyler.'),
+          ]),
+          kartlar('Hangi yöntemleri kullanır?', [
+              ('Birebir veri eşleştirme', 'Kalıplar değil; CRM, İK veya ana bankacılık dökümlerinizdeki kayıtlar.'),
+              ('Belge parmak izi', 'Referans belgelerin tamamı veya tek bir paragrafa kadar kısmi kopyaları.'),
+              ('Doğrulanmış kalıplar', 'Kart, T.C. kimlik, IBAN ve pasaport numaraları; sağlama doğrulamasıyla.'),
+              ('Sınıflandırıcılar', 'Kaynak kod, mali tablolar, sözleşmeler, özgeçmişler ve teknik çizimler.'),
+              ('OCR', 'Görsellerdeki, taramalardaki ve ekran görüntülerindeki metin okunur ve kontrol edilir.'),
+              ('Eşikler ve birleşimler', 'Örneğin "50\'den fazla kayıt" veya "parmak izi artı dış alıcı".'),
+          ]),
+          sss('Tespit Motoru hakkında sorular', [
+              ('Neden bir yakalama oranı yayımlamıyorsunuz?', 'Başkasının verisinde ölçülen bir yakalama oranı sizinki hakkında çok az şey söyler. Yöntemler POC sırasında sizin ortamınızda ayarlanır ve sonuçları kendi dosyalarınızda görürsünüz. Bir oran değil, yöntemlerimizi yayımlıyoruz.'),
+              ('Dizinleme verimizi bir yere gönderir mi?', 'Hayır. Birebir eşleştirme ve parmak izi dizinleri politika sunucunuzda oluşturulur ve saklanır. Kurum içi sürümlerde ağınızdan hiç çıkmaz; konsol hangi kaynakların ne zaman dizinlendiğini gösterir.'),
+              ('Tek politika birden çok yöntem kullanabilir mi?', 'Evet. Bir politika parmak izi eşleşmesi ile dış alıcıyı, belirli sayının üzerinde kaydı veya sınıflandırıcı sonucu ile etiketi birlikte şart koşabilir. Her politikanın kendi birleşimi vardır; tek bir ayarın her veri türüne uyması gerekmez.'),
+          ]),
+          ilgili('veri-siniflandirma', 'veri-kesfi-dspm', 'dlp', 'yapay-zeka-guvenlik-duvari'),
+      ])
+
+sayfa('dlp', 'DLP\'ye genel bakış', 'platform/dlp', 'platform', 5,
+      'Uç nokta, ağ ve bulutta hassas veriyi tespit edip politikayı uygulayın.',
+      'DLP · Politikaya dayalı veri koruması', 'Politikaya göre hareket eden veri sızıntısı önleme.',
+      'Hassas veri gündelik işin içinde sürekli hareket eder. Korvia DLP politika ihlallerini gerçek zamanlı tespit eder ve uç noktalarda, e-postada, web yüklemelerinde, bulut uygulamalarında ve yapay zekâ araçlarında ayrıntılı denetim uygular.',
+      [
+          senaryo('Yeni ürünün çizimi USB belleğe kopyalanıyor.', 'Yeni ürünün CAD çizimi', 'Tasarım mühendisi',
+                  'USB bellek', 'Mühendislik fikri mülkiyeti: gerekçe iste', 'uyar', 'kullanıcıdan gerekçe istendi, gerekçe kaydedildi'),
+          metin('Tek hassas dosya. Farklı iş eylemleri.',
+                'Gizli bir belge USB belleğe kopyalansa da, e-postaya eklense de, tarayıcıdan yüklense de veya bir yapay zekâ aracına yapıştırılsa da Korvia dosyanın içeriğini, kullanıcı bağlamını ve hedefi tek politika altında değerlendirir.\n\nGüvenlik ekipleri sessiz izlemeden kullanıcı gerekçesine ve engellemeye kadar kademeli yanıtlar uygulayabilir; her adım denetim kanıtıyla birlikte.'),
+          karar('Tespitten doğru yanıta.',
+                'Her politika ihlali aynı yanıtı gerektirmez. Bazı eylemler izlenmeli, bazıları uyarı veya ek bağlam istemeli, bazıları hemen durdurulmalıdır.',
+                'Kullanıcıyı kesintiye uğratmadan hassas verinin nasıl hareket ettiğini görün.',
+                'Kullanıcıya politika açıklamasını gösterin ve devam etmek için iş gerekçesi isteyin.',
+                'İmzalı denetim olaylarını, eşleşen tespitçileri ve inceleme kanıtını saklayın.',
+                'İzinsiz aktarımı hassas veri kontrolünüzden çıkmadan önce durdurun.'),
+          adimlar('Tek politika nasıl karar verir?', [
+              ('Veriyi tanı', 'Etiketler ve Tespit Motoru dosyanın gerçekte ne olduğunu söyler.'),
+              ('Kanalı gör', 'USB, yazdırma, e-posta, web, bir bulut uygulaması veya bir yapay zekâ komutu.'),
+              ('Karar ver', 'Veri, kullanıcı ve hedefe göre izle, uyar, kaydet veya engelle.'),
+              ('Açıkla', 'Kullanıcı nedenini, analist kanıtı görür.'),
+          ]),
+          kartlar('Korvia veriyi nerede korur?', [
+              ('Uç nokta', 'USB, yazdırma, pano, ekran görüntüsü, eşitleme klasörleri ve tarayıcı yüklemeleri.'),
+              ('E-posta', 'Giden e-postaları ve ekleri inceleyerek yanlışlıkla veya izinsiz ifşayı önleyin.'),
+              ('Web ve ağ', 'Dışarı çıkan yüklemeler, web postası ve mesajlaşma.'),
+              ('Bulut uygulamaları', 'Bağlı bulut uygulamalarında yüklemeyi, indirmeyi ve dış paylaşımı denetleyin.'),
+              ('Yapay zekâ uygulamaları', 'Komutlar ve yüklemeler diğer kanallar gibi kontrol edilir.'),
+              ('Durağan veri', 'Veri hareket etmeden önce uç noktalarda, sunucularda ve paylaşımlarda tarayın ve sınıflandırın.'),
+          ]),
+          sss('Korvia DLP hakkında sorular', [
+              ('Veri sınıflandırma DLP\'yi nasıl iyileştirir?', 'Sınıflandırma dosyanın kendisine kalıcı bir hassasiyet sinyali ekler. DLP politikaları aktarım anında yalnızca düzenli ifadelere veya dosya adına dayanmak yerine dosyanın etiketine, içeriğine ve kullanıcı bağlamına göre hemen hareket eder. Bu, yanlış alarmı belirgin biçimde azaltır.'),
+              ('İlk günden engellemek zorunda mıyız?', 'Hayır. Kademeli yaklaşımda güvenlik ekibi izlemeyle başlar, sonuçları inceler ve uyarı veya engellemeye geçmeden politikaları ayarlar. Uygun uygulama seviyesi bilginin hassasiyetine ve iş akışına bağlıdır.'),
+              ('Veri Sınıflandırma ile DLP arasındaki fark ne?', 'Veri Sınıflandırma bir dosyanın ne olduğunu belirler ve onu (görsel olarak ve üst veride) etiketler. DLP ise biri o dosyayı USB\'ye kopyalamaya, yazdırmaya, e-postayla göndermeye, buluta yüklemeye veya bir yapay zekâ aracına yapıştırmaya çalıştığında ne olabileceğini uygular.'),
+          ]),
+          ilgili('uc-nokta-dlp', 'ag-ve-e-posta-dlp', 'bulut-dlp', 'veri-siniflandirma'),
+      ])
+
+sayfa('uc-nokta-dlp', 'Uç Nokta DLP', 'platform/dlp/uc-nokta', 'platform', 6,
+      'USB, yazdırma, pano, tarayıcı yüklemeleri.',
+      'Platform · Uç nokta DLP', 'Çalışan cihazlarındaki hassas veriyi koruyun.',
+      'Hassas veri çalışan cihazlarında oluşturulur, düzenlenir, kopyalanır ve paylaşılır. Korvia Uç Nokta DLP; USB aktarımlarını, yazdırmayı, pano yapıştırmalarını, ekran görüntülerini, eşitleme klasörlerini ve tarayıcı yüklemelerini, cihaz ağa bağlı olsun olmasın inceler.',
+      [
+          senaryo('Müşteri kayıtları bir sohbet uygulamasına gidiyor.', 'CRM\'den kopyalanan müşteri kayıtları',
+                  'Müşteri hizmetleri temsilcisi', 'Masaüstündeki mesajlaşma uygulaması', 'Kişisel veri kurum dışına çıkıyor', 'engelle', 'yapıştırma durduruldu, nedeni gösterildi'),
+          metin('Gizli bir dosya çıkarılabilir belleğe gittiğinde.',
+                'Bir kullanıcı sınıflandırılmış bir belgeyi USB belleğe kopyalamaya çalışır. Uç nokta politikası eylemi değerlendirir ve aktarıma izin verilip verilmeyeceğine, kaydedileceğine veya engelleneceğine karar verir.\n\nHer karar; eşleşen içerik, kullanıcı gerekçesi, cihaz bilgisi ve politika bağlamıyla birlikte hemen incelenebilecek biçimde kaydedilir.'),
+          adimlar('Uç Nokta DLP nasıl çalışır?', [
+              ('Çıkışları izle', 'Ajan USB\'yi, yazdırmayı, panoyu, ekran görüntüsünü, eşitleme istemcilerini ve yüklemeleri görür.'),
+              ('İçeriği oku', 'Tespit motoru yalnızca verinin nereye gittiğine değil, ne olduğuna bakar.'),
+              ('Tek politika uygula', 'Aynı kural karar verir: izle, uyar, kaydet veya engelle.'),
+              ('Kanıtı sakla', 'Her karar neyin neden eşleştiğiyle birlikte kaydedilir.'),
+          ]),
+          kartlar('Neleri kapsar?', [
+              ('Çıkarılabilir bellek', 'Yalnızca okuma, engelleme veya cihaz kimliğine göre izin.'),
+              ('Yazdırma', 'Sanal yazıcılar ve PDF\'e yazdırma dahil.'),
+              ('Pano ve ekran görüntüsü', 'Uygulama bazında kurallar.'),
+              ('Eşitleme istemcileri ve yüklemeler', 'OneDrive, Google Drive, Dropbox ve tarayıcı yüklemeleri.'),
+              ('Ağ dışı politika', 'Dizüstü bilgisayar ofisten çıktığında da politika geçerli kalır.'),
+              ('Kullanıcı bildirimleri', 'Politikaya göre uyarın, gerekçe isteyin veya sessizce engelleyin.'),
+          ]),
+          sss('Uç Nokta DLP hakkında sorular', [
+              ('Ayrı bir ajan mı?', 'Hayır. Aynı ajan hassas veriyi bulur ve etiketler; tek yaygınlaştırma, tek güncelleme kanalı ve yardım masasının bilmesi gereken tek bileşen. Keşif, sınıflandırma ve uygulama tek politikayı ve tek kanıt deposunu paylaşır.'),
+              ('Kurum ağı dışında da çalışır mı?', 'Evet. Ajan politikanın bir kopyasını saklar ve yoldayken de uygulamaya devam eder. Kanıt, cihaz politika sunucusuna yeniden ulaştığında yüklenir.'),
+              ('Kullanıcı ne görür?', 'Politikaya bağlıdır. Kullanıcı kısa bir uyarı alabilir, iş gerekçesi istenebilir veya eylemin engellendiğini ve nedenini görebilir. Kuralları ayarlarken sessiz izleme de mümkündür.'),
+          ]),
+          ilgili('dlp', 'veri-siniflandirma', 'yapay-zeka-guvenlik-duvari', 'inceleme'),
+      ])
+
+sayfa('ag-ve-e-posta-dlp', 'Ağ ve E-posta DLP', 'platform/dlp/ag-ve-e-posta', 'platform', 7,
+      'Giden e-postayı, web yüklemelerini ve ağ trafiğini veri çıkmadan inceleyin.',
+      'Platform · Ağ ve e-posta DLP', 'İş yazışmalarındaki hassas veriyi koruyun.',
+      'E-posta ve web yüklemeleri, yanlışlıkla oluşan veri sızıntılarının başlıca kanalları olmaya devam ediyor. Korvia giden e-postaları, ekleri ve web trafiğini inceleyerek izinsiz ifşayı önler.',
+      [
+          senaryo('Fiyat listesi kişisel bir adrese gidiyor.', 'Müşteri fiyat listesi, Gizli', 'Satış temsilcisi',
+                  'Kişisel web postası adresi', 'Gizli fiyatlandırma: yalnızca kurum içi alıcılar', 'engelle', 'durduruldu, gönderene nedeni gösterildi'),
+          metin('İçerik çıkmadan önce ne olduğunu anlayın.',
+                'Yanlış adreslenmiş bir e-posta veya izinsiz bir dosya aktarımı, kötü niyet olmadan da bir veri ifşası olayına dönüşebilir.\n\nİçeriğe duyarlı politikalar mesaj gövdesini, ekleri ve alıcı alan adlarını gerçek zamanlı değerlendirir. Meşru dış iş birliğine izin verirken yanlış yönlendirilmiş veya izinsiz aktarımları durdurur.'),
+          adimlar('Nasıl çalışır?', [
+              ('Giden trafiği incele', 'Giden posta ve web yüklemeleri çıkmadan önce kontrol edilir.'),
+              ('İçeriği oku', 'Yalnızca hedef değil; gövde, ekler ve yüklemeler kontrol edilir.'),
+              ('Alıcıya göre karar ver', 'Aynı dosya müşteriye gidebilir, kişisel gelen kutusuna gidemez.'),
+              ('Harekete geç', 'Engelle, uyar, gerekçe iste veya kaydet.'),
+          ]),
+          kartlar('Neleri kapsar?', [
+              ('Giden e-posta', 'Outlook\'ta ve SMTP üzerinden engelle, uyar, gerekçe iste veya kaydet.'),
+              ('Web yüklemeleri', 'Web postası, bulut depolama, sosyal medya ve mesajlaşma web istemcileri.'),
+              ('Dosya aktarımı', 'FTP ve SFTP ağ seviyesinde engellenir, içerik okunmaz.'),
+              ('Posta platformları', 'Microsoft 365, Google Workspace ve Exchange.'),
+              ('Yanlış alıcı', 'Kurum içi veri dış bir adrese gitmek üzereyken uyarı.'),
+          ]),
+          sss('Ağ ve E-posta DLP hakkında sorular', [
+              ('Ofis dışındaki dizüstü bilgisayarlar ne olacak?', 'Aynı ajan onları da kapsar. Masaüstü istemciden gönderilen posta ve evdeki bir dizüstünden yapılan yüklemeler ofisteki politikaya tabidir; kanıt, cihaz yeniden bağlandığında politika sunucusuna ulaşır.'),
+              ('E-posta da diğer kanallarla aynı kurallara mı tabi?', 'Evet. Outlook eklentisi ve SMTP; USB, web ve bulutla aynı sıralı kural tablosunu kullanır. Dosya her kanalda aynı politikayı taşır; hangi yoldan çıkmaya çalışırsa çalışsın kanıt tek yerde toplanır.'),
+          ]),
+          ilgili('dlp', 'uc-nokta-dlp', 'bulut-dlp', 'tespit-motoru'),
+      ])
+
+sayfa('bulut-dlp', 'Bulut DLP', 'platform/dlp/bulut', 'platform', 8,
+      'Bulut uygulamalarında paylaşımı, yüklemeyi ve indirmeyi denetleyin.',
+      'Platform · Bulut DLP', 'Veri korumasını bulut iş akışlarına taşıyın.',
+      'İş verisi SaaS uygulamaları ve bulut sürücüler arasında sürekli hareket eder. Korvia Bulut DLP onaysız uygulamaları (gölge BT) keşfeder, kurumsal kiracıyı kişisel hesaptan ayırır ve yüklemeyi, indirmeyi ve dış paylaşımı denetler.',
+      [
+          senaryo('Bir sözleşme onaysız bir uygulamaya gidiyor.', 'Müşteri sözleşmesi', 'Müşteri temsilcisi',
+                  'Onaysız dosya paylaşım uygulaması', 'Sözleşmeler: yalnızca onaylı uygulamalar', 'uyar', 'onaylı uygulama önerildi'),
+          metin('İş bağlamını kaybetmeden paylaşımı denetleyin.',
+                'Bulut güvenliği bir uygulamayı tanımaktan fazlasını gerektirir. Güvenlik ekipleri hangi bilginin söz konusu olduğunu, hangi eylemin gerçekleştiğini ve hangi yanıtın uygun olduğunu bilmelidir.\n\nKorvia uç nokta incelemesini Microsoft 365, Google Workspace, Box ve Salesforce için doğrudan API taramasıyla birleştirir; bulutta ve kurum içinde aynı veri politikalarını uygular.'),
+          adimlar('Nasıl çalışır?', [
+              ('Uygulamaları bul', 'Kullanılan her SaaS uygulaması; onaylı olsun olmasın.'),
+              ('Veriyi tanı', 'Etiketler ve Tespit Motoru neyin yüklendiğini söyler.'),
+              ('Uygulama bazında kural koy', 'Yükleme, indirme ve paylaşım; uygulama uygulama.'),
+              ('Raporla', 'Gölge BT raporu kimsenin onaylamadığı uygulamaları listeler.'),
+          ]),
+          kartlar('Neleri kapsar?', [
+              ('Uygulama kataloğu', 'Kategoriler ve risk notları; kendi kayıtlarınızı da ekleyin.'),
+              ('Uygulama bazında kurallar', 'Her uygulama için yükleme, indirme ve paylaşım.'),
+              ('Kurumsal veya kişisel hesap', 'Servisin ayırt ettiği yerde farklı kurallar.'),
+              ('Durağan veri', 'Microsoft 365, Google Workspace, Box ve Salesforce için API taraması.'),
+              ('Gölge BT raporu', 'Kimsenin onaylamadığı, kullanımdaki uygulamalar.'),
+              ('Yapay zekâ servisleri dahil', 'Yapay zekâ araçları aynı katalogda; Yapay Zekâ Veri Güvenliği komut denetimi ekler.'),
+          ]),
+          sss('Bulut DLP hakkında sorular', [
+              ('Bu bir CASB mi?', 'Hayır, olmaya da çalışmıyor. Bulut DLP, zaten kullandığınız uygulamalar için veri koruma katmanıdır: verinin ne olduğunu bilir ve diğer kanallarla aynı politikayı, kurulacak ayrı bir ürün olmadan uygular.'),
+              ('Bulut uygulamalarını nasıl görür?', 'Her cihazdan yapılan yüklemelere aynı politikayı uygulayan uç nokta ajanıyla. Büyük SaaS platformlarında zaten duran veri de, taşınmadan, kendi API\'leri üzerinden taranabilir.'),
+              ('Yapay zekâ araçları burada kapsanıyor mu?', 'Evet. Yapay zekâ servisleri diğer bulut uygulamalarıyla aynı katalogdadır; yükleme kuralları onlara da uygulanır. Yapay Zekâ Veri Güvenliği bu kuralların üzerine maskeleme gibi komut seviyesinde denetimler ekler.'),
+          ]),
+          ilgili('dlp', 'ag-ve-e-posta-dlp', 'yapay-zeka-veri-guvenligi', 'veri-kesfi-dspm'),
+      ])
+
+sayfa('inceleme', 'İnceleme', 'platform/inceleme', 'platform', 9,
+      'Kim, ne, nereye ve hangi politika; tek ekranda.',
+      'Platform · İnceleme', 'Hassas veriye ne olduğunu anlayın.',
+      'Bağlamı olmayan bir alarm analistin zamanını harcar. Korvia İnceleme dosya etkinlik kayıtlarını, kullanıcı davranış sinyallerini, eşleşen tespitçileri ve imzalı kanıtı tek görünümde toplar; analistler olayları hızla sonuçlandırır.',
+      [
+          senaryo('Ayrılmak üzere olan bir çalışan her zamankinden çok fazla dosya indiriyor.', 'Müşteri dosyaları ve fiyat listeleri',
+                  'Müşteri temsilcisi, gelecek hafta ayrılıyor', 'Kişisel bulut sürücü', 'Gizli veri aktarım politikası', 'kaydet', 'olay kaydedildi, analiste bildirildi'),
+          metin('Bir olay, incelemenin başlangıcıdır.',
+                'Bir politika ihlali otomatik olarak kötü niyet anlamına gelmez. Güvenlik ekibinin hangi bilginin söz konusu olduğunu, politikayı hangi eylemin tetiklediğini ve ardından hangi yanıtın verildiğini anlaması gerekir.\n\nKorvia bir dosyanın çevresindeki tüm zaman çizelgesini gösterir: kim oluşturdu, yeniden adlandırdı, kopyaladı veya yükledi. İnceleyenler masum hatayı gerçek içeriden riskten hızla ayırır.'),
+          adimlar('İnceleme nasıl yürür?', [
+              ('Etkinliği kaydet', 'Sınıflandırılmış dosyaları kim açtı, kopyaladı, yeniden adlandırdı, yazdırdı veya taşıdı.'),
+              ('Bağlamı ekle', 'Olayın çevresindeki kullanıcı, cihaz, hedef ve davranış sinyalleri.'),
+              ('Politikayı kontrol et', 'Hangi politika neden tetiklendi.'),
+              ('Olayı incele', 'Kaydedilen olayları ve destekleyici kanıtı değerlendirin.'),
+          ]),
+          kartlar('Analist neler görür?', [
+              ('Dosya etkinlik kaydı', 'Uç noktalarda ve sunucularda sınıflandırılmış veri üzerindeki her eylem.'),
+              ('Politika bağlamı', 'Hangi kural eşleşti, hangi tespitçi tetiklendi ve tam olarak hangi eşiğe ulaşıldı.'),
+              ('Etkinlik ayrıntıları', 'Kullanıcı kimliği, uç nokta adı, uygulama, hedef hesap ve zaman damgası.'),
+              ('Davranış sinyalleri', 'Dosya hareketi ve kullanıcı davranışı, olay bağlamında.'),
+              ('İmzalı kanıt', 'Her olay neyin eşleştiğini, hangi kuralın ve nedenini söyler.'),
+              ('Vaka yönetimi', 'İlgili olayları vakalarda toplayın, inceleyen atayın ve imzalı denetim raporları dışa aktarın.'),
+          ]),
+          sss('İnceleme hakkında sorular', [
+              ('Bu çalışan gözetimi mi?', 'Hayır. İçerik yalnızca bir politika eşleştiğinde kaydedilir. Amaç insanları izlemek değil, hassas verinin çevresinde ne olduğunu anlamaktır. Bir politika olayı bir çalışan hakkında hüküm değil, adil bir incelemenin başlangıç noktasıdır.'),
+              ('Denetçiye ne gösterebiliriz?', 'Her olay neyin tespit edildiğini, hangi kuralın neden eşleştiğini, kullanıcıyı, hedefi ve uygulanan eylemi taşır. Olaylar imzalıdır; denetçiye gösterdiğiniz şey gerçekte olandır. Rapor şablonları KVKK, PCI DSS ve ISO 27001 kapsamındadır.'),
+              ('Eski DLP politikalarımızı içe aktarabilir miyiz?', 'Evet. Geçişi kısaltmak için politikalar diğer DLP ürünlerinden içe aktarılabilir; boş bir sayfadan başlamazsınız. İçe aktarım POC sırasında kontrol edilir ve ayarlanır.'),
+          ]),
+          ilgili('veri-kesfi-dspm', 'veri-siniflandirma', 'dlp', 'platform'),
+      ])
+
+sayfa('kurulum', 'Kurulum seçenekleri', 'platform/kurulum', 'platform', 10,
+      KURULUM_ACIKLAMA,
+      'Platform · Kurulum', 'Varsayılan olarak kurum içinde. Gerisi sizin tercihiniz.',
+      'Korvia önce kurum içi çalışacak biçimde tasarlandı; çünkü DLP\'ye en çok ihtiyaç duyan kurumlar çoğu zaman verisini başkasının bulutuna gönderemez. Yönetilen sürümler aynı kodu çalıştırır.',
+      [
+          tablo('Dört sürüm, tek lisans.', ['', 'Kurum içi', 'Özel bulut', 'Yönetilen hizmet', 'MSSP sürümü'], [
+              ('Politika sunucusu ve konsol', 'Veri merkeziniz, ISO veya OVA cihaz', 'Kendi bulut kiracılığınız', 'Korvia tarafından barındırılır, müşteri başına tek kiracı', 'Korvia veya MSSP tarafından barındırılır, çok kiracılı'),
+              ('Uç nokta ajanları', 'Sizde', 'Sizde', 'Sizde', 'Her müşteride'),
+              ('İçerik ve kanıtın yeri', 'Ağınızın içinde', 'Kiracılığınızın içinde', 'Barındırılan depoda, seçtiğiniz bölgede', 'Kiracı başına, seçtiğiniz bölgede'),
+              ('İlk politikaya kadar süre', 'Günler', 'Günler', 'Aynı gün', 'Müşteri başına aynı gün'),
+              ('Tipik müşteri', 'Bankalar, kamu, düzenlemeye tabi sektörler', 'Bulut öncelikli kurumlar', 'Platform ekibi olmayan orta ölçekli kurumlar', 'Hizmet sağlayıcılar'),
+          ]),
+          kartlar('Kurum içi kurulum ayrıntıları', [
+              ('Sağlamlaştırılmış cihaz', 'Tam disk şifreleme; ISO veya OVA olarak teslim edilir.'),
+              ('Kendi sanallaştırma ortamınız', 'Yönetim cihazı VMware, Hyper-V veya KVM üzerinde çalışır.'),
+              ('Yüksek erişilebilirlik', 'Politika sunucusu için.'),
+              ('Dizin entegrasyonu', 'Kullanıcılar ve gruplar için Active Directory veya LDAP.'),
+              ('Yalıtılmış ağda çalışma', 'Güncellemeler imzalı çevrim dışı paketler olarak gelir.'),
+              ('Varsayılan olarak telemetri yok', 'Siz açmadıkça ağınızdan hiçbir şey çıkmaz.'),
+          ]),
+          notkutu('Entegrasyonlar', 'Syslog üzerinden SIEM (CEF veya RFC 5424), JSON REST API ve CSV veya JSON dışa aktarım.'),
+          notkutu('Hangi sürümün uygun olduğundan emin değil misiniz?', 'Pek çok müşteri politikaları kanıtlamak için yönetilen hizmetle başlar, sonra karar verir.', 'Bir POC planlayın', '/kaynaklar/poc-rehberi/'),
+      ])

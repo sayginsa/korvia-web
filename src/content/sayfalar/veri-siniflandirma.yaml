@@ -1,0 +1,90 @@
+kimlik: Veri Sınıflandırma
+yol: platform/veri-siniflandirma
+bolum: platform
+sira: 2
+ikon: etiket
+menuAciklama: Dosyaları içerik, bağlam, mevcut üst veri ve özel kurallarla sınıflandırın.
+seoBaslik: Veri Sınıflandırma | Korvia
+seoAciklama: Hassas bilgi nadiren tutarlı biçimde etiketlenir. Korvia Veri Sınıflandırma ortamınızdaki veriyi keşfeder ve içerik incelemesi, bağlam analizi, mevcut MIP eti
+eyebrow: Platform · Veri sınıflandırma
+baslik: Verinizi tanıyın. Güvenle sınıflandırın.
+ozet: Hassas bilgi nadiren tutarlı biçimde etiketlenir. Korvia Veri Sınıflandırma ortamınızdaki veriyi keşfeder ve içerik incelemesi, bağlam analizi, mevcut MIP etiketleri ve özel kurallarla kalıcı hassasiyet etiketleri uygular.
+cta:
+  etiket: Demo planlayın
+  url: /demo/
+bloklar:
+- discriminant: senaryo
+  value:
+    baslik: Sıradan görünen bir dosya müşteri verisi taşıyor.
+    veri: Genel adlı, müşteri kayıtları içeren tablo
+    kullanici: Paylaşmaya hazırlanan çalışan
+    hedef: Dış e-posta veya bulut yüklemesi
+    politika: Müşteri verisi "Gizli"dir
+    karar: kaydet
+    kararNotu: içeriğine göre sınıflandırıldı
+- discriminant: metin
+  value:
+    eyebrow: ''
+    baslik: Dosyanın adına değil, içine bakan politika.
+    govde: |-
+      Bir çalışan müşteri bilgisi içeren bir tabloyu paylaşmaya hazırlanıyor. Dosyanın adı sıradan ama içeriği tanımlı bir hassas veri sınıflandırma politikasıyla eşleşiyor.
+
+      Korvia sınıflandırma etiketini her kanaldaki koruma kararında hemen kullanır. Politikalar dosyanın adına değil, içinde gerçekte ne olduğuna göre çalışır.
+- discriminant: adimlar
+  value:
+    baslik: Sınıflandırma nasıl çalışır?
+    ogeler:
+    - ikon: ''
+      baslik: Tara
+      metin: Uç noktaları, dosya sunucularını, NAS'ı, SharePoint'i ve bulut sürücüleri zamanlanmış veya sürekli tarayın.
+    - ikon: ''
+      baslik: Tanı
+      metin: İçerik, bağlam, mevcut etiketler ve kendi kurallarınız dosyanın ne olduğuna karar verir.
+    - ikon: ''
+      baslik: Etiketle
+      metin: Görsel etiket ve üst veri etiketi dosyayla birlikte taşınır.
+    - ikon: ''
+      baslik: Uygula
+      metin: Dosya hareket ettiği anda DLP politikaları etiketi kullanır.
+- discriminant: kartlar
+  value:
+    eyebrow: ''
+    baslik: Neleri kapsar?
+    aciklama: ''
+    ogeler:
+    - ikon: tara
+      baslik: Her yerde keşif
+      metin: Uç noktalar, dosya sunucuları, NAS, SharePoint ve bulut sürücüler; aynı ajanla.
+    - ikon: etiket
+      baslik: Görsel ve üst veri etiketleri
+      metin: Üst bilgi, alt bilgi veya filigran ile birlikte bir üst veri etiketi.
+    - ikon: kullanici
+      baslik: Otomatik veya kullanıcı seçimi
+      metin: Etiketi içerik belirler ya da kullanıcı kaydederken seçer.
+    - ikon: etiket
+      baslik: Yanlış etiketlenmiş dosyalar
+      metin: '"Genel" işaretli ama kart numarası taşıyan bir dosya işaretlenir.'
+    - ikon: akis
+      baslik: Düzeltme
+      metin: Taşıyın, karantinaya alın, şifreleyin, sahibine bildirin veya vaka açın.
+    - ikon: paylasim
+      baslik: Erişim raporları
+      metin: Herkesle paylaşılan dosyalar, dış bağlantılar ve bayat veri.
+- discriminant: sss
+  value:
+    baslik: Veri Sınıflandırma hakkında sorular
+    ogeler:
+    - soru: Sınıflandırma ve DLP neden aynı üründe?
+      cevap: Her etiket, uygulama politikalarının kullanabileceği bir sinyaldir. Aynı ajan dosyayı etiketleyip daha sonra hareket ettiğini gördüğünde karar, dosyanın yalnızca nereye gittiğine değil gerçekte ne olduğuna dayanır. Tek yaygınlaştırma, sürdürülecek tek politika.
+    - soru: Microsoft duyarlılık etiketleriyle çalışır mı?
+      cevap: Evet. Platform etiketleri Office belgelerindeki Microsoft duyarlılık (MIP) etiketleriyle eşlenebilir; mevcut etiketler sınıflandırmada sinyallerden biri olarak okunur. Diğer etiketleme araçlarıyla birlikte çalışma POC'de doğrulanır.
+    - soru: Çalışanlar taramaları fark eder mi?
+      cevap: Keşif zamanlanmış veya sürekli çalışır ve hızı sınırlanır; çalışanlar işine devam eder. Sonuçlar konsolda, hassas verinin nerede durduğunu, kimin sahibi olduğunu ve kimin erişebildiğini gösteren bir envanter olarak görünür.
+- discriminant: ilgili
+  value:
+    baslik: İlgili sayfalar
+    sayfalar:
+    - veri-kesfi-dspm
+    - tespit-motoru
+    - dlp
+    - platform

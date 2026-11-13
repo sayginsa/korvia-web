@@ -1,0 +1,97 @@
+kimlik: Ağ ve E-posta DLP
+yol: platform/dlp/ag-ve-e-posta
+bolum: platform
+sira: 7
+ikon: eposta
+menuAciklama: Giden e-postayı, web yüklemelerini ve ağ trafiğini veri çıkmadan inceleyin.
+seoBaslik: Ağ ve E-posta DLP | Korvia
+seoAciklama: E-posta ve web yüklemeleri, yanlışlıkla oluşan veri sızıntılarının başlıca kanalları olmaya devam ediyor. Korvia giden e-postaları, ekleri ve web trafiğini in
+eyebrow: Platform · Ağ ve e-posta DLP
+baslik: İş yazışmalarındaki hassas veriyi koruyun.
+ozet: E-posta ve web yüklemeleri, yanlışlıkla oluşan veri sızıntılarının başlıca kanalları olmaya devam ediyor. Korvia giden e-postaları, ekleri ve web trafiğini inceleyerek izinsiz ifşayı önler.
+cta:
+  etiket: Demo planlayın
+  url: /demo/
+bloklar:
+- discriminant: senaryo
+  value:
+    baslik: Fiyat listesi kişisel bir adrese gidiyor.
+    veri: Müşteri fiyat listesi, Gizli
+    kullanici: Satış temsilcisi
+    hedef: Kişisel web postası adresi
+    politika: 'Gizli fiyatlandırma: yalnızca kurum içi alıcılar'
+    karar: engelle
+    kararNotu: durduruldu, gönderene nedeni gösterildi
+- discriminant: metin
+  value:
+    eyebrow: ''
+    baslik: İçerik çıkmadan önce ne olduğunu anlayın.
+    govde: |-
+      Yanlış adreslenmiş bir e-posta veya izinsiz bir dosya aktarımı, kötü niyet olmadan da bir veri ifşası olayına dönüşebilir.
+
+      İçeriğe duyarlı politikalar mesaj gövdesini, ekleri ve alıcı alan adlarını gerçek zamanlı değerlendirir. Meşru dış iş birliğine izin verirken yanlış yönlendirilmiş veya izinsiz aktarımları durdurur.
+- discriminant: bildirim
+  value:
+    eyebrow: Kullanıcı ne görür?
+    baslik: Yanlış adrese giden e-posta çıkmadan durur.
+    aciklama: Kart numaraları içeren bir ek kişisel bir adrese gönderilmek istendi. Gönderen nedenini gördü; aynı dosya kurum içindeki alıcıya gidebilir.
+    sahne: eposta
+    karar: engelle
+    hedef: kisisel.example
+    uygulama: P
+    veriTuru: Kart numarası
+    veriDegeri: 5555 **** **** 4444
+    dosya: fiyat-listesi.xlsx
+- discriminant: adimlar
+  value:
+    baslik: Nasıl çalışır?
+    ogeler:
+    - ikon: ''
+      baslik: Giden trafiği incele
+      metin: Giden posta ve web yüklemeleri çıkmadan önce kontrol edilir.
+    - ikon: ''
+      baslik: İçeriği oku
+      metin: Yalnızca hedef değil; gövde, ekler ve yüklemeler kontrol edilir.
+    - ikon: ''
+      baslik: Alıcıya göre karar ver
+      metin: Aynı dosya müşteriye gidebilir, kişisel gelen kutusuna gidemez.
+    - ikon: ''
+      baslik: Harekete geç
+      metin: Engelle, uyar, gerekçe iste veya kaydet.
+- discriminant: kartlar
+  value:
+    eyebrow: ''
+    baslik: Neleri kapsar?
+    aciklama: ''
+    ogeler:
+    - ikon: eposta
+      baslik: Giden e-posta
+      metin: Outlook'ta ve SMTP üzerinden engelle, uyar, gerekçe iste veya kaydet.
+    - ikon: web
+      baslik: Web yüklemeleri
+      metin: Web postası, bulut depolama, sosyal medya ve mesajlaşma web istemcileri.
+    - ikon: paylasim
+      baslik: Dosya aktarımı
+      metin: FTP ve SFTP ağ seviyesinde engellenir, içerik okunmaz.
+    - ikon: eposta
+      baslik: Posta platformları
+      metin: Microsoft 365, Google Workspace ve Exchange.
+    - ikon: eposta
+      baslik: Yanlış alıcı
+      metin: Kurum içi veri dış bir adrese gitmek üzereyken uyarı.
+- discriminant: sss
+  value:
+    baslik: Ağ ve E-posta DLP hakkında sorular
+    ogeler:
+    - soru: Ofis dışındaki dizüstü bilgisayarlar ne olacak?
+      cevap: Aynı ajan onları da kapsar. Masaüstü istemciden gönderilen posta ve evdeki bir dizüstünden yapılan yüklemeler ofisteki politikaya tabidir; kanıt, cihaz yeniden bağlandığında politika sunucusuna ulaşır.
+    - soru: E-posta da diğer kanallarla aynı kurallara mı tabi?
+      cevap: Evet. Outlook eklentisi ve SMTP; USB, web ve bulutla aynı sıralı kural tablosunu kullanır. Dosya her kanalda aynı politikayı taşır; hangi yoldan çıkmaya çalışırsa çalışsın kanıt tek yerde toplanır.
+- discriminant: ilgili
+  value:
+    baslik: İlgili sayfalar
+    sayfalar:
+    - dlp
+    - uc-nokta-dlp
+    - bulut-dlp
+    - tespit-motoru

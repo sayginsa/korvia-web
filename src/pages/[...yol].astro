@@ -1,0 +1,114 @@
+---
+import Temel from '../layouts/Temel.astro';
+import Bloklar from '../components/Bloklar.astro';
+import { reader, tumSayfalar, href, BOLUM_ADLARI, tarihTR, doldur } from '../lib/icerik';
+
+export async function getStaticPaths() {
+  const sayfalar = await tumSayfalar();
+  return sayfalar.map((s) => ({ params: { yol: s.yol }, props: { slug: s.slug } }));
+}
+
+const { slug } = Astro.props as { slug: string };
+const s = (await reader.collections.sayfalar.read(slug))!;
+
+// Kırıntı: üst sayfalar
+const tum = await tumSayfalar();
+const parcalar = s.yol.split('/');
+const kirinti = parcalar.slice(0, -1).map((_, i) => {
+  const y = parcalar.slice(0, i + 1).join('/');
+  const ust = tum.find((x) => x.yol === y);
+  return ust ? { ad: ust.kimlik, url: href(y) } : null;
+}).filter(Boolean) as { ad: string; url: string }[];
+const bolumAdi = BOLUM_ADLARI[s.bolum];
+
+// Özel içerikli sayfalar
+const yazilar = slug === 'blog'
+  ? (await reader.collections.blog.all()).sort((a, b) => (b.entry.tarih ?? '').localeCompare(a.entry.tarih ?? '') || a.slug.localeCompare(b.slug))
+  : [];
+const sss = slug === 'sss' ? await reader.singletons.sss.read() : null;
+const terimler = slug === 'sozluk' ? (await reader.collections.sozluk.all()).sort((a, b) => (a.entry.sira ?? 0) - (b.entry.sira ?? 0)) : [];
+const ozet = await doldur(s.ozet);
+const ok = `<svg class="ok" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>`;
+---
+<Temel baslik={s.seoBaslik} aciklama={s.seoAciklama}>
+  <section class="sayfa-basi">
+    <div class="wrap">
+      <div class="sayfa-basi__ic">
+        {s.bolum !== 'yasal' && (
+          <nav aria-label="Konum">
+            <ol class="kirinti mono">
+              <li><a href="/">Ana sayfa</a></li>
+              {bolumAdi && kirinti.length === 0 && <li>{bolumAdi}</li>}
+              {kirinti.map((k) => <li><a href={k.url}>{k.ad}</a></li>)}
+            </ol>
+          </nav>
+        )}
+        <p class="eyebrow">{s.eyebrow}</p>
+        <h1 class="h1">{s.baslik}</h1>
+        <p class="lead">{ozet}</p>
+        {s.cta.url && (
+          <div class="sayfa-basi__eylem">
+            <a class="btn btn--birincil" href={s.cta.url}>{s.cta.etiket}</a>
+          </div>
+        )}
+      </div>
+    </div>
+  </section>
+
+  {slug === 'blog' && (
+    <section class="bolum">
+      <div class="wrap">
+        <div class="yazi-liste">
+          {yazilar.map((y) => (
+            <a href={`/blog/${y.slug}/`}>
+              <span class="mono">{y.entry.kategori}</span>
+              <div>
+                <h2 class="h2">{y.entry.baslik}</h2>
+                <p>{y.entry.ozet}</p>
+              </div>
+              <span class="mono">{tarihTR(y.entry.tarih)} · {y.entry.sure} dk</span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  {sss && sss.gruplar.map((g, i) => (
+    <section class={`bolum${i % 2 ? ' bolum--beyaz' : ''}`}>
+      <div class="wrap iki-sutun">
+        <h2 class="h2">{g.ad}</h2>
+        <div class="sss">
+          {g.sorular.map((q) => (<details><summary>{q.soru}</summary><div><p>{q.cevap}</p></div></details>))}
+        </div>
+      </div>
+    </section>
+  ))}
+
+  {terimler.length > 0 && (
+    <section class="bolum">
+      <div class="wrap">
+        <dl class="sozluk">
+          {terimler.map((t) => (
+            <div id={t.slug}>
+              <dt class="h3">{t.entry.terim}</dt>
+              <dd>
+                <p>{t.entry.tanim}</p>
+                {t.entry.ilgiliYol && <a class="metin-link" href={t.entry.ilgiliYol}>{t.entry.ilgiliEtiket}<Fragment set:html={ok} /></a>}
+              </dd>
+            </div>
+          ))}
+        </dl>
+      </div>
+    </section>
+  )}
+
+  <Bloklar bloklar={s.bloklar} />
+</Temel>
+
+<style>
+  .sozluk { margin: 0; border-top: 1px solid var(--line); }
+  .sozluk > div { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); gap: 24px; padding: 24px 0; border-bottom: 1px solid var(--line); }
+  .sozluk dd { margin: 0; color: var(--ink-700); display: grid; gap: 4px; justify-items: start; }
+  @media (max-width: 700px) { .sozluk > div { grid-template-columns: 1fr; gap: 8px; } }
+</style>

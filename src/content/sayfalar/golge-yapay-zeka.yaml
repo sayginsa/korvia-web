@@ -1,0 +1,83 @@
+kimlik: Gölge yapay zekâ
+yol: cozumler/golge-yapay-zeka
+bolum: cozumler
+sira: 1
+ikon: goz
+menuAciklama: Onaysız yapay zekâ araçlarını veri açığa çıkmadan bulun.
+seoBaslik: Gölge yapay zekâ | Korvia
+seoAciklama: Çalışanlar yapay zekâ araçlarını güvenlik ekibi onaylamadan çok önce kullanmaya başlar. Korvia tarayıcıda ve masaüstünde kullanılan her yapay zekâ servisini o
+eyebrow: Çözümler · Gölge yapay zekâ
+baslik: Gölge yapay zekâyı veri açığa çıkmadan keşfedin.
+ozet: Çalışanlar yapay zekâ araçlarını güvenlik ekibi onaylamadan çok önce kullanmaya başlar. Korvia tarayıcıda ve masaüstünde kullanılan her yapay zekâ servisini ortaya çıkarır, kişisel hesabı kurumsal kiracıdan ayırır ve hassas verinin yönetilmeyen dil modellerine sızmasını durdurur.
+cta:
+  etiket: Demo planlayın
+  url: /demo/
+bloklar:
+- discriminant: senaryo
+  value:
+    baslik: Bütçe dosyası onaysız bir yapay zekâ aracına gidiyor.
+    veri: Gelecek yılın bütçe dosyası
+    kullanici: Finans analisti
+    hedef: Tarayıcıdaki onaysız yapay zekâ aracı
+    politika: 'Finansal veri: yalnızca onaylı yapay zekâ araçları'
+    karar: uyar
+    kararNotu: gerekçe istendi, ardından kaydedildi
+- discriminant: metin
+  value:
+    eyebrow: ''
+    baslik: Güvenliğin hiç onaylamadığı yapay zekâ aracı.
+    govde: |-
+      Bir çalışan kurum içi belgeleri özetlemek için kişisel yapay zekâ hesabını kullanır. Etkinlik verimli olabilir ama iş bilgisinin nerede paylaşıldığı konusunda belirsizlik yaratır.
+
+      Korvia tarayıcılarda ve uç noktalarda onaysız yapay zekâ araçlarını ortaya çıkarır, hangi hassas verinin paylaşıldığını gösterir ve hesaba duyarlı maskeleme veya engelleme politikaları uygular.
+- discriminant: bildirim
+  value:
+    eyebrow: Kullanıcı ne görür?
+    baslik: Onaysız araçta önce gerekçe istenir.
+    aciklama: Engellemeden önce sormak çoğu zaman yeterlidir. Gerekçe kayda geçer; güvenlik ekibi hangi ihtiyacın karşılanmadığını görür.
+    sahne: yapay-zeka
+    karar: uyar
+    hedef: ozetle.example
+    uygulama: O
+    veriTuru: Finansal veri
+    veriDegeri: butce-2027.xlsx
+    dosya: ''
+- discriminant: kartlar
+  value:
+    eyebrow: ''
+    baslik: Üç adım
+    aciklama: ''
+    ogeler:
+    - ikon: ''
+      baslik: Kullanımı anlayın
+      metin: Tarayıcıda ve masaüstünde kullanılan her yapay zekâ servisini kullanıcı ve hesap türüne göre görün.
+    - ikon: ''
+      baslik: Veri riskini belirleyin
+      metin: Kişisel veri, kaynak kod veya finansal veri içeren komutları ve yüklemeleri tespit edin.
+    - ikon: ''
+      baslik: Yönetişim uygulayın
+      metin: Kurumsal kiracılara izin verin, hassas değerleri satır içinde maskeleyin, onaysız araçları engelleyin.
+- discriminant: ilgili
+  value:
+    baslik: Korvia'nın hangi parçaları bunu yapar?
+    sayfalar:
+    - yapay-zeka-veri-guvenligi
+    - yapay-zeka-guvenlik-duvari
+    - uc-nokta-dlp
+- discriminant: not
+  value:
+    baslik: Nereden başlamalı?
+    metin: 'Yalnızca görünürlükle: yapay zekâ kullanımının ve ilgili hassas verinin envanteri, hiçbir engelleme açılmadan.'
+    link:
+      etiket: POC rehberi
+      url: /kaynaklar/poc-rehberi/
+- discriminant: mevzuat
+  value:
+    baslik: Hangi mevzuata dokunur?
+    ogeler:
+    - ikon: ''
+      baslik: KVKK
+      metin: '6698 sayılı Kanun: veri güvenliğine ilişkin yükümlülükler (md. 12), veri envanteri ve ihlal bildirimi.'
+    - ikon: ''
+      baslik: Bilgi ve İletişim Güvenliği Rehberi
+      metin: 'Cumhurbaşkanlığı rehberi: kritik verinin sınıflandırılması, korunması ve kayıt yönetimi.'

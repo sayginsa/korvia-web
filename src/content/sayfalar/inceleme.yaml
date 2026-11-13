@@ -1,0 +1,90 @@
+kimlik: İnceleme
+yol: platform/inceleme
+bolum: platform
+sira: 9
+ikon: belgeAra
+menuAciklama: Kim, ne, nereye ve hangi politika; tek ekranda.
+seoBaslik: İnceleme | Korvia
+seoAciklama: Bağlamı olmayan bir alarm analistin zamanını harcar. Korvia İnceleme dosya etkinlik kayıtlarını, kullanıcı davranış sinyallerini, eşleşen tespitçileri ve imza
+eyebrow: Platform · İnceleme
+baslik: Hassas veriye ne olduğunu anlayın.
+ozet: Bağlamı olmayan bir alarm analistin zamanını harcar. Korvia İnceleme dosya etkinlik kayıtlarını, kullanıcı davranış sinyallerini, eşleşen tespitçileri ve imzalı kanıtı tek görünümde toplar; analistler olayları hızla sonuçlandırır.
+cta:
+  etiket: Demo planlayın
+  url: /demo/
+bloklar:
+- discriminant: senaryo
+  value:
+    baslik: Ayrılmak üzere olan bir çalışan her zamankinden çok fazla dosya indiriyor.
+    veri: Müşteri dosyaları ve fiyat listeleri
+    kullanici: Müşteri temsilcisi, gelecek hafta ayrılıyor
+    hedef: Kişisel bulut sürücü
+    politika: Gizli veri aktarım politikası
+    karar: kaydet
+    kararNotu: olay kaydedildi, analiste bildirildi
+- discriminant: metin
+  value:
+    eyebrow: ''
+    baslik: Bir olay, incelemenin başlangıcıdır.
+    govde: |-
+      Bir politika ihlali otomatik olarak kötü niyet anlamına gelmez. Güvenlik ekibinin hangi bilginin söz konusu olduğunu, politikayı hangi eylemin tetiklediğini ve ardından hangi yanıtın verildiğini anlaması gerekir.
+
+      Korvia bir dosyanın çevresindeki tüm zaman çizelgesini gösterir: kim oluşturdu, yeniden adlandırdı, kopyaladı veya yükledi. İnceleyenler masum hatayı gerçek içeriden riskten hızla ayırır.
+- discriminant: adimlar
+  value:
+    baslik: İnceleme nasıl yürür?
+    ogeler:
+    - ikon: ''
+      baslik: Etkinliği kaydet
+      metin: Sınıflandırılmış dosyaları kim açtı, kopyaladı, yeniden adlandırdı, yazdırdı veya taşıdı.
+    - ikon: ''
+      baslik: Bağlamı ekle
+      metin: Olayın çevresindeki kullanıcı, cihaz, hedef ve davranış sinyalleri.
+    - ikon: ''
+      baslik: Politikayı kontrol et
+      metin: Hangi politika neden tetiklendi.
+    - ikon: ''
+      baslik: Olayı incele
+      metin: Kaydedilen olayları ve destekleyici kanıtı değerlendirin.
+- discriminant: kartlar
+  value:
+    eyebrow: ''
+    baslik: Analist neler görür?
+    aciklama: ''
+    ogeler:
+    - ikon: gecmis
+      baslik: Dosya etkinlik kaydı
+      metin: Uç noktalarda ve sunucularda sınıflandırılmış veri üzerindeki her eylem.
+    - ikon: akis
+      baslik: Politika bağlamı
+      metin: Hangi kural eşleşti, hangi tespitçi tetiklendi ve tam olarak hangi eşiğe ulaşıldı.
+    - ikon: kullanici
+      baslik: Etkinlik ayrıntıları
+      metin: Kullanıcı kimliği, uç nokta adı, uygulama, hedef hesap ve zaman damgası.
+    - ikon: gosterge
+      baslik: Davranış sinyalleri
+      metin: Dosya hareketi ve kullanıcı davranışı, olay bağlamında.
+    - ikon: kanit
+      baslik: İmzalı kanıt
+      metin: Her olay neyin eşleştiğini, hangi kuralın ve nedenini söyler.
+    - ikon: vaka
+      baslik: Vaka yönetimi
+      metin: İlgili olayları vakalarda toplayın, inceleyen atayın ve imzalı denetim raporları dışa aktarın.
+- discriminant: sss
+  value:
+    baslik: İnceleme hakkında sorular
+    ogeler:
+    - soru: Bu çalışan gözetimi mi?
+      cevap: Hayır. İçerik yalnızca bir politika eşleştiğinde kaydedilir. Amaç insanları izlemek değil, hassas verinin çevresinde ne olduğunu anlamaktır. Bir politika olayı bir çalışan hakkında hüküm değil, adil bir incelemenin başlangıç noktasıdır.
+    - soru: Denetçiye ne gösterebiliriz?
+      cevap: Her olay neyin tespit edildiğini, hangi kuralın neden eşleştiğini, kullanıcıyı, hedefi ve uygulanan eylemi taşır. Olaylar imzalıdır; denetçiye gösterdiğiniz şey gerçekte olandır. Rapor şablonları KVKK, PCI DSS ve ISO 27001 kapsamındadır.
+    - soru: Eski DLP politikalarımızı içe aktarabilir miyiz?
+      cevap: Evet. Geçişi kısaltmak için politikalar diğer DLP ürünlerinden içe aktarılabilir; boş bir sayfadan başlamazsınız. İçe aktarım POC sırasında kontrol edilir ve ayarlanır.
+- discriminant: ilgili
+  value:
+    baslik: İlgili sayfalar
+    sayfalar:
+    - veri-kesfi-dspm
+    - veri-siniflandirma
+    - dlp
+    - platform

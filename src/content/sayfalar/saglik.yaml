@@ -1,0 +1,64 @@
+kimlik: Sağlık
+yol: sektorler/saglik
+bolum: sektorler
+sira: 2
+ikon: saglik
+menuAciklama: Hastaneler, klinikler ve laboratuvarlar.
+seoBaslik: Sağlık | Korvia
+seoAciklama: Klinik personel kayıtları e-postayla gönderir, yazdırır ve ekranların fotoğrafını çeker. Korvia servisi durdurmadan politika uygular; bir kaydın taşınması ger
+eyebrow: Sektörler · Sağlık
+baslik: Hasta kayıtları gün boyu hareket eder. Kaybolmaları işin parçası değildir.
+ozet: Klinik personel kayıtları e-postayla gönderir, yazdırır ve ekranların fotoğrafını çeker. Korvia servisi durdurmadan politika uygular; bir kaydın taşınması gerektiğinde gerekçe ister.
+cta:
+  etiket: Demo planlayın
+  url: /demo/
+bloklar:
+- discriminant: senaryo
+  value:
+    baslik: Bir epikriz sevk eden kliniğe gidiyor.
+    veri: Epikriz raporu
+    kullanici: Hemşire
+    hedef: Sevk eden klinik
+    politika: 'Hasta kayıtları: gerekçe zorunlu'
+    karar: uyar
+    kararNotu: gerekçe kaydedildi
+- discriminant: metin
+  value:
+    eyebrow: ''
+    baslik: Bakımı aksatmadan hassas bilgiyi koruyun.
+    govde: |-
+      Hastaneler, klinikler ve laboratuvarlar sürekli epikriz, tahlil sonucu, görüntüleme ve sigorta dosyası alışverişi yapar. Klinik personeli doğrudan engellemek hasta bakımını aksatır; denetlenmeyen USB bellekler, kişisel web postası ve çıktılar ise özel nitelikli sağlık verisini açığa çıkarır.
+
+      Korvia tıbbi tanımlayıcıları, T.C. kimlik numaralarını ve OCR ile taranmış belgeleri tanır. Yetkili sevklerin kayıtlı bir klinik gerekçeyle ilerlemesine izin verirken çıkarılabilir belleklere, kişisel bulut hesaplarına veya herkese açık yapay zekâ araçlarına izinsiz aktarımı engeller.
+- discriminant: kartlar
+  value:
+    eyebrow: ''
+    baslik: Korvia'nın hangi parçaları bunu yapar?
+    aciklama: ''
+    ogeler:
+    - ikon: ekran
+      baslik: Uç Nokta DLP
+      metin: E-posta, yazdırma ve pano tek politikaya uyar.
+    - ikon: parmakIzi
+      baslik: Tespit Motoru
+      metin: Tıbbi kayıt biçimlerini ve tanımlayıcıları tanır.
+    - ikon: belgeAra
+      baslik: İnceleme
+      metin: Kimin neyi, neden gönderdiğinin kaydı.
+- discriminant: not
+  value:
+    baslik: Hangi kurulum uygun?
+    metin: Kurum içi veya özel bulut; hasta verisi sizin denetlediğiniz altyapıda kalır.
+    link:
+      etiket: Kurulum seçenekleri
+      url: /platform/kurulum/
+- discriminant: mevzuat
+  value:
+    baslik: Hangi mevzuata dokunur?
+    ogeler:
+    - ikon: ''
+      baslik: KVKK
+      metin: '6698 sayılı Kanun: veri güvenliğine ilişkin yükümlülükler (md. 12), veri envanteri ve ihlal bildirimi.'
+    - ikon: ''
+      baslik: Kişisel Sağlık Verileri Yönetmeliği
+      metin: Özel nitelikli sağlık verisine erişim, aktarım ve kayıt.

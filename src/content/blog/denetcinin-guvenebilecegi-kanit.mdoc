@@ -1,0 +1,62 @@
+---
+baslik: "Denetçinin güvenebileceği kanıt"
+kategori: Uyum
+tarih: 2026-11-07
+sure: 3
+ozet: >-
+  Bir denetçi ne olduğunu sorduğunda "sanırız" bir cevap değildir. Yararlı bir kayıt kendini açıklar ve sessizce değiştirilemez.
+---
+Bir denetçi ne olduğunu sorduğunda "sanırız" bir cevap değildir. Denetçinin güvenebileceği kanıt neyin tespit edildiğini, neden eşleştiğini, kimin yaptığını, verinin nereye gittiğini ve sistemin ne yaptığını kaydeder. İmzalıdır; sonradan sessizce değiştirilemez ve kimin okuyabileceğine dair net kuralları olan bir yerde tutulur. Gerisi bir hikâyedir.
+
+## Kayıtlar neden yetmez?
+
+Kurumların çoğunun bol miktarda kaydı vardır. Çoğu zaman eksik olan bir cevaptır. Bir kayıt satırı bir dosyanın taşındığını söyler. Dosyanın ne olduğunu, neden önemsenmesi gerektiğini veya o sırada politikanın ne olduğunu nadiren söyler.
+
+Bir denetim sorusu genellikle elinizdeki veriden daha dardır. Bu sözleşmeyi kim dışarı gönderdi, izni var mıydı? Bununla ilgili ne yaptınız? Kaydın eksiksiz olduğunu nereden biliyorsunuz? Kısmi kayıtları olan altı sistem buna cevap vermez. Birine bir haftalık iş ve yine de boşlukları olan bir sonuç çıkarır.
+
+## Yararlı bir olay ne içerir?
+
+İyi bir olay beş soruyu tek ekranda cevaplar.
+
+- **Ne tespit edildi?** Dosya veya içerik ve etiketi.
+- **Neden eşleşti?** Kural ve arkasındaki tespitçi: parmak izi, doğrulanmış kalıp, sınıflandırıcı.
+- **Kim yaptı?** Kullanıcı ve cihaz.
+- **Nereye gidiyordu?** Kanal ve hedef.
+- **Ne oldu?** İzin verildi, uyarıldı, gerekçe istendi, kaydedildi veya engellendi.
+
+İkinci soru en çok zaman kazandırandır. Bir karar kendini açıklayabiliyorsa analistin onu yeniden kurması, denetçinin de ona güvenmek zorunda kalması gerekmez. "Neden eşleşti" aynı zamanda yanlış alarmları düzeltilebilir kılar; çünkü fazla geniş olan kuralı görebilirsiniz.
+
+## İmzalı, yani düzenlenemez
+
+Bir denetim izi ancak kimse onu sonradan düzeltemiyorsa bir şeye değer. Buna yöneticiler de, iyi niyetli kişiler de dahildir. Her Korvia olayı imzalı kanıt bırakır; denetçiye gösterdiğiniz gerçekte olandır. Denetim kaydına erişim de kaydedilir; bu, denetçinin genellikle sorduğu bir sonraki soruyu cevaplar.
+
+Bu konuşmayı değiştirir. Artık birinden ekibinize güvenmesini istemiyorsunuz. Güvene dayanmayan bir kayıt gösteriyorsunuz.
+
+## Kanıt da hassas veri taşır
+
+Burada bir tuzak var. Bir veri sızıntısının kanıtı sızan veriyi içerebilir; özensiz kanıt yönetimi ikinci bir ifşa yaratır. Birkaç kural bunu denetim altında tutar.
+
+- **Kopyayı yalnızca bir kural istediğinde tutun.** Çoğu olay dosyanın kendisine ihtiyaç duymaz. Dosyayı yalnızca politikanın gerektirdiği yerde gölge kopya olarak alın.
+- **Görmeyi incelemekten ayırın.** Rol tabanlı erişim, kimin neyi göreceğini kanal, eylem ve birime göre sınırlayabilir. İçeriğe erişimi olmayan bir inceleyen rolü, birinin yakalananı okumadan sürecin işlediğini kontrol etmesini sağlar.
+- **Son kullanıcının gördüğünü maskeleyin.** Mesajının durdurulduğu söylenen kişinin eşleşen değeri yeniden görmesine gerek yoktur.
+- **İçeriği SIEM'in dışında tutun.** Olay üst verisi SIEM'inize gidebilir; hassas içerik gitmemelidir.
+- **Saklamayı bilerek belirleyin.** Korvia olayları varsayılan olarak 400 gün, yıllık karşılaştırmaya yetecek kadar, denetim kaydını ise 24 ay saklar. Kurumunuz bu süreleri kısaltabilir; neden bu süreleri seçtiğinizi yazmak işe yarar.
+
+## Olaylardan vakaya
+
+Bir denetçi nadiren tek bir olay ister. Bir olayın hikâyesini ister: ne zaman başladı, inceleyen ne buldu, kim neye karar verdi ve nasıl bitti. Olayları zaman çizelgesi ve notlarla bir vakada toplamak denetçiye bu hikâyeyi, kendi ekibinize de işi devretmenin bir yolunu verir.
+
+Dönem karşılaştırmaları da yardımcı olur. Bir politika değiştikten sonra bir olay türünün azaldığını gösterebilmek, işlerin iyileştiğini söylemekten daha güçlüdür.
+
+## Kendi kanıtınızı sınamak için sorular
+
+Yakın tarihli bir olayı seçin ve şunları deneyin.
+
+- Tek bir kişi, tek bir ekranda ne olduğunu ve neden eşleştiğini söyleyebiliyor mu?
+- Biri o kaydı iz bırakmadan düzenleyebilir miydi?
+- Arkasındaki içeriği kim okuyabiliyor ve bu bir yerde yazılı mı?
+- Kayıt ne kadar süre saklanacak ve neden bu kadar?
+
+Bunları cevaplamak bir hafta sürüyorsa denetçi bunu fark edecektir. Birkaç dakika sürüyorsa denetim çok daha kısa bir konuşma olur.
+
+[İncelemenin kanıtı nasıl bir arada tuttuğunu okuyun.](/platform/inceleme/)

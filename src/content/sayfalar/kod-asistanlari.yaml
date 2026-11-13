@@ -1,0 +1,142 @@
+kimlik: Kod asistanları
+yol: yapay-zeka-guvenligi/kod-asistanlari
+bolum: yapay-zeka
+sira: 4
+ikon: kod
+menuAciklama: Claude Code, Codex, Copilot ve Cursor.
+seoBaslik: Kod asistanları | Korvia
+seoAciklama: Yapay zekâ kod asistanları yazılım geliştirmeyi hızlandırır; ancak geliştirici iş akışları kaynak kod, yapılandırma dosyaları, kimlik bilgileri ve kurum içi t
+eyebrow: Yapay zekâ güvenliği · Kod asistanları
+baslik: Yapay zekâ destekli geliştirmede hassas kodu koruyun.
+ozet: Yapay zekâ kod asistanları yazılım geliştirmeyi hızlandırır; ancak geliştirici iş akışları kaynak kod, yapılandırma dosyaları, kimlik bilgileri ve kurum içi teknik belgeler de içerebilir. Korvia Claude Code, Codex, GitHub Copilot ve Cursor genelinde özel depolarınızı, API anahtarlarınızı ve müşteri verinizi, geliştiricileri yavaşlatmadan korur.
+cta:
+  etiket: Demo planlayın
+  url: /demo/
+bloklar:
+- discriminant: tablo
+  value:
+    baslik: Depo sınıfları
+    aciklama: ''
+    sutunlar:
+    - Depo
+    - Sınıf
+    - Asistan erişimi
+    - Karar
+    satirlar:
+    - hucreler:
+      - ana-bankacilik/
+      - Kırmızı · kritik
+      - Asistan okuyamaz
+      - Engelle · hiçbir şey çıkmaz
+    - hucreler:
+      - odeme-api/
+      - Sarı · kurum içi
+      - Ağ geçidi üzerinden okunabilir
+      - Kaydet · gizli anahtarlar maskelenir
+    - hucreler:
+      - dokuman-araclari/
+      - Yeşil · açık
+      - Okunabilir
+      - İzle · kaydedilir
+- discriminant: senaryo
+  value:
+    baslik: Bir API anahtarı modele gidiyor.
+    veri: Canlı API anahtarı içeren bir fonksiyon
+    kullanici: Claude Code kullanan geliştirici
+    hedef: Anthropic API
+    politika: 'Kırmızı depo: hiçbir kod çıkmaz'
+    karar: engelle
+    kararNotu: nedeni terminalde gösterildi
+- discriminant: metin
+  value:
+    eyebrow: ''
+    baslik: Bir kod aracı hassas bağlam aldığında.
+    govde: |-
+      Bir geliştirici bir uygulamadaki sorunu çözmek için yapay zekâ asistanından yardım ister. İstek kaynak kod, yapılandırma değerleri veya dışarıyla paylaşılmaması gereken kurum içi teknik ayrıntılar taşıyabilir.
+
+      Korvia herhangi bir komut veya dosya bağlamı geliştiricinin makinesinden çıkmadan önce depo seviyesinde erişim kurallarını ve satır içi gizli anahtar maskelemesini uygular.
+- discriminant: bildirim
+  value:
+    eyebrow: Kullanıcı ne görür?
+    baslik: Anahtar modele ulaşmaz.
+    aciklama: Kod asistanı yapılandırma dosyasını okudu. Dosyada canlı bir API anahtarı vardı; istek gönderilmedi ve geliştiriciye nedeni gösterildi.
+    sahne: kod
+    karar: engelle
+    hedef: api.asistan.example
+    uygulama: K
+    veriTuru: API anahtarı
+    veriDegeri: sk_live_****************9f2a
+    dosya: config/prod.env
+- discriminant: kartlar
+  value:
+    eyebrow: ''
+    baslik: Kapsanan araçlar
+    aciklama: ''
+    ogeler:
+    - ikon: yapayZeka
+      baslik: Komut satırı ajanları
+      metin: Claude Code ve Codex; yönetilen kancalar (hook) üzerinden.
+    - ikon: rota
+      baslik: API trafiği
+      metin: Anthropic ve OpenAI API çağrıları; yapay zekâ ağ geçidi üzerinden.
+    - ikon: kod
+      baslik: Editör asistanları
+      metin: GitHub Copilot ve Cursor; aynı kurallarla.
+- discriminant: adimlar
+  value:
+    baslik: Nerede kontrol eder?
+    ogeler:
+    - ikon: ''
+      baslik: Ajan kancaları
+      metin: Claude Code ve Codex kancaları her komutu ve ajanın okuduğu her dosyayı kontrol eder.
+    - ikon: ''
+      baslik: Yapay zekâ ağ geçidi
+      metin: Tüm Anthropic ve OpenAI API trafiği denetim kaydıyla birlikte tek geçitten çıkar.
+    - ikon: ''
+      baslik: Depo sınıfları
+      metin: Kırmızı, Sarı ve Yeşil depoların kendi okuma ve gönderme kuralları vardır.
+    - ikon: ''
+      baslik: Karar motoru
+      metin: Gizli anahtarlar ve kişisel veri maskelenir. Kritik kod maskelenmez, engellenir.
+- discriminant: kartlar
+  value:
+    eyebrow: ''
+    baslik: Neleri kapsar?
+    aciklama: ''
+    ogeler:
+    - ikon: terminal
+      baslik: Claude Code ve Codex
+      metin: Yönetilen kancalar komutları, dosya okumalarını ve araç çıktısını kontrol eder.
+    - ikon: yapayZeka
+      baslik: Yapay zekâ ağ geçidi
+      metin: Anthropic ve OpenAI API trafiği için tek çıkış ve denetim kaydı.
+    - ikon: kod
+      baslik: GitHub Copilot ve Cursor
+      metin: Editör içindeki asistanlar için aynı kurallar.
+    - ikon: veritabani
+      baslik: Depo sınıfları
+      metin: Kırmızı, Sarı ve Yeşil; her birinin kendi kuralları.
+    - ikon: veritabani
+      baslik: Kritik depolarda okuma engeli
+      metin: Asistan Kırmızı bir depoyu hiç okuyamaz.
+    - ikon: cevrimdisi
+      baslik: Bağlantı kesilirse kapalı
+      metin: Karar motoruna ulaşılamazsa Kırmızı depolar engelli kalır.
+- discriminant: sss
+  value:
+    baslik: Kod asistanları hakkında sorular
+    ogeler:
+    - soru: Kodu engellemek yerine neden maskelemiyorsunuz?
+      cevap: Maskeleme anahtarlar, IBAN'lar ve kurum içi sunucu adları gibi değişmez değerlerde işe yarar; model farkı neredeyse hissetmez. Kodun kendisini yeniden adlandırmak ise modeli kör eder ve yanıt işe yaramaz hâle gelir. Kritik kod için dürüst karar ya izin vermek ya engellemektir.
+    - soru: Kimler için?
+      cevap: Geliştiricileri Claude Code, Codex, Copilot veya Cursor kullanan ve kendi kaynak kodunun ve müşteri verisinin bu araçlardan çıkmadığını göstermesi gereken bankalar ve düzenlemeye tabi diğer yazılım ekipleri için.
+    - soru: Geliştirici ne görür?
+      cevap: Terminalde veya editörde neyin bulunduğunu ve hangi depodan veya dosyadan geldiğini söyleyen kısa bir mesaj. İstisna talep edilebilir; ekipler kurallar ayarlanırken yalnızca uyarı modunda başlayabilir.
+- discriminant: ilgili
+  value:
+    baslik: İlgili sayfalar
+    sayfalar:
+    - yapay-zeka-guvenlik-duvari
+    - yapay-zeka-veri-guvenligi
+    - fikri-mulkiyet
+    - tespit-motoru

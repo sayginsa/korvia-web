@@ -1,0 +1,108 @@
+kimlik: Yapay Zekâ Güvenlik Duvarı
+yol: yapay-zeka-guvenligi/yapay-zeka-guvenlik-duvari
+bolum: yapay-zeka
+sira: 2
+ikon: rota
+menuAciklama: Giden komutları ve dönen yanıtları tek politikayla inceleyin.
+seoBaslik: Yapay Zekâ Güvenlik Duvarı | Korvia
+seoAciklama: 'Yapay zekâ etkileşimleri iki yönde risk taşır. Korvia Yapay Zekâ Güvenlik Duvarı giden komutları ve dönen model yanıtlarını gerçek zamanlı inceler: hassas ver'
+eyebrow: Yapay zekâ güvenliği · Yapay zekâ güvenlik duvarı
+baslik: Yapay zekâya ne girdiğini ve ne döndüğünü denetleyin.
+ozet: 'Yapay zekâ etkileşimleri iki yönde risk taşır. Korvia Yapay Zekâ Güvenlik Duvarı giden komutları ve dönen model yanıtlarını gerçek zamanlı inceler: hassas veriyi maskeler, gizli anahtarları yakalar ve yapay zekâ iş akışlarınızda güvenlik politikalarını uygular.'
+cta:
+  etiket: Demo planlayın
+  url: /demo/
+bloklar:
+- discriminant: senaryo
+  value:
+    baslik: Bir destek talebi dil modeline gidiyor.
+    veri: Müşterinin IBAN'ını içeren talep metni
+    kullanici: Destek sistemindeki temsilci
+    hedef: Yapay zekâ ağ geçidi üzerinden dil modeli
+    politika: 'Finansal veri koruması: göndermeden önce maskele'
+    karar: maskele
+    kararNotu: IBAN gönderilmeden maskelendi; yanıtta yetkili kullanıcı için asıl değer geri yüklendi
+- discriminant: metin
+  value:
+    eyebrow: ''
+    baslik: Bir komut bir sorudan fazlasını taşıdığında.
+    govde: |-
+      Bir çalışan bir müşteri kaydını, finansal bir rakamı veya kaynak kodu bir komuta yapıştırdığında Korvia hassas içeriği tarayıcıdan, uç noktadan veya ağ geçidinden çıkmadan önce tespit eder.
+
+      Politikanıza göre Korvia kullanıcıyı uyarır, komutun güvenle devam edebilmesi için hassas değerleri satır içinde maskeler ya da isteği tamamen engeller.
+- discriminant: bildirim
+  value:
+    eyebrow: Kullanıcı ne görür?
+    baslik: Engellemek yerine maskeleme.
+    aciklama: Komut gönderilir ama hassas değerler önce etikete dönüşür. Model asıl değerleri hiç görmez; çalışan işine devam eder.
+    sahne: yapay-zeka
+    karar: maskele
+    hedef: asistan.example
+    uygulama: A
+    veriTuru: IBAN
+    veriDegeri: 3 değer → [IBAN]
+    dosya: ''
+- discriminant: adimlar
+  value:
+    baslik: Nerede çalışır?
+    ogeler:
+    - ikon: ''
+      baslik: Tarayıcı eklentisi
+      metin: ChatGPT, Claude ve Gemini gibi tarayıcı tabanlı yapay zekâ servislerinde komutları, dosya yüklemelerini ve yanıtları inceler.
+    - ikon: ''
+      baslik: Uç nokta ajanı
+      metin: Masaüstü yapay zekâ uygulamalarını, yerel kod asistanlarını ve pano yapıştırmalarını izler ve denetler.
+    - ikon: ''
+      baslik: Yapay zekâ ağ geçidi
+      metin: Salesforce, Teams veya destek sistemleri gibi iş uygulamalarından OpenAI, Gemini veya Mistral gibi modellere giden istekleri ve yanıtları inceler.
+- discriminant: kartlar
+  value:
+    eyebrow: → Giden
+    baslik: 'Giderken: komutlar ve dosyalar'
+    aciklama: ''
+    ogeler:
+    - ikon: maske
+      baslik: Kişisel veri maskeleme
+      metin: Ad, kimlik ve hesap numaraları etiketlerle değiştirilir; komut yine gider.
+    - ikon: anahtar
+      baslik: Gizli anahtarlar ve token'lar
+      metin: API anahtarları, parolalar ve token'lar modele ulaşmadan yakalanır.
+    - ikon: kod
+      baslik: Kaynak kod
+      metin: Komuta yapıştırılan kod tanınır ve politikaya göre ele alınır.
+    - ikon: yapayZeka
+      baslik: Komut enjeksiyonu ve jailbreak
+      metin: Komut enjeksiyonu ve jailbreak kalıplarını modele ulaşmadan tespit edin.
+- discriminant: kartlar
+  value:
+    eyebrow: ← Dönen
+    baslik: 'Dönerken: yanıtlar'
+    aciklama: ''
+    ogeler:
+    - ikon: maske
+      baslik: Maskelenen değerlerin geri yüklenmesi
+      metin: Kullanıcı yanıtta gerçek değerleri yeniden görür. Model ise hiç görmedi.
+    - ikon: belgeAra
+      baslik: Yanıtlardaki hassas veri
+      metin: Korunan veri taşıyan yanıtlar dönüşte yakalanır.
+    - ikon: akis
+      baslik: Hassas içerik ve politika kısıtları
+      metin: Modellerin kısıtlı kurum içi veriyi veya politikaya aykırı çıktıyı kullanıcıya döndürmesini önleyin.
+- discriminant: sss
+  value:
+    baslik: Yapay Zekâ Güvenlik Duvarı hakkında sorular
+    ogeler:
+    - soru: Çalışanlar yapay zekâ araçlarını kullanmayı bırakmak zorunda mı?
+      cevap: Hayır. Toptan yasak yerine yanıtları veri hassasiyetine ve kullanıcı bağlamına göre ayarlayabilirsiniz. Çalışanlar satır içi maskeleme veya gerekçe isteminden sonra güvenle çalışmaya devam eder; yüksek riskli sızıntılar engellenir.
+    - soru: Hangi yapay zekâ servislerini kapsar?
+      cevap: Tarayıcı eklentisiyle tarayıcı tabanlı dil modellerini (ChatGPT, Claude, Gemini, Perplexity ve DeepSeek dahil), uç nokta ajanıyla masaüstü yapay zekâ uygulamalarını ve kod asistanlarını (Copilot, Cursor, Claude Code, Codex), yapay zekâ ağ geçidiyle kurumsal API trafiğini (OpenAI, Anthropic, Mistral, Gemini). Servis bazındaki tam denetim tablosunu POC öncesinde paylaşırız.
+    - soru: Yapay zekâ güvenlik duvarı neyi inceler?
+      cevap: Giden komutları (dosya ekleri dahil) ve dönen model yanıtlarını kişisel veri, finansal veri, API anahtarı, kimlik bilgisi, kaynak kod ve komut enjeksiyonu kalıpları açısından inceler.
+- discriminant: ilgili
+  value:
+    baslik: İlgili sayfalar
+    sayfalar:
+    - yapay-zeka-veri-guvenligi
+    - kod-asistanlari
+    - tespit-motoru
+    - golge-yapay-zeka

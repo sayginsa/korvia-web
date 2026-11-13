@@ -1,0 +1,109 @@
+kimlik: İş ortakları
+yol: is-ortaklari
+bolum: kurumsal
+sira: 3
+ikon: ortaklik
+menuAciklama: Bayi, entegratör ve MSSP iş ortaklığı.
+seoBaslik: İş ortakları | Korvia
+seoAciklama: Korvia; bayiler, sistem entegratörleri, çözüm ortakları ve yönetilen güvenlik hizmeti sağlayıcılarıyla çalışır. DSPM, uç nokta DLP ve yapay zekâ güvenliğini k
+eyebrow: İş ortakları
+baslik: Veri ve yapay zekâ güvenliğini müşterilerinize taşıyın.
+ozet: Korvia; bayiler, sistem entegratörleri, çözüm ortakları ve yönetilen güvenlik hizmeti sağlayıcılarıyla çalışır. DSPM, uç nokta DLP ve yapay zekâ güvenliğini kurum içinde veya çok kiracılı yönetilen hizmet olarak sunun; fırsat koruması ve doğrudan mühendislik desteğiyle.
+cta:
+  etiket: Başvurun
+  url: '#form'
+bloklar:
+- discriminant: metin
+  value:
+    eyebrow: ''
+    baslik: Müşteri ihtiyacına göre kurulmuş bir güvenlik portföyü.
+    govde: |-
+      Müşteriler geleneksel bir DLP ihtiyacıyla, bir veri görünürlüğü sorunuyla veya çalışanların yapay zekâ araçlarıyla hassas bilgi paylaşma endişesiyle başlayabilir.
+
+      Müşteri ister gölge yapay zekâ keşfiyle, ister mevzuat kaynaklı sınıflandırmayla, ister tam uç nokta DLP değişimiyle başlasın; tek modülle girip aynı ajan üzerinde genişleyebilirsiniz.
+- discriminant: tablo
+  value:
+    baslik: İş ortaklığının üç yolu
+    aciklama: ''
+    sutunlar:
+    - ''
+    - Bayi / entegratör
+    - MSSP / yönetilen hizmet
+    - Bölge iş ortağı
+    satirlar:
+    - hucreler:
+      - Siz satarsınız
+      - Korvia lisansları ve kendi kurulum ve desteğiniz
+      - Aylık veri koruma hizmeti
+      - Bölgenizdeki bayi ağınız üzerinden Korvia
+    - hucreler:
+      - Biz sağlarız
+      - Lisans, teknik eğitim, POC desteği, fırsat kaydı
+      - Çok kiracılı konsol, müşteri bazında politika ve raporlar
+      - Lisans, teknik eğitim, satış ve pazarlama kitleri, POC desteği
+    - hucreler:
+      - Müşterinin kurulumu
+      - Müşterinin tercihine göre kurum içi, özel bulut veya yönetilen
+      - Sizde veya bizde barındırılır; uç nokta ajanları müşteride
+      - Müşterinin tercihine göre kurum içi, özel bulut veya yönetilen
+    - hucreler:
+      - Ticari model
+      - Abonelik veya süresiz lisans üzerinden marj
+      - Her iş ortağıyla ayrıca kararlaştırılır
+      - Abonelik veya süresiz lisans üzerinden marj
+- discriminant: kartlar
+  value:
+    eyebrow: ''
+    baslik: MSSP sürümü size neler verir?
+    aciklama: ''
+    ogeler:
+    - ikon: ''
+      baslik: Kesin kiracı ayrımı
+      metin: Tek konsol; her müşteri yalnızca kendi verisini görür.
+    - ikon: ''
+      baslik: Politika şablonları
+      metin: Bir kez kurun, her müşteriye dağıtın, müşteri bazında değiştirin.
+    - ikon: ''
+      baslik: Panolar ve raporlar
+      metin: Müşteri ve portföy bazında, zamanlanmış olarak.
+    - ikon: ''
+      baslik: Hızlı devreye alma
+      metin: Kiracıyı oluşturun, ajanı dağıtın, şablonu uygulayın. Genellikle bir öğleden sonra.
+- discriminant: not
+  value:
+    baslik: Yapmadıklarımız
+    metin: Kayıtlı müşterilerinize satış yapmayız ve bölgenizde rakip bir yönetilen hizmet işletmeyiz.
+    link:
+      etiket: ''
+      url: ''
+- discriminant: kartlar
+  value:
+    eyebrow: ''
+    baslik: Yetkinlik desteği
+    aciklama: ''
+    ogeler:
+    - ikon: ''
+      baslik: Teknik eğitim
+      metin: İki gün; çevrim içi veya yerinde.
+    - ikon: ''
+      baslik: Satış desteği
+      metin: Konumlandırma, demo ortamı, itiraz karşılama ve POC el kitabı.
+    - ikon: ''
+      baslik: Pazarlama kitleri
+      metin: Ortak markalı ürün föyleri ve kampanya kitleri.
+    - ikon: ''
+      baslik: İsimli iş ortağı yöneticisi
+      metin: Ve mühendislerimize doğrudan bir kanal.
+- discriminant: form
+  value:
+    tur: is-ortakligi
+    baslik: Korvia iş ortağı olun
+    aciklama: Nerede çalıştığınızı ve nasıl sattığınızı anlatın. İlk kavram kanıtlamanızı uçtan uca birlikte yürütürüz.
+    secenekBasligi: Nasıl iş ortaklığı yapmak istiyorsunuz?
+    secenekler:
+    - 'Bayi / entegratör: müşterilere satış ve kurulum'
+    - 'MSSP / yönetilen hizmet: kendi hizmetiniz olarak işletme'
+    - 'Bölge iş ortağı: bir bölgeyi kapsama'
+    - 'Henüz emin değilim: birlikte seçelim'
+    mesajEtiketi: İşinizi kısaca anlatın (isteğe bağlı)
+    gonderEtiketi: Başvurun

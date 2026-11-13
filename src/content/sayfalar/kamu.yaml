@@ -1,0 +1,64 @@
+kimlik: Kamu
+yol: sektorler/kamu
+bolum: sektorler
+sira: 4
+ikon: kamu
+menuAciklama: Bakanlıklar, belediyeler ve kamu kurumları.
+seoBaslik: Kamu | Korvia
+seoAciklama: Kamu kurumları kimlik belgeleri, vergi ve sosyal güvenlik kayıtlarıyla çalışır ve çoğu zaman yurt dışında barındırılan servisleri kullanamaz. Korvia kendi alt
+eyebrow: Sektörler · Kamu
+baslik: Vatandaş verisi, sizin altyapınızda.
+ozet: Kamu kurumları kimlik belgeleri, vergi ve sosyal güvenlik kayıtlarıyla çalışır ve çoğu zaman yurt dışında barındırılan servisleri kullanamaz. Korvia kendi altyapınızda, internet bağlantısı olsun olmasın çalışır.
+cta:
+  etiket: Demo planlayın
+  url: /demo/
+bloklar:
+- discriminant: senaryo
+  value:
+    baslik: Bir T.C. kimlik numarası listesi kişisel bulut sürücüye gidiyor.
+    veri: Vatandaş T.C. kimlik numarası listesi
+    kullanici: Dosya sorumlusu
+    hedef: Kişisel bulut sürücü
+    politika: 'Vatandaş verisi: yalnızca kurum içi sistemler'
+    karar: engelle
+    kararNotu: durduruldu, nedeni gösterildi
+- discriminant: metin
+  value:
+    eyebrow: ''
+    baslik: Kamu hizmetlerinde hassas bilgiyi koruyun.
+    govde: |-
+      Bakanlıklar, belediyeler ve kamu kurumları T.C. kimlik numaralarını, vergi beyannamelerini, sosyal yardım kayıtlarını ve ihale belgelerini sıkı veri egemenliği şartlarıyla işler. Üst veriyi veya içeriği yurt dışına yönlendiren yalnızca bulut tabanlı güvenlik araçları çoğu zaman söz konusu bile olamaz.
+
+      Korvia tamamen kurum içinde veya internetten yalıtılmış ağlarda kurulur. Sağlama doğrulamalı T.C. kimlik tespitini, otomatik sınıflandırmayı ve imzalı denetim izlerini KVKK ve Bilgi ve İletişim Güvenliği Rehberi çalışmalarınız için bir araya getirir.
+- discriminant: kartlar
+  value:
+    eyebrow: ''
+    baslik: Korvia'nın hangi parçaları bunu yapar?
+    aciklama: ''
+    ogeler:
+    - ikon: sunucu
+      baslik: Kurulum
+      metin: Kendi altyapınızda bir cihaz; gerektiğinde yalıtılmış ağda.
+    - ikon: tara
+      baslik: Veri Keşfi ve DSPM
+      metin: Kişisel veri mevzuatının istediği kişisel veri envanteri.
+    - ikon: parmakIzi
+      baslik: Tespit Motoru
+      metin: T.C. kimlik ve vergi numaraları yalnızca biçimle değil sağlama doğrulamasıyla kontrol edilir.
+- discriminant: not
+  value:
+    baslik: Hangi kurulum uygun?
+    metin: Kurum içi. Siz açmadıkça ağınızdan hiçbir şey çıkmaz.
+    link:
+      etiket: Kurulum seçenekleri
+      url: /platform/kurulum/
+- discriminant: mevzuat
+  value:
+    baslik: Hangi mevzuata dokunur?
+    ogeler:
+    - ikon: ''
+      baslik: KVKK
+      metin: '6698 sayılı Kanun: veri güvenliğine ilişkin yükümlülükler (md. 12), veri envanteri ve ihlal bildirimi.'
+    - ikon: ''
+      baslik: Bilgi ve İletişim Güvenliği Rehberi
+      metin: 'Cumhurbaşkanlığı rehberi: kritik verinin sınıflandırılması, korunması ve kayıt yönetimi.'

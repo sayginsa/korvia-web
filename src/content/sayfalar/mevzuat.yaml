@@ -1,0 +1,73 @@
+kimlik: Mevzuata genel bakış
+yol: mevzuat
+bolum: cozumler
+sira: 20
+ikon: kitap
+menuAciklama: KVKK, BDDK, SPK, Bilgi ve İletişim Güvenliği Rehberi, PCI DSS, ISO 27001.
+seoBaslik: 'Mevzuat: KVKK, BDDK, SPK ve Bilgi ve İletişim Güvenliği Rehberi | Korvia'
+seoAciklama: 'Veri nerede, ona ne oldu? Korvia programınızın teknik tarafını destekler: düzenlemeye tabi verinin envanteri, nereye gidebileceğine dair denetimler ve kanıt.'
+eyebrow: Mevzuat
+baslik: Her düzenleme aynı iki soruyu sorar.
+ozet: 'Veri nerede, ona ne oldu? Korvia programınızın teknik tarafını destekler: düzenlemeye tabi verinin envanteri, nereye gidebileceğine dair denetimler ve kanıt.'
+cta:
+  etiket: Demo planlayın
+  url: /demo/
+bloklar:
+- discriminant: mevzuat
+  value:
+    baslik: Hangi düzenlemeye ihtiyacınız var?
+    ogeler:
+    - ikon: ''
+      baslik: KVKK
+      metin: '6698 sayılı Kanun: veri güvenliğine ilişkin yükümlülükler (md. 12), veri envanteri ve ihlal bildirimi.'
+    - ikon: ''
+      baslik: BDDK Bilgi Sistemleri Yönetmeliği
+      metin: Bankalarda bilgi güvenliği, erişim yönetimi ve iz kayıtları.
+    - ikon: ''
+      baslik: SPK Bilgi Sistemleri Yönetimi Tebliği
+      metin: 'VII-128.9: sermaye piyasası kurumlarında bilgi güvenliği ve iz kayıtları.'
+    - ikon: ''
+      baslik: Bilgi ve İletişim Güvenliği Rehberi
+      metin: 'Cumhurbaşkanlığı rehberi: kritik verinin sınıflandırılması, korunması ve kayıt yönetimi.'
+    - ikon: ''
+      baslik: PCI DSS
+      metin: Kart verisinin saklanması ve hareket hâlinde korunması.
+    - ikon: ''
+      baslik: ISO/IEC 27001
+      metin: Sınıflandırma, etiketleme ve bilgi aktarımı kontrolleri.
+    - ikon: ''
+      baslik: Kişisel Sağlık Verileri Yönetmeliği
+      metin: Özel nitelikli sağlık verisine erişim, aktarım ve kayıt.
+    - ikon: ''
+      baslik: GDPR
+      metin: AB'deki kişilerin verisini işleyen kurumlar için işleme güvenliği ve kayıtlar.
+- discriminant: tablo
+  value:
+    baslik: Teknik gereksinimden Korvia'ya
+    aciklama: ''
+    sutunlar:
+    - Teknik soru
+    - Korvia'daki karşılığı
+    satirlar:
+    - hucreler:
+      - Kişisel veri nerede duruyor?
+      - 'Veri Keşfi ve DSPM: konuma göre kişisel veri envanteri'
+    - hucreler:
+      - Veri hangi kanallardan çıkabilir?
+      - 'DLP: uç nokta, e-posta, web, bulut ve yapay zekâda tek politika'
+    - hucreler:
+      - Bir olayda ne oldu, kim yaptı?
+      - 'İnceleme: imzalı olay kayıtları ve vaka zaman çizelgesi'
+    - hucreler:
+      - Kayıtlar değiştirilebilir mi?
+      - İmzalı kanıt; denetim kaydına erişim de kaydedilir
+    - hucreler:
+      - Veri yurt dışına çıkıyor mu?
+      - Kurum içi ve özel bulut kurulumda içerik ve kanıt ağınızda kalır
+- discriminant: not
+  value:
+    baslik: '"Destekler" ne demek?'
+    metin: Korvia bu gereksinimleri teknik kontrollerle destekler. Hukuki yorum hukuk danışmanınıza aittir.
+    link:
+      etiket: ''
+      url: ''

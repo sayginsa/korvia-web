@@ -1,0 +1,73 @@
+kimlik: Finans
+yol: sektorler/finans
+bolum: sektorler
+sira: 1
+ikon: finans
+menuAciklama: Bankalar, sigorta ve ödeme kuruluşları.
+seoBaslik: Finans | Korvia
+seoAciklama: Bankalar, sigorta şirketleri ve ödeme kuruluşları BDDK, SPK ve PCI DSS gereksinimleriyle ve verinin nerede tutulabileceğine dair kurallarla çalışır. Korvia ağ
+eyebrow: Sektörler · Finans
+baslik: Düzenleyici kanıt ister. Müşteri, verisinin yerinde kalmasını.
+ozet: Bankalar, sigorta şirketleri ve ödeme kuruluşları BDDK, SPK ve PCI DSS gereksinimleriyle ve verinin nerede tutulabileceğine dair kurallarla çalışır. Korvia ağınızın içinde çalışır ve her olay için imzalı kanıt saklar.
+cta:
+  etiket: Demo planlayın
+  url: /demo/
+bloklar:
+- discriminant: senaryo
+  value:
+    baslik: Bir kart verisi dökümü kişisel adrese gidiyor.
+    veri: Kart verisi dökümü
+    kullanici: Ödeme sistemleri analisti
+    hedef: Kişisel e-posta adresi
+    politika: 'Kart verisi: yalnızca onaylı sistemler'
+    karar: engelle
+    kararNotu: durduruldu, gönderene nedeni gösterildi
+- discriminant: metin
+  value:
+    eyebrow: ''
+    baslik: Finansal bilgiyi gündelik iş akışlarında koruyun.
+    govde: |-
+      Analistler, danışmanlar ve operasyon ekipleri her gün ana bankacılık dökümleri, kart verisi (PAN), IBAN listeleri, birleşme ve satın alma modelleri ve kredi dosyalarıyla çalışır. Yanlış adreslenmiş tek bir e-posta, onaysız bir bulut yüklemesi veya bir yapay zekâ komutu bildirim gerektiren bir ihlale dönüşebilir.
+
+      Korvia müşteri ve kart kayıtlarınızı birebir veri eşleştirme (EDM) ve sağlama doğrulamasıyla yerel olarak dizinler. Uç nokta, e-posta, web ve yapay zekâda izinsiz aktarımları durdururken tüm incelemeyi ve imzalı denetim kanıtını ağınızın içinde tutar.
+- discriminant: kartlar
+  value:
+    eyebrow: ''
+    baslik: Korvia'nın hangi parçaları bunu yapar?
+    aciklama: ''
+    ogeler:
+    - ikon: eposta
+      baslik: Ağ ve E-posta DLP
+      metin: Giden posta ve yüklemeler çıkmadan kontrol edilir.
+    - ikon: parmakIzi
+      baslik: Tespit Motoru
+      metin: Kendi müşteri ve kart kayıtlarınıza karşı birebir veri eşleştirme.
+    - ikon: belgeAra
+      baslik: İnceleme
+      metin: Denetçiler için imzalı kanıt ve vaka zaman çizelgeleri.
+    - ikon: sunucu
+      baslik: Kurulum
+      metin: Kurum içinde, kendi ağınızda.
+- discriminant: not
+  value:
+    baslik: Hangi kurulum uygun?
+    metin: Kurum içi; gerektiği yerde yalıtılmış ağ güncellemeleri ve SIEM'inize gönderilen olaylarla.
+    link:
+      etiket: Kurulum seçenekleri
+      url: /platform/kurulum/
+- discriminant: mevzuat
+  value:
+    baslik: Hangi mevzuata dokunur?
+    ogeler:
+    - ikon: ''
+      baslik: BDDK Bilgi Sistemleri Yönetmeliği
+      metin: Bankalarda bilgi güvenliği, erişim yönetimi ve iz kayıtları.
+    - ikon: ''
+      baslik: SPK Bilgi Sistemleri Yönetimi Tebliği
+      metin: 'VII-128.9: sermaye piyasası kurumlarında bilgi güvenliği ve iz kayıtları.'
+    - ikon: ''
+      baslik: PCI DSS
+      metin: Kart verisinin saklanması ve hareket hâlinde korunması.
+    - ikon: ''
+      baslik: KVKK
+      metin: '6698 sayılı Kanun: veri güvenliğine ilişkin yükümlülükler (md. 12), veri envanteri ve ihlal bildirimi.'

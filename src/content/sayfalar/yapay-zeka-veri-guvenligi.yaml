@@ -1,0 +1,108 @@
+kimlik: Yapay Zekâ Veri Güvenliği
+yol: yapay-zeka-guvenligi/yapay-zeka-veri-guvenligi
+bolum: yapay-zeka
+sira: 3
+ikon: maske
+menuAciklama: Gölge yapay zekâ, maskeleme, tarayıcı ve masaüstü uygulamaları.
+seoBaslik: Yapay Zekâ Veri Güvenliği | Korvia
+seoAciklama: Çalışanlar yapay zekâyı her gün yazmak, analiz etmek ve kod geliştirmek için kullanıyor. Korvia Yapay Zekâ Veri Güvenliği kullanılan her yapay zekâ aracını ke
+eyebrow: Yapay zekâ güvenliği · Yapay zekâ veri güvenliği
+baslik: Çalışanların yapay zekâyla veriyi nasıl paylaştığını anlayın.
+ozet: Çalışanlar yapay zekâyı her gün yazmak, analiz etmek ve kod geliştirmek için kullanıyor. Korvia Yapay Zekâ Veri Güvenliği kullanılan her yapay zekâ aracını keşfeder, kurumsal kiracıyı kişisel hesaptan ayırır ve komutlardaki ve dosya yüklemelerindeki hassas veriyi maskeler veya engeller.
+cta:
+  etiket: Demo planlayın
+  url: /demo/
+bloklar:
+- discriminant: maskeleme
+  value:
+    baslik: 'Örnek: maskeleme'
+    once: Ayşe Yılmaz için bir ödeme hatırlatması yaz. T.C. Kimlik No 10000000146, IBAN TR33 0006 1005 1978 6457 8413 26.
+    sonra: '[AD SOYAD] için bir ödeme hatırlatması yaz. T.C. Kimlik No [TCKN], IBAN [IBAN].'
+    not: Temsilî örnektir.
+- discriminant: senaryo
+  value:
+    baslik: Müşteri listesi kişisel bir sohbet botuna gidiyor.
+    veri: Ad ve telefon numaraları içeren müşteri listesi
+    kullanici: Satış müdürü
+    hedef: Sohbet botu · kişisel hesap
+    politika: Müşteri verisi / yapay zekâ paylaşımı
+    karar: engelle
+    kararNotu: gönderilmedi, nedeni gösterildi
+- discriminant: metin
+  value:
+    eyebrow: ''
+    baslik: Denetimden önce görünürlük gelir.
+    govde: |-
+      Kurumlar etkili güvenlik politikaları koymadan önce çalışanların hangi yapay zekâ araçlarını kullandığını ve hassas bilginin nerede paylaşılabileceğini anlamalıdır.
+
+      Korvia Yapay Zekâ Veri Güvenliği yapay zekâ kullanımının görünürlüğüne, hassas verinin açığa çıkmasına ve yönetişime odaklanır. Yapay Zekâ Güvenlik Duvarı ise komutlar ve yanıtlar için satır içi inceleme ve uygulama sağlar. İkisi birlikte, güvenlik ekiplerinin riskli yapay zekâ etkinliğini anlamasına ve doğru denetimi uygulamasına yardım eder.
+- discriminant: bildirim
+  value:
+    eyebrow: Kullanıcı ne görür?
+    baslik: Komut gönderilmeden durur, neden durduğu söylenir.
+    aciklama: Çalışan kişisel hesabından bir yapay zekâ aracına müşteri IBAN'larını yapıştırdı. Korvia içeriği tanıdı, komutu göndermedi ve nedenini ekranda gösterdi.
+    sahne: yapay-zeka
+    karar: engelle
+    hedef: asistan.example
+    uygulama: A
+    veriTuru: IBAN
+    veriDegeri: TR33 **** **** **** **** **13 26
+    dosya: ''
+- discriminant: adimlar
+  value:
+    baslik: Nasıl çalışır?
+    ogeler:
+    - ikon: ''
+      baslik: Yapay zekâ araçlarını bul
+      metin: Kullanılan yapay zekâ servisleri; kullanıcı ve cihaz bazında, kurumsal veya kişisel hesapla.
+    - ikon: ''
+      baslik: İçeriği incele
+      metin: Yazılan komutlar, yapıştırılan metin ve eklenen dosyalar çıkmadan önce Tespit Motoru'ndan geçer.
+    - ikon: ''
+      baslik: Maskele veya durdur
+      metin: Hassas değerler etikete dönüşür ya da politika öyle diyorsa komut durur.
+    - ikon: ''
+      baslik: Kullanıcıya söyle
+      metin: Kullanıcı "Bu içerik gönderilmedi" mesajını ve nedenini görür.
+- discriminant: kartlar
+  value:
+    eyebrow: ''
+    baslik: Yapay zekâ modülü ne yapar?
+    aciklama: ''
+    ogeler:
+    - ikon: yapayZeka
+      baslik: Gölge yapay zekâ envanteri
+      metin: Hangi yapay zekâ araçlarının, kim tarafından, ne sıklıkla ve hangi hesapla kullanıldığı.
+    - ikon: yapayZeka
+      baslik: Komut incelemesi
+      metin: Yazılan ve yapıştırılan metin gönderilmeden sınıflandırılır.
+    - ikon: bulut
+      baslik: Yükleme denetimi
+      metin: Komuta eklenen dosyalar diğer tüm yüklemeler gibi incelenir.
+    - ikon: maske
+      baslik: Maskeleme
+      metin: Ad, kimlik ve hesap numaraları etikete dönüşür; geri kalanı gider.
+    - ikon: hesap
+      baslik: Hesaba duyarlı politika
+      metin: Kurumun yapay zekâ kiracısı ve kişisel hesaplar için farklı kurallar.
+    - ikon: ekran
+      baslik: Tarayıcı ve masaüstü
+      metin: Tarayıcı eklentisi web tabanlı yapay zekâyı, uç nokta ajanı masaüstü uygulamalarını kapsar.
+- discriminant: sss
+  value:
+    baslik: Yapay Zekâ Veri Güvenliği hakkında sorular
+    ogeler:
+    - soru: Yapay zekâ araçlarını engellemek zorunda mıyız?
+      cevap: Hayır. Yapay zekâyı tamamen engellemek çalışanları yönetilmeyen kişisel cihazlara iter. Korvia komutlardaki kişisel veriyi, finansal veriyi ve gizli anahtarları otomatik maskeleyerek yapay zekâyla verimli çalışmaya izin verir; engellemeyi kritik fikri mülkiyete veya onaysız kişisel hesaplara ayırırsınız.
+    - soru: Hangi yapay zekâ araçlarını görür?
+      cevap: Tarayıcı tabanlı dil modellerini (ChatGPT, Claude, Gemini, Perplexity ve DeepSeek gibi), masaüstü yapay zekâ uygulamalarını ve kod asistanlarını (Copilot, Cursor, Claude Code, Codex) tespit eder; Teams ve Slack gibi iş birliği araçlarındaki yapay zekâ dosya yüklemelerini de inceler.
+    - soru: Nereden başlamalıyız?
+      cevap: Gölge yapay zekâ keşfini izleme modunda açarak başlayın. Birkaç gün içinde hangi yapay zekâ servislerinin hangi birimlerde kullanıldığını ve hangi hassas verinin paylaşıldığını gösteren somut bir envanter elde edersiniz. Bu, uygulanabilir maskeleme ve engelleme kuralları koymak için gereken kanıttır.
+- discriminant: ilgili
+  value:
+    baslik: İlgili sayfalar
+    sayfalar:
+    - yapay-zeka-guvenlik-duvari
+    - golge-yapay-zeka
+    - bulut-dlp
+    - kod-asistanlari

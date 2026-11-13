@@ -1,0 +1,64 @@
+kimlik: Hukuk
+yol: sektorler/hukuk
+bolum: sektorler
+sira: 5
+ikon: hukuk
+menuAciklama: Hukuk büroları ve danışmanlık şirketleri.
+seoBaslik: Hukuk | Korvia
+seoAciklama: Hukuk büroları ve danışmanlık şirketleri dosyaları ve gizli yazışmaları korurken çalışanları taslak ve özet için yapay zekâ kullanıyor. Korvia araçları yasakl
+eyebrow: Sektörler · Hukuk
+baslik: Müvekkil dosyaları gizli kalır. Her müvekkil de farklıdır.
+ozet: Hukuk büroları ve danışmanlık şirketleri dosyaları ve gizli yazışmaları korurken çalışanları taslak ve özet için yapay zekâ kullanıyor. Korvia araçları yasaklamadan nelerin girdiğini denetler.
+cta:
+  etiket: Demo planlayın
+  url: /demo/
+bloklar:
+- discriminant: senaryo
+  value:
+    baslik: Bir müvekkil sözleşmesinden madde herkese açık bir yapay zekâ aracına gidiyor.
+    veri: Müvekkil sözleşmesinden bir madde
+    kullanici: Avukat
+    hedef: Herkese açık yapay zekâ aracı
+    politika: 'Müvekkil belgeleri: yalnızca onaylı araçlar'
+    karar: uyar
+    kararNotu: onaylı araç önerildi
+- discriminant: metin
+  value:
+    eyebrow: ''
+    baslik: Gizli müvekkil ve dosya bilgisini koruyun.
+    govde: |-
+      Avukatlar ve ortaklar yüzlerce müvekkil dosyasında çalışır: sözleşme taslağı hazırlar, birleşme ve satın alma veri odalarını inceler ve giderek daha çok dilekçe özetlemek için dil modellerini kullanır. Gizli tek bir maddeyi herkese açık bir yapay zekâ aracına yapıştırmak veya yanlış müvekkilin dosyasını e-postaya eklemek, müvekkil güvenini sarsar.
+
+      Korvia belgeleri müvekkile veya dosyaya göre etiketler, hassas sözleşmelerin tek bir paragrafa kadar parmak izini alır ve gizli maddeleri onaysız yapay zekâ araçlarına veya kişisel e-postaya ulaşmadan maskeler ya da engeller.
+- discriminant: kartlar
+  value:
+    eyebrow: ''
+    baslik: Korvia'nın hangi parçaları bunu yapar?
+    aciklama: ''
+    ogeler:
+    - ikon: yapayZeka
+      baslik: Yapay Zekâ Veri Güvenliği
+      metin: Onaylı asistana izin verin, diğerlerine nelerin ulaştığını denetleyin.
+    - ikon: parmakIzi
+      baslik: Tespit Motoru
+      metin: Parmak izleri yalnızca kopyalanan dosyayı değil, kopyalanan maddeyi de tanır.
+    - ikon: etiket
+      baslik: Veri Sınıflandırma
+      metin: Kendi kurallarınızla müvekkile veya dosyaya göre etiketler.
+- discriminant: not
+  value:
+    baslik: Hangi kurulum uygun?
+    metin: Yönetilen hizmet veya özel bulut; Yapay Zekâ Veri Güvenliği baştan açık.
+    link:
+      etiket: Kurulum seçenekleri
+      url: /platform/kurulum/
+- discriminant: mevzuat
+  value:
+    baslik: Hangi mevzuata dokunur?
+    ogeler:
+    - ikon: ''
+      baslik: KVKK
+      metin: '6698 sayılı Kanun: veri güvenliğine ilişkin yükümlülükler (md. 12), veri envanteri ve ihlal bildirimi.'
+    - ikon: ''
+      baslik: ISO/IEC 27001
+      metin: Sınıflandırma, etiketleme ve bilgi aktarımı kontrolleri.

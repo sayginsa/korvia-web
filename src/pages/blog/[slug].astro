@@ -1,0 +1,46 @@
+---
+import Temel from '../../layouts/Temel.astro';
+import { reader, markdocHtml, tarihTR } from '../../lib/icerik';
+
+export async function getStaticPaths() {
+  const yazilar = await reader.collections.blog.all();
+  return yazilar.map((y) => ({ params: { slug: y.slug } }));
+}
+
+const { slug } = Astro.params as { slug: string };
+const y = (await reader.collections.blog.read(slug))!;
+const { node } = await y.icerik();
+const html = markdocHtml(node);
+const digerleri = (await reader.collections.blog.all()).filter((x) => x.slug !== slug && x.entry.kategori === y.kategori).slice(0, 2);
+---
+<Temel baslik={`${y.baslik} | Korvia Blog`} aciklama={y.ozet}>
+  <article>
+    <header class="sayfa-basi">
+      <div class="wrap">
+        <div class="sayfa-basi__ic">
+          <nav aria-label="Konum">
+            <ol class="kirinti mono"><li><a href="/">Ana sayfa</a></li><li><a href="/blog/">Blog</a></li></ol>
+          </nav>
+          <p class="eyebrow">{y.kategori}</p>
+          <h1 class="h1">{y.baslik}</h1>
+          <p class="mono muted">{tarihTR(y.tarih)} · {y.sure} dk okuma · Korvia ekibi</p>
+        </div>
+      </div>
+    </header>
+    <div class="bolum bolum--beyaz">
+      <div class="wrap"><div class="yazi" set:html={html} /></div>
+    </div>
+  </article>
+  {digerleri.length > 0 && (
+    <section class="bolum">
+      <div class="wrap">
+        <div class="bolum-baslik"><h2 class="h2">İlgili yazılar</h2></div>
+        <div class="ilgili">
+          {digerleri.map((d) => (
+            <a href={`/blog/${d.slug}/`}><strong>{d.entry.baslik}</strong><span>{d.entry.ozet}</span></a>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+</Temel>

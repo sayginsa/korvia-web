@@ -1,0 +1,23 @@
+---
+import { ayarlar } from '../lib/icerik';
+const a = await ayarlar();
+---
+<section class="kapanis" aria-labelledby="kapanis-baslik">
+  <svg class="kapanis__motif" viewBox="0 0 240 160" aria-hidden="true" style="position:absolute;right:0;top:0;height:100%;width:auto;opacity:.16">
+    <rect x="200" y="0" width="40" height="40" fill="#fff" />
+    <rect x="160" y="40" width="40" height="40" fill="#fff" />
+    <rect x="200" y="80" width="40" height="40" fill="#fff" />
+    <rect x="120" y="120" width="40" height="40" fill="#fff" />
+  </svg>
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Kavram kanıtlama</p>
+      <h2 id="kapanis-baslik" class="h1" style="margin-top:14px">{a.kapanisBaslik}</h2>
+      <p>{a.kapanisMetin}</p>
+    </div>
+    <div style="display:flex;gap:12px;flex-wrap:wrap">
+      <a class="btn btn--birincil" href="/demo/" style="background:#fff;color:var(--k-bordo)">{a.demoEtiketi}</a>
+      <a class="btn" href="/kaynaklar/poc-rehberi/" style="color:#fff;border-color:rgba(255,255,255,.5)">POC rehberi</a>
+    </div>
+  </div>
+</section>

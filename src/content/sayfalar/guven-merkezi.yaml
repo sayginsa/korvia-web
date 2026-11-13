@@ -1,0 +1,48 @@
+kimlik: Güven merkezi
+yol: guven-merkezi
+bolum: kurumsal
+sira: 2
+ikon: rozet
+menuAciklama: Neyi incelediğimiz, sakladığımız ve nerede tuttuğumuz.
+seoBaslik: Güven merkezi | Korvia
+seoAciklama: Güvenlik ekipleri bir güvenlik aracının neyi incelediğini, neyi sakladığını veya ağ üzerinden neyi gönderdiğini tahmin etmek zorunda kalmamalı. Korvia Güven M
+eyebrow: Güven merkezi
+baslik: Güvenlikte şeffaflık önemlidir.
+ozet: Güvenlik ekipleri bir güvenlik aracının neyi incelediğini, neyi sakladığını veya ağ üzerinden neyi gönderdiğini tahmin etmek zorunda kalmamalı. Korvia Güven Merkezi bileşenlerin nerede çalıştığını, olay kayıtlarının neyi tuttuğunu, kayıtların ne kadar saklandığını ve verinizin nasıl sizin denetiminizde kaldığını belgeler.
+cta:
+  etiket: Demo planlayın
+  url: /demo/
+bloklar:
+- discriminant: kartlar
+  value:
+    eyebrow: ''
+    baslik: Altı soru, altı cevap
+    aciklama: ''
+    ogeler:
+    - ikon: ''
+      baslik: Korvia neyi inceler?
+      metin: Politikalarınızın kapsadığı kanallardaki dosyaları, mesajları, yüklemeleri ve yapay zekâ komutlarını. İçerik hareket ettiği yerde kontrol edilir ve karar orada verilir. Açmadığınız kanallar incelenmez.
+    - ikon: ''
+      baslik: Neyi saklar?
+      metin: 'Olayları: neyin tespit edildiğini, hangi kuralın neden eşleştiğini, kullanıcıyı, hedefi ve uygulanan eylemi. İçerik yalnızca bir politika onu kanıt olarak istediğinde saklanır. Olaylar imzalıdır; sonradan yapılan her değişiklik görünür.'
+    - ikon: ''
+      baslik: Nerede saklanır?
+      metin: Kurum içi sürümler her şeyi ağınızın içinde tutar; siz göndermeyi seçmedikçe hiçbir şey çıkmaz. Yönetilen sürümlerde veri, kurulumdan önce sizinle kararlaştırılan bölgedeki barındırılan depoda tutulur.
+    - ikon: ''
+      baslik: Kim erişebilir?
+      metin: Konsol rolü verdiğiniz kişiler. Erişim rol tabanlıdır; denetçiler ham içeriği görmeden raporları görebilir. Her yönetici eylemi konsolun kendi denetim kaydına yazılır.
+    - ikon: ''
+      baslik: Hangi bileşenler ağınızda çalışır?
+      metin: 'Kurum içi sürümde hepsi: uç nokta ajanları, konsoluyla birlikte politika sunucusu ve kanıt deposu. Yönetilen sürümlerde uç nokta ajanları sizde çalışır, politika sunucusu sizin için barındırılır.'
+    - ikon: ''
+      baslik: Veri ne kadar saklanır?
+      metin: Olaylar, keşif tarama geçmişi ve günlük özetler varsayılan olarak 400 gün, denetim kaydı 24 ay saklanır. Kurumunuz bu süreleri kısaltabilir. Gerekçesi değerlendirme sırasında paylaştığımız saklama belgesindedir.
+- discriminant: form
+  value:
+    tur: belge
+    baslik: Güvenlik belgesi talep edin
+    aciklama: İncelemeniz için hangi belgelere ihtiyacınız olduğunu yazın. Sürümünüze ve kurulumunuza uygun olanları göndeririz.
+    secenekBasligi: ''
+    secenekler: []
+    mesajEtiketi: Hangi belgelere, neden ihtiyacınız var?
+    gonderEtiketi: Belge talep edin

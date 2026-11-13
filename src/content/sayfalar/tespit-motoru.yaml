@@ -1,0 +1,90 @@
+kimlik: Tespit Motoru
+yol: platform/tespit-motoru
+bolum: platform
+sira: 4
+ikon: parmakIzi
+menuAciklama: Parmak izi, birebir veri eşleştirme, görsellerde OCR.
+seoBaslik: Tespit Motoru | Korvia
+seoAciklama: Güvenilir veri koruması bir dosyanın, görselin veya komutun gerçekte ne içerdiğini bilmekle başlar. Korvia Tespit Motoru birebir veri eşleştirme, belge parmak
+eyebrow: Platform · Tespit motoru
+baslik: İçeriğin ne zaman hassas olduğunu bilin.
+ozet: Güvenilir veri koruması bir dosyanın, görselin veya komutun gerçekte ne içerdiğini bilmekle başlar. Korvia Tespit Motoru birebir veri eşleştirme, belge parmak izi, sağlama doğrulaması, sınıflandırıcılar ve OCR'ı birleştirerek yanlış alarmı azaltır.
+cta:
+  etiket: Demo planlayın
+  url: /demo/
+bloklar:
+- discriminant: senaryo
+  value:
+    baslik: Fiyat modelinin tek bir paragrafı dışarı çıkıyor.
+    veri: Parmak izi alınmış fiyat modelinden bir paragraf
+    kullanici: Müşteri temsilcisi
+    hedef: Kişisel web postası
+    politika: 'Fiyat modeli: parmak izi eşleşmesi ve dış alıcı'
+    karar: engelle
+    kararNotu: kısmi kopya yakalandı
+- discriminant: metin
+  value:
+    eyebrow: ''
+    baslik: Tespit kalitesi bağlama bağlıdır.
+    govde: |-
+      Hassas veri tespiti bir anahtar kelime araması değildir. Bilginin biçimi, eşleştirme yöntemi ve politika koşulları, bir olayın önemli olup olmadığını birlikte belirler.
+
+      Korvia güvenlik ekiplerinin birden çok tespit sinyalini, eşiği ve alıcı kuralını tek politikada birleştirmesine izin verir. Aynı motor hem sınıflandırmayı hem gerçek zamanlı DLP uygulamasını besler.
+- discriminant: adimlar
+  value:
+    baslik: Nasıl karar verir?
+    ogeler:
+    - ikon: ''
+      baslik: Önemli olanı dizinle
+      metin: Veritabanlarınız ve referans belgeleriniz ağınızın içinde dizinlenir.
+    - ikon: ''
+      baslik: Yöntemleri birleştir
+      metin: Her politika ihtiyaç duyduğu yöntemleri ve eşikleri seçer.
+    - ikon: ''
+      baslik: Eşleştir
+      metin: İçerik, görseller ve arşivler dahil, hareket ederken kontrol edilir.
+    - ikon: ''
+      baslik: Açıkla
+      metin: Her olay hangi kuralın neden eşleştiğini söyler.
+- discriminant: kartlar
+  value:
+    eyebrow: ''
+    baslik: Hangi yöntemleri kullanır?
+    aciklama: ''
+    ogeler:
+    - ikon: veritabani
+      baslik: Birebir veri eşleştirme
+      metin: Kalıplar değil; CRM, İK veya ana bankacılık dökümlerinizdeki kayıtlar.
+    - ikon: parmakIzi
+      baslik: Belge parmak izi
+      metin: Referans belgelerin tamamı veya tek bir paragrafa kadar kısmi kopyaları.
+    - ikon: liste
+      baslik: Doğrulanmış kalıplar
+      metin: Kart, T.C. kimlik, IBAN ve pasaport numaraları; sağlama doğrulamasıyla.
+    - ikon: katman
+      baslik: Sınıflandırıcılar
+      metin: Kaynak kod, mali tablolar, sözleşmeler, özgeçmişler ve teknik çizimler.
+    - ikon: ocr
+      baslik: OCR
+      metin: Görsellerdeki, taramalardaki ve ekran görüntülerindeki metin okunur ve kontrol edilir.
+    - ikon: esik
+      baslik: Eşikler ve birleşimler
+      metin: Örneğin "50'den fazla kayıt" veya "parmak izi artı dış alıcı".
+- discriminant: sss
+  value:
+    baslik: Tespit Motoru hakkında sorular
+    ogeler:
+    - soru: Neden bir yakalama oranı yayımlamıyorsunuz?
+      cevap: Başkasının verisinde ölçülen bir yakalama oranı sizinki hakkında çok az şey söyler. Yöntemler POC sırasında sizin ortamınızda ayarlanır ve sonuçları kendi dosyalarınızda görürsünüz. Bir oran değil, yöntemlerimizi yayımlıyoruz.
+    - soru: Dizinleme verimizi bir yere gönderir mi?
+      cevap: Hayır. Birebir eşleştirme ve parmak izi dizinleri politika sunucunuzda oluşturulur ve saklanır. Kurum içi sürümlerde ağınızdan hiç çıkmaz; konsol hangi kaynakların ne zaman dizinlendiğini gösterir.
+    - soru: Tek politika birden çok yöntem kullanabilir mi?
+      cevap: Evet. Bir politika parmak izi eşleşmesi ile dış alıcıyı, belirli sayının üzerinde kaydı veya sınıflandırıcı sonucu ile etiketi birlikte şart koşabilir. Her politikanın kendi birleşimi vardır; tek bir ayarın her veri türüne uyması gerekmez.
+- discriminant: ilgili
+  value:
+    baslik: İlgili sayfalar
+    sayfalar:
+    - veri-siniflandirma
+    - veri-kesfi-dspm
+    - dlp
+    - yapay-zeka-guvenlik-duvari

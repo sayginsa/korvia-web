@@ -1,0 +1,66 @@
+kimlik: Fikri mülkiyetin korunması
+yol: cozumler/fikri-mulkiyet
+bolum: cozumler
+sira: 2
+ikon: parmakIzi
+menuAciklama: Tasarımları, kaynak kodu, formülleri ve fiyat modellerini koruyun.
+seoBaslik: Fikri mülkiyetin korunması | Korvia
+seoAciklama: Fikri mülkiyet patentlerle sınırlı değildir. Ürün tasarımları, kaynak kod, fiyat modelleri, formüller, mühendislik dosyaları ve gizli iş planları da korunması
+eyebrow: Çözümler · Fikri mülkiyet
+baslik: Sizi farklı kılan bilgiyi koruyun.
+ozet: Fikri mülkiyet patentlerle sınırlı değildir. Ürün tasarımları, kaynak kod, fiyat modelleri, formüller, mühendislik dosyaları ve gizli iş planları da korunması gereken değerli bilgilerdir.
+cta:
+  etiket: Demo planlayın
+  url: /demo/
+bloklar:
+- discriminant: senaryo
+  value:
+    baslik: Bir CAD montajı kişisel bulut sürücüye gidiyor.
+    veri: Parmak izi alınmış CAD montajı
+    kullanici: Tasarım mühendisi
+    hedef: Kişisel bulut sürücü
+    politika: 'Mühendislik fikri mülkiyeti: yalnızca kurum depolaması'
+    karar: engelle
+    kararNotu: kısmi kopya tanındı
+- discriminant: metin
+  value:
+    eyebrow: ''
+    baslik: Hangi bilginin korunması gerektiğini bilin.
+    govde: |-
+      Bir mühendislik belgesi tescilli tasarım ayrıntıları içerebilir. Bir geliştirme deposu gizli kod barındırabilir. Ticari bir tablo hassas fiyatlandırma stratejilerini açığa çıkarabilir.
+
+      Korvia kritik depoların, CAD çizimlerinin ve finansal modellerin parmak izini alır; tamamı veya bir kısmı USB, kişisel bulut, e-posta veya yapay zekâ komutlarıyla çıkmadan önce yakalanır.
+
+      Çalışanların iş birliği yapması, dosya göndermesi ve dış ortaklarla çalışması gerekir. Amaç meşru işi durdurmak değil, gizli bilginin kurum politikasına aykırı biçimde ele alındığı anı tanımaktır.
+- discriminant: kartlar
+  value:
+    eyebrow: ''
+    baslik: Korvia'nın hangi parçaları bunu yapar?
+    aciklama: ''
+    ogeler:
+    - ikon: parmakIzi
+      baslik: Tespit Motoru
+      metin: Depoların tamamının parmak izini alın, kısmi kopyaları tanıyın.
+    - ikon: etiket
+      baslik: Veri Sınıflandırma
+      metin: Yeniden adlandırma, dönüştürme ve kopyalamada dosyayla kalan etiketler.
+    - ikon: kod
+      baslik: Kod asistanları
+      metin: Kaynak kod, politikanızın izin vermediği komutlardan uzak durur.
+    - ikon: ekran
+      baslik: Uç Nokta DLP
+      metin: USB bellekler, yüklemeler ve eşitleme klasörleri aynı kurala uyar.
+- discriminant: not
+  value:
+    baslik: Hangi kurulum uygun?
+    metin: Kurum içi. Mühendislik veriniz ve onunla ilgili kanıt ağınızın içinde kalır.
+    link:
+      etiket: Kurulum seçenekleri
+      url: /platform/kurulum/
+- discriminant: mevzuat
+  value:
+    baslik: Hangi mevzuata dokunur?
+    ogeler:
+    - ikon: ''
+      baslik: ISO/IEC 27001
+      metin: Sınıflandırma, etiketleme ve bilgi aktarımı kontrolleri.

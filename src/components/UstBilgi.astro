@@ -1,0 +1,127 @@
+---
+import { menu, ayarlar } from '../lib/icerik';
+import Ikon from './Ikon.astro';
+const bolumler = await menu();
+const a = await ayarlar();
+const yol = Astro.url.pathname;
+const BASLIK: Record<string, string> = {
+  platform: 'Keşiften uygulamaya tek platform.',
+  'yapay-zeka': 'Yapay zekâya giden veriyi denetleyin.',
+  cozumler: 'İhtiyaca ve sektöre göre.',
+  kaynaklar: 'Değerlendirmek için.',
+  kurumsal: 'Korvia hakkında.',
+};
+const GENEL: Record<string, string> = {
+  platform: '/platform/',
+  'yapay-zeka': '/yapay-zeka-guvenligi/',
+  cozumler: '/mevzuat/',
+};
+---
+<header class="ust">
+  <div class="wrap ust__ic">
+    <a class="ust__logo" href="/" aria-label="Korvia ana sayfa">
+      <img src="/logo/korvia-yatay-renkli.svg" alt="korvia" width="135" height="30" />
+    </a>
+    <nav aria-label="Ana menü" style="flex:1;display:flex">
+      <ul class="ana-menu">
+        {bolumler.map((b) => (
+          <li>
+            <button class="ana-menu__dugme" type="button" aria-expanded="false" aria-controls={`panel-${b.anahtar}`} data-panel>
+              {b.ad}
+              <svg viewBox="0 0 12 12" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M2.5 4.5 6 8l3.5-3.5" /></svg>
+            </button>
+            <div class="panel" id={`panel-${b.anahtar}`} hidden>
+              <div class="wrap panel__ic">
+                <div class="panel__baslik">
+                  <span class="eyebrow">{b.ad}</span>
+                  <p class="h3">{BASLIK[b.anahtar]}</p>
+                  {GENEL[b.anahtar] && <a class="metin-link" href={GENEL[b.anahtar]}>Genel bakış</a>}
+                </div>
+                <div class="panel__gruplar">
+                  {b.gruplar.map((g) => (
+                    <div class="panel__grup">
+                      {b.gruplar.length > 1 && <p class="mono muted">{g.ad}</p>}
+                      <ul>
+                        {g.ogeler.map((o) => (
+                          <li>
+                            <a href={o.url} aria-current={yol === o.url ? 'page' : undefined}>
+                              {o.ikon && <Ikon ad={o.ikon} boyut={18} />}
+                              <strong>{o.ad}</strong>
+                              <span>{o.aciklama}</span>
+                            </a>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </nav>
+    <div class="ust__eylem">
+      <a class="btn btn--ikincil btn--kucuk" href="/iletisim/">İletişim</a>
+      <a class="btn btn--birincil btn--kucuk" href="/demo/">{a.demoEtiketi}</a>
+      <button class="mobil-dugme" type="button" aria-expanded="false" aria-controls="mobil-menu" aria-label="Menüyü aç" data-mobil>
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M3 6h14M3 10h14M3 14h14" /></svg>
+      </button>
+    </div>
+  </div>
+  <div class="mobil-menu" id="mobil-menu" hidden>
+    <div class="wrap">
+      {bolumler.map((b) => (
+        <details>
+          <summary>{b.ad}<span aria-hidden="true">+</span></summary>
+          {b.gruplar.map((g) => (
+            <>
+              {b.gruplar.length > 1 && <p class="mono">{g.ad}</p>}
+              <ul>{g.ogeler.map((o) => <li><a href={o.url}>{o.ad}</a></li>)}</ul>
+            </>
+          ))}
+        </details>
+      ))}
+      <div style="display:flex;gap:12px;padding:20px 0 28px;flex-wrap:wrap">
+        <a class="btn btn--birincil" href="/demo/">{a.demoEtiketi}</a>
+        <a class="btn btn--ikincil" href="/iletisim/">İletişim</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<script>
+  const dugmeler = Array.from(document.querySelectorAll<HTMLButtonElement>('[data-panel]'));
+  const kapat = (haric?: HTMLButtonElement) => {
+    dugmeler.forEach((d) => {
+      if (d === haric) return;
+      d.setAttribute('aria-expanded', 'false');
+      document.getElementById(d.getAttribute('aria-controls')!)!.hidden = true;
+    });
+  };
+  dugmeler.forEach((d) => {
+    d.addEventListener('click', () => {
+      const acik = d.getAttribute('aria-expanded') === 'true';
+      kapat(d);
+      d.setAttribute('aria-expanded', String(!acik));
+      document.getElementById(d.getAttribute('aria-controls')!)!.hidden = acik;
+    });
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key !== 'Escape') return;
+    const acik = dugmeler.find((d) => d.getAttribute('aria-expanded') === 'true');
+    if (acik) { kapat(); acik.focus(); }
+  });
+  document.addEventListener('click', (e) => {
+    if (!(e.target as HTMLElement).closest('.ana-menu')) kapat();
+  });
+
+  const mobil = document.querySelector<HTMLButtonElement>('[data-mobil]');
+  const mobilMenu = document.getElementById('mobil-menu');
+  mobil?.addEventListener('click', () => {
+    const acik = mobil.getAttribute('aria-expanded') === 'true';
+    mobil.setAttribute('aria-expanded', String(!acik));
+    mobil.setAttribute('aria-label', acik ? 'Menüyü aç' : 'Menüyü kapat');
+    if (mobilMenu) mobilMenu.hidden = acik;
+  });
+</script>

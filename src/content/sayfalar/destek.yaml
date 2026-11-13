@@ -1,0 +1,130 @@
+kimlik: Destek
+yol: destek
+bolum: kaynaklar
+sira: 6
+ikon: entegrasyon
+menuAciklama: Teknik destek kanalları, önem dereceleri ve talep süreci.
+seoBaslik: Destek | Korvia
+seoAciklama: Korvia müşterileri ve POC sürecindeki kurumlar için teknik destek. Destek Türkçedir; çalışma saatleri ve yanıt hedefleri destek sözleşmenizde belirlenir.
+eyebrow: Kaynaklar · Destek
+baslik: Size nasıl yardımcı olabiliriz?
+ozet: Korvia müşterileri ve POC sürecindeki kurumlar için teknik destek. Destek Türkçedir; çalışma saatleri ve yanıt hedefleri destek sözleşmenizde belirlenir.
+cta:
+  etiket: Destek talebi açın
+  url: /iletisim/
+bloklar:
+- discriminant: tablo
+  value:
+    baslik: Bize nasıl ulaşırsınız?
+    aciklama: ''
+    sutunlar:
+    - Kanal
+    - Adres
+    - Kapsam
+    satirlar:
+    - hucreler:
+      - E-posta
+      - '{destekEposta}'
+      - Tüm destek talepleri
+    - hucreler:
+      - İş ortağınız
+      - İş ortağınız üzerinden
+      - Yönetilen hizmet ve MSSP müşterileri için birinci seviye destek
+- discriminant: tablo
+  value:
+    baslik: Talepler nasıl önceliklendirilir?
+    aciklama: Yanıt hedefleri destek sözleşmenize bağlıdır; sözleşmedeki tablo geçerlidir.
+    sutunlar:
+    - Seviye
+    - Tanım
+    - Örnek
+    satirlar:
+    - hucreler:
+      - Önem 1, kritik
+      - Üretim durdu veya veri koruması çalışmıyor; geçici çözüm yok
+      - Yönetim cihazına erişilemiyor veya uç nokta ajanları toplu olarak bağlantısız
+    - hucreler:
+      - Önem 2, yüksek
+      - Ana bir işlev bozuk, üretim devam ediyor
+      - Bir kanal olay üretmiyor veya konsola erişilemiyor
+    - hucreler:
+      - Önem 3, orta
+      - Sınırlı etki, geçici çözüm var
+      - Tek bir uç nokta etkilenmiş, raporlama hatası veya politika ayarı
+    - hucreler:
+      - Önem 4, düşük
+      - Soru, görsel bir sorun veya özellik talebi
+      - Dokümantasyon sorusu veya arayüz önerisi
+- discriminant: kartlar
+  value:
+    eyebrow: ''
+    baslik: Destek neleri kapsar?
+    aciklama: ''
+    ogeler:
+    - ikon: ''
+      baslik: Ürün hataları
+      metin: Teşhis ve çözüm.
+    - ikon: ''
+      baslik: Kurulum ve yükseltme
+      metin: Kurulum, yükseltme ve yapılandırma yardımı.
+    - ikon: ''
+      baslik: Politika rehberliği
+      metin: Politika ve kural tasarımı üzerine öneri.
+    - ikon: ''
+      baslik: Tespit sonuçları
+      metin: Yanlış pozitif ve yanlış negatiflerin değerlendirilmesi.
+    - ikon: ''
+      baslik: Güvenlik güncellemeleri
+      metin: Güvenlik güncellemeleri ve yamalar.
+- discriminant: kartlar
+  value:
+    eyebrow: ''
+    baslik: Ayrı hizmet olanlar
+    aciklama: ''
+    ogeler:
+    - ikon: ''
+      baslik: Politika setinizin işletilmesi
+      metin: Uçtan uca tasarım ve işletim; yönetilen hizmet ve MSSP modellerine dahildir.
+    - ikon: ''
+      baslik: Üçüncü taraf sistemler
+      metin: Korvia olmayan sistemlerin yönetimi.
+    - ikon: ''
+      baslik: Özel entegrasyonlar
+      metin: Ortamınıza özel geliştirme işleri.
+- discriminant: adimlar
+  value:
+    baslik: Bir talep nasıl ilerler?
+    ogeler:
+    - ikon: ''
+      baslik: Açın
+      metin: Ortamınızı, etkilenen modülü, hata mesajlarını ve etkiyi gönderin.
+    - ikon: ''
+      baslik: Önceliklendirme
+      metin: Talep önem derecesine göre sınıflandırılır ve bir mühendise atanır.
+    - ikon: ''
+      baslik: Yükseltme
+      metin: İlerleme durursa kıdemli mühendise, ardından destek yönetimine taşınır.
+    - ikon: ''
+      baslik: Kritik olaylar
+      metin: Önem 1 taleplerde çözülene kadar düzenli durum güncellemesi verilir.
+- discriminant: not
+  value:
+    baslik: Talepte neler olmalı?
+    metin: Ürün sürümü, kurulum modeli, etkilenen modül, sorunun başladığı zaman, hata mesajları ve etkilenen kullanıcı sayısı.
+    link:
+      etiket: ''
+      url: ''
+- discriminant: not
+  value:
+    baslik: Neleri eklememelisiniz?
+    metin: Gerçek kişisel veri veya müşteri dosyası eklemeyin. Örnek gerekiyorsa destek ekibi sizinle güvenli bir aktarım yöntemi belirler.
+    link:
+      etiket: ''
+      url: ''
+- discriminant: not
+  value:
+    baslik: Güncellemeler nasıl yapılır?
+    metin: İmzalı yükseltme paketleri belirlediğiniz bakım penceresinde kurulur. Yalıtılmış ağlar dosyadan güncellenir.
+    link:
+      etiket: ''
+      url: ''

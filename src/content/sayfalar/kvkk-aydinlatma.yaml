@@ -1,0 +1,45 @@
+kimlik: KVKK aydınlatma metni
+yol: kvkk-aydinlatma
+bolum: yasal
+sira: 1
+ikon: ''
+menuAciklama: Kişisel verilerin işlenmesine ilişkin aydınlatma metni.
+seoBaslik: KVKK Aydınlatma Metni | Korvia
+seoAciklama: Bu metin taslaktır ve yayına alınmadan önce hukuk danışmanınız tarafından gözden geçirilmelidir.
+eyebrow: Yasal
+baslik: Kişisel verilerin işlenmesine ilişkin aydınlatma metni
+ozet: Bu metin taslaktır ve yayına alınmadan önce hukuk danışmanınız tarafından gözden geçirilmelidir.
+cta:
+  etiket: ''
+  url: ''
+bloklar:
+- discriminant: metin
+  value:
+    eyebrow: ''
+    baslik: Veri sorumlusu
+    govde: '6698 sayılı Kişisel Verilerin Korunması Kanunu ("KVKK") kapsamında veri sorumlusu {sirketAdi}''dır (adres: {adres}).'
+- discriminant: metin
+  value:
+    eyebrow: ''
+    baslik: Hangi verileri işliyoruz?
+    govde: Bu sitedeki formlar aracılığıyla ilettiğiniz ad soyad, iş e-postası, şirket, ülke ve mesaj içeriği. Site, çerez veya benzeri izleme teknolojisiyle davranışsal veri toplamaz.
+- discriminant: metin
+  value:
+    eyebrow: ''
+    baslik: Hangi amaçla işliyoruz?
+    govde: Demo, iletişim, iş ortaklığı ve belge taleplerinizi cevaplamak; talebinizle ilgili teklif ve bilgi sunmak.
+- discriminant: metin
+  value:
+    eyebrow: ''
+    baslik: Hukuki sebep
+    govde: Kişisel verileriniz, KVKK md. 5/2-c (bir sözleşmenin kurulması veya ifasıyla doğrudan ilgili olması) ve md. 5/2-f (veri sorumlusunun meşru menfaati) hukuki sebeplerine dayanılarak işlenir.
+- discriminant: metin
+  value:
+    eyebrow: ''
+    baslik: Kimlere aktarıyoruz?
+    govde: Talebinizin karşılanması için gerekli olduğu ölçüde, yetkili iş ortaklarımıza ve hizmet aldığımız altyapı sağlayıcılarına aktarılabilir. Yurt dışına aktarım yapılması hâlinde KVKK md. 9 hükümlerine uyulur.
+- discriminant: metin
+  value:
+    eyebrow: ''
+    baslik: Haklarınız
+    govde: KVKK md. 11 kapsamındaki haklarınızı kullanmak için {satisEposta} adresine yazabilirsiniz.

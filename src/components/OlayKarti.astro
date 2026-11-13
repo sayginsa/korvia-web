@@ -1,0 +1,39 @@
+---
+import { KARAR_ADI } from '../lib/icerik';
+interface Satir { ad: string; deger: string }
+interface Props {
+  ust: string;
+  cumle?: string;
+  satirlar: Satir[];
+  karar: string;
+  kararNotu?: string;
+  mesaj?: string;
+  baslikSeviyesi?: 'h2' | 'h3' | 'p';
+  /** Ana sayfadaki canlandırma için: metinler daktilo gibi yazılır, karar sonra gelir. */
+  canli?: boolean;
+}
+const { ust, cumle, satirlar, karar, kararNotu, mesaj, baslikSeviyesi = 'p', canli = false } = Astro.props;
+const Baslik = baslikSeviyesi;
+const y = canli ? { 'data-yaz': '' } : {};
+---
+<article class="olay" data-canli={canli ? '' : undefined}>
+  <div class="olay__ust">
+    <span class="mono" {...y}>{ust}</span>
+    {cumle && <Baslik class="olay__cumle" {...y}>{cumle}</Baslik>}
+  </div>
+  <dl>
+    {satirlar.map((s) => (<><dt>{s.ad}</dt><dd><span {...y}>{s.deger}</span></dd></>))}
+    <dt>Karar</dt>
+    <dd class="olay__karar">
+      {canli && <span class="olay__bekle mono" aria-hidden="true">inceleniyor<i>.</i><i>.</i><i>.</i></span>}
+      <span class={`karar karar--${karar}`} data-karar={canli ? '' : undefined}>{KARAR_ADI[karar] ?? karar}</span>
+      {kararNotu && <span class="olay__not">{kararNotu}</span>}
+    </dd>
+  </dl>
+  {mesaj && (
+    <p class="olay__mesaj" data-mesaj={canli ? '' : undefined}>
+      <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><circle cx="9" cy="9" r="7.25" /><path d="M9 5.5v4.25M9 12.25v.25" stroke-linecap="round" /></svg>
+      <span><strong style="color:var(--k-ink)">Kullanıcının gördüğü:</strong> {mesaj}</span>
+    </p>
+  )}
+</article>

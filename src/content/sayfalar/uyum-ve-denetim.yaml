@@ -1,0 +1,92 @@
+kimlik: Uyum ve denetim
+yol: cozumler/uyum-ve-denetim
+bolum: cozumler
+sira: 4
+ikon: kanit
+menuAciklama: Kişisel veri envanteri, tutarlı politika ve imzalı kanıt.
+seoBaslik: Uyum ve denetim | Korvia
+seoAciklama: Güvenlik ve uyum ekipleri hassas bilginin nasıl tanındığını, korunduğunu ve olaylarda nasıl ele alındığını göstermek zorundadır. Korvia güncel kişisel veri en
+eyebrow: Çözümler · Uyum ve denetim
+baslik: Veri koruma kararlarını açıklamayı kolaylaştırın.
+ozet: Güvenlik ve uyum ekipleri hassas bilginin nasıl tanındığını, korunduğunu ve olaylarda nasıl ele alındığını göstermek zorundadır. Korvia güncel kişisel veri envanteri, tutarlı politika uygulaması ve kriptografik olarak imzalanmış olay kayıtlarıyla KVKK, BDDK, SPK, PCI DSS ve ISO 27001 denetimlerine hazırlığı kolaylaştırır.
+cta:
+  etiket: Demo planlayın
+  url: /demo/
+bloklar:
+- discriminant: senaryo
+  value:
+    baslik: Bir dizüstü bilgisayarda kart numaraları çıkıyor.
+    veri: Kart numaraları içeren döküm
+    kullanici: Destek analisti
+    hedef: İndirilenler klasörü
+    politika: Onaylı sistemler dışında kart verisi
+    karar: kaydet
+    kararNotu: vaka açıldı, kanıt saklandı
+- discriminant: metin
+  value:
+    eyebrow: ''
+    baslik: Kanıt alarmdan fazlasıdır.
+    govde: 'Denetçiler iki şey ister: koyduğunuz kurallar ve bunların çalıştığının kanıtı. Korvia etkin sınıflandırma ve DLP politikalarınızı kriptografik olarak imzalanmış olay kayıtları ve kişisel veri envanterleriyle eşleştirir. Denetçilere ham hassas dosyaları göstermeden doğrulanabilir kanıt sunarsınız.'
+- discriminant: kartlar
+  value:
+    eyebrow: ''
+    baslik: Üç kanıt katmanı
+    aciklama: ''
+    ogeler:
+    - ikon: ''
+      baslik: Politikalar
+      metin: Sınıflandırma ve DLP kurallarını düzenleyici kontrollerle doğrudan eşleyin.
+    - ikon: ''
+      baslik: Olaylar
+      metin: Neyin eşleştiğini, hangi kuralın tetiklendiğini ve hangi eylemin uygulandığını gösteren imzalı, değiştirilemez kayıtlar üretin.
+    - ikon: ''
+      baslik: Değerlendirmeler
+      metin: İç ve dış denetçilere ham hassas içeriği göstermeden rol tabanlı rapor erişimi verin.
+- discriminant: kartlar
+  value:
+    eyebrow: ''
+    baslik: Korvia'nın hangi parçaları bunu yapar?
+    aciklama: ''
+    ogeler:
+    - ikon: tara
+      baslik: Veri Keşfi ve DSPM
+      metin: Uç noktalarda, sunucularda ve bulut sürücülerde kişisel veri envanteri.
+    - ikon: akis
+      baslik: DLP
+      metin: Düzenlemeye tabi verinin uç nokta, e-posta, web, bulut ve yapay zekâda nereye gidebileceğini tek politika belirler.
+    - ikon: belgeAra
+      baslik: İnceleme
+      metin: İmzalı kanıt ve vakalar; denetçiler için rol tabanlı erişim.
+- discriminant: not
+  value:
+    baslik: Hangi kurulum uygun?
+    metin: Kurum içi. İçerik ve kanıt ağınızda kalır; bu çoğu zaman veri yerelliği sorusunu da kapatır.
+    link:
+      etiket: Kurulum seçenekleri
+      url: /platform/kurulum/
+- discriminant: mevzuat
+  value:
+    baslik: Hangi mevzuata dokunur?
+    ogeler:
+    - ikon: ''
+      baslik: KVKK
+      metin: '6698 sayılı Kanun: veri güvenliğine ilişkin yükümlülükler (md. 12), veri envanteri ve ihlal bildirimi.'
+    - ikon: ''
+      baslik: BDDK Bilgi Sistemleri Yönetmeliği
+      metin: Bankalarda bilgi güvenliği, erişim yönetimi ve iz kayıtları.
+    - ikon: ''
+      baslik: SPK Bilgi Sistemleri Yönetimi Tebliği
+      metin: 'VII-128.9: sermaye piyasası kurumlarında bilgi güvenliği ve iz kayıtları.'
+    - ikon: ''
+      baslik: PCI DSS
+      metin: Kart verisinin saklanması ve hareket hâlinde korunması.
+    - ikon: ''
+      baslik: ISO/IEC 27001
+      metin: Sınıflandırma, etiketleme ve bilgi aktarımı kontrolleri.
+- discriminant: not
+  value:
+    baslik: '"Destekler" ne demek?'
+    metin: Korvia bu gereksinimleri teknik kontrollerle destekler. Hukuki yorum hukuk danışmanınıza aittir.
+    link:
+      etiket: ''
+      url: ''

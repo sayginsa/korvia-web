@@ -1,0 +1,102 @@
+kimlik: Bulut DLP
+yol: platform/dlp/bulut
+bolum: platform
+sira: 8
+ikon: bulut
+menuAciklama: Bulut uygulamalarında paylaşımı, yüklemeyi ve indirmeyi denetleyin.
+seoBaslik: Bulut DLP | Korvia
+seoAciklama: İş verisi SaaS uygulamaları ve bulut sürücüler arasında sürekli hareket eder. Korvia Bulut DLP onaysız uygulamaları (gölge BT) keşfeder, kurumsal kiracıyı kiş
+eyebrow: Platform · Bulut DLP
+baslik: Veri korumasını bulut iş akışlarına taşıyın.
+ozet: İş verisi SaaS uygulamaları ve bulut sürücüler arasında sürekli hareket eder. Korvia Bulut DLP onaysız uygulamaları (gölge BT) keşfeder, kurumsal kiracıyı kişisel hesaptan ayırır ve yüklemeyi, indirmeyi ve dış paylaşımı denetler.
+cta:
+  etiket: Demo planlayın
+  url: /demo/
+bloklar:
+- discriminant: senaryo
+  value:
+    baslik: Bir sözleşme onaysız bir uygulamaya gidiyor.
+    veri: Müşteri sözleşmesi
+    kullanici: Müşteri temsilcisi
+    hedef: Onaysız dosya paylaşım uygulaması
+    politika: 'Sözleşmeler: yalnızca onaylı uygulamalar'
+    karar: uyar
+    kararNotu: onaylı uygulama önerildi
+- discriminant: metin
+  value:
+    eyebrow: ''
+    baslik: İş bağlamını kaybetmeden paylaşımı denetleyin.
+    govde: |-
+      Bulut güvenliği bir uygulamayı tanımaktan fazlasını gerektirir. Güvenlik ekipleri hangi bilginin söz konusu olduğunu, hangi eylemin gerçekleştiğini ve hangi yanıtın uygun olduğunu bilmelidir.
+
+      Korvia uç nokta incelemesini Microsoft 365, Google Workspace, Box ve Salesforce için doğrudan API taramasıyla birleştirir; bulutta ve kurum içinde aynı veri politikalarını uygular.
+- discriminant: bildirim
+  value:
+    eyebrow: Kullanıcı ne görür?
+    baslik: Onaysız uygulamada gerekçe istenir.
+    aciklama: Bir sözleşme onaysız bir dosya paylaşım sitesine yüklenmek istendi. Çalışan gerekçe yazabilir veya onaylı uygulamayı kullanabilir.
+    sahne: bulut
+    karar: uyar
+    hedef: dosyapaylas.example
+    uygulama: D
+    veriTuru: Sözleşme
+    veriDegeri: musteri-sozlesmesi.pdf
+    dosya: musteri-sozlesmesi.pdf
+- discriminant: adimlar
+  value:
+    baslik: Nasıl çalışır?
+    ogeler:
+    - ikon: ''
+      baslik: Uygulamaları bul
+      metin: Kullanılan her SaaS uygulaması; onaylı olsun olmasın.
+    - ikon: ''
+      baslik: Veriyi tanı
+      metin: Etiketler ve Tespit Motoru neyin yüklendiğini söyler.
+    - ikon: ''
+      baslik: Uygulama bazında kural koy
+      metin: Yükleme, indirme ve paylaşım; uygulama uygulama.
+    - ikon: ''
+      baslik: Raporla
+      metin: Gölge BT raporu kimsenin onaylamadığı uygulamaları listeler.
+- discriminant: kartlar
+  value:
+    eyebrow: ''
+    baslik: Neleri kapsar?
+    aciklama: ''
+    ogeler:
+    - ikon: uygulamalar
+      baslik: Uygulama kataloğu
+      metin: Kategoriler ve risk notları; kendi kayıtlarınızı da ekleyin.
+    - ikon: uygulamalar
+      baslik: Uygulama bazında kurallar
+      metin: Her uygulama için yükleme, indirme ve paylaşım.
+    - ikon: hesap
+      baslik: Kurumsal veya kişisel hesap
+      metin: Servisin ayırt ettiği yerde farklı kurallar.
+    - ikon: disk
+      baslik: Durağan veri
+      metin: Microsoft 365, Google Workspace, Box ve Salesforce için API taraması.
+    - ikon: goz
+      baslik: Gölge BT raporu
+      metin: Kimsenin onaylamadığı, kullanımdaki uygulamalar.
+    - ikon: yapayZeka
+      baslik: Yapay zekâ servisleri dahil
+      metin: Yapay zekâ araçları aynı katalogda; Yapay Zekâ Veri Güvenliği komut denetimi ekler.
+- discriminant: sss
+  value:
+    baslik: Bulut DLP hakkında sorular
+    ogeler:
+    - soru: Bu bir CASB mi?
+      cevap: 'Hayır, olmaya da çalışmıyor. Bulut DLP, zaten kullandığınız uygulamalar için veri koruma katmanıdır: verinin ne olduğunu bilir ve diğer kanallarla aynı politikayı, kurulacak ayrı bir ürün olmadan uygular.'
+    - soru: Bulut uygulamalarını nasıl görür?
+      cevap: Her cihazdan yapılan yüklemelere aynı politikayı uygulayan uç nokta ajanıyla. Büyük SaaS platformlarında zaten duran veri de, taşınmadan, kendi API'leri üzerinden taranabilir.
+    - soru: Yapay zekâ araçları burada kapsanıyor mu?
+      cevap: Evet. Yapay zekâ servisleri diğer bulut uygulamalarıyla aynı katalogdadır; yükleme kuralları onlara da uygulanır. Yapay Zekâ Veri Güvenliği bu kuralların üzerine maskeleme gibi komut seviyesinde denetimler ekler.
+- discriminant: ilgili
+  value:
+    baslik: İlgili sayfalar
+    sayfalar:
+    - dlp
+    - ag-ve-e-posta-dlp
+    - yapay-zeka-veri-guvenligi
+    - veri-kesfi-dspm

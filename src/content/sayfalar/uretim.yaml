@@ -1,0 +1,64 @@
+kimlik: Üretim
+yol: sektorler/uretim
+bolum: sektorler
+sira: 3
+ikon: uretim
+menuAciklama: CAD dosyaları, formüller ve tedarikçi fiyatları.
+seoBaslik: Üretim | Korvia
+seoAciklama: 'Üreticiler için hassas veri tekniktir: CAD dosyaları, formüller, tedarikçi fiyatları ve test sonuçları. Korvia bunları tanır ve nereye gidebileceklerini denet'
+eyebrow: Sektörler · Üretim
+baslik: Ürün çizimlerin içindedir.
+ozet: 'Üreticiler için hassas veri tekniktir: CAD dosyaları, formüller, tedarikçi fiyatları ve test sonuçları. Korvia bunları tanır ve nereye gidebileceklerini denetler.'
+cta:
+  etiket: Demo planlayın
+  url: /demo/
+bloklar:
+- discriminant: senaryo
+  value:
+    baslik: Test sonuçları bir tedarikçi portalına gidiyor.
+    veri: Yeni bir parçanın test sonuçları
+    kullanici: Kalite mühendisi
+    hedef: Tedarikçi portalı
+    politika: 'Mühendislik verisi: yalnızca onaylı ortaklar'
+    karar: uyar
+    kararNotu: gerekçe istendi
+- discriminant: metin
+  value:
+    eyebrow: ''
+    baslik: Mühendislik bilgisini ve operasyonel veriyi koruyun.
+    govde: |-
+      Üretimde rekabet avantajı yapısal olmayan dosyalarda yaşar: CAD montajları, ürün ağaçları (BOM), kimyasal formüller, PLC/SCADA yapılandırmaları ve tedarikçi fiyat matrisleri. Standart kalıplar çalınmış bir çizimi veya bir test raporunun kısmi kopyasını tanıyamaz.
+
+      Korvia mühendislik depolarınızın parmak izini alır ve dosya yeniden adlandırılsa da kalan etiketler uygular. Tedarikçi portallarına, üretim sahasındaki USB belleklere ve dış bulut depolamaya aktarımları denetler.
+- discriminant: kartlar
+  value:
+    eyebrow: ''
+    baslik: Korvia'nın hangi parçaları bunu yapar?
+    aciklama: ''
+    ogeler:
+    - ikon: parmakIzi
+      baslik: Tespit Motoru
+      metin: Mühendislik depolarının parmak izini alın, kısmi kopyaları tanıyın.
+    - ikon: ekran
+      baslik: Uç Nokta DLP
+      metin: Tasarım ofisinde ve üretim sahasında USB bellekler ve eşitleme klasörleri.
+    - ikon: bulut
+      baslik: Bulut DLP
+      metin: Her bulut uygulaması için yükleme ve paylaşım kuralları.
+- discriminant: not
+  value:
+    baslik: Hangi kurulum uygun?
+    metin: Kurum içi; internet bağlantısı olmayan sahalar dahil.
+    link:
+      etiket: Kurulum seçenekleri
+      url: /platform/kurulum/
+- discriminant: mevzuat
+  value:
+    baslik: Hangi mevzuata dokunur?
+    ogeler:
+    - ikon: ''
+      baslik: ISO/IEC 27001
+      metin: Sınıflandırma, etiketleme ve bilgi aktarımı kontrolleri.
+    - ikon: ''
+      baslik: KVKK
+      metin: '6698 sayılı Kanun: veri güvenliğine ilişkin yükümlülükler (md. 12), veri envanteri ve ihlal bildirimi.'

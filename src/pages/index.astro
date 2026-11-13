@@ -1,0 +1,378 @@
+---
+import Temel from '../layouts/Temel.astro';
+import OlayKarti from '../components/OlayKarti.astro';
+import Ikon from '../components/Ikon.astro';
+import { reader, paragraflar } from '../lib/icerik';
+
+const s = (await reader.singletons.anasayfa.read())!;
+const ok = `<svg class="ok" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>`;
+const [siniflandirma, dlp, yz] = s.moduller;
+---
+<Temel baslik={s.seoBaslik} aciklama={s.seoAciklama}>
+  <!-- 01 · Üst bölüm -->
+  <section class="hero">
+    <div class="wrap hero__ic">
+      <div class="hero__metin">
+        <p class="eyebrow">{s.eyebrow}</p>
+        <h1 class="display">{s.baslik}</h1>
+        <p class="lead">{s.ozet}</p>
+        <div class="sayfa-basi__eylem">
+          <a class="btn btn--birincil" href={s.birincilCta.url}>{s.birincilCta.etiket}</a>
+          <a class="btn btn--ikincil" href={s.ikincilCta.url}>{s.ikincilCta.etiket}<Fragment set:html={ok} /></a>
+        </div>
+      </div>
+      <div class="hero__gorsel hazir">
+        <noscript><style>.hero__gorsel.hazir *{opacity:1!important;transform:none!important;visibility:visible!important;stroke-dashoffset:0!important}</style></noscript>
+        <svg class="hero__motif" viewBox="0 0 200 40" aria-hidden="true">
+          <rect class="m-kare" x="0" y="0" width="16" height="16" fill="#F6B9BC" />
+          <rect class="m-kare" x="28" y="12" width="16" height="16" fill="#EE8A8F" />
+          <rect class="m-kare" x="56" y="24" width="16" height="16" fill="#E5525B" />
+          <path class="m-cizgi" pathLength="1" d="M72 32h44l20-20h64" fill="none" stroke="#D81F2A" stroke-width="2" />
+        </svg>
+        <OlayKarti
+          ust={s.olay.kategori}
+          cumle={s.olay.cumle}
+          satirlar={[
+            { ad: 'Dosya', deger: s.olay.dosya },
+            { ad: 'İçerik', deger: s.olay.icerik },
+            { ad: 'Hedef', deger: s.olay.hedef },
+          ]}
+          karar={s.olay.karar}
+          mesaj={s.olay.kullaniciMesaji}
+          canli
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 · Kanallar -->
+  <section class="bolum" aria-labelledby="kanal-baslik">
+    <div class="wrap">
+      <div class="bolum-baslik">
+        <p class="eyebrow">01 · Tek politika</p>
+        <h2 id="kanal-baslik" class="h1">{s.kanalBaslik}</h2>
+        <p class="lead">{s.kanalAciklama}</p>
+      </div>
+      <div class="kanal" data-sekmeler>
+        <div class="kanal__sekmeler" role="tablist" aria-label="Kanallar">
+          {s.kanallar.map((k, i) => (
+            <button role="tab" type="button" id={`sekme-${i}`} aria-controls={`kanal-${i}`} aria-selected={i === 0 ? 'true' : 'false'} tabindex={i === 0 ? 0 : -1}>
+              <span class="mono">{String(i + 1).padStart(2, '0')}</span>{k.ad}
+            </button>
+          ))}
+        </div>
+        {s.kanallar.map((k, i) => (
+          <div class="kanal__panel" role="tabpanel" id={`kanal-${i}`} aria-labelledby={`sekme-${i}`} hidden={i !== 0}>
+            <div class="maske">
+              <div><span class="mono muted">Kullanıcının gönderdiği</span><pre>{k.once}</pre></div>
+              <div class="maske__ok"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.75" role="img" aria-label="Korvia politikası"><path d="M4 10h12M11 5l5 5-5 5" /></svg></div>
+              <div>
+                <span class="mono muted">Kurumdan çıkan · {k.hedef}</span>
+                <pre set:html={k.sonra.replace(/(\S*\*+\S*)/g, '<mark>$1</mark>')} />
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 · İlkeler -->
+  <section class="bolum bolum--beyaz" aria-labelledby="ilke-baslik">
+    <div class="wrap">
+      <div class="bolum-baslik">
+        <p class="eyebrow">02 · Bağlam</p>
+        <h2 id="ilke-baslik" class="h1">{s.ilkeBaslik}</h2>
+        <p class="lead">{s.ilkeAciklama}</p>
+      </div>
+      <ol class="adimlar adimlar--3">
+        {s.ilkeler.map((o) => (<li><h3 class="h3">{o.baslik}</h3><p>{o.metin}</p></li>))}
+      </ol>
+    </div>
+  </section>
+
+  <!-- 04 · Modüller -->
+  <section class="bolum" aria-labelledby="mod-1">
+    <div class="wrap modul">
+      <div class="modul__metin">
+        <p class="eyebrow">03 · {siniflandirma.eyebrow}</p>
+        <h2 id="mod-1" class="h1">{siniflandirma.baslik}</h2>
+        <p class="lead">{siniflandirma.metin}</p>
+        <a class="metin-link" href={siniflandirma.link.url}>{siniflandirma.link.etiket}<Fragment set:html={ok} /></a>
+      </div>
+      <figure class="dosya" aria-label="Örnek sınıflandırılmış dosya">
+        <div class="dosya__ust">
+          <span class="mono">{siniflandirma.maddeler[0]}</span>
+          <span class="karar karar--engelle" style="height:24px">{siniflandirma.maddeler[siniflandirma.maddeler.length - 1]}</span>
+        </div>
+        <p class="dosya__metin">Bu sözleşme 24 ay boyunca birim fiyatı <mark>₺412,50</mark> olarak belirler ve ödemeler aşağıdaki hesaba yapılır: <mark>TR33 0006 1005 1978 6457 8413 26</mark>…</p>
+        <figcaption class="dosya__etiketler">
+          {siniflandirma.maddeler.slice(1, -1).map((m) => <span class="etiket">{m}</span>)}
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="bolum bolum--beyaz" aria-labelledby="mod-2">
+    <div class="wrap modul modul--ters">
+      <div class="modul__metin">
+        <p class="eyebrow">04 · {dlp.eyebrow}</p>
+        <h2 id="mod-2" class="h1">{dlp.baslik}</h2>
+        <p class="lead">{dlp.metin}</p>
+        <a class="metin-link" href={dlp.link.url}>{dlp.link.etiket}<Fragment set:html={ok} /></a>
+      </div>
+      <div>
+        <div class="olcek">
+          <div><strong>İzle</strong><p>görün</p></div>
+          <div><strong>Uyar</strong><p>kullanıcıya söyleyin</p></div>
+          <div><strong>Kaydet</strong><p>kanıtı saklayın</p></div>
+          <div><strong>Engelle</strong><p>durdurun</p></div>
+        </div>
+        <div class="olcek__eksen mono"><span>düşük müdahale</span><span>yüksek müdahale</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bolum" aria-labelledby="kapi-baslik">
+    <div class="wrap iki-sutun">
+      <h2 id="kapi-baslik" class="h1">{s.kapiBaslik}</h2>
+      <div>
+        <div class="prose">{paragraflar(s.kapiMetin).map((p) => <p>{p}</p>)}</div>
+        <ul class="kapilar">
+          {[['usb','USB bellek'],['yazdir','Yazdırma'],['pano','Pano'],['eposta','E-posta'],['web','Web yükleme'],['bulut','Bulut uygulaması'],['yapayZeka','Yapay zekâ komutu'],['kod','Kod asistanı']].map(([i, a]) => (
+            <li><Ikon ad={i} boyut={20} /><span>{a}</span></li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="bolum bolum--beyaz" aria-labelledby="mod-3">
+    <div class="wrap modul">
+      <div class="modul__metin">
+        <p class="eyebrow">05 · {yz.eyebrow}</p>
+        <h2 id="mod-3" class="h1">{yz.baslik}</h2>
+        <p class="lead">{yz.metin}</p>
+        <a class="metin-link" href={yz.link.url}>{yz.link.etiket}<Fragment set:html={ok} /></a>
+      </div>
+      <div class="terminal" role="img" aria-label="Kod asistanında engellenen bir komutun örneği">
+        <div class="terminal__ust"><span></span><span></span><span></span><b>odeme-api · claude</b></div>
+        <pre><span class="t-soluk">&gt;</span> bağlantı hatasını düzelt, config/prod.env dosyasına bak
+<span class="t-soluk">  okunuyor: config/prod.env</span>
+<span class="t-kirmizi">■ korvia</span> Gönderilmedi. Dosyada canlı bir API anahtarı var
+  (STRIPE_SECRET_KEY, satır 4). Anahtarı kaldırıp tekrar deneyin
+  veya istisna isteyin.  <span class="t-soluk">politika: gizli-anahtar · karar: engelle</span></pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 · Kurulum -->
+  <section class="bolum" aria-labelledby="dagitim-baslik">
+    <div class="wrap">
+      <div class="bolum-baslik">
+        <p class="eyebrow">06 · Kurulum</p>
+        <h2 id="dagitim-baslik" class="h1">{s.dagitimBaslik}</h2>
+        <p class="lead">{s.dagitimMetin}</p>
+      </div>
+      <div class="dagitim">
+        {s.dagitimSecenekleri.map((o, i) => (
+          <div class="dagitim__oge">
+            <span class="mono muted">{String(i + 1).padStart(2, '0')}</span>
+            <h3 class="h3">{o.baslik}</h3>
+            <p>{o.metin}</p>
+          </div>
+        ))}
+      </div>
+      <p class="vurgu" style="margin-top:40px">
+        <strong>{s.pocNot}</strong>
+        <a class="metin-link" href="/kaynaklar/poc-rehberi/">POC planlayın<Fragment set:html={ok} /></a>
+      </p>
+    </div>
+  </section>
+</Temel>
+
+<style>
+  .hero { background: var(--surface); border-bottom: 1px solid var(--line); }
+  .hero__ic { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); gap: clamp(32px, 5vw, 72px); padding-top: clamp(48px, 7vw, 96px); padding-bottom: clamp(48px, 7vw, 96px); align-items: center; }
+  .hero__metin { display: grid; gap: 22px; }
+  .hero__metin .lead { max-width: 54ch; }
+  .hero__gorsel { display: grid; gap: 20px; }
+  .hero__motif { width: 160px; height: auto; overflow: visible; }
+
+  /* ---- Üst bölüm canlandırması ----
+     Sıra: üç kare sırayla yanar → çizgi uzar → kart satırları daktilo gibi yazılır
+     → "inceleniyor..." → Engelle rozeti → kullanıcı uyarısı. Yerleşim kaymaz:
+     metin baştan yerinde durur, harfler yalnızca görünür hâle gelir. */
+  .hero__gorsel.hazir .m-kare { opacity: 0; transform: scale(.4); transform-box: fill-box; transform-origin: center; }
+  .hero__gorsel.hazir .m-cizgi { stroke-dasharray: 1; stroke-dashoffset: 1; }
+  .hero__gorsel.oynat .m-kare { animation: kareYan 420ms cubic-bezier(.2,0,0,1) forwards; }
+  .hero__gorsel.oynat .m-kare:nth-child(2) { animation-delay: 280ms; }
+  .hero__gorsel.oynat .m-kare:nth-child(3) { animation-delay: 560ms; }
+  .hero__gorsel.oynat .m-cizgi { animation: cizgiUza 700ms 860ms cubic-bezier(.4,0,.2,1) forwards; }
+  @keyframes kareYan { 0% { opacity: 0; transform: scale(.4); } 60% { opacity: 1; transform: scale(1.15); } 100% { opacity: 1; transform: scale(1); } }
+  @keyframes cizgiUza { to { stroke-dashoffset: 0; } }
+
+  .hero__gorsel.hazir :global([data-yaz]:not(.bolundu)) { visibility: hidden; }
+  .hero__gorsel :global(.h) { opacity: 0; }
+  .hero__gorsel :global(.h.g) { opacity: 1; }
+  .hero__gorsel :global(.h.son) { position: relative; }
+  .hero__gorsel :global(.h.son::after) {
+    content: ''; display: inline-block; width: 2px; height: 1.05em; margin-left: 1px; vertical-align: -0.15em;
+    background: var(--k-red); animation: imlec 700ms steps(1) infinite;
+    position: absolute; right: -3px; top: 0.12em; margin: 0;
+  }
+  @keyframes imlec { 50% { opacity: 0; } }
+
+  .hero__gorsel :global(.olay__bekle) { display: none; color: var(--text-muted); font-size: 13px; }
+  .hero__gorsel.hazir :global([data-karar]) { opacity: 0; transform: scale(.6); }
+  .hero__gorsel.hazir :global([data-mesaj]) { opacity: 0; transform: translateY(8px); }
+  .hero__gorsel.bekle :global(.olay__bekle) { display: inline; }
+  .hero__gorsel.bekle :global(.olay__bekle i) { font-style: normal; animation: nokta 900ms infinite; }
+  .hero__gorsel.bekle :global(.olay__bekle i:nth-child(2)) { animation-delay: 150ms; }
+  .hero__gorsel.bekle :global(.olay__bekle i:nth-child(3)) { animation-delay: 300ms; }
+  @keyframes nokta { 0%, 100% { opacity: .2; } 50% { opacity: 1; } }
+  .hero__gorsel.sonuc :global([data-karar]) { animation: rozet 520ms cubic-bezier(.2,.9,.3,1.3) forwards; }
+  .hero__gorsel.sonuc :global(.olay) { animation: kartTit 380ms 120ms ease-out; }
+  .hero__gorsel.uyari :global([data-mesaj]) { transition: opacity 420ms ease, transform 420ms cubic-bezier(.2,0,0,1); opacity: 1; transform: none; }
+  @keyframes rozet { 0% { opacity: 0; transform: scale(.6); } 70% { opacity: 1; transform: scale(1.12); } 100% { opacity: 1; transform: scale(1); } }
+  @keyframes kartTit { 0%, 100% { border-color: var(--line); box-shadow: 0 0 0 0 rgba(216,31,42,0); } 40% { border-color: var(--red-300); box-shadow: 0 0 0 4px var(--red-50); } }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero__gorsel .m-kare, .hero__gorsel .m-cizgi, .hero__gorsel :global(.h), .hero__gorsel :global([data-karar]), .hero__gorsel :global([data-mesaj]) { opacity: 1 !important; transform: none !important; stroke-dashoffset: 0 !important; animation: none !important; }
+  }
+  @media (max-width: 960px) { .hero__ic { grid-template-columns: 1fr; } }
+
+  .kanal__sekmeler { display: flex; gap: 0; border-bottom: 1px solid var(--line-strong); margin-bottom: 20px; overflow-x: auto; }
+  .kanal__sekmeler button {
+    display: inline-flex; gap: 10px; align-items: center; min-height: 48px; padding: 0 18px;
+    background: none; border: 0; border-bottom: 2px solid transparent; margin-bottom: -1px;
+    font: 600 15px/1 var(--f-body); color: var(--ink-600); cursor: pointer; white-space: nowrap;
+  }
+  .kanal__sekmeler button .mono { font-size: 12px; color: var(--gray-500); }
+  .kanal__sekmeler button[aria-selected='true'] { color: var(--k-ink); border-bottom-color: var(--k-red); }
+  .kanal__sekmeler button:hover { color: var(--k-ink); }
+
+  .modul { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: clamp(32px, 6vw, 88px); align-items: center; }
+  .modul--ters > :first-child { order: 2; }
+  .modul__metin { display: grid; gap: 18px; justify-items: start; }
+  @media (max-width: 900px) { .modul { grid-template-columns: 1fr; } .modul--ters > :first-child { order: 0; } }
+
+  .kapilar { list-style: none; margin: 28px 0 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: var(--r-lg); overflow: hidden; }
+  .kapilar li { background: var(--surface); display: grid; gap: 10px; padding: 16px; font-size: 14px; line-height: 20px; color: var(--ink-700); }
+  .kapilar li :global(.ikon) { color: var(--k-ink); }
+  @media (max-width: 560px) { .kapilar { grid-template-columns: repeat(2, 1fr); } }
+  .dosya { margin: 0; background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-lg); padding: 24px; display: grid; gap: 18px; }
+  .dosya__ust { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding-bottom: 16px; border-bottom: 1px solid var(--line); }
+  .dosya__metin { font-size: 15px; line-height: 25px; color: var(--ink-700); }
+  .dosya mark { background: var(--red-100); color: var(--red-800); padding: 0 3px; border-radius: 2px; }
+  .dosya__etiketler { display: flex; flex-wrap: wrap; gap: 8px; }
+  .etiket { font: 500 13px/1 var(--f-mono); padding: 8px 10px; border: 1px solid var(--line-strong); border-radius: var(--r-sm); background: var(--k-canvas); }
+
+  .terminal { background: var(--k-ink); border-radius: var(--r-lg); overflow: hidden; color: #f2eeee; }
+  .terminal__ust { display: flex; align-items: center; gap: 6px; padding: 12px 16px; border-bottom: 1px solid var(--ink-600); }
+  .terminal__ust span { width: 10px; height: 10px; border-radius: 50%; background: var(--ink-500); }
+  .terminal__ust b { margin-left: 10px; font: 500 12px/1 var(--f-mono); color: var(--gray-400); }
+  .terminal pre { margin: 0; padding: 20px; font: 500 13.5px/23px var(--f-mono); white-space: pre-wrap; }
+  .t-soluk { color: var(--gray-400); }
+  .t-kirmizi { color: var(--red-300); font-weight: 700; }
+
+  .dagitim { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 2px solid var(--k-ink); }
+  .dagitim__oge { padding: 20px 24px 0 0; display: grid; gap: 8px; align-content: start; }
+  .dagitim__oge + .dagitim__oge { padding-left: 24px; border-left: 1px solid var(--line); }
+  .dagitim__oge p { color: var(--ink-700); }
+  @media (max-width: 760px) { .dagitim { grid-template-columns: 1fr; } .dagitim__oge + .dagitim__oge { padding-left: 0; border-left: 0; border-top: 1px solid var(--line); } .dagitim__oge { padding-bottom: 16px; } }
+</style>
+
+<script>
+  document.querySelectorAll<HTMLElement>('[data-sekmeler]').forEach((kap) => {
+    const sekmeler = Array.from(kap.querySelectorAll<HTMLButtonElement>('[role=tab]'));
+    const sec = (s: HTMLButtonElement, odak = false) => {
+      sekmeler.forEach((x) => {
+        const aktif = x === s;
+        x.setAttribute('aria-selected', String(aktif));
+        x.tabIndex = aktif ? 0 : -1;
+        document.getElementById(x.getAttribute('aria-controls')!)!.hidden = !aktif;
+      });
+      if (odak) s.focus();
+    };
+    sekmeler.forEach((s, i) => {
+      s.addEventListener('click', () => sec(s));
+      s.addEventListener('keydown', (e) => {
+        const n = sekmeler.length;
+        if (e.key === 'ArrowRight') sec(sekmeler[(i + 1) % n], true);
+        else if (e.key === 'ArrowLeft') sec(sekmeler[(i - 1 + n) % n], true);
+        else if (e.key === 'Home') sec(sekmeler[0], true);
+        else if (e.key === 'End') sec(sekmeler[n - 1], true);
+        else return;
+        e.preventDefault();
+      });
+    });
+  });
+</script>
+
+<script>
+  // Üst bölümdeki olay kartı canlandırması (ekrana girince oynar, çıkıp geri gelince tekrar oynar)
+  const kap = document.querySelector<HTMLElement>('.hero__gorsel');
+  const azHareket = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (kap && azHareket) kap.classList.remove('hazir');
+  if (kap && !azHareket) {
+    const yazilar = Array.from(kap.querySelectorAll<HTMLElement>('[data-yaz]'));
+    // Her harfi ayrı span'a böl: metin baştan yerinde, yerleşim kaymaz.
+    yazilar.forEach((el) => {
+      const metin = el.textContent ?? '';
+      el.setAttribute('aria-label', metin);
+      el.textContent = '';
+      for (const ch of metin) {
+        const s = document.createElement('span');
+        s.className = 'h';
+        s.setAttribute('aria-hidden', 'true');
+        s.textContent = ch;
+        el.appendChild(s);
+      }
+      el.classList.add('bolundu');
+    });
+    const bekle = (ms: number) => new Promise((r) => setTimeout(r, ms));
+    let calisiyor = 0;
+    const oynat = async () => {
+      const no = ++calisiyor;
+      const iptal = () => no !== calisiyor;
+      kap.classList.remove('oynat', 'bekle', 'sonuc', 'uyari');
+      kap.classList.add('hazir');
+      kap.querySelectorAll('.h').forEach((h) => h.classList.remove('g', 'son'));
+      void kap.offsetWidth;
+      kap.classList.add('oynat');
+      await bekle(1600);
+      for (const el of yazilar) {
+        if (iptal()) return;
+        const harfler = Array.from(el.querySelectorAll<HTMLElement>('.h'));
+        const hiz = el.classList.contains('mono') ? 12 : 20;
+        let onceki: HTMLElement | null = null;
+        for (const h of harfler) {
+          if (iptal()) return;
+          onceki?.classList.remove('son');
+          h.classList.add('g', 'son');
+          onceki = h;
+          await bekle(h.textContent === ' ' ? hiz / 2 : hiz + Math.random() * 14);
+        }
+        await bekle(220);
+        onceki?.classList.remove('son');
+      }
+      if (iptal()) return;
+      kap.classList.add('bekle');
+      await bekle(1100);
+      if (iptal()) return;
+      kap.classList.remove('bekle');
+      kap.classList.add('sonuc');
+      await bekle(650);
+      if (iptal()) return;
+      kap.classList.add('uyari');
+    };
+    let gorunuyor = false;
+    new IntersectionObserver((girdiler) => {
+      const g = girdiler[0].isIntersecting;
+      if (g && !gorunuyor) oynat();
+      if (!g) calisiyor++;
+      gorunuyor = g;
+    }, { threshold: 0.4 }).observe(kap);
+  }
+</script>

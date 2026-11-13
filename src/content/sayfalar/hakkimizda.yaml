@@ -1,0 +1,74 @@
+kimlik: Hakkımızda
+yol: hakkimizda
+bolum: kurumsal
+sira: 1
+ikon: kurum
+menuAciklama: Korvia neden var, nasıl düşünür.
+seoBaslik: Hakkımızda | Korvia
+seoAciklama: 'İyi çalışanlar da hata yapar: yanlış sohbete yapıştırılan bir liste, yanlış adrese giden bir dosya. Korvia bu anları pahalı bir olaya dönüşmeden yakalamak içi'
+eyebrow: Hakkımızda
+baslik: Verinizi, çalışanlarınızı ve itibarınızı koruyun.
+ozet: 'İyi çalışanlar da hata yapar: yanlış sohbete yapıştırılan bir liste, yanlış adrese giden bir dosya. Korvia bu anları pahalı bir olaya dönüşmeden yakalamak için var.'
+cta:
+  etiket: Demo planlayın
+  url: /demo/
+bloklar:
+- discriminant: not
+  value:
+    baslik: Hassas veri artık yalnızca e-postadan çıkmıyor.
+    metin: Müşteri listeleri yapay zekâ sohbetlerine, kod kişisel bulutlara, dosyalar USB belleklere gidiyor.
+    link:
+      etiket: ''
+      url: ''
+- discriminant: kartlar
+  value:
+    eyebrow: ''
+    baslik: Nasıl düşünüyoruz?
+    aciklama: ''
+    ogeler:
+    - ikon: ''
+      baslik: Her veri eşit değildir
+      metin: Aynı dosya, onu kimin nereye taşıdığına göre farklı risk taşır.
+    - ikon: ''
+      baslik: Etiketler karara dönüşmeli
+      metin: '"Gizli" damgası, bir politika ona göre davranmadıkça hiçbir şeyi korumaz.'
+    - ikon: ''
+      baslik: Alarm değil, bağlam
+      metin: Analist ne olduğunu, kimin yaptığını, hangi verinin nereye gittiğini ve nedenini görür.
+    - ikon: ''
+      baslik: Kendi verimiz konusunda açığız
+      metin: Neyi incelediğimizi, neyi sakladığımızı ve nerede tuttuğumuzu söyleriz.
+- discriminant: metin
+  value:
+    eyebrow: ''
+    baslik: Kim geliştiriyor?
+    govde: |-
+      Korvia, yirmi yılı aşkın süredir kurumlarda veri güvenliği projeleri yürüten bir ekip tarafından Türkiye pazarı için hazırlandı. Hantal ajanlardan, yapay zekâ etrafındaki kör noktalardan ve bağlamı olmayan alarmlardan yorulan güvenlik ekipleri için tek hafif ajan, varsayılan olarak kurum içi veri egemenliği ve sınıflandırma etiketlerini gerçekten uygulayan politikalar sunar.
+
+      Türkiye'de satış, kurulum ve destek iş ortağı kanalıyla verilir.
+- discriminant: tablo
+  value:
+    baslik: Şirket bilgileri
+    aciklama: ''
+    sutunlar:
+    - ''
+    - ''
+    satirlar:
+    - hucreler:
+      - Marka
+      - Korvia
+    - hucreler:
+      - Tüzel kişilik
+      - '{sirketAdi}'
+    - hucreler:
+      - Odak
+      - Veri keşfi (DSPM), veri sınıflandırma, uç nokta/ağ/bulut DLP ve yapay zekâ güvenliği
+    - hucreler:
+      - Kurulum
+      - Kurum içi, özel bulut, yalıtılmış ağ ve yönetilen hizmet
+    - hucreler:
+      - Adres
+      - '{adres}'
+    - hucreler:
+      - İletişim
+      - '{satisEposta}'

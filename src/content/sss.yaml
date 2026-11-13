@@ -1,0 +1,67 @@
+baslik: Sık sorulan sorular
+ozet: Korvia'nın neyi tespit ettiği, nasıl kurulduğu, neyi sakladığı ve nasıl değerlendirileceği hakkında doğrudan cevaplar.
+gruplar:
+- ad: Genel
+  sorular:
+  - soru: DLP (veri sızıntısı önleme) nedir?
+    cevap: 'DLP, hassas verinin izinsiz olarak kurum dışına çıkmasını durduran teknoloji ve süreçlerin bütünüdür. Modern DLP yalnızca e-postayı kapsamaz: uç noktalar, web, bulut uygulamaları, USB cihazlar ve yapay zekâ servisleri de verinin hareket ettiği ve sızdığı kanallardır.'
+  - soru: Korvia geleneksel DLP'den ne bakımdan farklı?
+    cevap: 'Üç noktada. Yapay zekâ veri güvenliği platformun çekirdeğindedir; çalışanların yapay zekâ servislerine ne gönderdiğini içerik ve bağlamıyla görürsünüz. Tespit tek bir motorda çalışır. Kararlar da ikili değildir: izleme, uyarma, kaydetme ve engelleme bağlama göre seçilir.'
+  - soru: Platform hangi modüllerden oluşur?
+    cevap: Veri Keşfi ve DSPM, Veri Sınıflandırma, Uç Nokta DLP, Ağ ve E-posta DLP, Bulut DLP, Yapay Zekâ Güvenlik Duvarı, Yapay Zekâ Veri Güvenliği, Tespit Motoru ve İnceleme. Platform modülerdir; ihtiyacınız olanla başlayıp genişletebilirsiniz.
+  - soru: Yalnızca kart veya kimlik numarası gibi yapısal veriyi mi tespit eder?
+    cevap: Hayır. Kart, T.C. kimlik, vergi ve IBAN numaraları yalnızca biçimle değil sağlama (checksum) doğrulamasıyla kontrol edilir; bu yanlış alarmı azaltır. Belge parmak izi ve içerik analizi tasarım, kaynak kod, fiyat modeli ve formül gibi yapısal olmayan varlıkları da tanır. OCR taranmış belgeleri ve görselleri kapsar.
+- ad: Teknik
+  sorular:
+  - soru: Ajanlı mı, ajansız mı çalışır?
+    cevap: İkisi de. Hafif bir uç nokta ajanı veri hareketini denetler ve içeriği cihazda inceler. Ağ paylaşımlarındaki keşif ise yönetim cihazından ajansız çalışır; dosya sunucusuna ajan kurmanız gerekmez.
+  - soru: Hangi işletim sistemleri destekleniyor?
+    cevap: Windows (imzalı MSI paketi, Grup İlkesi ile sessiz kurulum) ve Linux (Debian, Ubuntu, RHEL, Rocky ve SUSE paketleri). macOS kapsamı için satış ekibimize danışın. Yönetim bileşeni tek bir sanal makinedir.
+  - soru: Uç nokta performansını etkiler mi?
+    cevap: Ajan, politikayla ayarlanabilen bir işlemci sınırının altında kalır ve sınıra yaklaştıkça kendini yavaşlatır. Bellek ve disk etkisini POC sırasında kendi donanımınızda ölçmenizi öneririz; ölçümleri sizinle birlikte değerlendiririz.
+  - soru: Mevcut etiketleme araçlarımızla çalışır mı?
+    cevap: Evet. Korvia mevcut etiketleri tespit motorunun girdilerinden biri olarak okur ve politikaya bağlar. Platform etiketleri, Office belgelerindeki Microsoft duyarlılık (MIP) etiketleriyle eşlenebilir. Diğer etiketleme araçlarıyla birlikte çalışma POC'de doğrulanır.
+  - soru: SIEM veya SOAR entegrasyonu var mı?
+    cevap: Evet. Olaylar ve denetim kaydı SIEM'inize syslog üzerinden (CEF veya RFC 5424, TCP veya TLS) gider. Yalnızca üst veri gönderilir, hassas içerik asla gönderilmez. JSON REST API ve CSV/JSON dışa aktarım SOAR ve raporlama akışlarını besleyebilir.
+- ad: Yapay zekâ veri güvenliği
+  sorular:
+  - soru: Hangi yapay zekâ servislerini görebiliriz?
+    cevap: ChatGPT gibi üretken yapay zekâ siteleri, Teams, Slack ve Discord'a dosya yüklemeleri, WhatsApp Web, dosya paylaşım siteleri ve bulut depolama. Bazı servislerde içerik incelenir; bazılarında erişim veya yükleme kararı uygulanır. Kesin kapsam tablosunu POC öncesinde paylaşırız.
+  - soru: Kurumsal yapay zekâ hesabını kişisel hesaptan ayırabilir mi?
+    cevap: Evet. Kurumsal ve kişisel hesabı ayırmak bağlam değerlendirmesinin parçasıdır. Aynı serviste kurumsal hesaba yüklemeye izin verirken aynı içeriğin kişisel hesaba gitmesini engelleyebilirsiniz.
+  - soru: Gölge yapay zekâ nedir, nasıl yönetilir?
+    cevap: 'Gölge yapay zekâ, kurumun onayı veya bilgisi dışında yapay zekâ araçlarının kullanılmasıdır. Korvia önce bu kullanımı görünür kılar: hangi kullanıcı, hangi servis, hangi içerik. Ardından her şeyi engellemek yerine izleme ve uyarıyla başlayabilirsiniz.'
+  - soru: Yapay zekâyı tamamen engellemek zorunda mıyız?
+    cevap: 'Hayır, bunu önermiyoruz. Amaç, hassas içeriğin çıkmasını durdururken çalışanların verimli kalmasıdır: içerik türüne, hesaba ve bağlama göre izleyin, uyarın, kaydedin veya engelleyin. Kullanıcı bir iş gerekçesi yazıp devam da edebilir.'
+- ad: Kurulum
+  sorular:
+  - soru: Hangi kurulum modelleri var?
+    cevap: 'Dört model: düzenleyici ve yalıtılmış ağ ihtiyaçları için kurum içi; kendi altyapınızda özel bulut; platformu sizin için işlettiğimiz yönetilen hizmet; ve bir hizmet sağlayıcı üzerinden MSSP modeli.'
+  - soru: Verimiz yurt dışına çıkar mı?
+    cevap: Kurum içi ve özel bulut modellerinde veri sizin seçtiğiniz altyapıda kalır. Taranan içerik ve tespit edilen değerler yönetim cihazından çıkmaz; ürün internet bağlantısı olmadan da tam işlevle çalışır. Mimari belgesi her bileşenin nerede çalıştığını gösterir.
+  - soru: Kurulum ne kadar sürer?
+    cevap: 'Kapsama bağlıdır. Zamanın çoğu yaygınlaştırmaya gider: dizin entegrasyonu, neyin taranacağını seçmek, ilk tarama, ince ayar ve ajan dağıtımı. Canlıya geçiş takvimi uç nokta sayısına göre belirlenir ve yazılı bir yol haritasıyla paylaşılır.'
+- ad: Gizlilik ve güven
+  sorular:
+  - soru: Korvia hangi veriyi inceler ve saklar?
+    cevap: Neyin incelendiğini, olay kayıtlarının ne içerdiğini, nerede, ne kadar süre saklandığını ve kimin okuyabildiğini belgeleriz. Olaylar, tarama geçmişi ve günlük özetler varsayılan olarak 400 gün, denetim kaydı 24 ay saklanır. Her iki süreyi de kısaltabilirsiniz.
+  - soru: Olay kayıtlarında hassas içeriğin kopyası tutulur mu?
+    cevap: Olay kayıtları hangi tespitçinin eşleştiğini ve eşleşen değerleri tutar. Yetkili analistler bunları inceleme için görür; kullanıcı bildirimlerinde değer maskelenir. Dosyanın kendisi yalnızca "gölge kopya" eylemi tanımlı kurallarda alınır. Kanıtlar şifrelenir ve her erişim kaydedilir.
+  - soru: KVKK uyum çalışmalarını nasıl destekler?
+    cevap: 'Korvia programınızın teknik tarafını güçlendirir: kişisel veriyi bulmak, hareketini izlemek ve izinsiz aktarımı durdurmak. Kişisel veri envanteri ve dönem karşılaştırmaları gibi denetim kanıtları üretir. Hukuki sorular için hukuk danışmanınızın görüşünü alın.'
+- ad: Satın alma ve POC
+  sorular:
+  - soru: Satın almadan önce kendi verimizle test edebilir miyiz?
+    cevap: 'Evet, bunu öneriyoruz. POC dört aşamadan oluşur: veriyi ve başarı ölçütlerini tanımlayın, politikaları yapılandırın, gerçekçi senaryoları test edin, sonuçları değerlendirin. POC rehberi süreci ayrıntılı anlatır.'
+  - soru: Lisanslama nasıl işler?
+    cevap: Lisans; uç nokta ajanı sayısına, seçilen modüllere ve 1, 2 veya 3 yıllık süreye göre yapılandırılır. Lisans yönetim cihazına bağlıdır ve lisans dosyasıyla çevrim dışı etkinleştirilir. Teklif için satış ekibimize yazın.
+  - soru: Modülleri ayrı ayrı alabilir miyiz?
+    cevap: Evet. Platform modülerdir. Örneğin Uç Nokta DLP ve Yapay Zekâ Veri Güvenliği ile başlayıp sonraki aşamada Veri Keşfi ve İnceleme ekleyebilirsiniz.
+  - soru: Mevcut DLP ürünümüzden geçiş zor mu?
+    cevap: Hayır. Mevcut ürününüzdeki kurallar ve politikalar içe aktarılabilir; karşılığı olmayan öğeler raporlanır. İçe aktarılan kurallar karşılaştırma için önce izleme modunda çalışır; emin olduğunuzda geçişi tamamlarsınız.
+- ad: Destek
+  sorular:
+  - soru: Desteğe nasıl ulaşırız?
+    cevap: Destek e-posta adresimize yazın. Yanıt hedefleri sorunun önem derecesine ve destek sözleşmenize göre belirlenir. Destek sayfası önem derecelerini ve talepte nelerin yer alması gerektiğini anlatır.
+  - soru: Destek hangi dilde?
+    cevap: Türkçe. Yönetim konsolu Türkçe ve İngilizce kullanılabilir; destek kapsamı ve saatleri lisans veya destek sözleşmenizde tanımlanır. İş ortakları yönetilen hizmet ve MSSP müşterilerine birinci seviye destek verebilir.

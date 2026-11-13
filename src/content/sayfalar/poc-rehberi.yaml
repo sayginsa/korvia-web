@@ -1,0 +1,248 @@
+kimlik: POC rehberi
+yol: kaynaklar/poc-rehberi
+bolum: kaynaklar
+sira: 1
+ikon: liste
+menuAciklama: On iki test senaryosu ve bir puanlama tablosu.
+seoBaslik: POC rehberi | Korvia
+seoAciklama: Bir üreticinin demo verisi, bir DLP platformunun size uygun olup olmadığını söyleyemez. Bu rehber Korvia'yı ya da herhangi bir veri güvenliği ürününü kendi iş
+eyebrow: Kaynaklar · POC rehberi
+baslik: Demo izlemeyin. Kendi verinizle test edin.
+ozet: Bir üreticinin demo verisi, bir DLP platformunun size uygun olup olmadığını söyleyemez. Bu rehber Korvia'yı ya da herhangi bir veri güvenliği ürününü kendi iş akışlarınızda değerlendirmenize yardım eder.
+cta:
+  etiket: POC'nizi planlayın
+  url: /demo/
+bloklar:
+- discriminant: metin
+  value:
+    eyebrow: ''
+    baslik: Ortamınızda önemli olanı test edin.
+    govde: |-
+      Bir kavram kanıtlama (POC), güvenlik ürününün kurumunuz için önemli iş akışlarında nasıl davrandığını göstermelidir.
+
+      Korvia ile kendi belge şablonlarınıza, veritabanı şemalarınıza ve yapay zekâ iş akışlarınıza karşı test edersiniz; tespit doğruluğunu, yanlış alarm oranlarını, uç nokta performansını ve olayların ne kadar açıklanabilir olduğunu ilk elden ölçersiniz.
+- discriminant: kartlar
+  value:
+    eyebrow: ''
+    baslik: Neleri hazırlamalısınız?
+    aciklama: ''
+    ogeler:
+    - ikon: ''
+      baslik: Bir veri türü seçin
+      metin: En kritik veya en sık sızan veriyle başlayın.
+    - ikon: ''
+      baslik: Gerçek iş akışlarını listeleyin
+      metin: Bu veriyi kim, hangi araçla, nereye gönderiyor?
+    - ikon: ''
+      baslik: İzin ve engel örnekleri yazın
+      metin: Meşru veya riskli diyebileceğiniz beş ile on vaka.
+    - ikon: ''
+      baslik: İş birimini dahil edin
+      metin: Güvenlik ekibi tek başına gerçekçi sonuç üretemez.
+    - ikon: ''
+      baslik: Altyapıyı hazırlayın
+      metin: Bir sanal makine (8 vCPU, 16 GB RAM, 250 GB disk), dizin erişimi ve test uç noktaları.
+    - ikon: ''
+      baslik: Başarı ölçütlerini önce yazın
+      metin: POC'den sonra yazılan ölçütler sonucu anlamsız kılar.
+- discriminant: not
+  value:
+    baslik: Gerçek kişisel veriye ihtiyacınız var mı?
+    metin: Hayır. Sağlama doğrulamasından geçen sentetik T.C. kimlik ve IBAN numaraları, gerçek belge şablonlarınızla birlikte gerçekçi sonuç verir.
+    link:
+      etiket: ''
+      url: ''
+- discriminant: tablo
+  value:
+    baslik: Hangi senaryoları test etmelisiniz?
+    aciklama: İzin verilmesi gereken akışları da mutlaka test edin. Projeler kaçırılan olaylardan çok yanlış engellemeler yüzünden başarısız olur.
+    sutunlar:
+    - No.
+    - Senaryo
+    - Kanal
+    - Beklenen davranış
+    satirlar:
+    - hucreler:
+      - '1'
+      - Müşteri listesinin kişisel yapay zekâ hesabına yüklenmesi
+      - Yapay zekâ, web
+      - Engelle ve kullanıcıya nedenini söyle
+    - hucreler:
+      - '2'
+      - Aynı listenin kurumsal yapay zekâ hesabına yüklenmesi
+      - Yapay zekâ, web
+      - İzin ver ve kaydet
+    - hucreler:
+      - '3'
+      - Kaynak kod dosyasının USB belleğe kopyalanması
+      - Uç nokta
+      - Ekibinizin kararına göre engelle veya uyar
+    - hucreler:
+      - '4'
+      - Gizli sözleşmenin kişisel web postasıyla gönderilmesi
+      - Web, e-posta
+      - Engelle ve olayı kaydet
+    - hucreler:
+      - '5'
+      - Erişim anahtarının bir yapay zekâ aracına yapıştırılması
+      - Yapay zekâ, pano
+      - Engelle
+    - hucreler:
+      - '6'
+      - CAD dosyası veya formülün kişisel bulut depolamaya yüklenmesi
+      - Bulut, web
+      - Engelle ve olayı kaydet
+    - hucreler:
+      - '7'
+      - Gizli belgenin etiketsiz bir kopyayla gönderilmesi
+      - Uç nokta, web
+      - Parmak iziyle yakalanır
+    - hucreler:
+      - '8'
+      - Hassas içeriğin bir kısmının kopyala-yapıştırla çıkması
+      - Yapay zekâ, web, pano
+      - İçerik analiziyle yakalanır
+    - hucreler:
+      - '9'
+      - Mali raporun onaylı bir paydaşa gönderilmesi
+      - E-posta
+      - İzin ver, yanlış engelleme yok
+    - hucreler:
+      - '10'
+      - Olağan dışı yoğun dosya etkinliği olan kullanıcı
+      - İçeriden risk
+      - Görünürlük ve bağlamlı bir olay
+    - hucreler:
+      - '11'
+      - T.C. kimlik numarası listesi içeren taranmış belge
+      - Uç nokta, keşif
+      - OCR ile yakalanır
+    - hucreler:
+      - '12'
+      - Açık ağ paylaşımında kişisel veri içeren dosya
+      - Keşif
+      - Aşırı açık dosya olarak raporlanır
+- discriminant: tablo
+  value:
+    baslik: Başarıyı nasıl ölçersiniz?
+    aciklama: Hedefleri başlamadan önce üzerinde anlaşarak belirleyin. Hedefleri kurumunuz koyar.
+    sutunlar:
+    - Ölçüt
+    - Nasıl ölçülür
+    - Hedef nasıl yazılır
+    satirlar:
+    - hucreler:
+      - Tespit doğruluğu
+      - Hazırlanan riskli örneklerden yakalananların oranı
+      - Riskli örnekler sizin belirlediğiniz oranda yakalanır
+    - hucreler:
+      - Yanlış pozitif
+      - Meşru akışlarda yanlış engelleme ve uyarılar
+      - Kabul edilebilir en fazla yanlış alarm
+    - hucreler:
+      - Yanlış negatif
+      - Gözden kaçan riskli örnekler
+      - Kritik veri türü için kabul edilebilir kaçırma
+    - hucreler:
+      - Bağlam farkındalığı
+      - Kurumsal ve kişisel hesabın ayırt edilmesi
+      - 1. ve 2. senaryo arasında net fark
+    - hucreler:
+      - Açıklanabilirlik
+      - Tek ekran kim, ne, nereye, hangi politika ve neden sorularını cevaplar
+      - Evet veya hayır
+    - hucreler:
+      - Performans
+      - Uç nokta işlemci ve bellek kullanımı, kullanıcı geri bildirimi
+      - Ajan işlemci sınırının altında kalır, şikâyet yok
+    - hucreler:
+      - Politika hızı
+      - Kural değişikliğinin uç noktalara ulaşma süresi
+      - POC ortamınızda ölçülür
+- discriminant: adimlar
+  value:
+    baslik: Yanlış pozitifleri nasıl değerlendirirsiniz?
+    ogeler:
+    - ikon: ''
+      baslik: Her olayı sınıflandırın
+      metin: Doğru tespit, yanlış alarm veya kaçırılan olay.
+    - ikon: ''
+      baslik: Nedeni bulun
+      metin: Kural çok mu geniş, istisna mı eksik, sinyal mi yanlış?
+    - ikon: ''
+      baslik: Kusuru ayardan ayırın
+      metin: Ayar, POC sırasında birlikte düzeltilebilmelidir.
+    - ikon: ''
+      baslik: Yeniden çalıştırın
+      metin: Önemli olan iyileştirme döngüsünün ne kadar iyi işlediğidir.
+- discriminant: tablo
+  value:
+    baslik: Her üreticiye ne sormalısınız?
+    aciklama: ''
+    sutunlar:
+    - Konu
+    - Soru
+    satirlar:
+    - hucreler:
+      - Konum
+      - 'Veri nerede tespit ediliyor: uç noktada, ağda, bulutta?'
+    - hucreler:
+      - Tanıma
+      - Yalnızca sayı kalıpları mı, yoksa doğrulanmış tanımlayıcılar ve yapısal olmayan varlıklar da mı?
+    - hucreler:
+      - Yapay zekâ
+      - Hangi servisler, hangi hesap ayrımı; içerik seviyesinde mi, yalnızca alan adıyla mı?
+    - hucreler:
+      - Ağ dışında
+      - Evden veya yoldan çalışanlar için koruma devam ediyor mu?
+    - hucreler:
+      - Açıklama
+      - Olay kaydı kim, ne, nereye, hangi politika ve neden sorularını cevaplıyor mu?
+    - hucreler:
+      - Saklama
+      - Kayıtlar ve hassas veri nerede, ne kadar süre tutuluyor ve kim okuyabiliyor?
+- discriminant: tablo
+  value:
+    baslik: Nasıl karar verirsiniz?
+    aciklama: Her satırı paydaşlarınızla 1'den 5'e puanlayın. Ağırlıklar bir öneridir.
+    sutunlar:
+    - Boyut
+    - Ağırlık (100 üzerinden)
+    satirlar:
+    - hucreler:
+      - Tespit kalitesi, yanlış pozitif ve negatif dengesi
+      - '25'
+    - hucreler:
+      - Yapay zekâ ve bağlam senaryolarının kapsamı
+      - '20'
+    - hucreler:
+      - Analist ve operasyon deneyimi
+      - '15'
+    - hucreler:
+      - Kullanıcı deneyimi ve performans etkisi
+      - '15'
+    - hucreler:
+      - Mimari şeffaflık ve verinin kaldığı yer
+      - '10'
+    - hucreler:
+      - Kurulum uyumu
+      - '10'
+    - hucreler:
+      - Toplam sahip olma maliyeti
+      - '5'
+- discriminant: adimlar
+  value:
+    baslik: Bir Korvia POC'si nasıl yürür?
+    ogeler:
+    - ikon: ''
+      baslik: Tanımla
+      metin: Hedef veri türlerini, gerçek iş akışlarını ve ölçülebilir başarı ölçütlerini sabitleyin.
+    - ikon: ''
+      baslik: Yapılandır
+      metin: Cihazı kurun, örnek şemaları veya şablonları dizinleyin, politikaları yapılandırın.
+    - ikon: ''
+      baslik: Test et
+      metin: Uç nokta, web, e-posta ve yapay zekâda izin, uyarı, maskeleme ve engelleme senaryolarını çalıştırın.
+    - ikon: ''
+      baslik: Değerlendir
+      metin: Yakalama oranlarını, yanlış pozitifleri, uç nokta kaynak kullanımını ve açıklanabilirliği hedeflerinizle karşılaştırın.

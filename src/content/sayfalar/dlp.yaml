@@ -1,0 +1,98 @@
+kimlik: DLP'ye genel bakış
+yol: platform/dlp
+bolum: platform
+sira: 5
+ikon: akis
+menuAciklama: Uç nokta, ağ ve bulutta hassas veriyi tespit edip politikayı uygulayın.
+seoBaslik: DLP'ye genel bakış | Korvia
+seoAciklama: Hassas veri gündelik işin içinde sürekli hareket eder. Korvia DLP politika ihlallerini gerçek zamanlı tespit eder ve uç noktalarda, e-postada, web yüklemeleri
+eyebrow: DLP · Politikaya dayalı veri koruması
+baslik: Politikaya göre hareket eden veri sızıntısı önleme.
+ozet: Hassas veri gündelik işin içinde sürekli hareket eder. Korvia DLP politika ihlallerini gerçek zamanlı tespit eder ve uç noktalarda, e-postada, web yüklemelerinde, bulut uygulamalarında ve yapay zekâ araçlarında ayrıntılı denetim uygular.
+cta:
+  etiket: Demo planlayın
+  url: /demo/
+bloklar:
+- discriminant: senaryo
+  value:
+    baslik: Yeni ürünün çizimi USB belleğe kopyalanıyor.
+    veri: Yeni ürünün CAD çizimi
+    kullanici: Tasarım mühendisi
+    hedef: USB bellek
+    politika: 'Mühendislik fikri mülkiyeti: gerekçe iste'
+    karar: uyar
+    kararNotu: kullanıcıdan gerekçe istendi, gerekçe kaydedildi
+- discriminant: metin
+  value:
+    eyebrow: ''
+    baslik: Tek hassas dosya. Farklı iş eylemleri.
+    govde: |-
+      Gizli bir belge USB belleğe kopyalansa da, e-postaya eklense de, tarayıcıdan yüklense de veya bir yapay zekâ aracına yapıştırılsa da Korvia dosyanın içeriğini, kullanıcı bağlamını ve hedefi tek politika altında değerlendirir.
+
+      Güvenlik ekipleri sessiz izlemeden kullanıcı gerekçesine ve engellemeye kadar kademeli yanıtlar uygulayabilir; her adım denetim kanıtıyla birlikte.
+- discriminant: karar
+  value:
+    baslik: Tespitten doğru yanıta.
+    aciklama: Her politika ihlali aynı yanıtı gerektirmez. Bazı eylemler izlenmeli, bazıları uyarı veya ek bağlam istemeli, bazıları hemen durdurulmalıdır.
+    izle: Kullanıcıyı kesintiye uğratmadan hassas verinin nasıl hareket ettiğini görün.
+    uyar: Kullanıcıya politika açıklamasını gösterin ve devam etmek için iş gerekçesi isteyin.
+    kaydet: İmzalı denetim olaylarını, eşleşen tespitçileri ve inceleme kanıtını saklayın.
+    engelle: İzinsiz aktarımı hassas veri kontrolünüzden çıkmadan önce durdurun.
+- discriminant: adimlar
+  value:
+    baslik: Tek politika nasıl karar verir?
+    ogeler:
+    - ikon: ''
+      baslik: Veriyi tanı
+      metin: Etiketler ve Tespit Motoru dosyanın gerçekte ne olduğunu söyler.
+    - ikon: ''
+      baslik: Kanalı gör
+      metin: USB, yazdırma, e-posta, web, bir bulut uygulaması veya bir yapay zekâ komutu.
+    - ikon: ''
+      baslik: Karar ver
+      metin: Veri, kullanıcı ve hedefe göre izle, uyar, kaydet veya engelle.
+    - ikon: ''
+      baslik: Açıkla
+      metin: Kullanıcı nedenini, analist kanıtı görür.
+- discriminant: kartlar
+  value:
+    eyebrow: ''
+    baslik: Korvia veriyi nerede korur?
+    aciklama: ''
+    ogeler:
+    - ikon: ekran
+      baslik: Uç nokta
+      metin: USB, yazdırma, pano, ekran görüntüsü, eşitleme klasörleri ve tarayıcı yüklemeleri.
+    - ikon: eposta
+      baslik: E-posta
+      metin: Giden e-postaları ve ekleri inceleyerek yanlışlıkla veya izinsiz ifşayı önleyin.
+    - ikon: web
+      baslik: Web ve ağ
+      metin: Dışarı çıkan yüklemeler, web postası ve mesajlaşma.
+    - ikon: bulut
+      baslik: Bulut uygulamaları
+      metin: Bağlı bulut uygulamalarında yüklemeyi, indirmeyi ve dış paylaşımı denetleyin.
+    - ikon: yapayZeka
+      baslik: Yapay zekâ uygulamaları
+      metin: Komutlar ve yüklemeler diğer kanallar gibi kontrol edilir.
+    - ikon: disk
+      baslik: Durağan veri
+      metin: Veri hareket etmeden önce uç noktalarda, sunucularda ve paylaşımlarda tarayın ve sınıflandırın.
+- discriminant: sss
+  value:
+    baslik: Korvia DLP hakkında sorular
+    ogeler:
+    - soru: Veri sınıflandırma DLP'yi nasıl iyileştirir?
+      cevap: Sınıflandırma dosyanın kendisine kalıcı bir hassasiyet sinyali ekler. DLP politikaları aktarım anında yalnızca düzenli ifadelere veya dosya adına dayanmak yerine dosyanın etiketine, içeriğine ve kullanıcı bağlamına göre hemen hareket eder. Bu, yanlış alarmı belirgin biçimde azaltır.
+    - soru: İlk günden engellemek zorunda mıyız?
+      cevap: Hayır. Kademeli yaklaşımda güvenlik ekibi izlemeyle başlar, sonuçları inceler ve uyarı veya engellemeye geçmeden politikaları ayarlar. Uygun uygulama seviyesi bilginin hassasiyetine ve iş akışına bağlıdır.
+    - soru: Veri Sınıflandırma ile DLP arasındaki fark ne?
+      cevap: Veri Sınıflandırma bir dosyanın ne olduğunu belirler ve onu (görsel olarak ve üst veride) etiketler. DLP ise biri o dosyayı USB'ye kopyalamaya, yazdırmaya, e-postayla göndermeye, buluta yüklemeye veya bir yapay zekâ aracına yapıştırmaya çalıştığında ne olabileceğini uygular.
+- discriminant: ilgili
+  value:
+    baslik: İlgili sayfalar
+    sayfalar:
+    - uc-nokta-dlp
+    - ag-ve-e-posta-dlp
+    - bulut-dlp
+    - veri-siniflandirma

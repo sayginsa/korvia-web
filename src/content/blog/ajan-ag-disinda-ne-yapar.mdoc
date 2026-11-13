@@ -1,0 +1,59 @@
+---
+baslik: "Ajan ağ dışında ne yapar?"
+kategori: Veri Koruma
+tarih: 2026-11-07
+sure: 3
+ozet: >-
+  Yalnızca ofiste çalışan bir politika bir öneridir. Dizüstü bilgisayarın hiç bağlantısı olmadığında olması gerekenler.
+---
+Yalnızca ofiste çalışan bir politika bir öneridir. Korvia çalışan bir dizüstü bilgisayar kurum ağından ayrıldığında ajan aldığı son politikayı saklar, cihazda uygulamaya devam eder, olanları kaydeder ve politika sunucusuna yeniden ulaşabildiğinde kanıtı geri gönderir. Koruma bir VPN'e bağlı değildir.
+
+## Bu soru neden önemli?
+
+Hassas işin çoğu artık ofis ağında yapılmıyor. Trende, mutfak masasında, otelde, havalimanı kapısında yapılıyor. Yalnızca ağ sınırında yaşayan her denetim, cihaz binadan çıktığı anda onu görmeyi bırakır.
+
+Eski tasarımlar bunu trafiği VPN üzerinden merkeze zorlayarak çözdü. VPN açıkken bu işe yarar. Dizüstü çevrim dışıyken, biri iki bağlantı arasındayken veya görüntülü görüşme zorlandığı için VPN'i kapattığında hiçbir işe yaramaz. Bir USB belleğin ise hiç ağa ihtiyacı yoktur.
+
+Yani yararlı soru basittir: denetim hiçbir yere ulaşamadığında ne yapar?
+
+## Adım adım ne olur?
+
+Cevabın dört parçası var.
+
+**Politika önbellektedir.** Ajan aldığı son politikayı cihazda saklar. Kuralların ne olduğunu kimseye sorması gerekmez.
+
+**Uygulama devam eder.** Aynı kurallar USB belleklere, yazdırmaya, panoya, yüklemelere ve yapay zekâ komutlarına uygulanır. İçerik cihazda incelenir; karar bir sunucuyu beklemek zorunda kalmaz.
+
+**Olaylar yerel olarak kaydedilir.** Her karar cihaza yazılır: ne bulundu, hangi kural eşleşti, kim yaptı ve veri nereye gidiyordu.
+
+**Kanıt yeniden bağlanınca merkeze döner.** Dizüstü politika sunucusuna yeniden ulaştığında kanıt yüklenir ve diğer her şeyle aynı vaka zaman çizelgesine düşer. Bir analist o kişinin haftasını tek yerde okuyabilir.
+
+## Test etmeye değer üç durum
+
+Çevrim dışı davranış hakkında iddiada bulunmak kolaydır; bu yüzden test etmeye değer. Bizimki dahil her ürün için üç basit kontrol:
+
+**Kabloyu çekin.** Bir test dizüstünü tüm ağlardan ayırın ve politikanızın durdurması gereken eylemleri deneyin: etiketli bir dosyayı USB'ye kopyalayın, yazdırın, yerel bir uygulamaya yapıştırın. Sonuç ofistekiyle aynı olmalı ve kullanıcı aynı açıklamayı görmeli.
+
+**Cihaz uzaktayken politikayı değiştirin.** Dizüstü çevrim dışıyken yeni bir kural yayımlayın, sonra yeniden bağlayın. Yeni kural gelmeli; cihaz uzaktayken kaydedilen olaylar konsolda orijinal zamanlarıyla görünmeli.
+
+**Bir süre uzak kalın.** Cihazı bir hafta sonundan daha uzun süre ağdan uzak tutun. Uygulama sessizce sona ermemeli; döndüğünde kanıt eksiksiz gelmeli.
+
+## Kullanıcı ne görür?
+
+Ağ dışında çalışanların yine çalışması ve bir şeyin neden durduğunu bilmesi gerekir. Aldıkları mesaj masalarında görecekleriyle aynı olmalıdır. Politika bir iş gerekçesi istiyorsa kişi bunu yazabilir ve cevap kanıtla birlikte merkeze gider.
+
+Bu göründüğünden önemlidir. Ofiste bir türlü, yolda başka türlü davranan bir denetim, çalışanlara kuralların nerede oturduklarına bağlı olduğunu öğretir. Tutarlı bir denetim ise kuralı öğretir.
+
+## Sınırlar nerede?
+
+Dürüst cevaplar sınırları da içerir. Cihazdaki bir ajan yalnızca üzerinde çalıştığı cihazı koruyabilir. Kişisel bir telefon kapsamı dışındadır; dizüstü uzaktayken yayımlanan bir politika, dizüstü yeniden bağlanana kadar uygulanmaz. İnternetteki bir servise karşı kontrol gibi canlı sorgu gerektiren her şey bağlantıya bağlıdır.
+
+Bunların hiçbiri dizüstünden vazgeçmek için bir neden değildir. Denetiminizin tam olarak ne yaptığını bilmek ve buna göre plan yapmak için bir nedendir.
+
+## Her üreticiye sorulacak soru
+
+Hibrit çalışma, ağ dışı davranışı bir özellik değil temel bir gereksinim hâline getirdi. Bu yüzden doğrudan sorun: ajanınız hiç bağlantı yokken ne yapar? Hangi kanallar kapsamda kalır? Kanıt nerede tutulur ve merkeze nasıl döner?
+
+Net bir cevap, ürünün insanların gerçekte nasıl çalıştığına göre tasarlandığını söyler. Uzun bir duraksama da bir şey söyler.
+
+[Uç Nokta DLP'nin politikayı cihazda nasıl tuttuğunu okuyun.](/platform/dlp/uc-nokta/)

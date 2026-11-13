@@ -1,0 +1,13 @@
+---
+import { IKONLAR } from '../lib/ikonlar';
+import { SVG } from '../lib/ikon-svg';
+
+interface Props { ad?: string | null; boyut?: number; class?: string }
+const { ad, boyut = 20, class: sinif = '' } = Astro.props;
+const tanim = ad ? (IKONLAR as Record<string, { lucide: string }>)[ad] : undefined;
+const ic = tanim ? SVG[tanim.lucide] ?? '' : '';
+---
+{ic && (
+  <svg class={`ikon ${sinif}`} width={boyut} height={boyut} viewBox="0 0 24 24" fill="none" stroke="currentColor"
+    stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" set:html={ic} />
+)}

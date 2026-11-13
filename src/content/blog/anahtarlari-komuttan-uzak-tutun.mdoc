@@ -1,0 +1,56 @@
+---
+baslik: "Anahtarları komuttan uzak tutun"
+kategori: Yapay Zekâ Güvenliği
+tarih: 2026-11-07
+sure: 4
+ozet: >-
+  Bir kodlama komutundaki risk nadiren algoritmadır. Asıl risk onunla birlikte gidenlerdir: anahtarlar, bağlantı dizeleri ve test verisindeki müşteri bilgisi.
+---
+Bir kodlama komutundaki asıl risk nadiren algoritmadır. Asıl risk kodla birlikte gidenlerdir: bir yapılandırma dosyasında unutulmuş API anahtarı, bir bağlantı dizesi, test verisindeki müşteri bilgisi, kurum içi bir sunucu adı. Kodu yapay zekâ asistanlarından korumak, geliştiricileri asistandan uzak tutmakla değil, bunları komuttan uzak tutmakla başlar.
+
+## Gerçekte ne çıkıyor?
+
+Bir geliştiricinin, hata veren bir fonksiyonu düzeltmesi için asistandan yardım istediğini düşünün. Asistanın yardım edebilmesi için bağlama ihtiyacı vardır; çevredeki dosyaları okur. Bu dosyalar hiçbir zaman dışarıdan bir okuyucu düşünülerek yazılmamıştır. Gece yarısı yapılmış bir düzeltmeden kalan sabit bir token, üretimden kopyalanmış örnek bir kayıt, kodun konuştuğu sunucunun adını veren bir yorum satırı taşırlar.
+
+Bunların hiçbirini paylaşmaya kimse karar vermedi. Araç onları topladı; çünkü araç böyle çalışır. Bir depoyu okuyabilen ajan o depodaki her şeyi okuyabilir ve bunu saatte defalarca yapabilir.
+
+Bu yüzden "gizli anahtarları yapay zekâ araçlarına yapıştırmayın" gibi yazılı bir kural yetersiz kalır. Geliştirici hiçbir şey yapıştırmadı. Ajan aldı.
+
+## Asistanları yasaklamak neden işe yaramaz?
+
+Bazı kurumlar kod asistanlarını tamamen yasaklayarak cevap verir. Yasağı duyurmak kolay, sürdürmek zordur. Geliştiriciler bu araçlarla daha hızlıdır ve bunu bilirler. Onaylı yol kapandığında iş kişisel bir hesaba veya ev bilgisayarına taşınır; aynı kod aynı modellere, bu kez kimse bakmadan ulaşır.
+
+Yasak en önemli soruyu da cevapsız bırakır. Hangi kodun önemli olduğu hakkında hiçbir şey söylemez. Bir pazarlama sitesi ile ana ödeme servisi aynı risk değildir; ikisine aynı davranmak ya herkesi yavaşlatır ya hiçbir şeyi korumaz.
+
+## Denetlemeye değer üç şey
+
+Uygulanabilir bir yaklaşımın üç parçası vardır.
+
+**Komutta ne olduğunu tanıyın.** Kaynak kod kendi başına bir veri kategorisidir; politika onu bir pazarlama belgesinden farklı ele alabilmelidir. Gizli anahtarların kendi tespiti olmalıdır: API anahtarları, token'lar ve bağlantı dizeleri başka hiçbir şeye benzemez ve yola çıkmadan bulunabilir. Test verisindeki kişisel veri, diğer her yerdeki kişisel veri gibi yakalanır.
+
+**Yolu denetleyin.** Ajan kancaları Claude Code ve Codex gibi araçlarda bir komutu gönderilmeden kontrol edebilir. Bir yapay zekâ ağ geçidi Anthropic ve OpenAI API trafiğine tek çıkış ve arkasında bir denetim kaydı verir. Copilot ve Cursor da kapsanmalıdır; çünkü geliştiriciler nadiren tek bir araç kullanır.
+
+**Depolarınızı sınıflandırın.** Her kod aynı kuralı hak etmez. Depoları Kırmızı, Sarı veya Yeşil olarak sınıflandırmak politikayı riske uydurur. Kırmızı bir depo kritik kod barındırır; asistan onu hiç okuyamaz. Sarı bir depo dikkatle ve kayıt altında kullanılabilir. Yeşil bir depo normal kullanıma açıktır.
+
+## Maskelemenin burada yapamadıkları
+
+Maskeleme kişisel veride iyi çalışır. Bir ad veya hesap numarası bir etiketle değiştirilir, modele gönderilir ve yanıtta geri yüklenir. Kod böyle çalışmaz. Mantığı maskelenmiş bir fonksiyon artık bir fonksiyon değildir; asistan ona yardım edemez.
+
+Bu, kararı basitleştirir. Kişisel değerleri yapabildiğiniz yerde maskeleyin, gizli anahtarları her seferinde durdurun ve kritik kod için karar engellemek olsun. Karar motoruna ulaşılamıyorsa Kırmızı bir depo kapalı kalmalıdır; böylece bir ağ arızası sessizce açık bir kapıya dönüşmez.
+
+## Geliştiricilerin yaşayabileceği bir politika
+
+Bir politikanın sınavı, yoğun bir cuma günü de uygulanıp uygulanmadığıdır. Birkaç alışkanlık yardımcı olur.
+
+- Kurumsal hesaptaki onaylı asistana izin verin ve gündelik kodda normal çalışmasına izin verin.
+- Bir komutu yalnızca gizli bir anahtar veya kritik bir depo söz konusu olduğunda durdurun ve nedenini tek satırda söyleyin.
+- Geliştiriciye bir çıkış yolu verin: anahtarı kaldırın, onaylı hesabı kullanın veya işi izin veren bir depoya taşıyın.
+- Olayı kaydedin; ardından anahtar yenilensin ve bir ders çıkarılsın.
+
+Durdurulan bir komut kendi başına faydalıdır. Çoğu zaman, dışarıdan biri bulmadan çok önce, depoda hiç olmaması gereken bir anahtarı ortaya çıkarır.
+
+## Nereden başlamalı?
+
+Bakarak başlayın. Hangi asistanların, hangi hesaplarla, hangi depolara karşı kullanıldığını öğrenin. Ardından depolarınızı sınıflandırın; sızdığında en çok canınızı yakacak birkaç depoyla başlayın. Sonra gizli anahtar tespitini açın; tek bir hatanın en pahalıya mal olduğu yer orasıdır.
+
+Yapay zekâyı mühendislikten yasaklamak kodu korumaz. Yalnızca kodun nasıl kullanıldığını gizler. Amaç anahtarları dışarıda tutmak ve geliştiricilerin devam etmesine izin vermektir. [Kod asistanlarının Korvia'da nasıl kapsandığını okuyun.](/yapay-zeka-guvenligi/kod-asistanlari/)

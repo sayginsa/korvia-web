@@ -1,0 +1,94 @@
+---
+/** Temsilî kanal sahneleri. Üçüncü taraf ürün logosu yok; alan adları .example. */
+import KorviaUyari from './KorviaUyari.astro';
+import Ikon from './Ikon.astro';
+interface Props {
+  sahne: string;
+  karar: string;
+  hedef: string;
+  uygulama?: string;
+  veriTuru: string;
+  veriDegeri: string;
+  dosya?: string;
+}
+const p = Astro.props;
+const dosya = p.dosya || 'musteri-listesi-2026.xlsx';
+---
+<figure class="sahne">
+  <div class={`sahne__pencere sahne__pencere--${p.sahne}`}>
+    {p.sahne === 'yapay-zeka' && (
+      <>
+        <div class="sahne__bar"><span class="sahne__nokta"></span><span class="sahne__adres">{p.hedef}/yeni</span></div>
+        <div class="sahne__ic sahne__ic--yz">
+          <aside><span><Ikon ad="yapayZeka" boyut={16} />Yeni sohbet</span><span><Ikon ad="gecmis" boyut={16} />Geçmiş</span></aside>
+          <div class="sahne__yz">
+            <p class="sahne__soru">Size nasıl yardımcı olabilirim?</p>
+            <div class="sahne__komut">
+              <span>Bu müşterilere ödeme hatırlatması yaz:</span>
+              <span>Ayşe Yılmaz · TR33 0006 1005 1978 6457 8413 26</span>
+              <span>Mehmet Kaya · TR12 0001 0012 3456 7890 1234 56</span>
+              <span>Zeynep Demir · TR64 0004 6007 8888 8000 1234 56</span>
+            </div>
+          </div>
+        </div>
+      </>
+    )}
+    {p.sahne === 'usb' && (
+      <>
+        <div class="sahne__bar"><Ikon ad="usb" boyut={14} /><span class="sahne__baslik">USB Bellek (E:)</span></div>
+        <div class="sahne__ic sahne__ic--dosya">
+          <div class="sahne__tablo">
+            <div class="sahne__satir sahne__satir--bas"><span>Ad</span><span>Değiştirme</span><span>Boyut</span></div>
+            <div class="sahne__satir"><span><Ikon ad="vaka" boyut={15} />Yedek</span><span>12.10.2026</span><span></span></div>
+            <div class="sahne__satir"><span><Ikon ad="vaka" boyut={15} />Fotoğraflar</span><span>12.10.2026</span><span></span></div>
+            <div class="sahne__satir"><span><Ikon ad="belge" boyut={15} />notlar.docx</span><span>06.11.2026</span><span>24 KB</span></div>
+          </div>
+          <div class="sahne__kopya">
+            <strong>Kopyalama durduruldu</strong>
+            <span class="muted">Belgeler → USB Bellek (E:)</span>
+            <span class="sahne__dosya"><Ikon ad="belge" boyut={15} />{dosya}</span>
+            <span class="sahne__ilerleme"><i></i></span>
+            <span class="muted sahne__kucuk">Kurumunuzun politikası tarafından durduruldu</span>
+          </div>
+        </div>
+      </>
+    )}
+    {p.sahne === 'eposta' && (
+      <>
+        <div class="sahne__bar"><Ikon ad="eposta" boyut={14} /><span class="sahne__baslik">Yeni ileti</span></div>
+        <div class="sahne__ic sahne__ic--eposta">
+          <div class="sahne__alan"><span>Kime</span><span>a.yilmaz@kisisel.example</span></div>
+          <div class="sahne__alan"><span>Konu</span><span>Güncel fiyat listesi</span></div>
+          <div class="sahne__ek"><Ikon ad="belge" boyut={15} />{dosya}<span class="muted">48 KB</span></div>
+          <div class="sahne__metin">
+            <span>Merhaba,</span><span>İstediğin listeyi ekte gönderiyorum. Kart bilgileri de içinde.</span>
+          </div>
+          <span class="sahne__gonder">Gönder</span>
+        </div>
+      </>
+    )}
+    {p.sahne === 'bulut' && (
+      <>
+        <div class="sahne__bar"><span class="sahne__nokta"></span><span class="sahne__adres">{p.hedef}/yukle</span></div>
+        <div class="sahne__ic sahne__ic--bulut">
+          <div class="sahne__birak">
+            <Ikon ad="bulut" boyut={28} />
+            <strong>Dosyaları buraya bırakın</strong>
+            <span class="sahne__dosya"><Ikon ad="belge" boyut={15} />{dosya}</span>
+          </div>
+        </div>
+      </>
+    )}
+    {p.sahne === 'kod' && (
+      <>
+        <div class="sahne__bar sahne__bar--koyu"><Ikon ad="terminal" boyut={14} /><span class="sahne__baslik">odeme-api — kod asistanı</span></div>
+        <pre class="sahne__ic sahne__ic--kod"><span class="t-soluk">$</span> asistan "bağlantı hatasını düzelt"
+<span class="t-soluk">  okunuyor: src/db.ts</span>
+<span class="t-soluk">  okunuyor: {dosya}</span>
+<span class="t-soluk">  istek hazırlanıyor…</span></pre>
+      </>
+    )}
+    <KorviaUyari class="sahne__uyari" karar={p.karar} hedef={p.hedef} uygulama={p.uygulama} veriTuru={p.veriTuru} veriDegeri={p.veriDegeri} />
+  </div>
+  <figcaption class="sahne__not mono">Temsilî görünüm. Alan adları ve kişiler örnektir.</figcaption>
+</figure>

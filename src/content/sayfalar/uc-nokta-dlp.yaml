@@ -1,0 +1,102 @@
+kimlik: Uç Nokta DLP
+yol: platform/dlp/uc-nokta
+bolum: platform
+sira: 6
+ikon: ekran
+menuAciklama: USB, yazdırma, pano, tarayıcı yüklemeleri.
+seoBaslik: Uç Nokta DLP | Korvia
+seoAciklama: Hassas veri çalışan cihazlarında oluşturulur, düzenlenir, kopyalanır ve paylaşılır. Korvia Uç Nokta DLP; USB aktarımlarını, yazdırmayı, pano yapıştırmalarını,
+eyebrow: Platform · Uç nokta DLP
+baslik: Çalışan cihazlarındaki hassas veriyi koruyun.
+ozet: Hassas veri çalışan cihazlarında oluşturulur, düzenlenir, kopyalanır ve paylaşılır. Korvia Uç Nokta DLP; USB aktarımlarını, yazdırmayı, pano yapıştırmalarını, ekran görüntülerini, eşitleme klasörlerini ve tarayıcı yüklemelerini, cihaz ağa bağlı olsun olmasın inceler.
+cta:
+  etiket: Demo planlayın
+  url: /demo/
+bloklar:
+- discriminant: senaryo
+  value:
+    baslik: Müşteri kayıtları bir sohbet uygulamasına gidiyor.
+    veri: CRM'den kopyalanan müşteri kayıtları
+    kullanici: Müşteri hizmetleri temsilcisi
+    hedef: Masaüstündeki mesajlaşma uygulaması
+    politika: Kişisel veri kurum dışına çıkıyor
+    karar: engelle
+    kararNotu: yapıştırma durduruldu, nedeni gösterildi
+- discriminant: metin
+  value:
+    eyebrow: ''
+    baslik: Gizli bir dosya çıkarılabilir belleğe gittiğinde.
+    govde: |-
+      Bir kullanıcı sınıflandırılmış bir belgeyi USB belleğe kopyalamaya çalışır. Uç nokta politikası eylemi değerlendirir ve aktarıma izin verilip verilmeyeceğine, kaydedileceğine veya engelleneceğine karar verir.
+
+      Her karar; eşleşen içerik, kullanıcı gerekçesi, cihaz bilgisi ve politika bağlamıyla birlikte hemen incelenebilecek biçimde kaydedilir.
+- discriminant: bildirim
+  value:
+    eyebrow: Kullanıcı ne görür?
+    baslik: Kopyalama yarıda durur.
+    aciklama: Sınıflandırılmış bir dosya USB belleğe kopyalanmak istendi. Ajan içeriği cihazda inceledi, aktarımı durdurdu ve olayı kaydetti; ağ bağlantısı gerekmedi.
+    sahne: usb
+    karar: engelle
+    hedef: USB Bellek (E:)
+    uygulama: E
+    veriTuru: T.C. Kimlik No
+    veriDegeri: '*********46'
+    dosya: personel-kayitlari.xlsx
+- discriminant: adimlar
+  value:
+    baslik: Uç Nokta DLP nasıl çalışır?
+    ogeler:
+    - ikon: ''
+      baslik: Çıkışları izle
+      metin: Ajan USB'yi, yazdırmayı, panoyu, ekran görüntüsünü, eşitleme istemcilerini ve yüklemeleri görür.
+    - ikon: ''
+      baslik: İçeriği oku
+      metin: Tespit motoru yalnızca verinin nereye gittiğine değil, ne olduğuna bakar.
+    - ikon: ''
+      baslik: Tek politika uygula
+      metin: 'Aynı kural karar verir: izle, uyar, kaydet veya engelle.'
+    - ikon: ''
+      baslik: Kanıtı sakla
+      metin: Her karar neyin neden eşleştiğiyle birlikte kaydedilir.
+- discriminant: kartlar
+  value:
+    eyebrow: ''
+    baslik: Neleri kapsar?
+    aciklama: ''
+    ogeler:
+    - ikon: usb
+      baslik: Çıkarılabilir bellek
+      metin: Yalnızca okuma, engelleme veya cihaz kimliğine göre izin.
+    - ikon: yazdir
+      baslik: Yazdırma
+      metin: Sanal yazıcılar ve PDF'e yazdırma dahil.
+    - ikon: pano
+      baslik: Pano ve ekran görüntüsü
+      metin: Uygulama bazında kurallar.
+    - ikon: esitleme
+      baslik: Eşitleme istemcileri ve yüklemeler
+      metin: OneDrive, Google Drive, Dropbox ve tarayıcı yüklemeleri.
+    - ikon: cevrimdisi
+      baslik: Ağ dışı politika
+      metin: Dizüstü bilgisayar ofisten çıktığında da politika geçerli kalır.
+    - ikon: kullanici
+      baslik: Kullanıcı bildirimleri
+      metin: Politikaya göre uyarın, gerekçe isteyin veya sessizce engelleyin.
+- discriminant: sss
+  value:
+    baslik: Uç Nokta DLP hakkında sorular
+    ogeler:
+    - soru: Ayrı bir ajan mı?
+      cevap: Hayır. Aynı ajan hassas veriyi bulur ve etiketler; tek yaygınlaştırma, tek güncelleme kanalı ve yardım masasının bilmesi gereken tek bileşen. Keşif, sınıflandırma ve uygulama tek politikayı ve tek kanıt deposunu paylaşır.
+    - soru: Kurum ağı dışında da çalışır mı?
+      cevap: Evet. Ajan politikanın bir kopyasını saklar ve yoldayken de uygulamaya devam eder. Kanıt, cihaz politika sunucusuna yeniden ulaştığında yüklenir.
+    - soru: Kullanıcı ne görür?
+      cevap: Politikaya bağlıdır. Kullanıcı kısa bir uyarı alabilir, iş gerekçesi istenebilir veya eylemin engellendiğini ve nedenini görebilir. Kuralları ayarlarken sessiz izleme de mümkündür.
+- discriminant: ilgili
+  value:
+    baslik: İlgili sayfalar
+    sayfalar:
+    - dlp
+    - veri-siniflandirma
+    - yapay-zeka-guvenlik-duvari
+    - inceleme

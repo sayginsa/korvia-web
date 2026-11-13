@@ -1,0 +1,30 @@
+kimlik: Çerez politikası
+yol: cerezler
+bolum: yasal
+sira: 2
+ikon: ''
+menuAciklama: Bu sitenin kullandığı çerezler.
+seoBaslik: Çerez Politikası | Korvia
+seoAciklama: Bu site reklam, analiz veya izleme amacıyla çerez kullanmaz.
+eyebrow: Yasal
+baslik: Çerez politikası
+ozet: Bu site reklam, analiz veya izleme amacıyla çerez kullanmaz.
+cta:
+  etiket: ''
+  url: ''
+bloklar:
+- discriminant: metin
+  value:
+    eyebrow: ''
+    baslik: Kullandığımız çerezler
+    govde: Site yalnızca çalışması için zorunlu olan teknik depolamayı kullanabilir. Yazı tipleri sitenin kendi sunucusundan yüklenir; üçüncü taraf yazı tipi veya analiz servisine istek gönderilmez.
+- discriminant: metin
+  value:
+    eyebrow: ''
+    baslik: Yönetim paneli
+    govde: İçerik yönetim paneli (/keystatic) yalnızca yetkili editörler içindir ve oturum için zorunlu çerezler kullanır.
+- discriminant: metin
+  value:
+    eyebrow: ''
+    baslik: Değişiklikler
+    govde: Bir analiz aracı eklenirse bu sayfa güncellenir ve gerekli durumlarda açık rızanız alınır.
