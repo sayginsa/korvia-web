@@ -56,7 +56,7 @@
   --r-lg: 12px;
   --wrap: 1200px;
   --gutter: clamp(20px, 4vw, 40px);
-  --header-h: 72px;
+  --header-h: 84px;
   --t-fast: 150ms;
   --t-base: 220ms;
   --ease: cubic-bezier(0.2, 0, 0, 1);
@@ -173,18 +173,18 @@ p { margin: 0; }
   position: sticky; top: 0; z-index: 50;
   background: var(--surface); border-bottom: 1px solid var(--line);
 }
-.ust__ic { height: var(--header-h); display: flex; align-items: center; gap: 32px; }
+.ust__ic { height: var(--header-h); display: flex; align-items: center; gap: 28px; }
 .ust__logo { display: block; flex: none; padding: 8px 0; }
-.ust__logo img { height: 30px; width: auto; }
+.ust__logo img { height: 58px; width: auto; }
 .ana-menu { display: flex; align-items: center; gap: 2px; margin: 0; padding: 0; list-style: none; flex: 1; }
 .ana-menu > li { position: static; }
 .ana-menu__dugme {
   display: inline-flex; align-items: center; gap: 6px; height: 44px; padding: 0 12px;
   font: 500 15px/1 var(--f-body); color: var(--k-ink); background: none; border: 0; border-radius: var(--r-md);
-  cursor: pointer; text-decoration: none;
+  cursor: pointer; text-decoration: none; white-space: nowrap;
 }
 .ana-menu__dugme:hover, .ana-menu__dugme[aria-expanded='true'] { background: var(--stone-100); }
-.ana-menu__dugme svg { width: 12px; height: 12px; transition: transform var(--t-fast) var(--ease); }
+.ana-menu__dugme svg { width: 12px; height: 12px; flex: none; transition: transform var(--t-fast) var(--ease); }
 .ana-menu__dugme[aria-expanded='true'] svg { transform: rotate(180deg); }
 .ust__eylem { display: flex; align-items: center; gap: 8px; margin-left: auto; }
 
@@ -210,7 +210,7 @@ p { margin: 0; }
 .panel__grup a span { display: block; font-size: 14px; line-height: 20px; color: var(--text-muted); }
 
 .mobil-dugme { display: none; }
-@media (max-width: 1080px) {
+@media (max-width: 1240px) {
   .ana-menu, .ust__eylem .btn--ikincil { display: none; }
   .mobil-dugme {
     display: inline-flex; align-items: center; justify-content: center;
@@ -446,8 +446,8 @@ fieldset.alan { border: 0; padding: 0; margin: 0; }
   *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; scroll-behavior: auto !important; }
 }
 
-@media (max-width: 1080px) { .ust__ic { gap: 12px; } .ust__ic > nav { display: none !important; } }
-@media (max-width: 480px) { .ust__eylem .btn--birincil { display: none; } }
+@media (max-width: 1240px) { .ust__ic { gap: 12px; } .ust__ic > nav { display: none !important; } }
+@media (max-width: 520px) { .ust__eylem .btn--birincil { display: none; } .ust__logo img { height: 50px; } }
 
 /* Küçük ekranda tablolar kart düzenine geçer */
 @media (max-width: 640px) {
