@@ -1,7 +1,7 @@
 kimlik: Kurulum seçenekleri
 yol: platform/kurulum
-bolum: platform
-sira: 10
+bolum: kaynaklar
+sira: 3
 ikon: sunucu
 menuAciklama: Yerinde (on-prem), özel bulut, internetten yalıtılmış ağ veya yönetilen hizmet.
 seoBaslik: Kurulum seçenekleri | Korvia

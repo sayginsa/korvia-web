@@ -5,13 +5,16 @@ const bolumler = await menu();
 const a = await ayarlar();
 const yol = Astro.url.pathname;
 const BASLIK: Record<string, string> = {
-  urun: 'Uç nokta, ağ, bulut ve yapay zekâ tek politikada.',
-  cozumler: 'İhtiyaca ve sektöre göre.',
+  urun: 'Uç nokta, ağ ve bulut tek politikada.',
+  'yapay-zeka': 'Yapay zekâ araçlarını yasaklamadan güvenle kullanın.',
+  cozumler: 'İhtiyaca göre.',
+  sektorler: 'Sektörünüzün verisi ve mevzuatı için.',
   kaynaklar: 'Değerlendirmek için.',
   kurumsal: 'Korvia hakkında.',
 };
 const GENEL: Record<string, string> = {
   urun: '/platform/',
+  'yapay-zeka': '/yapay-zeka-guvenligi/',
   cozumler: '/mevzuat/',
 };
 ---

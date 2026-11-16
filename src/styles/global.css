@@ -142,7 +142,7 @@ p { margin: 0; }
 .wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 var(--gutter); }
 .bolum { padding: 96px 0; background: var(--bg); }
 @media (max-width: 760px) { .bolum { padding: 64px 0; } }
-.bolum--beyaz { background: var(--surface-alt); }
+.bolum--beyaz { background: var(--n-100); }
 .bolum--siki { padding: clamp(40px, 5vw, 64px) 0; }
 
 .bolum-baslik { display: grid; gap: 12px; margin-bottom: 40px; max-width: 760px; }
@@ -228,7 +228,7 @@ p { margin: 0; }
 .panel__grup a span { display: block; font-size: 14px; line-height: 20px; color: var(--text-muted); }
 
 .mobil-dugme { display: none; }
-@media (max-width: 960px) {
+@media (max-width: 1120px) {
   .ana-menu, .ust__iletisim { display: none; }
   .mobil-dugme {
     display: inline-flex; align-items: center; justify-content: center;
@@ -477,7 +477,8 @@ fieldset.alan { border: 0; padding: 0; margin: 0; }
   *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; scroll-behavior: auto !important; }
 }
 
-@media (max-width: 960px) { .ust__ic { gap: 12px; } .ust__ic > nav { display: none !important; } }
+@media (max-width: 1340px) { .ust__ic { gap: 20px; } .ana-menu__dugme { padding: 0 8px; font-size: 14.5px; } .ust__iletisim { display: none; } }
+@media (max-width: 1120px) { .ust__ic { gap: 12px; } .ust__ic > nav { display: none !important; } }
 @media (max-width: 520px) { .ust__eylem .btn--birincil { display: none; } .ust__logo img { height: 40px; } }
 
 /* Küçük ekranda tablolar kart düzenine geçer */

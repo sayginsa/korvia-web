@@ -5,8 +5,8 @@ const b = await menu();
 const bul = (k: string) => b.find((x) => x.anahtar === k)!;
 const sutunlar = [
   { ad: 'Ürün', ogeler: bul('urun').gruplar[0].ogeler },
-  { ad: 'Yapay zekâ ve çözümler', ogeler: [...bul('urun').gruplar[1].ogeler, ...bul('cozumler').gruplar[0].ogeler] },
-  { ad: 'Sektörler', ogeler: bul('cozumler').gruplar[1].ogeler },
+  { ad: 'Yapay zekâ ve çözümler', ogeler: [...bul('yapay-zeka').gruplar[0].ogeler, ...bul('cozumler').gruplar[0].ogeler] },
+  { ad: 'Sektörler', ogeler: bul('sektorler').gruplar[0].ogeler },
   { ad: 'Kaynaklar ve kurumsal', ogeler: [...bul('kaynaklar').gruplar[0].ogeler, ...bul('kurumsal').gruplar[0].ogeler] },
 ];
 const yil = new Date().getFullYear();

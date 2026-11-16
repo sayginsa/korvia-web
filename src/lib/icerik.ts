@@ -45,24 +45,12 @@ export async function menu(): Promise<MenuBolumu[]> {
       .filter((s) => s.bolum === b)
       .sort((x, y) => (x.sira ?? 0) - (y.sira ?? 0))
       .map((s) => ({ ad: s.kimlik, aciklama: s.menuAciklama, url: href(s.yol), ikon: s.ikon }));
-  // Kılavuz 2.0 üst menüsü: Ürün · Çözümler · Kaynaklar · Hakkımızda
+  // Üst menü: Ürün · Yapay Zekâ Güvenliği · Çözümler · Sektörler · Kaynaklar · Hakkımızda
   return [
-    {
-      anahtar: 'urun',
-      ad: 'Ürün',
-      gruplar: [
-        { ad: 'Platform', ogeler: grup('platform') },
-        { ad: 'Yapay zekâ güvenliği', ogeler: grup('yapay-zeka') },
-      ],
-    },
-    {
-      anahtar: 'cozumler',
-      ad: 'Çözümler',
-      gruplar: [
-        { ad: 'Kullanım alanları', ogeler: grup('cozumler') },
-        { ad: 'Sektörler', ogeler: grup('sektorler') },
-      ],
-    },
+    { anahtar: 'urun', ad: 'Ürün', gruplar: [{ ad: 'Platform', ogeler: grup('platform') }] },
+    { anahtar: 'yapay-zeka', ad: 'Yapay Zekâ Güvenliği', gruplar: [{ ad: 'Yapay zekâ güvenliği', ogeler: grup('yapay-zeka') }] },
+    { anahtar: 'cozumler', ad: 'Çözümler', gruplar: [{ ad: 'Kullanım alanları', ogeler: grup('cozumler') }] },
+    { anahtar: 'sektorler', ad: 'Sektörler', gruplar: [{ ad: 'Sektörler', ogeler: grup('sektorler') }] },
     { anahtar: 'kaynaklar', ad: 'Kaynaklar', gruplar: [{ ad: 'Kaynaklar', ogeler: grup('kaynaklar') }] },
     { anahtar: 'kurumsal', ad: 'Hakkımızda', gruplar: [{ ad: 'Kurumsal', ogeler: grup('kurumsal').filter((o) => o.url !== '/demo/') }] },
   ];
