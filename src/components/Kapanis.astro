@@ -3,12 +3,10 @@ import { ayarlar } from '../lib/icerik';
 const a = await ayarlar();
 ---
 <section class="kapanis" aria-labelledby="kapanis-baslik">
-  <svg class="kapanis__motif" viewBox="0 0 240 160" aria-hidden="true" style="position:absolute;right:0;top:0;height:100%;width:auto;opacity:.16">
-    <rect x="200" y="0" width="40" height="40" fill="#fff" />
-    <rect x="160" y="40" width="40" height="40" fill="#fff" />
-    <rect x="200" y="80" width="40" height="40" fill="#fff" />
-    <rect x="120" y="120" width="40" height="40" fill="#fff" />
-  </svg>
+  <div class="kapanis__bloklar bloklar" aria-hidden="true">
+    <span class="b-petrol"></span><span class="b-lacivert"></span>
+    <span class="b-petrol-acik"></span><span class="b-petrol-koyu"></span>
+  </div>
   <div class="wrap">
     <div>
       <p class="eyebrow">Kavram kanıtlama</p>
@@ -16,8 +14,20 @@ const a = await ayarlar();
       <p>{a.kapanisMetin}</p>
     </div>
     <div style="display:flex;gap:12px;flex-wrap:wrap">
-      <a class="btn btn--birincil" href="/demo/" style="background:#fff;color:var(--k-bordo)">{a.demoEtiketi}</a>
-      <a class="btn" href="/kaynaklar/poc-rehberi/" style="color:#fff;border-color:rgba(255,255,255,.5)">POC rehberi</a>
+      <a class="btn btn--birincil" href="/demo/">{a.demoEtiketi}</a>
+      <a class="btn btn--ters" href="/kaynaklar/poc-rehberi/">POC rehberini okuyun</a>
     </div>
   </div>
 </section>
+
+<style>
+  .kapanis__bloklar {
+    position: absolute; right: -40px; top: 24px; bottom: 24px; width: min(38%, 440px);
+    grid-template-columns: 1.3fr 1fr; grid-template-rows: 1fr 1fr; opacity: .9;
+  }
+  .kapanis__bloklar span:nth-child(1) { grid-row: span 2; }
+  .kapanis__bloklar span:nth-child(3) { display: none; }
+  .kapanis .wrap { grid-template-columns: 1fr !important; align-items: start !important; gap: 28px !important; }
+  .kapanis .wrap > div:first-child { max-width: 640px; }
+  @media (max-width: 960px) { .kapanis__bloklar { display: none; } }
+</style>

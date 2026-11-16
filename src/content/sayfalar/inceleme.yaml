@@ -10,7 +10,7 @@ eyebrow: Platform · İnceleme
 baslik: Hassas veriye ne olduğunu anlayın.
 ozet: Bağlamı olmayan bir alarm analistin zamanını harcar. Korvia İnceleme dosya etkinlik kayıtlarını, kullanıcı davranış sinyallerini, eşleşen tespitçileri ve imzalı kanıtı tek görünümde toplar; analistler olayları hızla sonuçlandırır.
 cta:
-  etiket: Demo planlayın
+  etiket: Demo isteyin
   url: /demo/
 bloklar:
 - discriminant: senaryo

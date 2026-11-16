@@ -1,13 +1,13 @@
-seoBaslik: Korvia | Veri Sızıntısı Önleme ve Yapay Zekâ Veri Güvenliği
-seoAciklama: Korvia hassas veriyi keşfeder, sınıflandırır ve e-posta, USB, tarayıcı ve yapay zekâ araçlarında veri hareket ettiği anda politikayı uygular. Kurum içinde çalışır.
-eyebrow: Veri sızıntısı önleme
-baslik: Veri kurumda kalır.
-ozet: İyi çalışanlar da hata yapar. Bunun bedelini veriniz ödememeli. Korvia hassas veriyi gerçek zamanlı tanır; yapay zekâ aracına, tarayıcı yüklemesine, e-postaya veya USB belleğe gitmeden önce maskeler ya da durdurur. Her kanal için tek politika.
+seoBaslik: Korvia | Veri Kaybını Önleme (DLP) · Türkiye'de geliştirildi
+seoAciklama: Korvia, Türkiye için geliştirilen yerli Veri Kaybını Önleme (DLP) ürünüdür. Hassas veriyi uç noktada, ağda, bulutta ve yapay zekâ uygulamalarında tanır, sınıflandırır ve kurum dışına çıkmadan durdurur.
+eyebrow: Veri Kaybını Önleme | DLP
+baslik: Hassas veri, kurumdan çıkmadan durur.
+ozet: Yerli geliştirme, yerinde kurulum. Uç nokta, ağ, bulut ve yapay zekâ uygulamaları tek politikada. Korvia hassas veriyi tanır, sınıflandırır ve kurum dışına çıkmadan durdurur.
 birincilCta:
-  etiket: Demo planlayın
+  etiket: Demo isteyin
   url: /demo/
 ikincilCta:
-  etiket: Platformu inceleyin
+  etiket: Ürünü inceleyin
   url: /platform/
 olay:
   kategori: Müşteri verisi / Yapay zekâ paylaşımı
@@ -89,7 +89,7 @@ moduller:
   link:
     etiket: Veri sınıflandırmayı inceleyin
     url: /platform/veri-siniflandirma/
-- eyebrow: Veri sızıntısı önleme
+- eyebrow: Veri kaybını önleme
   baslik: Hassas verinin nereye gittiğine siz karar verin.
   metin: USB, yazdırma ve pano gibi uç nokta eylemlerinden e-postaya, web yüklemelerine ve bulut iş akışlarına kadar her kanalda aynı politikayı uygulayın. İhlalleri tam bağlamıyla inceleyin.
   maddeler: []
@@ -109,10 +109,10 @@ kapiMetin: |-
 
   Korvia veri bağlamını uç noktada, ağda, bulutta ve yapay zekâda politikaya dayalı korumayla birleştirir.
 dagitimBaslik: Esnek kurulum, net veri kontrolü.
-dagitimMetin: Kurum içinde, özel bulutunuzda veya yönetilen hizmet olarak çalıştırın. Politikaların, içerik incelemesinin ve olay kayıtlarının nerede işlendiğine siz karar verirsiniz. Yönetilen güvenlik hizmeti (MSSP) iş ortakları da Korvia'yı hizmet olarak sunabilir.
+dagitimMetin: Yerinde (on-prem), özel bulutunuzda veya yönetilen hizmet olarak çalıştırın. Politikaların, içerik incelemesinin ve olay kayıtlarının nerede işlendiğine siz karar verirsiniz. Yönetilen güvenlik hizmeti (MSSP) iş ortakları da Korvia'yı hizmet olarak sunabilir.
 dagitimSecenekleri:
 - ikon: ''
-  baslik: Kurum içi
+  baslik: Yerinde (on-prem)
   metin: Tüm bileşenler ağınızda. İnternetten yalıtılmış ağlarda da çalışır.
 - ikon: ''
   baslik: Özel bulut

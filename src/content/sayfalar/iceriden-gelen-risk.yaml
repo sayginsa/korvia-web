@@ -10,7 +10,7 @@ eyebrow: Çözümler · İçeriden gelen risk
 baslik: İçeriden gelen risk çoğu zaman sıradan iş gibi görünür.
 ozet: Her veri kaybı olayı dışarıdan bir saldırganla yaşanmaz. Hassas bilgi, zaten meşru erişimi olan biri tarafından kopyalanabilir, iletilebilir veya aktarılabilir. Korvia dosya sınıflandırmasını, uç nokta etkinliğini ve olağan dışı hareket hacmini ilişkilendirir; güvenlik ekipleri ayrılan çalışanların veya ele geçirilmiş hesapların veri kaçırmasını durdurur.
 cta:
-  etiket: Demo planlayın
+  etiket: Demo isteyin
   url: /demo/
 bloklar:
 - discriminant: senaryo
@@ -48,7 +48,7 @@ bloklar:
 - discriminant: not
   value:
     baslik: Hangi kurulum uygun?
-    metin: Kurum içi veya özel bulut. Hassas olay kanıtı ve çalışan etkinlik kayıtları rol tabanlı erişimle kendi altyapınızda kalır.
+    metin: Yerinde (on-prem) veya özel bulut. Hassas olay kanıtı ve çalışan etkinlik kayıtları rol tabanlı erişimle kendi altyapınızda kalır.
     link:
       etiket: Kurulum seçenekleri
       url: /platform/kurulum/

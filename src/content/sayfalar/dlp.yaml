@@ -7,10 +7,10 @@ menuAciklama: Uç nokta, ağ ve bulutta hassas veriyi tespit edip politikayı uy
 seoBaslik: DLP'ye genel bakış | Korvia
 seoAciklama: Hassas veri gündelik işin içinde sürekli hareket eder. Korvia DLP politika ihlallerini gerçek zamanlı tespit eder ve uç noktalarda, e-postada, web yüklemeleri
 eyebrow: DLP · Politikaya dayalı veri koruması
-baslik: Politikaya göre hareket eden veri sızıntısı önleme.
+baslik: Politikaya göre hareket eden veri kaybını önleme.
 ozet: Hassas veri gündelik işin içinde sürekli hareket eder. Korvia DLP politika ihlallerini gerçek zamanlı tespit eder ve uç noktalarda, e-postada, web yüklemelerinde, bulut uygulamalarında ve yapay zekâ araçlarında ayrıntılı denetim uygular.
 cta:
-  etiket: Demo planlayın
+  etiket: Demo isteyin
   url: /demo/
 bloklar:
 - discriminant: senaryo

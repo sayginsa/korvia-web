@@ -10,7 +10,7 @@ eyebrow: Sektörler · Hukuk
 baslik: Müvekkil dosyaları gizli kalır. Her müvekkil de farklıdır.
 ozet: Hukuk büroları ve danışmanlık şirketleri dosyaları ve gizli yazışmaları korurken çalışanları taslak ve özet için yapay zekâ kullanıyor. Korvia araçları yasaklamadan nelerin girdiğini denetler.
 cta:
-  etiket: Demo planlayın
+  etiket: Demo isteyin
   url: /demo/
 bloklar:
 - discriminant: senaryo

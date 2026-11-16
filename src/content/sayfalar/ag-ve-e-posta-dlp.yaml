@@ -10,7 +10,7 @@ eyebrow: Platform · Ağ ve e-posta DLP
 baslik: İş yazışmalarındaki hassas veriyi koruyun.
 ozet: E-posta ve web yüklemeleri, yanlışlıkla oluşan veri sızıntılarının başlıca kanalları olmaya devam ediyor. Korvia giden e-postaları, ekleri ve web trafiğini inceleyerek izinsiz ifşayı önler.
 cta:
-  etiket: Demo planlayın
+  etiket: Demo isteyin
   url: /demo/
 bloklar:
 - discriminant: senaryo

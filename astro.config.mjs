@@ -14,7 +14,7 @@ const adapter = STATIC_ONLY
     : node({ mode: 'standalone' });
 
 export default defineConfig({
-  site: process.env.SITE_URL || (process.env.VERCEL_PROJECT_PRODUCTION_URL ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}` : 'https://www.example.com.tr'),
+  site: process.env.SITE_URL || (process.env.VERCEL_PROJECT_PRODUCTION_URL ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}` : 'https://s-korvia.com'),
   trailingSlash: 'ignore',
   output: 'static',
   integrations: STATIC_ONLY ? [] : [react(), keystatic()],

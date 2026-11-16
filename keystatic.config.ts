@@ -251,7 +251,7 @@ export default config({
           description: 'Formların POST edileceği URL (ör. Formspree, kendi API\'niz). Boşsa formlar e-posta istemcisini açar.',
         }),
         footerMetni: fields.text({ label: 'Alt bilgi açıklaması', multiline: true }),
-        demoEtiketi: fields.text({ label: 'Demo butonu metni', defaultValue: 'Demo planlayın' }),
+        demoEtiketi: fields.text({ label: 'Demo butonu metni', defaultValue: 'Demo isteyin' }),
         kapanisBaslik: fields.text({ label: 'Sayfa sonu çağrı başlığı' }),
         kapanisMetin: fields.text({ label: 'Sayfa sonu çağrı metni', multiline: true }),
       },

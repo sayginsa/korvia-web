@@ -10,7 +10,7 @@ eyebrow: Platform · Tespit motoru
 baslik: İçeriğin ne zaman hassas olduğunu bilin.
 ozet: Güvenilir veri koruması bir dosyanın, görselin veya komutun gerçekte ne içerdiğini bilmekle başlar. Korvia Tespit Motoru birebir veri eşleştirme, belge parmak izi, sağlama doğrulaması, sınıflandırıcılar ve OCR'ı birleştirerek yanlış alarmı azaltır.
 cta:
-  etiket: Demo planlayın
+  etiket: Demo isteyin
   url: /demo/
 bloklar:
 - discriminant: senaryo

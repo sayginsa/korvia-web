@@ -10,7 +10,7 @@ eyebrow: Mevzuat
 baslik: Her düzenleme aynı iki soruyu sorar.
 ozet: 'Veri nerede, ona ne oldu? Korvia programınızın teknik tarafını destekler: düzenlemeye tabi verinin envanteri, nereye gidebileceğine dair denetimler ve kanıt.'
 cta:
-  etiket: Demo planlayın
+  etiket: Demo isteyin
   url: /demo/
 bloklar:
 - discriminant: mevzuat
@@ -63,7 +63,7 @@ bloklar:
       - İmzalı kanıt; denetim kaydına erişim de kaydedilir
     - hucreler:
       - Veri yurt dışına çıkıyor mu?
-      - Kurum içi ve özel bulut kurulumda içerik ve kanıt ağınızda kalır
+      - Yerinde (on-prem) ve özel bulut kurulumda içerik ve kanıt ağınızda kalır
 - discriminant: not
   value:
     baslik: '"Destekler" ne demek?'

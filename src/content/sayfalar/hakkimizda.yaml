@@ -5,12 +5,12 @@ sira: 1
 ikon: kurum
 menuAciklama: Korvia neden var, nasıl düşünür.
 seoBaslik: Hakkımızda | Korvia
-seoAciklama: 'İyi çalışanlar da hata yapar: yanlış sohbete yapıştırılan bir liste, yanlış adrese giden bir dosya. Korvia bu anları pahalı bir olaya dönüşmeden yakalamak içi'
+seoAciklama: Korvia, Türkiye için geliştirilen yerli Veri Kaybını Önleme (DLP) ürünüdür. Yerinde kurulur, veri yurt dışına çıkmaz, destek Türkiye'de.
 eyebrow: Hakkımızda
 baslik: Verinizi, çalışanlarınızı ve itibarınızı koruyun.
-ozet: 'İyi çalışanlar da hata yapar: yanlış sohbete yapıştırılan bir liste, yanlış adrese giden bir dosya. Korvia bu anları pahalı bir olaya dönüşmeden yakalamak için var.'
+ozet: Korvia, Türkiye için geliştirilen yerli Veri Kaybını Önleme (DLP) ürünüdür. Hassas veriyi uç noktada, ağda, bulutta ve yapay zekâ uygulamalarında tanır, sınıflandırır ve kurum dışına çıkmadan durdurur.
 cta:
-  etiket: Demo planlayın
+  etiket: Demo isteyin
   url: /demo/
 bloklar:
 - discriminant: not
@@ -38,14 +38,34 @@ bloklar:
     - ikon: ''
       baslik: Kendi verimiz konusunda açığız
       metin: Neyi incelediğimizi, neyi sakladığımızı ve nerede tuttuğumuzu söyleriz.
+- discriminant: tablo
+  value:
+    baslik: Kimin için?
+    aciklama: ''
+    sutunlar:
+    - ''
+    - ''
+    satirlar:
+    - hucreler:
+      - Ne yapıyoruz
+      - Kurumun hassas verisini bulur, sınıflandırır, sızmadan durdururuz.
+    - hucreler:
+      - Kime
+      - Türkiye'deki kamu kurumları, bankalar, sigorta, sağlık, savunma ve büyük işletmeler.
+    - hucreler:
+      - Muhatap
+      - CISO, BT güvenlik ve KVKK uyum ekipleri.
+    - hucreler:
+      - Neden Korvia
+      - Yerli geliştirme, yerinde kurulum. TCKN, IBAN, vergi numarası gibi Türkçe veri tipleri hazır gelir. Destek Türkiye'de.
 - discriminant: metin
   value:
     eyebrow: ''
     baslik: Kim geliştiriyor?
     govde: |-
-      Korvia, yirmi yılı aşkın süredir kurumlarda veri güvenliği projeleri yürüten bir ekip tarafından Türkiye pazarı için hazırlandı. Hantal ajanlardan, yapay zekâ etrafındaki kör noktalardan ve bağlamı olmayan alarmlardan yorulan güvenlik ekipleri için tek hafif ajan, varsayılan olarak kurum içi veri egemenliği ve sınıflandırma etiketlerini gerçekten uygulayan politikalar sunar.
+      Korvia Türkiye'de geliştirilir ve yerinde (on-prem) kurulur; veri yurt dışına çıkmaz. T.C. kimlik, IBAN ve vergi numarası gibi Türkçe veri tipleri hazır gelir. Satış, kurulum ve destek Türkiye'dedir.
 
-      Türkiye'de satış, kurulum ve destek iş ortağı kanalıyla verilir.
+      Ürünü, yirmi yılı aşkın süredir kurumlarda veri güvenliği projeleri yürüten bir ekip geliştiriyor. Hantal ajanlardan, yapay zekâ etrafındaki kör noktalardan ve bağlamı olmayan alarmlardan yorulan güvenlik ekipleri için tek hafif ajan, varsayılan olarak yerinde kurulum ve sınıflandırma etiketlerini gerçekten uygulayan politikalar sunar.
 - discriminant: tablo
   value:
     baslik: Şirket bilgileri
@@ -58,6 +78,9 @@ bloklar:
       - Marka
       - Korvia
     - hucreler:
+      - Tanımlayıcı
+      - Veri Kaybını Önleme | DLP
+    - hucreler:
       - Tüzel kişilik
       - '{sirketAdi}'
     - hucreler:
@@ -65,7 +88,10 @@ bloklar:
       - Veri keşfi (DSPM), veri sınıflandırma, uç nokta/ağ/bulut DLP ve yapay zekâ güvenliği
     - hucreler:
       - Kurulum
-      - Kurum içi, özel bulut, yalıtılmış ağ ve yönetilen hizmet
+      - Yerinde (on-prem), özel bulut, yalıtılmış ağ ve yönetilen hizmet
+    - hucreler:
+      - Web
+      - s-korvia.com
     - hucreler:
       - Adres
       - '{adres}'

@@ -10,7 +10,7 @@ eyebrow: Sektörler · Finans
 baslik: Düzenleyici kanıt ister. Müşteri, verisinin yerinde kalmasını.
 ozet: Bankalar, sigorta şirketleri ve ödeme kuruluşları BDDK, SPK ve PCI DSS gereksinimleriyle ve verinin nerede tutulabileceğine dair kurallarla çalışır. Korvia ağınızın içinde çalışır ve her olay için imzalı kanıt saklar.
 cta:
-  etiket: Demo planlayın
+  etiket: Demo isteyin
   url: /demo/
 bloklar:
 - discriminant: senaryo
@@ -51,7 +51,7 @@ bloklar:
 - discriminant: not
   value:
     baslik: Hangi kurulum uygun?
-    metin: Kurum içi; gerektiği yerde yalıtılmış ağ güncellemeleri ve SIEM'inize gönderilen olaylarla.
+    metin: Yerinde (on-prem); gerektiği yerde yalıtılmış ağ güncellemeleri ve SIEM'inize gönderilen olaylarla.
     link:
       etiket: Kurulum seçenekleri
       url: /platform/kurulum/

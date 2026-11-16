@@ -10,7 +10,7 @@ eyebrow: Çözümler · Fikri mülkiyet
 baslik: Sizi farklı kılan bilgiyi koruyun.
 ozet: Fikri mülkiyet patentlerle sınırlı değildir. Ürün tasarımları, kaynak kod, fiyat modelleri, formüller, mühendislik dosyaları ve gizli iş planları da korunması gereken değerli bilgilerdir.
 cta:
-  etiket: Demo planlayın
+  etiket: Demo isteyin
   url: /demo/
 bloklar:
 - discriminant: senaryo
@@ -53,7 +53,7 @@ bloklar:
 - discriminant: not
   value:
     baslik: Hangi kurulum uygun?
-    metin: Kurum içi. Mühendislik veriniz ve onunla ilgili kanıt ağınızın içinde kalır.
+    metin: Yerinde (on-prem). Mühendislik veriniz ve onunla ilgili kanıt ağınızın içinde kalır.
     link:
       etiket: Kurulum seçenekleri
       url: /platform/kurulum/

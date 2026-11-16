@@ -10,7 +10,7 @@ eyebrow: Çözümler · Gölge yapay zekâ
 baslik: Gölge yapay zekâyı veri açığa çıkmadan keşfedin.
 ozet: Çalışanlar yapay zekâ araçlarını güvenlik ekibi onaylamadan çok önce kullanmaya başlar. Korvia tarayıcıda ve masaüstünde kullanılan her yapay zekâ servisini ortaya çıkarır, kişisel hesabı kurumsal kiracıdan ayırır ve hassas verinin yönetilmeyen dil modellerine sızmasını durdurur.
 cta:
-  etiket: Demo planlayın
+  etiket: Demo isteyin
   url: /demo/
 bloklar:
 - discriminant: senaryo

@@ -10,7 +10,7 @@ eyebrow: Platform · Veri keşfi ve DSPM
 baslik: Hassas veriyi bulun. Riskin nerede olduğunu anlayın.
 ozet: Hassas veri dosya paylaşımlarına, çalışan bilgisayarlarına, posta kutularına ve bulut sürücülere yayılır. Korvia hassas dosyaların nerede durduğunu keşfeder, kimin erişebildiğini haritalar ve sızmadan önce gereğinden fazla açıkta veya bayat kalmış veriyi gösterir.
 cta:
-  etiket: Demo planlayın
+  etiket: Demo isteyin
   url: /demo/
 bloklar:
 - discriminant: senaryo

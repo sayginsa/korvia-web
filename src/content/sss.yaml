@@ -3,7 +3,7 @@ ozet: Korvia'nın neyi tespit ettiği, nasıl kurulduğu, neyi sakladığı ve n
 gruplar:
 - ad: Genel
   sorular:
-  - soru: DLP (veri sızıntısı önleme) nedir?
+  - soru: Veri Kaybını Önleme (DLP) nedir?
     cevap: 'DLP, hassas verinin izinsiz olarak kurum dışına çıkmasını durduran teknoloji ve süreçlerin bütünüdür. Modern DLP yalnızca e-postayı kapsamaz: uç noktalar, web, bulut uygulamaları, USB cihazlar ve yapay zekâ servisleri de verinin hareket ettiği ve sızdığı kanallardır.'
   - soru: Korvia geleneksel DLP'den ne bakımdan farklı?
     cevap: 'Üç noktada. Yapay zekâ veri güvenliği platformun çekirdeğindedir; çalışanların yapay zekâ servislerine ne gönderdiğini içerik ve bağlamıyla görürsünüz. Tespit tek bir motorda çalışır. Kararlar da ikili değildir: izleme, uyarma, kaydetme ve engelleme bağlama göre seçilir.'
@@ -38,7 +38,7 @@ gruplar:
   - soru: Hangi kurulum modelleri var?
     cevap: 'Dört model: düzenleyici ve yalıtılmış ağ ihtiyaçları için kurum içi; kendi altyapınızda özel bulut; platformu sizin için işlettiğimiz yönetilen hizmet; ve bir hizmet sağlayıcı üzerinden MSSP modeli.'
   - soru: Verimiz yurt dışına çıkar mı?
-    cevap: Kurum içi ve özel bulut modellerinde veri sizin seçtiğiniz altyapıda kalır. Taranan içerik ve tespit edilen değerler yönetim cihazından çıkmaz; ürün internet bağlantısı olmadan da tam işlevle çalışır. Mimari belgesi her bileşenin nerede çalıştığını gösterir.
+    cevap: Yerinde (on-prem) ve özel bulut modellerinde veri sizin seçtiğiniz altyapıda kalır. Taranan içerik ve tespit edilen değerler yönetim cihazından çıkmaz; ürün internet bağlantısı olmadan da tam işlevle çalışır. Mimari belgesi her bileşenin nerede çalıştığını gösterir.
   - soru: Kurulum ne kadar sürer?
     cevap: 'Kapsama bağlıdır. Zamanın çoğu yaygınlaştırmaya gider: dizin entegrasyonu, neyin taranacağını seçmek, ilk tarama, ince ayar ve ajan dağıtımı. Canlıya geçiş takvimi uç nokta sayısına göre belirlenir ve yazılı bir yol haritasıyla paylaşılır.'
 - ad: Gizlilik ve güven

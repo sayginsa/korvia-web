@@ -10,7 +10,7 @@ eyebrow: Güven merkezi
 baslik: Güvenlikte şeffaflık önemlidir.
 ozet: Güvenlik ekipleri bir güvenlik aracının neyi incelediğini, neyi sakladığını veya ağ üzerinden neyi gönderdiğini tahmin etmek zorunda kalmamalı. Korvia Güven Merkezi bileşenlerin nerede çalıştığını, olay kayıtlarının neyi tuttuğunu, kayıtların ne kadar saklandığını ve verinizin nasıl sizin denetiminizde kaldığını belgeler.
 cta:
-  etiket: Demo planlayın
+  etiket: Demo isteyin
   url: /demo/
 bloklar:
 - discriminant: kartlar

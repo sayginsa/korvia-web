@@ -10,7 +10,7 @@ eyebrow: Sektörler · Enerji
 baslik: Kritik veri, buluta hiç dokunmayan ağlarda.
 ozet: Enerji, su ve telekom için bir sızıntı finansal kayıptan fazlasıdır. Korvia kapalı ağlarda çalışır; şebeke haritalarını, tesis planlarını ve SCADA yapılandırmalarını korur.
 cta:
-  etiket: Demo planlayın
+  etiket: Demo isteyin
   url: /demo/
 bloklar:
 - discriminant: senaryo
@@ -48,7 +48,7 @@ bloklar:
 - discriminant: not
   value:
     baslik: Hangi kurulum uygun?
-    metin: Kurum içi ve yalıtılmış ağ; güncellemeler imzalı dosyalar olarak gelir.
+    metin: Yerinde (on-prem) ve yalıtılmış ağ; güncellemeler imzalı dosyalar olarak gelir.
     link:
       etiket: Kurulum seçenekleri
       url: /platform/kurulum/

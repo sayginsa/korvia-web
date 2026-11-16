@@ -19,7 +19,7 @@ export async function doldur(metin: string): Promise<string> {
 }
 
 export const BOLUM_ADLARI: Record<string, string> = {
-  platform: 'Platform',
+  platform: 'Ürün',
   'yapay-zeka': 'Yapay Zekâ Güvenliği',
   cozumler: 'Çözümler',
   sektorler: 'Sektörler',
@@ -45,9 +45,16 @@ export async function menu(): Promise<MenuBolumu[]> {
       .filter((s) => s.bolum === b)
       .sort((x, y) => (x.sira ?? 0) - (y.sira ?? 0))
       .map((s) => ({ ad: s.kimlik, aciklama: s.menuAciklama, url: href(s.yol), ikon: s.ikon }));
+  // Kılavuz 2.0 üst menüsü: Ürün · Çözümler · Kaynaklar · Hakkımızda
   return [
-    { anahtar: 'platform', ad: 'Platform', gruplar: [{ ad: 'Modüller', ogeler: grup('platform') }] },
-    { anahtar: 'yapay-zeka', ad: 'Yapay Zekâ Güvenliği', gruplar: [{ ad: 'Yapay zekâ', ogeler: grup('yapay-zeka') }] },
+    {
+      anahtar: 'urun',
+      ad: 'Ürün',
+      gruplar: [
+        { ad: 'Platform', ogeler: grup('platform') },
+        { ad: 'Yapay zekâ güvenliği', ogeler: grup('yapay-zeka') },
+      ],
+    },
     {
       anahtar: 'cozumler',
       ad: 'Çözümler',
@@ -57,7 +64,7 @@ export async function menu(): Promise<MenuBolumu[]> {
       ],
     },
     { anahtar: 'kaynaklar', ad: 'Kaynaklar', gruplar: [{ ad: 'Kaynaklar', ogeler: grup('kaynaklar') }] },
-    { anahtar: 'kurumsal', ad: 'Kurumsal', gruplar: [{ ad: 'Kurumsal', ogeler: grup('kurumsal').filter((o) => o.url !== '/demo/') }] },
+    { anahtar: 'kurumsal', ad: 'Hakkımızda', gruplar: [{ ad: 'Kurumsal', ogeler: grup('kurumsal').filter((o) => o.url !== '/demo/') }] },
   ];
 }
 

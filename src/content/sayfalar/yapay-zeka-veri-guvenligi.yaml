@@ -10,7 +10,7 @@ eyebrow: Yapay zekâ güvenliği · Yapay zekâ veri güvenliği
 baslik: Çalışanların yapay zekâyla veriyi nasıl paylaştığını anlayın.
 ozet: Çalışanlar yapay zekâyı her gün yazmak, analiz etmek ve kod geliştirmek için kullanıyor. Korvia Yapay Zekâ Veri Güvenliği kullanılan her yapay zekâ aracını keşfeder, kurumsal kiracıyı kişisel hesaptan ayırır ve komutlardaki ve dosya yüklemelerindeki hassas veriyi maskeler veya engeller.
 cta:
-  etiket: Demo planlayın
+  etiket: Demo isteyin
   url: /demo/
 bloklar:
 - discriminant: maskeleme

@@ -10,7 +10,7 @@ eyebrow: Platform · Uç nokta DLP
 baslik: Çalışan cihazlarındaki hassas veriyi koruyun.
 ozet: Hassas veri çalışan cihazlarında oluşturulur, düzenlenir, kopyalanır ve paylaşılır. Korvia Uç Nokta DLP; USB aktarımlarını, yazdırmayı, pano yapıştırmalarını, ekran görüntülerini, eşitleme klasörlerini ve tarayıcı yüklemelerini, cihaz ağa bağlı olsun olmasın inceler.
 cta:
-  etiket: Demo planlayın
+  etiket: Demo isteyin
   url: /demo/
 bloklar:
 - discriminant: senaryo

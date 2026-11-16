@@ -4,8 +4,8 @@ const a = await ayarlar();
 const b = await menu();
 const bul = (k: string) => b.find((x) => x.anahtar === k)!;
 const sutunlar = [
-  { ad: 'Platform', ogeler: bul('platform').gruplar[0].ogeler },
-  { ad: 'Yapay zekâ ve çözümler', ogeler: [...bul('yapay-zeka').gruplar[0].ogeler, ...bul('cozumler').gruplar[0].ogeler] },
+  { ad: 'Ürün', ogeler: bul('urun').gruplar[0].ogeler },
+  { ad: 'Yapay zekâ ve çözümler', ogeler: [...bul('urun').gruplar[1].ogeler, ...bul('cozumler').gruplar[0].ogeler] },
   { ad: 'Sektörler', ogeler: bul('cozumler').gruplar[1].ogeler },
   { ad: 'Kaynaklar ve kurumsal', ogeler: [...bul('kaynaklar').gruplar[0].ogeler, ...bul('kurumsal').gruplar[0].ogeler] },
 ];
@@ -15,9 +15,9 @@ const yil = new Date().getFullYear();
   <div class="wrap">
     <div class="alt__ust">
       <div>
-        <img src="/logo/korvia-yatay-en-koyu-zemin.svg" alt="korvia · Data &amp; AI Security" width="221" height="52" style="height:52px;width:auto" />
+        <img src="/logo/korvia-dlp-beyaz.svg" alt="Korvia · Veri Kaybını Önleme | DLP" width="205" height="62" style="height:62px;width:auto" />
         <p>{a.footerMetni}</p>
-        <p style="margin-top:20px"><a href={`mailto:${a.satisEposta}`}>{a.satisEposta}</a><br />{a.telefon}</p>
+        <p style="margin-top:20px"><a href="https://s-korvia.com">s-korvia.com</a><br /><a href={`mailto:${a.satisEposta}`}>{a.satisEposta}</a><br />{a.telefon}</p>
       </div>
       <div class="alt__sutunlar">
         {sutunlar.map((s) => (
@@ -29,7 +29,7 @@ const yil = new Date().getFullYear();
       </div>
     </div>
     <div class="alt__alt">
-      <span>© {yil} {a.sirketAdi} · Korvia</span>
+      <span>© {yil} {a.sirketAdi} · Korvia · Türkiye'de geliştirildi</span>
       <ul>
         <li><a href="/kvkk-aydinlatma/">KVKK aydınlatma metni</a></li>
         <li><a href="/cerezler/">Çerezler</a></li>

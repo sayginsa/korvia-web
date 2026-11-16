@@ -10,7 +10,7 @@ eyebrow: Yapay zekâ güvenliği · Yapay zekâ güvenlik duvarı
 baslik: Yapay zekâya ne girdiğini ve ne döndüğünü denetleyin.
 ozet: 'Yapay zekâ etkileşimleri iki yönde risk taşır. Korvia Yapay Zekâ Güvenlik Duvarı giden komutları ve dönen model yanıtlarını gerçek zamanlı inceler: hassas veriyi maskeler, gizli anahtarları yakalar ve yapay zekâ iş akışlarınızda güvenlik politikalarını uygular.'
 cta:
-  etiket: Demo planlayın
+  etiket: Demo isteyin
   url: /demo/
 bloklar:
 - discriminant: senaryo

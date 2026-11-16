@@ -10,7 +10,7 @@ eyebrow: Platform · Veri sınıflandırma
 baslik: Verinizi tanıyın. Güvenle sınıflandırın.
 ozet: Hassas bilgi nadiren tutarlı biçimde etiketlenir. Korvia Veri Sınıflandırma ortamınızdaki veriyi keşfeder ve içerik incelemesi, bağlam analizi, mevcut MIP etiketleri ve özel kurallarla kalıcı hassasiyet etiketleri uygular.
 cta:
-  etiket: Demo planlayın
+  etiket: Demo isteyin
   url: /demo/
 bloklar:
 - discriminant: senaryo

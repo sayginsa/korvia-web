@@ -10,7 +10,7 @@ eyebrow: Sektörler · Sağlık
 baslik: Hasta kayıtları gün boyu hareket eder. Kaybolmaları işin parçası değildir.
 ozet: Klinik personel kayıtları e-postayla gönderir, yazdırır ve ekranların fotoğrafını çeker. Korvia servisi durdurmadan politika uygular; bir kaydın taşınması gerektiğinde gerekçe ister.
 cta:
-  etiket: Demo planlayın
+  etiket: Demo isteyin
   url: /demo/
 bloklar:
 - discriminant: senaryo
@@ -48,7 +48,7 @@ bloklar:
 - discriminant: not
   value:
     baslik: Hangi kurulum uygun?
-    metin: Kurum içi veya özel bulut; hasta verisi sizin denetlediğiniz altyapıda kalır.
+    metin: Yerinde (on-prem) veya özel bulut; hasta verisi sizin denetlediğiniz altyapıda kalır.
     link:
       etiket: Kurulum seçenekleri
       url: /platform/kurulum/

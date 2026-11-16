@@ -10,7 +10,7 @@ eyebrow: Platform
 baslik: Hassas veriyi keşfetmekten politikayı uygulamaya.
 ozet: Korvia veri keşfini, sınıflandırmayı, uç nokta ve ağ DLP'sini ve yapay zekâ güvenliğini tek mimaride birleştirir. Güvenlik ekibi hassas veriyi bulur, nasıl hareket ettiğini denetler ve olayları tek konsoldan inceler.
 cta:
-  etiket: Demo planlayın
+  etiket: Demo isteyin
   url: /demo/
 bloklar:
 - discriminant: kartlar

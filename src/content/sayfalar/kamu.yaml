@@ -10,7 +10,7 @@ eyebrow: Sektörler · Kamu
 baslik: Vatandaş verisi, sizin altyapınızda.
 ozet: Kamu kurumları kimlik belgeleri, vergi ve sosyal güvenlik kayıtlarıyla çalışır ve çoğu zaman yurt dışında barındırılan servisleri kullanamaz. Korvia kendi altyapınızda, internet bağlantısı olsun olmasın çalışır.
 cta:
-  etiket: Demo planlayın
+  etiket: Demo isteyin
   url: /demo/
 bloklar:
 - discriminant: senaryo
@@ -48,7 +48,7 @@ bloklar:
 - discriminant: not
   value:
     baslik: Hangi kurulum uygun?
-    metin: Kurum içi. Siz açmadıkça ağınızdan hiçbir şey çıkmaz.
+    metin: Yerinde (on-prem). Siz açmadıkça ağınızdan hiçbir şey çıkmaz.
     link:
       etiket: Kurulum seçenekleri
       url: /platform/kurulum/

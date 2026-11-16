@@ -5,22 +5,23 @@ const bolumler = await menu();
 const a = await ayarlar();
 const yol = Astro.url.pathname;
 const BASLIK: Record<string, string> = {
-  platform: 'Keşiften uygulamaya tek platform.',
-  'yapay-zeka': 'Yapay zekâya giden veriyi denetleyin.',
+  urun: 'Uç nokta, ağ, bulut ve yapay zekâ tek politikada.',
   cozumler: 'İhtiyaca ve sektöre göre.',
   kaynaklar: 'Değerlendirmek için.',
   kurumsal: 'Korvia hakkında.',
 };
 const GENEL: Record<string, string> = {
-  platform: '/platform/',
-  'yapay-zeka': '/yapay-zeka-guvenligi/',
+  urun: '/platform/',
   cozumler: '/mevzuat/',
 };
 ---
 <header class="ust">
   <div class="wrap ust__ic">
     <a class="ust__logo" href="/" aria-label="Korvia ana sayfa">
-      <img src="/logo/korvia-yatay-en-renkli.svg" alt="korvia · Data &amp; AI Security" width="246" height="58" />
+      <picture>
+        <source media="(max-width: 520px)" srcset="/logo/korvia-beyaz.svg" />
+        <img src="/logo/korvia-dlp-beyaz.svg" alt="Korvia · Veri Kaybını Önleme | DLP" width="205" height="62" />
+      </picture>
     </a>
     <nav aria-label="Ana menü" style="flex:1;display:flex">
       <ul class="ana-menu">
@@ -62,7 +63,7 @@ const GENEL: Record<string, string> = {
       </ul>
     </nav>
     <div class="ust__eylem">
-      <a class="btn btn--ikincil btn--kucuk" href="/iletisim/">İletişim</a>
+      <a class="btn btn--ters btn--kucuk ust__iletisim" href="/iletisim/">İletişim</a>
       <a class="btn btn--birincil btn--kucuk" href="/demo/">{a.demoEtiketi}</a>
       <button class="mobil-dugme" type="button" aria-expanded="false" aria-controls="mobil-menu" aria-label="Menüyü aç" data-mobil>
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M3 6h14M3 10h14M3 14h14" /></svg>

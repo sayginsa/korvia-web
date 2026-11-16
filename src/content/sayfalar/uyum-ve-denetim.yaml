@@ -10,7 +10,7 @@ eyebrow: Çözümler · Uyum ve denetim
 baslik: Veri koruma kararlarını açıklamayı kolaylaştırın.
 ozet: Güvenlik ve uyum ekipleri hassas bilginin nasıl tanındığını, korunduğunu ve olaylarda nasıl ele alındığını göstermek zorundadır. Korvia güncel kişisel veri envanteri, tutarlı politika uygulaması ve kriptografik olarak imzalanmış olay kayıtlarıyla KVKK, BDDK, SPK, PCI DSS ve ISO 27001 denetimlerine hazırlığı kolaylaştırır.
 cta:
-  etiket: Demo planlayın
+  etiket: Demo isteyin
   url: /demo/
 bloklar:
 - discriminant: senaryo
@@ -60,7 +60,7 @@ bloklar:
 - discriminant: not
   value:
     baslik: Hangi kurulum uygun?
-    metin: Kurum içi. İçerik ve kanıt ağınızda kalır; bu çoğu zaman veri yerelliği sorusunu da kapatır.
+    metin: Yerinde (on-prem). İçerik ve kanıt ağınızda kalır; bu çoğu zaman veri yerelliği sorusunu da kapatır.
     link:
       etiket: Kurulum seçenekleri
       url: /platform/kurulum/

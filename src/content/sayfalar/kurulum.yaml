@@ -3,14 +3,14 @@ yol: platform/kurulum
 bolum: platform
 sira: 10
 ikon: sunucu
-menuAciklama: Kurum içi, özel bulut, internetten yalıtılmış ağ veya yönetilen hizmet.
+menuAciklama: Yerinde (on-prem), özel bulut, internetten yalıtılmış ağ veya yönetilen hizmet.
 seoBaslik: Kurulum seçenekleri | Korvia
 seoAciklama: Korvia önce kurum içi çalışacak biçimde tasarlandı; çünkü DLP'ye en çok ihtiyaç duyan kurumlar çoğu zaman verisini başkasının bulutuna gönderemez. Yönetilen s
 eyebrow: Platform · Kurulum
 baslik: Varsayılan olarak kurum içinde. Gerisi sizin tercihiniz.
 ozet: Korvia önce kurum içi çalışacak biçimde tasarlandı; çünkü DLP'ye en çok ihtiyaç duyan kurumlar çoğu zaman verisini başkasının bulutuna gönderemez. Yönetilen sürümler aynı kodu çalıştırır.
 cta:
-  etiket: Demo planlayın
+  etiket: Demo isteyin
   url: /demo/
 bloklar:
 - discriminant: tablo
