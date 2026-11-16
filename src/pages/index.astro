@@ -14,7 +14,7 @@ const [siniflandirma, dlp, yz] = s.moduller;
     <div class="wrap hero__ic">
       <div class="hero__metin">
         <p class="eyebrow">{s.eyebrow}</p>
-        <h1 class="display">{s.baslik}</h1>
+        <h1 class="display hero__baslik">{s.baslik}</h1>
         <p class="lead">{s.ozet}</p>
         <div class="sayfa-basi__eylem">
           {/* Kılavuz: görünümde tek petrol düğme var (üst menüdeki "Demo isteyin"); hero'da ikincil düğmeler */}
@@ -197,12 +197,33 @@ const [siniflandirma, dlp, yz] = s.moduller;
   </section>
 </Temel>
 
+<script>
+  document.querySelectorAll<HTMLElement>('.kapilar').forEach((kap) => {
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const kutular = Array.from(kap.querySelectorAll<HTMLElement>('li'));
+    let son = -1, zaman: number | undefined;
+    const yak = () => {
+      let i = Math.floor(Math.random() * kutular.length);
+      if (i === son) i = (i + 1 + Math.floor(Math.random() * (kutular.length - 1))) % kutular.length;
+      son = i;
+      const k = kutular[i];
+      k.classList.add('yanik');
+      setTimeout(() => k.classList.remove('yanik'), 1400);
+    };
+    new IntersectionObserver(([g]) => {
+      if (g.isIntersecting && !zaman) { yak(); zaman = window.setInterval(yak, 900); }
+      else if (!g.isIntersecting && zaman) { clearInterval(zaman); zaman = undefined; }
+    }, { threshold: 0.15 }).observe(kap);
+  });
+</script>
+
 <style>
   /* Kılavuz örneği: lacivert zemin, beyaz logo, kilitlenen bloklar */
   .hero { background: var(--inverse); color: #fff; overflow: hidden; }
   .hero__ic { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 6fr); gap: clamp(32px, 5vw, 64px); padding-top: clamp(48px, 7vw, 88px); padding-bottom: clamp(48px, 7vw, 88px); align-items: center; }
   .hero__metin { display: grid; gap: 22px; }
-  .hero__metin .eyebrow { color: var(--brand-light); }
+  .hero__metin .eyebrow { color: var(--brand-light); font-size: clamp(13px, 1.1vw, 15px); line-height: 1.4; letter-spacing: 0.1em; }
+  .hero__baslik { font-size: clamp(34px, 4.3vw, 46px); line-height: 1.1; }
   .hero__metin h1 { color: #fff; }
   .hero__metin .lead { max-width: 54ch; color: var(--l-200); }
   .hero__beyaz { background: #fff; color: var(--ink); }
@@ -283,35 +304,12 @@ const [siniflandirma, dlp, yz] = s.moduller;
   .kapilar li { background: var(--surface); display: grid; gap: 10px; padding: 16px; font-size: 14px; line-height: 20px; color: var(--ink-muted); justify-items: start; }
   .kapilar li :global(.ikon) { color: var(--ink); }
 
-  /* Sırayla dönen ikonlar: 8 kanal × 0,8 sn döngü; her an yalnızca biri döner */
-  .kapilar__ikon { display: inline-grid; place-items: center; width: 40px; height: 40px; border-radius: var(--r-md); background: var(--surface-alt); perspective: 200px; }
-  .kapilar__ikon :global(.ikon) { transition: color var(--t-base) var(--ease); }
-  .kapilar li { animation: kapiZemin 6.4s linear infinite; animation-delay: calc(var(--i) * 0.8s); }
-  .kapilar li .kapilar__ikon { animation: kapiKutu 6.4s linear infinite; animation-delay: calc(var(--i) * 0.8s); }
-  .kapilar li .kapilar__ikon :global(.ikon) { animation: kapiDon 6.4s cubic-bezier(.4,0,.2,1) infinite; animation-delay: calc(var(--i) * 0.8s); }
-  @keyframes kapiDon {
-    0% { transform: rotateY(0); color: var(--ink); }
-    2% { color: var(--brand); }
-    11% { transform: rotateY(360deg); color: var(--brand); }
-    14%, 100% { transform: rotateY(360deg); color: var(--ink); }
-  }
-  @keyframes kapiKutu {
-    0%, 100% { background: var(--surface-alt); }
-    2%, 12% { background: var(--brand-soft); }
-    16% { background: var(--surface-alt); }
-  }
-  @keyframes kapiZemin {
-    0%, 100% { color: var(--ink-muted); }
-    2%, 12% { color: var(--ink); }
-    16% { color: var(--ink-muted); }
-  }
-  /* Üzerine gelince o ikon da döner */
-  .kapilar li:hover .kapilar__ikon :global(.ikon) { animation: kapiHover 600ms cubic-bezier(.4,0,.2,1); color: var(--brand); }
-  .kapilar li:hover .kapilar__ikon { background: var(--brand-soft); }
-  @keyframes kapiHover { from { transform: rotateY(0); } to { transform: rotateY(360deg); } }
-  @media (prefers-reduced-motion: reduce) {
-    .kapilar li, .kapilar li .kapilar__ikon, .kapilar li .kapilar__ikon :global(.ikon) { animation: none !important; }
-  }
+  /* Rastgele yanan kutucuklar: JS her ~0,9 sn'de bir kutuya .yanik ekler */
+  .kapilar__ikon { display: inline-grid; place-items: center; width: 40px; height: 40px; border-radius: var(--r-md); background: var(--surface-alt); }
+  .kapilar li, .kapilar__ikon, .kapilar__ikon :global(.ikon) { transition: background-color 500ms var(--ease), color 500ms var(--ease); }
+  .kapilar li.yanik, .kapilar li:hover { background: var(--brand-soft); color: var(--ink); }
+  .kapilar li.yanik .kapilar__ikon, .kapilar li:hover .kapilar__ikon { background: var(--brand); }
+  .kapilar li.yanik .kapilar__ikon :global(.ikon), .kapilar li:hover .kapilar__ikon :global(.ikon) { color: #fff; }
   @media (max-width: 560px) { .kapilar { grid-template-columns: repeat(2, 1fr); } }
   .dosya { margin: 0; background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-lg); padding: 24px; display: grid; gap: 18px; }
   .dosya__ust { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding-bottom: 16px; border-bottom: 1px solid var(--line); }
