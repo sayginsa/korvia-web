@@ -1,0 +1,20 @@
+---
+import Temel from '../layouts/Temel.astro';
+---
+<Temel baslik="Sayfa bulunamadı · Korvia" aciklama="Aradığınız sayfa taşınmış veya kaldırılmış olabilir." kapanis={false}>
+  <section class="sayfa-basi">
+    <div class="sb-bloklar bloklar" aria-hidden="true">
+      <span class="b-petrol"></span><span class="b-petrol-soluk"></span><span class="b-lacivert"></span>
+    </div>
+    <div class="wrap" style="position:relative">
+      <div class="sayfa-basi__ic">
+        <p class="eyebrow">404</p>
+        <h1 class="h1">Bu sayfa bulunamadı.</h1>
+        <p class="lead">Aradığınız sayfa taşınmış veya kaldırılmış olabilir. Ana sayfadan devam edebilirsiniz.</p>
+        <div class="sayfa-basi__eylem">
+          <a class="btn btn--lacivert" href="/">Ana sayfaya dön</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Temel>

@@ -7,7 +7,8 @@
     "dev": "astro dev",
     "build": "astro build",
     "build:static": "KORVIA_STATIC=1 astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "deploy": "npm run build:static && wrangler deploy"
   },
   "dependencies": {
     "@astrojs/node": "^11.1.12",
@@ -22,5 +23,8 @@
     "js-yaml": "^5.5.0",
     "react": "^19.3.1",
     "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "wrangler": "^4.164.0"
   }
 }

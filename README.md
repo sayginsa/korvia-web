@@ -30,7 +30,17 @@ Yeni sayfa eklemek için: Sayfalar → Ekle → "Adres" alanına ör. `sektorler
 
 Metinlerde `{sirketAdi}`, `{satisEposta}`, `{destekEposta}`, `{adres}` yazarsanız site ayarlarındaki değer yerleşir.
 
-## Yayına alma (Vercel + GitHub)
+## Yayına alma (Cloudflare Workers) — güncel
+
+Site Cloudflare Workers'ta statik olarak yayınlanır (`wrangler.jsonc`, `dist/`).
+
+- Cloudflare → Workers & Pages → Create → Import a repository → `sayginsa/korvia-web`
+- Build command: `npm run build:static` · Deploy command: `npx wrangler deploy`
+- `main` dalına her push'ta Cloudflare siteyi yeniden derleyip yayınlar.
+- Alan adı: Worker → Settings → Domains & Routes → `s-korvia.com` ve `www.s-korvia.com`.
+- Bu modda admin paneli (/keystatic) yayında yoktur; içerik yerelde `npm run dev` ile düzenlenip push edilir.
+
+## Yayına alma (Vercel + GitHub) — eski seçenek
 
 Kod: https://github.com/sayginsa/korvia-web. `main` dalına her push'ta Vercel siteyi yeniden yayınlar.
 

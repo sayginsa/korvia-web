@@ -1,0 +1,11 @@
+// Cloudflare Workers: yalnızca statik site (dist/). Derleme: npm run build:static
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "korvia-web",
+  "compatibility_date": "2026-11-01",
+  "assets": {
+    "directory": "./dist",
+    "not_found_handling": "404-page",
+    "html_handling": "auto-trailing-slash"
+  }
+}

@@ -1,9 +1,9 @@
-sirketAdi: '[Tüzel kişilik adı]'
+sirketAdi: Korvia
 aciklamaSatiri: Veri Kaybını Önleme | DLP
-satisEposta: satis@[alan adı]
-destekEposta: destek@[alan adı]
-telefon: +90 [telefon]
-adres: '[Adres]'
+satisEposta: satis@s-korvia.com
+destekEposta: destek@s-korvia.com
+telefon: 0533 158 46 05
+adres: Bilkent Cyberpark, Ankara
 formAdresi: ''
 footerMetni: Korvia, Türkiye için geliştirilen yerli Veri Kaybını Önleme (DLP) ürünüdür. Hassas veriyi uç noktada, ağda, bulutta ve yapay zekâ uygulamalarında tanır, sınıflandırır ve kurum dışına çıkmadan durdurur.
 demoEtiketi: Demo isteyin
