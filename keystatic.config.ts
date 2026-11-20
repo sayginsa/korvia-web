@@ -246,9 +246,13 @@ export default config({
         destekEposta: fields.text({ label: 'Destek e-postası' }),
         telefon: fields.text({ label: 'Telefon' }),
         adres: fields.text({ label: 'Adres', multiline: true }),
+        formAnahtari: fields.text({
+          label: 'Form erişim anahtarı (Web3Forms)',
+          description: 'web3forms.com üzerinde senem@s-korvia.com için alınan Access Key. Doluysa tüm formlar bu adrese e-posta olarak gelir.',
+        }),
         formAdresi: fields.text({
           label: 'Form gönderim adresi (endpoint)',
-          description: 'Formların POST edileceği URL (ör. Formspree, kendi API\'niz). Boşsa formlar e-posta istemcisini açar.',
+          description: 'Formların POST edileceği URL (ör. Formspree, kendi API\'niz). Form erişim anahtarı doluysa bu alan kullanılmaz. İkisi de boşsa formlar ziyaretçinin e-posta uygulamasını açar.',
         }),
         footerMetni: fields.text({ label: 'Alt bilgi açıklaması', multiline: true }),
         demoEtiketi: fields.text({ label: 'Demo butonu metni', defaultValue: 'Demo isteyin' }),

@@ -591,3 +591,4 @@ fieldset.alan { border: 0; padding: 0; margin: 0; }
 .panel__grup a { display: grid !important; grid-template-columns: auto 1fr; column-gap: 12px; align-items: start; }
 .panel__grup a .ikon { grid-row: span 2; margin-top: 2px; color: var(--ink-muted); }
 .panel__grup a:not(:has(.ikon)) { grid-template-columns: 1fr; }
+.gizli-tuzak { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; pointer-events: none; }

@@ -25,7 +25,7 @@ const cokluSecim = tur === 'demo';
       <p style="margin-top:8px">{a.adres}</p>
     </div>
   </div>
-  <form class="form" id={id} data-form data-tur={tur} data-adres={a.formAdresi || ''} data-alici={alici} novalidate>
+  <form class="form" id={id} data-form data-tur={tur} data-adres={a.formAdresi || ''} data-anahtar={a.formAnahtari || ''} data-alici={alici} novalidate>
     {secenekler.length > 0 && (
       <fieldset class="alan">
         <legend>{secenekBasligi}</legend>
@@ -67,6 +67,7 @@ const cokluSecim = tur === 'demo';
       <input type="checkbox" name="kvkk" required />
       <span><a href="/kvkk-aydinlatma/" target="_blank" rel="noopener">KVKK aydınlatma metnini</a> okudum. Bilgilerimin yalnızca bu talebi cevaplamak için işleneceğini biliyorum.</span>
     </label>
+    <input type="checkbox" name="botcheck" class="gizli-tuzak" tabindex="-1" autocomplete="off" aria-hidden="true" />
     <div class="form__durum" role="status" aria-live="polite" hidden></div>
     <div><button class="btn btn--birincil" type="submit">{gonderEtiketi}</button></div>
   </form>
@@ -93,7 +94,19 @@ const cokluSecim = tur === 'demo';
       const nesne: Record<string, string> = { tur: form.dataset.tur || '' };
       veri.forEach((v, k) => { nesne[k] = nesne[k] ? `${nesne[k]}, ${v}` : String(v); });
       const dugme = form.querySelector<HTMLButtonElement>('button[type=submit]')!;
-      const adres = form.dataset.adres;
+      const anahtar = form.dataset.anahtar;
+      const adres = anahtar ? 'https://api.web3forms.com/submit' : form.dataset.adres;
+      if (nesne.botcheck) return; // bot tuzağı
+      delete nesne.botcheck;
+      const TURLER: Record<string, string> = { demo: 'Demo talebi', iletisim: 'İletişim formu', belge: 'Güven merkezi belge talebi', 'is-ortakligi': 'İş ortaklığı başvurusu' };
+      const ETIKET: Record<string, string> = { tur: 'Form', secim: 'Seçim', ad: 'Ad soyad', eposta: 'E-posta', kurum: 'Kurum', telefon: 'Telefon', mesaj: 'Mesaj', kvkk: 'KVKK onayı' };
+      const turAdi = TURLER[nesne.tur] || nesne.tur;
+      const govdeNesne: Record<string, string> = {};
+      Object.entries(nesne).forEach(([k, v]) => { govdeNesne[ETIKET[k] || k] = k === 'tur' ? turAdi : k === 'kvkk' ? 'Onaylandı' : v; });
+      govdeNesne['Sayfa'] = location.href;
+      const gonderilecek = anahtar
+        ? { access_key: anahtar, subject: `Korvia web sitesi: ${turAdi}${nesne.kurum ? ' – ' + nesne.kurum : ''}`, from_name: 'Korvia web sitesi', replyto: nesne.eposta, ...govdeNesne }
+        : nesne;
       if (!adres) {
         const govde = Object.entries(nesne).filter(([k]) => k !== 'kvkk').map(([k, v]) => `${k}: ${v}`).join('\n');
         window.location.href = `mailto:${form.dataset.alici}?subject=${encodeURIComponent('Korvia web: ' + nesne.tur)}&body=${encodeURIComponent(govde)}`;
@@ -103,8 +116,9 @@ const cokluSecim = tur === 'demo';
       dugme.disabled = true;
       dugme.textContent = 'Gönderiliyor…';
       try {
-        const r = await fetch(adres, { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify(nesne) });
-        if (!r.ok) throw new Error(String(r.status));
+        const r = await fetch(adres, { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify(gonderilecek) });
+        const sonuc = await r.json().catch(() => ({}));
+        if (!r.ok || sonuc.success === false) throw new Error(sonuc.message || String(r.status));
         form.reset();
         goster('ok', 'Teşekkürler. Talebinizi aldık; en kısa sürede size dönüyoruz.');
       } catch {
