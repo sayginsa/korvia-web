@@ -248,7 +248,7 @@ export default config({
         adres: fields.text({ label: 'Adres', multiline: true }),
         formAnahtari: fields.text({
           label: 'Form erişim anahtarı (Web3Forms)',
-          description: 'web3forms.com üzerinde senem@s-korvia.com için alınan Access Key. Doluysa tüm formlar bu adrese e-posta olarak gelir.',
+          description: 'web3forms.com üzerinde satis@s-korvia.com için alınan Access Key. Doluysa tüm formlar bu adrese e-posta olarak gelir.',
         }),
         formAdresi: fields.text({
           label: 'Form gönderim adresi (endpoint)',
