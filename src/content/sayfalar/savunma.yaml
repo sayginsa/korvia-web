@@ -1,0 +1,92 @@
+kimlik: Savunma
+yol: sektorler/savunma
+bolum: sektorler
+sira: 8
+ikon: cevrimdisi
+menuAciklama: Savunma sanayii; yalıtılmış ağlar ve mühendislik verisi.
+seoBaslik: Savunma sanayii için DLP | Korvia
+seoAciklama: 'Korvia, Türkiye''de geliştirilen ve internetten yalıtılmış ağlarda tam işlevle çalışan bir Veri Kaybını Önleme | DLP ürünüdür. Veri ağınızdan çıkmaz.'
+eyebrow: Sektörler · Savunma
+baslik: Yalıtılmış ağda tam işlev. Ağınızdan hiçbir şey çıkmaz.
+ozet: Korvia, Türkiye'de geliştirilen ve internetten yalıtılmış ağlarda tam işlevle çalışan bir Veri Kaybını Önleme | DLP ürünüdür; siz açmadıkça ağınızdan hiçbir şey çıkmaz.
+cta:
+  etiket: Demo isteyin
+  url: /demo/
+bloklar:
+- discriminant: senaryo
+  value:
+    baslik: Bir teknik çizim USB belleğe gidiyor.
+    veri: Parmak izi alınmış teknik çizim
+    kullanici: Tasarım mühendisi
+    hedef: USB bellek
+    politika: 'Mühendislik verisi: çıkarılabilir bellek yok'
+    karar: engelle
+    kararNotu: kısmi kopya tanındı, bulut bağlantısı gerekmedi
+- discriminant: metin
+  value:
+    eyebrow: ''
+    baslik: Mühendislik bilgisini kapalı ağın içinde koruyun.
+    govde: |-
+      Savunma sanayii kuruluşları CAD montajları, teknik çizimler, test raporları ve kaynak kod gibi yapısal olmayan dosyalarla, çoğu zaman internet bağlantısı olmayan ağlarda çalışır. Üst veriyi veya içeriği dışarıya gönderen yalnızca bulut tabanlı güvenlik araçları bu ortamlarda kullanılamaz.
+
+      Korvia tamamen kurum içinde veya internetten yalıtılmış ağlarda kurulur. Güncellemeler imzalı çevrim dışı paketler olarak gelir, lisans çevrim dışı etkinleştirilir ve varsayılan olarak telemetri yoktur. Mühendislik depolarının parmak izini alır; bir dosyanın tamamı veya bir kısmı USB belleğe, eşitleme klasörüne ya da e-postaya gitmeden önce tanınır.
+- discriminant: kartlar
+  value:
+    eyebrow: ''
+    baslik: Korvia'nın hangi parçaları bunu yapar?
+    aciklama: ''
+    ogeler:
+    - ikon: sunucu
+      baslik: Kurulum
+      metin: Sunucu, sınıflandırma ve analiz kapalı ağınızın içinde çalışır.
+    - ikon: parmakIzi
+      baslik: Tespit Motoru
+      metin: Mühendislik depolarının parmak izini alın, kısmi kopyaları tanıyın.
+    - ikon: ekran
+      baslik: Uç Nokta DLP
+      metin: USB bellekler, yazdırma ve eşitleme klasörleri aynı kurala uyar.
+    - ikon: belgeAra
+      baslik: İnceleme
+      metin: Kimin neyi, nereye göndermeye çalıştığının imzalı kaydı.
+- discriminant: not
+  value:
+    baslik: Hangi kurulum uygun?
+    metin: Yerinde (on-prem) ve yalıtılmış ağ; güncellemeler imzalı dosyalar olarak gelir.
+    link:
+      etiket: Kurulum seçenekleri
+      url: /platform/kurulum/
+- discriminant: mevzuat
+  value:
+    baslik: Hangi mevzuata dokunur?
+    ogeler:
+    - ikon: ''
+      baslik: Bilgi ve İletişim Güvenliği Rehberi
+      metin: 'Cumhurbaşkanlığı rehberi: kritik verinin sınıflandırılması, korunması ve kayıt yönetimi.'
+    - ikon: ''
+      baslik: ISO/IEC 27001
+      metin: Sınıflandırma, etiketleme ve bilgi aktarımı kontrolleri.
+    - ikon: ''
+      baslik: KVKK
+      metin: '6698 sayılı Kanun: veri güvenliğine ilişkin yükümlülükler (md. 12), veri envanteri ve ihlal bildirimi.'
+- discriminant: sss
+  value:
+    baslik: Savunma sanayii kuruluşlarından gelen sorular
+    ogeler:
+    - soru: Korvia internet bağlantısı olmadan çalışır mı?
+      cevap: Evet. Korvia tamamen kurum içinde veya internetten yalıtılmış ağlarda kurulur ve internet bağlantısı olmadan da tam işlevle çalışır. Güncellemeler imzalı çevrim dışı paketler olarak gelir, lisans çevrim dışı etkinleştirilir.
+    - soru: Korvia verileri yurt dışına gönderir mi?
+      cevap: Hayır. Kurum içi kurulumda taranan içerik, tespit edilen değerler ve kanıt ağınızın içinde kalır. Varsayılan olarak telemetri yoktur; siz açmadıkça ağınızdan hiçbir şey çıkmaz.
+    - soru: Teknik çizimler ve kaynak kod nasıl tanınır?
+      cevap: Tespit Motoru mühendislik depolarının parmak izini alır ve dosya yeniden adlandırılsa ya da yalnızca bir kısmı kopyalansa da tanır. Sınıflandırma etiketleri yeniden adlandırma, dönüştürme ve kopyalamada dosyayla kalır.
+    - soru: Korvia Bilgi ve İletişim Güvenliği Rehberi çalışmalarına nasıl katkı sağlar?
+      cevap: Otomatik sınıflandırmayı, kanallar arasında tek politikayı ve imzalı denetim izlerini bir araya getirir. Rehberdeki tedbirlerin nasıl karşılandığına dair değerlendirme kurumunuza ve denetçinize aittir.
+    - soru: Korvia nerede geliştiriliyor?
+      cevap: Türkiye'de. Satış, kurulum ve destek de Türkiye'dedir; destek Türkçedir.
+- discriminant: ilgili
+  value:
+    baslik: İlgili sayfalar
+    sayfalar:
+    - kamu
+    - fikri-mulkiyet
+    - kurulum
+    - mevzuat
