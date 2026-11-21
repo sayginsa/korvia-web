@@ -72,3 +72,10 @@ bloklar:
       cevap: Korvia servisi durdurmadan politika uygular. Politikaya göre kullanıcı uyarılabilir, iş gerekçesi istenebilir veya aktarım engellenebilir. Gerekçe istenen durumlarda kayıt gerekçesiyle birlikte saklanır.
     - soru: Hasta verisi nerede kalır?
       cevap: Yerinde (on-prem) veya özel bulut kurulumda hasta verisi sizin denetlediğiniz altyapıda kalır.
+- discriminant: ilgili
+  value:
+    baslik: İlgili sayfalar
+    sayfalar:
+    - kvkk-12-madde-ve-dlp
+    - finans
+    - kurulum

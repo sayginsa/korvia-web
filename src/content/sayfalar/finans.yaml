@@ -79,5 +79,15 @@ bloklar:
       cevap: Uç nokta (USB, yazdırma, pano), e-posta, web, bulut ve yapay zekâ. Müşteri ve kart kayıtları birebir veri eşleştirme (EDM) ve sağlama doğrulamasıyla yerel olarak dizinlenir.
     - soru: İnceleme ve kanıt nerede tutulur?
       cevap: Ağınızın içinde. Korvia yerinde (on-prem) kurulur; her olay için imzalı kanıt saklar ve olayları SIEM'inize syslog üzerinden gönderebilir. SIEM'e yalnızca üst veri gider, hassas içerik gönderilmez.
+    - soru: Sigorta şirketlerinde özel nitelikli sağlık verisi nasıl korunur?
+      cevap: Tespit Motoru tıbbi tanımlayıcıları, T.C. kimlik numaralarını ve OCR ile taranmış belgeleri tanır. Sigorta dosyaları çıkarılabilir belleğe, kişisel bulut hesaplarına veya herkese açık yapay zekâ araçlarına gitmeden aynı politikayla denetlenir.
     - soru: BDDK ve KVKK denetimlerinde ne gösterebiliriz?
       cevap: Kişisel veri envanterini, etkin politikaları ve hangi kuralın neden eşleştiğini gösteren imzalı olay kayıtlarını. Korvia bu gereksinimleri teknik kontrollerle destekler; hukuki yorum hukuk danışmanınıza aittir.
+- discriminant: ilgili
+  value:
+    baslik: İlgili sayfalar
+    sayfalar:
+    - kvkk-12-madde-ve-dlp
+    - saglik
+    - dlp-gecis-rehberi
+    - kurulum
