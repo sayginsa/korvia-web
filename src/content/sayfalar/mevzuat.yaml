@@ -71,3 +71,10 @@ bloklar:
     link:
       etiket: ''
       url: ''
+- discriminant: ilgili
+  value:
+    baslik: Ayrıntılı rehberler
+    sayfalar:
+    - kvkk-12-madde-ve-dlp
+    - uyum-ve-denetim
+    - dlp-gecis-rehberi
