@@ -3,14 +3,59 @@ import '../styles/global.css';
 import UstBilgi from '../components/UstBilgi.astro';
 import AltBilgi from '../components/AltBilgi.astro';
 import Kapanis from '../components/Kapanis.astro';
+import { ayarlar } from '../lib/icerik';
 
 interface Props {
   baslik: string;
   aciklama?: string;
   kapanis?: boolean;
+  /** Sayfada görünen soru-cevaplar; FAQPage yapılandırılmış verisi yalnızca bunlardan üretilir. */
+  sss?: { soru: string; cevap: string }[];
 }
-const { baslik, aciklama = '', kapanis = true } = Astro.props;
+const { baslik, aciklama = '', kapanis = true, sss = [] } = Astro.props;
 const kanonik = new URL(Astro.url.pathname, Astro.site).href;
+const kok = new URL('/', Astro.site).href;
+const gorsel = new URL('/icon-512.png', Astro.site).href;
+const a = await ayarlar();
+
+// Yapılandırılmış veri: yalnızca site ayarlarında ve sayfada zaten bulunan bilgiler.
+const ldGraf: Record<string, unknown>[] = [
+  {
+    '@type': 'Organization',
+    '@id': `${kok}#org`,
+    name: 'Korvia',
+    url: kok,
+    logo: gorsel,
+    description: a.footerMetni,
+    slogan: a.aciklamaSatiri,
+    email: a.satisEposta,
+    telephone: a.telefon,
+    address: a.adres,
+    areaServed: 'TR',
+  },
+  {
+    '@type': 'WebSite',
+    '@id': `${kok}#site`,
+    name: 'Korvia',
+    url: kok,
+    inLanguage: 'tr-TR',
+    publisher: { '@id': `${kok}#org` },
+  },
+];
+if (sss.length) {
+  ldGraf.push({
+    '@type': 'FAQPage',
+    '@id': `${kanonik}#sss`,
+    url: kanonik,
+    inLanguage: 'tr-TR',
+    mainEntity: sss.map((q) => ({
+      '@type': 'Question',
+      name: q.soru,
+      acceptedAnswer: { '@type': 'Answer', text: q.cevap },
+    })),
+  });
+}
+const jsonLd = JSON.stringify({ '@context': 'https://schema.org', '@graph': ldGraf }).replace(/</g, '\\u003c');
 ---
 <!doctype html>
 <html lang="tr">
@@ -29,6 +74,16 @@ const kanonik = new URL(Astro.url.pathname, Astro.site).href;
     <meta property="og:title" content={baslik} />
     {aciklama && <meta property="og:description" content={aciklama} />}
     <meta property="og:url" content={kanonik} />
+    <meta property="og:site_name" content="Korvia" />
+    <meta property="og:image" content={gorsel} />
+    <meta property="og:image:width" content="512" />
+    <meta property="og:image:height" content="512" />
+    <meta property="og:image:alt" content="Korvia · Veri Kaybını Önleme | DLP" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={baslik} />
+    {aciklama && <meta name="twitter:description" content={aciklama} />}
+    <meta name="twitter:image" content={gorsel} />
+    <script type="application/ld+json" set:html={jsonLd} />
   </head>
   <body>
     <a class="atla" href="#icerik">İçeriğe geç</a>

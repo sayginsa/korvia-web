@@ -28,9 +28,14 @@ const yazilar = slug === 'blog'
 const sss = slug === 'sss' ? await reader.singletons.sss.read() : null;
 const terimler = slug === 'sozluk' ? (await reader.collections.sozluk.all()).sort((a, b) => (a.entry.sira ?? 0) - (b.entry.sira ?? 0)) : [];
 const ozet = await doldur(s.ozet);
+// FAQPage verisi: sayfada görünen soru-cevaplar (SSS sayfası ve "Soru · cevap" blokları)
+const sayfaSss = [
+  ...(sss ? sss.gruplar.flatMap((g) => g.sorular) : []),
+  ...s.bloklar.flatMap((b) => (b.discriminant === 'sss' ? b.value.ogeler : [])),
+];
 const ok = `<svg class="ok" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>`;
 ---
-<Temel baslik={s.seoBaslik} aciklama={s.seoAciklama}>
+<Temel baslik={s.seoBaslik} aciklama={s.seoAciklama} sss={sayfaSss}>
   <section class="sayfa-basi">
     {s.bolum !== 'yasal' && (
       <div class="sb-bloklar bloklar" aria-hidden="true">

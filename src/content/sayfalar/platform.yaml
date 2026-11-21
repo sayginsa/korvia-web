@@ -4,8 +4,8 @@ bolum: platform
 sira: 1
 ikon: katman
 menuAciklama: Tek ajan ve tek konsol nasıl birlikte çalışır.
-seoBaslik: Platform | Veri Keşfi, Sınıflandırma, DLP ve Yapay Zekâ Güvenliği | Korvia
-seoAciklama: Korvia veri keşfini, sınıflandırmayı, uç nokta ve ağ DLP'sini ve yapay zekâ güvenliğini tek mimaride birleştirir. Güvenlik ekibi hassas veriyi bulur, nasıl ha
+seoBaslik: 'Platform: Veri Keşfi, DLP ve Yapay Zekâ Güvenliği | Korvia'
+seoAciklama: 'Korvia veri keşfini, sınıflandırmayı, uç nokta ve ağ DLP''sini ve yapay zekâ güvenliğini tek mimaride birleştirir; olaylar tek konsoldan incelenir.'
 eyebrow: Platform
 baslik: Hassas veriyi keşfetmekten politikayı uygulamaya.
 ozet: Korvia veri keşfini, sınıflandırmayı, uç nokta ve ağ DLP'sini ve yapay zekâ güvenliğini tek mimaride birleştirir. Güvenlik ekibi hassas veriyi bulur, nasıl hareket ettiğini denetler ve olayları tek konsoldan inceler.
