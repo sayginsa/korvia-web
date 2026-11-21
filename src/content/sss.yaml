@@ -5,6 +5,8 @@ gruplar:
   sorular:
   - soru: Korvia nedir?
     cevap: Korvia, Türkiye'de geliştirilen bir Veri Kaybını Önleme | DLP ürünüdür. Hassas veriyi uç noktada, ağda, bulutta ve yapay zekâ uygulamalarında tanır, sınıflandırır ve kurum dışına çıkmadan durdurur. Yerinde (on-prem), özel bulut, internetten yalıtılmış ağ veya yönetilen hizmet olarak kurulur.
+  - soru: Korvia yerli bir DLP ürünü mü?
+    cevap: Korvia Türkiye'de geliştirilir; satış, kurulum ve destek de Türkiye'dedir ve destek Türkçedir. Yerinde (on-prem) ve özel bulut kurulumda içerik ve kanıt kurumunuzun altyapısında kalır, veri yurt dışına çıkmaz. T.C. kimlik, IBAN ve vergi numarası gibi Türkçe veri tipleri hazır gelir.
   - soru: Korvia hangi kanalları denetler?
     cevap: Uç noktada USB bellek, yazdırma, pano, ekran görüntüsü, eşitleme klasörleri ve tarayıcı yüklemeleri; ayrıca giden e-posta, web yüklemeleri, bulut uygulamaları, yapay zekâ komutları ve kod asistanları. Tüm kanallarda aynı politika uygulanır.
   - soru: Veri Kaybını Önleme (DLP) nedir?

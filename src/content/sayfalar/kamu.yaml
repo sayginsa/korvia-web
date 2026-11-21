@@ -72,3 +72,10 @@ bloklar:
       cevap: Sağlama doğrulamalı T.C. kimlik tespitini, otomatik sınıflandırmayı ve imzalı denetim izlerini bir araya getirir. Rehberdeki tedbirlerin nasıl karşılandığına dair değerlendirme kurumunuza ve denetçinize aittir.
     - soru: Korvia nerede geliştiriliyor?
       cevap: Türkiye'de. Satış, kurulum ve destek de Türkiye'dedir; destek Türkçedir.
+- discriminant: ilgili
+  value:
+    baslik: İlgili sayfalar
+    sayfalar:
+    - mevzuat
+    - kvkk-12-madde-ve-dlp
+    - kurulum
