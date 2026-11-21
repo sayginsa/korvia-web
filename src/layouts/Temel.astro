@@ -41,6 +41,19 @@ const ldGraf: Record<string, unknown>[] = [
     inLanguage: 'tr-TR',
     publisher: { '@id': `${kok}#org` },
   },
+  {
+    '@type': 'SoftwareApplication',
+    '@id': `${kok}#urun`,
+    name: 'Korvia',
+    url: kok,
+    description: a.footerMetni,
+    applicationCategory: 'SecurityApplication',
+    applicationSubCategory: a.aciklamaSatiri,
+    // Desteklenen işletim sistemleri SSS'deki "Hangi işletim sistemleri destekleniyor?" cevabından.
+    operatingSystem: 'Windows, Linux',
+    inLanguage: 'tr-TR',
+    publisher: { '@id': `${kok}#org` },
+  },
 ];
 if (sss.length) {
   ldGraf.push({
