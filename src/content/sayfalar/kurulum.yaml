@@ -5,7 +5,7 @@ sira: 3
 ikon: sunucu
 menuAciklama: Yerinde (on-prem), özel bulut, internetten yalıtılmış ağ veya yönetilen hizmet.
 seoBaslik: Kurulum seçenekleri | Korvia
-seoAciklama: Korvia önce kurum içi çalışacak biçimde tasarlandı; çünkü DLP'ye en çok ihtiyaç duyan kurumlar çoğu zaman verisini başkasının bulutuna gönderemez. Yönetilen s
+seoAciklama: 'Korvia önce kurum içi çalışacak biçimde tasarlandı: yerinde (on-prem), özel bulut, yalıtılmış ağ veya yönetilen hizmet. Yönetilen sürümler aynı kodu çalıştırır.'
 eyebrow: Platform · Kurulum
 baslik: Varsayılan olarak kurum içinde. Gerisi sizin tercihiniz.
 ozet: Korvia önce kurum içi çalışacak biçimde tasarlandı; çünkü DLP'ye en çok ihtiyaç duyan kurumlar çoğu zaman verisini başkasının bulutuna gönderemez. Yönetilen sürümler aynı kodu çalıştırır.
