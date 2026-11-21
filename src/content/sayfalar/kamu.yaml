@@ -62,3 +62,13 @@ bloklar:
     - ikon: ''
       baslik: Bilgi ve İletişim Güvenliği Rehberi
       metin: 'Cumhurbaşkanlığı rehberi: kritik verinin sınıflandırılması, korunması ve kayıt yönetimi.'
+- discriminant: sss
+  value:
+    baslik: Kamu kurumlarından gelen sorular
+    ogeler:
+    - soru: Korvia internetten yalıtılmış ağda çalışır mı?
+      cevap: Evet. Korvia tamamen kurum içinde veya internetten yalıtılmış ağlarda kurulur. Güncellemeler imzalı çevrim dışı paketler olarak gelir; varsayılan olarak telemetri yoktur ve siz açmadıkça ağınızdan hiçbir şey çıkmaz.
+    - soru: Korvia Bilgi ve İletişim Güvenliği Rehberi çalışmalarına nasıl katkı sağlar?
+      cevap: Sağlama doğrulamalı T.C. kimlik tespitini, otomatik sınıflandırmayı ve imzalı denetim izlerini bir araya getirir. Rehberdeki tedbirlerin nasıl karşılandığına dair değerlendirme kurumunuza ve denetçinize aittir.
+    - soru: Korvia nerede geliştiriliyor?
+      cevap: Türkiye'de. Satış, kurulum ve destek de Türkiye'dedir; destek Türkçedir.

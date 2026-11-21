@@ -62,3 +62,13 @@ bloklar:
     - ikon: ''
       baslik: Kişisel Sağlık Verileri Yönetmeliği
       metin: Özel nitelikli sağlık verisine erişim, aktarım ve kayıt.
+- discriminant: sss
+  value:
+    baslik: Sağlık kurumlarından gelen sorular
+    ogeler:
+    - soru: Korvia özel nitelikli sağlık verisini nasıl korur?
+      cevap: Tıbbi tanımlayıcıları, T.C. kimlik numaralarını ve OCR ile taranmış belgeleri tanır. Yetkili sevklerin kayıtlı bir klinik gerekçeyle ilerlemesine izin verir; çıkarılabilir belleklere, kişisel bulut hesaplarına veya herkese açık yapay zekâ araçlarına izinsiz aktarımı engeller.
+    - soru: Klinik personelin işi durur mu?
+      cevap: Korvia servisi durdurmadan politika uygular. Politikaya göre kullanıcı uyarılabilir, iş gerekçesi istenebilir veya aktarım engellenebilir. Gerekçe istenen durumlarda kayıt gerekçesiyle birlikte saklanır.
+    - soru: Hasta verisi nerede kalır?
+      cevap: Yerinde (on-prem) veya özel bulut kurulumda hasta verisi sizin denetlediğiniz altyapıda kalır.
