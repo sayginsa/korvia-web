@@ -5,7 +5,7 @@ sira: 3
 ikon: ayrilan
 menuAciklama: Ayrılan çalışanların veya ele geçirilmiş hesapların veri kaçırmasını durdurun.
 seoBaslik: İçeriden gelen risk | Korvia
-seoAciklama: Her veri kaybı olayı dışarıdan bir saldırganla yaşanmaz. Hassas bilgi, zaten meşru erişimi olan biri tarafından kopyalanabilir, iletilebilir veya aktarılabili
+seoAciklama: 'Hassas bilgi, meşru erişimi olan biri tarafından da kopyalanabilir. Korvia sınıflandırmayı, uç nokta etkinliğini ve olağan dışı hareket hacmini ilişkilendirir.'
 eyebrow: Çözümler · İçeriden gelen risk
 baslik: İçeriden gelen risk çoğu zaman sıradan iş gibi görünür.
 ozet: Her veri kaybı olayı dışarıdan bir saldırganla yaşanmaz. Hassas bilgi, zaten meşru erişimi olan biri tarafından kopyalanabilir, iletilebilir veya aktarılabilir. Korvia dosya sınıflandırmasını, uç nokta etkinliğini ve olağan dışı hareket hacmini ilişkilendirir; güvenlik ekipleri ayrılan çalışanların veya ele geçirilmiş hesapların veri kaçırmasını durdurur.
