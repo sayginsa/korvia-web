@@ -1,0 +1,104 @@
+kimlik: DLP geçiş rehberi
+yol: kaynaklar/dlp-gecis-rehberi
+bolum: kaynaklar
+sira: 3
+ikon: rota
+menuAciklama: Mevcut DLP ürününüzden Korvia'ya adım adım geçiş.
+seoBaslik: Mevcut DLP ürününüzden Korvia'ya geçiş | Korvia
+seoAciklama: 'Mevcut DLP kurallarınızı Korvia''ya içe aktarın, önce izleme modunda karşılaştırın, kendi verinizle test edin ve emin olduğunuzda geçişi tamamlayın.'
+eyebrow: Kaynaklar · DLP geçiş rehberi
+baslik: Mevcut DLP ürününüzden Korvia'ya geçiş.
+ozet: Mevcut DLP ürününüzdeki kurallar ve politikalar Korvia'ya içe aktarılabilir; içe aktarılan kurallar önce izleme modunda çalışır, emin olduğunuzda geçişi tamamlarsınız.
+cta:
+  etiket: Bir POC planlayın
+  url: /kaynaklar/poc-rehberi/
+bloklar:
+- discriminant: kartlar
+  value:
+    eyebrow: ''
+    baslik: Geçişte neler değişir?
+    aciklama: ''
+    ogeler:
+    - ikon: kurum
+      baslik: Türkiye'de geliştirildi
+      metin: Satış, kurulum ve destek Türkiye'dedir. Destek Türkçedir; kapsamı ve saatleri destek sözleşmenizde tanımlanır.
+    - ikon: sunucu
+      baslik: Varsayılan olarak kurum içinde
+      metin: Tüm bileşenler ağınızda; internetten yalıtılmış ağlarda da çalışır. Siz açmadıkça ağınızdan hiçbir şey çıkmaz.
+    - ikon: parmakIzi
+      baslik: Türkçe veri tipleri hazır
+      metin: T.C. kimlik, IBAN ve vergi numarası yalnızca biçimle değil sağlama doğrulamasıyla kontrol edilir.
+    - ikon: yapayZeka
+      baslik: Yapay zekâ kanalları dahil
+      metin: Çalışanların yapay zekâ servislerine ve kod asistanlarına ne gönderdiğini aynı politikayla denetlersiniz.
+- discriminant: adimlar
+  value:
+    baslik: Geçiş nasıl ilerler?
+    ogeler:
+    - ikon: ''
+      baslik: İçe aktarın
+      metin: Mevcut ürününüzdeki kurallar ve politikalar içe aktarılır; karşılığı olmayan öğeler raporlanır. Boş bir sayfadan başlamazsınız.
+    - ikon: ''
+      baslik: İzleme modunda karşılaştırın
+      metin: İçe aktarılan kurallar önce izleme modunda çalışır. Sonuçları mevcut ürününüzün kararlarıyla karşılaştırırsınız.
+    - ikon: ''
+      baslik: Kendi verinizle test edin
+      metin: POC sırasında içe aktarım kontrol edilir ve ayarlanır; kanallar sizin dosyalarınız ve iş akışlarınızla test edilir.
+    - ikon: ''
+      baslik: Ajanları yaygınlaştırın
+      metin: Windows'ta imzalı MSI paketi ve Grup İlkesi ile sessiz kurulum, Linux'ta paketler. Canlıya geçiş takvimi yazılı bir yol haritasıyla paylaşılır.
+    - ikon: ''
+      baslik: Geçişi tamamlayın
+      metin: Emin olduğunuzda kuralları izlemeden uyarma, kaydetme veya engelleme kararlarına taşırsınız.
+- discriminant: tablo
+  value:
+    baslik: Geçiş kontrol listesi
+    aciklama: ''
+    sutunlar:
+    - Kontrol
+    - Neye bakmalı?
+    satirlar:
+    - hucreler:
+      - Kurallar ve politikalar
+      - İçe aktarılan ve karşılığı olmayan öğelerin raporu
+    - hucreler:
+      - Etiketler
+      - Mevcut etiketlerin politikaya bağlanması; Microsoft duyarlılık (MIP) etiketleriyle eşleme
+    - hucreler:
+      - Dizin
+      - Active Directory veya LDAP kullanıcı ve gruplarının eşleşmesi
+    - hucreler:
+      - SIEM
+      - Olayların syslog (CEF veya RFC 5424) üzerinden SIEM'inize ulaşması
+    - hucreler:
+      - Kanallar
+      - USB, yazdırma, e-posta, web, bulut ve yapay zekâ testleri
+    - hucreler:
+      - Ağ dışında
+      - Testlerin dizüstü bilgisayarın bağlantısı kesikken tekrarlanması
+    - hucreler:
+      - Uç nokta performansı
+      - Ajanın bellek ve disk etkisinin kendi donanımınızda ölçülmesi
+    - hucreler:
+      - Saklama süreleri
+      - Olay ve denetim kaydı saklama sürelerinin politikanıza göre ayarlanması
+- discriminant: sss
+  value:
+    baslik: Geçiş hakkında sorular
+    ogeler:
+    - soru: Mevcut DLP ürünümüzden geçiş zor mu?
+      cevap: Hayır. Mevcut ürününüzdeki kurallar ve politikalar içe aktarılabilir; karşılığı olmayan öğeler raporlanır. İçe aktarılan kurallar karşılaştırma için önce izleme modunda çalışır; emin olduğunuzda geçişi tamamlarsınız.
+    - soru: Geçiş ne kadar sürer?
+      cevap: 'Kapsama bağlıdır. Zamanın çoğu yaygınlaştırmaya gider: dizin entegrasyonu, neyin taranacağını seçmek, ilk tarama, ince ayar ve ajan dağıtımı. Canlıya geçiş takvimi uç nokta sayısına göre belirlenir ve yazılı bir yol haritasıyla paylaşılır.'
+    - soru: Hangi işletim sistemleri destekleniyor?
+      cevap: Windows (imzalı MSI paketi, Grup İlkesi ile sessiz kurulum) ve Linux (Debian, Ubuntu, RHEL, Rocky ve SUSE paketleri). macOS kapsamı için satış ekibimize danışın. Yönetim bileşeni tek bir sanal makinedir.
+    - soru: Destek hangi dilde?
+      cevap: Türkçe. Yönetim konsolu Türkçe ve İngilizce kullanılabilir; destek kapsamı ve saatleri lisans veya destek sözleşmenizde tanımlanır.
+- discriminant: ilgili
+  value:
+    baslik: Sırada ne var?
+    sayfalar:
+    - poc-rehberi
+    - dlp-satin-alma-rehberi
+    - kurulum
+    - sss

@@ -1,0 +1,83 @@
+kimlik: KVKK 12. madde ve DLP
+yol: mevzuat/kvkk
+bolum: cozumler
+sira: 21
+ikon: kanit
+menuAciklama: Veri güvenliği yükümlülükleri ve Korvia'daki teknik karşılıkları.
+seoBaslik: KVKK 12. madde teknik tedbirleri ve DLP | Korvia
+seoAciklama: 'Korvia, KVKK 12. maddedeki veri güvenliği yükümlülüklerinin teknik tarafını destekler: kişisel veri envanteri, kanal denetimi ve imzalı olay kayıtları.'
+eyebrow: Mevzuat · KVKK
+baslik: KVKK 12. madde ve DLP
+ozet: Korvia, KVKK 12. maddedeki veri güvenliği yükümlülüklerinin teknik tarafını destekler; kişisel veriyi bulur, nereye gidebileceğini denetler ve her olay için imzalı kanıt saklar.
+cta:
+  etiket: Demo isteyin
+  url: /demo/
+bloklar:
+- discriminant: metin
+  value:
+    eyebrow: ''
+    baslik: 12. madde ne ister?
+    govde: |-
+      6698 sayılı Kişisel Verilerin Korunması Kanunu'nun 12. maddesi veri sorumlusundan; kişisel verilerin hukuka aykırı olarak işlenmesini ve bunlara hukuka aykırı olarak erişilmesini önlemek ve verilerin muhafazasını sağlamak için uygun güvenlik düzeyini temin etmeye yönelik gerekli teknik ve idari tedbirleri almasını ister. Aynı madde, işlenen verilerin kanuni olmayan yollarla başkaları tarafından elde edilmesi hâlinde durumun ilgilisine ve Kurula bildirilmesini öngörür.
+
+      DLP bu yükümlülüklerin teknik tarafında yer alır: kişisel verinin nerede durduğunu, nereye gittiğini ve bir olayda ne olduğunu gösterir. İdari tedbirler, iç politikalar ve hukuki değerlendirme kurumunuzun uyum programının parçasıdır.
+- discriminant: tablo
+  value:
+    baslik: 12. madde ve Korvia'daki teknik karşılığı
+    aciklama: Tablo teknik kontrolleri gösterir. Hangi tedbirin yeterli olduğuna dair hukuki yorum hukuk danışmanınıza aittir.
+    sutunlar:
+    - Yükümlülük
+    - Teknik soru
+    - Korvia'daki karşılığı
+    satirlar:
+    - hucreler:
+      - Hukuka aykırı işlemeyi önlemek
+      - Kişisel veri nerede duruyor, kim erişebiliyor?
+      - 'Veri Keşfi ve DSPM: konuma göre kişisel veri envanteri ve erişim haritası'
+    - hucreler:
+      - Hukuka aykırı erişimi önlemek
+      - Veri hangi kanallardan kurum dışına çıkabilir?
+      - 'DLP: uç nokta (USB, yazdırma, pano), e-posta, web, bulut ve yapay zekâda tek politika'
+    - hucreler:
+      - Verilerin muhafazası
+      - Hassas dosyalar tutarlı biçimde tanınıyor mu?
+      - 'Veri Sınıflandırma ve Tespit Motoru: sağlama doğrulamalı T.C. kimlik, IBAN ve vergi numarası tespiti, kalıcı etiketler'
+    - hucreler:
+      - İhlalin fark edilmesi ve bildirimi
+      - Bir olayda ne oldu, kim yaptı, veri nereye gitti?
+      - 'İnceleme: imzalı olay kayıtları ve vaka zaman çizelgesi'
+    - hucreler:
+      - Tedbirlerin kanıtlanması
+      - Kayıtlar değiştirilebilir mi?
+      - İmzalı kanıt; denetim kaydına erişim de kaydedilir
+    - hucreler:
+      - Güvenlik aracının kendisi
+      - DLP ürünü kişisel veriyi nereye taşıyor?
+      - Yerinde (on-prem) ve özel bulut kurulumda içerik ve kanıt ağınızda kalır; varsayılan olarak telemetri yok
+- discriminant: sss
+  value:
+    baslik: KVKK ve Korvia hakkında sorular
+    ogeler:
+    - soru: Korvia KVKK 12. madde teknik tedbirlerine nasıl katkı sağlar?
+      cevap: Korvia kişisel veriyi bulur (Veri Keşfi ve DSPM), nereye gidebileceğini tek politikayla denetler (DLP) ve her olay için imzalı kanıt saklar (İnceleme). Bunlar teknik tedbirlerin bir parçasıdır; idari tedbirler ve hukuki yorum kurumunuzun uyum programına aittir.
+    - soru: Korvia kişisel veri envanteri çıkarır mı?
+      cevap: Evet. Veri Keşfi ve DSPM uç noktalarda, sunucularda ve bulut sürücülerde kişisel veri envanteri çıkarır. Envanter ve dönem karşılaştırmaları denetim kanıtı olarak kullanılabilir.
+    - soru: Denetçiye ne gösterebiliriz?
+      cevap: Her olay neyin tespit edildiğini, hangi kuralın neden eşleştiğini, kullanıcıyı, hedefi ve uygulanan eylemi taşır. Olaylar imzalıdır; denetçiye gösterdiğiniz şey gerçekte olandır. Rapor şablonları KVKK, PCI DSS ve ISO 27001 kapsamındadır.
+    - soru: Verimiz yurt dışına çıkar mı?
+      cevap: Yerinde (on-prem) ve özel bulut modellerinde veri sizin seçtiğiniz altyapıda kalır. Taranan içerik ve tespit edilen değerler yönetim cihazından çıkmaz; ürün internet bağlantısı olmadan da tam işlevle çalışır.
+- discriminant: not
+  value:
+    baslik: '"Destekler" ne demek?'
+    metin: Korvia bu gereksinimleri teknik kontrollerle destekler. Hukuki yorum hukuk danışmanınıza aittir.
+    link:
+      etiket: ''
+      url: ''
+- discriminant: ilgili
+  value:
+    baslik: İlgili sayfalar
+    sayfalar:
+    - mevzuat
+    - uyum-ve-denetim
+    - veri-kesfi-dspm
+    - inceleme

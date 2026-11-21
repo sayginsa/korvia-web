@@ -71,3 +71,13 @@ bloklar:
     - ikon: ''
       baslik: KVKK
       metin: '6698 sayılı Kanun: veri güvenliğine ilişkin yükümlülükler (md. 12), veri envanteri ve ihlal bildirimi.'
+- discriminant: sss
+  value:
+    baslik: Bankalardan ve sigorta şirketlerinden gelen sorular
+    ogeler:
+    - soru: Korvia hangi kanalları denetler?
+      cevap: Uç nokta (USB, yazdırma, pano), e-posta, web, bulut ve yapay zekâ. Müşteri ve kart kayıtları birebir veri eşleştirme (EDM) ve sağlama doğrulamasıyla yerel olarak dizinlenir.
+    - soru: İnceleme ve kanıt nerede tutulur?
+      cevap: Ağınızın içinde. Korvia yerinde (on-prem) kurulur; her olay için imzalı kanıt saklar ve olayları SIEM'inize syslog üzerinden gönderebilir. SIEM'e yalnızca üst veri gider, hassas içerik gönderilmez.
+    - soru: BDDK ve KVKK denetimlerinde ne gösterebiliriz?
+      cevap: Kişisel veri envanterini, etkin politikaları ve hangi kuralın neden eşleştiğini gösteren imzalı olay kayıtlarını. Korvia bu gereksinimleri teknik kontrollerle destekler; hukuki yorum hukuk danışmanınıza aittir.
