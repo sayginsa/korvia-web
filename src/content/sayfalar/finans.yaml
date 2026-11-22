@@ -81,12 +81,16 @@ bloklar:
       cevap: Ağınızın içinde. Korvia yerinde (on-prem) kurulur; her olay için imzalı kanıt saklar ve olayları SIEM'inize syslog üzerinden gönderebilir. SIEM'e yalnızca üst veri gider, hassas içerik gönderilmez.
     - soru: Sigorta şirketlerinde özel nitelikli sağlık verisi nasıl korunur?
       cevap: Tespit Motoru tıbbi tanımlayıcıları, T.C. kimlik numaralarını ve OCR ile taranmış belgeleri tanır. Sigorta dosyaları çıkarılabilir belleğe, kişisel bulut hesaplarına veya herkese açık yapay zekâ araçlarına gitmeden aynı politikayla denetlenir.
+    - soru: Bankada USB bellek ve e-posta nasıl denetlenir?
+      cevap: USB bellek için yalnızca okuma, engelleme veya cihaz kimliğine göre izin tanımlanır. Giden e-posta Outlook'ta ve SMTP üzerinden, gövde ve ekleriyle çıkmadan önce kontrol edilir. Her iki kanal da aynı sıralı kural tablosunu kullanır; kanıt tek yerde toplanır.
     - soru: BDDK ve KVKK denetimlerinde ne gösterebiliriz?
       cevap: Kişisel veri envanterini, etkin politikaları ve hangi kuralın neden eşleştiğini gösteren imzalı olay kayıtlarını. Korvia bu gereksinimleri teknik kontrollerle destekler; hukuki yorum hukuk danışmanınıza aittir.
 - discriminant: ilgili
   value:
     baslik: İlgili sayfalar
     sayfalar:
+    - uc-nokta-dlp
+    - ag-ve-e-posta-dlp
     - kvkk-12-madde-ve-dlp
     - saglik
     - dlp-gecis-rehberi
