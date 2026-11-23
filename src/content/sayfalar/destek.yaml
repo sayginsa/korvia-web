@@ -128,3 +128,20 @@ bloklar:
     link:
       etiket: ''
       url: ''
+- discriminant: sss
+  value:
+    baslik: Destek ve kurulum hakkında sorular
+    ogeler:
+    - soru: Korvia Türkçe destek veriyor mu?
+      cevap: Evet. Korvia Türkiye'de geliştirilir; satış, kurulum ve destek Türkiye'dedir ve destek Türkçedir. Yönetim konsolu Türkçe ve İngilizce kullanılabilir.
+    - soru: Destek saatleri ve yanıt süreleri nedir?
+      cevap: Çalışma saatleri ve yanıt hedefleri destek sözleşmenizde belirlenir. Talepler önem derecesine göre önceliklendirilir; Önem 1 taleplerde çözülene kadar düzenli durum güncellemesi verilir.
+    - soru: Korvia yerinde (on-prem) kurulabilir mi?
+      cevap: Evet. Korvia yerinde (on-prem), özel bulut, internetten yalıtılmış ağ veya yönetilen hizmet olarak kurulur. Yerinde ve özel bulut kurulumda içerik ve kanıt kurumunuzun altyapısında kalır. Yalıtılmış ağlar dosyadan güncellenir.
+- discriminant: ilgili
+  value:
+    baslik: İlgili sayfalar
+    sayfalar:
+    - kurulum
+    - poc-rehberi
+    - sss
