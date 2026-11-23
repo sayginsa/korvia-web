@@ -77,6 +77,9 @@ bloklar:
       - Ağ dışında
       - Testlerin dizüstü bilgisayarın bağlantısı kesikken tekrarlanması
     - hucreler:
+      - Yalıtılmış ağ ve lisans
+      - İnternetten yalıtılmış ağda kurulum; güncellemelerin imzalı çevrim dışı paketlerle gelmesi ve lisansın lisans dosyasıyla çevrim dışı etkinleştirilmesi
+    - hucreler:
       - Uç nokta performansı
       - Ajanın bellek ve disk etkisinin kendi donanımınızda ölçülmesi
     - hucreler:
@@ -92,6 +95,8 @@ bloklar:
       cevap: 'Kararı kurumunuzun ihtiyaçları belirler. Korvia''da değişenler şunlardır: ürün Türkiye''de geliştirilir, destek Türkçedir, tüm bileşenler varsayılan olarak ağınızda çalışır ve T.C. kimlik, IBAN ve vergi numarası gibi Türkçe veri tipleri hazır gelir. Mevcut kurallarınızı içe aktarıp izleme modunda karşılaştırarak kararı kendi verinizle verebilirsiniz.'
     - soru: Geçiş ne kadar sürer?
       cevap: 'Kapsama bağlıdır. Zamanın çoğu yaygınlaştırmaya gider: dizin entegrasyonu, neyin taranacağını seçmek, ilk tarama, ince ayar ve ajan dağıtımı. Canlıya geçiş takvimi uç nokta sayısına göre belirlenir ve yazılı bir yol haritasıyla paylaşılır.'
+    - soru: Korvia internetten yalıtılmış bir ağa kurulabilir mi?
+      cevap: Evet. Korvia tamamen kurum içinde veya internetten yalıtılmış ağlarda kurulur; ürün internet bağlantısı olmadan da tam işlevle çalışır. Güncellemeler imzalı çevrim dışı paketler olarak gelir, lisans çevrim dışı etkinleştirilir ve siz açmadıkça ağınızdan hiçbir şey çıkmaz.
     - soru: Hangi işletim sistemleri destekleniyor?
       cevap: Windows (imzalı MSI paketi, Grup İlkesi ile sessiz kurulum) ve Linux (Debian, Ubuntu, RHEL, Rocky ve SUSE paketleri). macOS kapsamı için satış ekibimize danışın. Yönetim bileşeni tek bir sanal makinedir.
     - soru: Destek hangi dilde?
